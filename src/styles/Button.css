@@ -1,0 +1,27 @@
+.custom-btn {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  transition: background 0.2s, transform 0.2s, opacity 0.4s, filter 0.4s;
+  font-weight: 500;
+  opacity: 0;
+  filter: blur(8px);
+  animation: btnFadeIn 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes btnFadeIn {
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.custom-btn:hover {
+  background: #e65c00;
+  transform: scale(1.05);
+}

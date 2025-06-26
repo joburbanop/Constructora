@@ -1,0 +1,90 @@
+.ambito {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.ambito h2 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+  font-family: Georgia, serif;
+}
+
+.ambito-sub {
+  color: #444;
+  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.ambito-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ambito-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 1.5rem 1rem 2rem 1rem;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ambito-img {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background-size: cover;
+  background-position: center 35%;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.ambito-img::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background: linear-gradient(180deg,rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.10) 60%,rgba(0,0,0,0.35) 100%);
+  z-index: 1;
+}
+
+.ambito-card-title {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  margin-bottom: 1rem;
+  text-align: center;
+  z-index: 2;
+  font-family: Georgia, serif;
+}
+
+.ambito-card-desc {
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #222;
+}
+
+
+.ambito-card:hover .ambito-img {
+  transform: scale(1.04);
+}
