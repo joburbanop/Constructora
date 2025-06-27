@@ -45,14 +45,51 @@
   box-shadow: 0 8px 32px rgba(0,0,0,0.13);
 }
 
+.proyecto-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1.2em;
+  right: 1.2em;
+  left: auto;
+  margin: 0;
+  background: #ffe066;
+  color: #444;
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 0.28em 1em 0.28em 0.8em;
+  border-radius: 2em 0 0 2em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  z-index: 2;
+  letter-spacing: 0.2px;
+  border: none;
+  min-width: 90px;
+}
+
+.icono-circular {
+  position: absolute;
+  top: 0.7em;
+  right: 0.7em;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
 .proyecto-img-wrap {
-  position: relative;
   width: 140px;
   height: 140px;
   margin-bottom: 1.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .proyecto-img {
@@ -62,20 +99,7 @@
   border-radius: 50%;
   background: #f7f7f7;
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-}
-
-.proyecto-etiqueta {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 0.3em 1em;
-  border-radius: 1em;
-  color: #fff;
-  font-size: 0.95rem;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  z-index: 2;
-  letter-spacing: 0.5px;
+  margin-top: 2.5em;
 }
 
 .proyecto-info {
@@ -94,10 +118,11 @@
 }
 
 .proyecto-desc {
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   color: #444;
   margin-bottom: 1.1rem;
   font-family: 'Times New Roman', Times, serif;
+  text-align: left;
 }
 
 .proyecto-ubicacion {
@@ -108,6 +133,8 @@
   color: #ff6600;
   margin-bottom: 1.2rem;
   font-weight: 500;
+  text-align: left;
+  width: 100%;
 }
 
 .proyecto-ubicacion-icon {
@@ -150,6 +177,25 @@
 .divider-icon {
   margin-right: 0.4em;
   font-size: 1.2em;
+}
+
+.proyecto-titulo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 0.2em;
+}
+
+.icono-circular-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 1.7em;
 }
 
 @media (max-width: 600px) {
