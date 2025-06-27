@@ -5,9 +5,9 @@ import { MdLocationOn, MdLocationCity, MdHomeWork, MdStoreMallDirectory } from '
 import '../styles/ProyectosEnMarcha.css';
 
 const iconosTipo = {
-  'Urbanización': <MdLocationCity size={32} color="#ff6600" />,
-  'Condominio': <MdHomeWork size={32} color="#ff6600" />,
-  'Locales': <MdStoreMallDirectory size={32} color="#ff6600" />
+  urbanizacion: MdLocationCity,
+  condominio: MdHomeWork,
+  locales: MdStoreMallDirectory
 };
 
 export default function ProyectosEnMarcha() {
@@ -24,7 +24,9 @@ export default function ProyectosEnMarcha() {
             </div>
             <div className="proyecto-info">
               <div className="proyecto-titulo-row">
-                <span className="icono-circular-titulo">{iconosTipo[proy.tipo]}</span>
+                <span className="icono-circular-titulo">
+                  {iconosTipo[proy.icono] && React.createElement(iconosTipo[proy.icono], { size: 32, color: proy.iconoColor || '#222' })}
+                </span>
                 <h3 className="proyecto-nombre">{proy.titulo}</h3>
               </div>
               <p className="proyecto-desc">{proy.descripcion}</p>
