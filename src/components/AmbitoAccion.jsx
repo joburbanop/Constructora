@@ -31,8 +31,8 @@ export default function AmbitoAccion() {
     <section className="ambito">
       <h2>Ámbito de acción</h2>
       <p className="ambito-sub">
-        Casas de lujo, Urbanizaciones Condominios campestres,<br />
-        Complejos comerciales, Estaciones de servicio
+        Casas de lujo, urbanizaciones, condominios campestres,<br />
+        Complejos comerciales, Estaciones de servicio.
       </p>
       <div className="ambito-cards">
         {cards.map((card, idx) => (

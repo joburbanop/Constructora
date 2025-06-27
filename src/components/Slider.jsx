@@ -15,17 +15,17 @@ const slides = [
   {
     image: img1,
     title: 'DESCUBRE TU ESPACIO IDEAL',
-    subtitle: 'CASAS, CONDOMINIOS Y LOCALES PARA TI'
+    subtitle: 'CASAS, CONDOMINIOS Y LOTES'
   },
   {
     image: img2,
     title: 'VIVE EN EL LUGAR QUE SUEÑAS',
-    subtitle: 'PROYECTOS MODERNOS Y SEGUROS'
+    subtitle: 'PROYECTOS MODERNOS Y LUGARES DE ALTA VALORACION'
   },
   {
     image: img3,
     title: 'INVIERTE CON CONFIANZA',
-    subtitle: 'CONSTRUCTORA DE CALIDAD'
+    subtitle: 'PROYECTOS SEGUROS Y DE CALIDAD'
   },
   {
     image: img4,
