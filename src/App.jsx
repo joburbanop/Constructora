@@ -10,10 +10,7 @@ function App() {
       <Slider />
       <div className="main-content">
         <AmbitoAccion />
-        <section className="hero">
-          <h1>DESCUBRE TU ESPACIO IDEAL</h1>
-          <p>CASAS, CONDOMINIOS Y LOCALES PARA TI</p>
-        </section>
+        
       </div>
     </>
   )
