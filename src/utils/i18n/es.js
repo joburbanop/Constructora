@@ -92,6 +92,13 @@ const es = {
     entregados: 'Proyectos entregados',
     nosotros: 'Nosotros',
     renders: 'Renders destacados'
+  },
+  expertos: {
+    titulo: "Nuestro equipo de",
+    highlight: "Expertos",
+    saitama_nombre: "Saitama",
+    saitama_cargo: "Asesor inmobiliario",
+    saitama_desc: "con amplia experiencia en proyectos de urbanización y desarrollo habitacional. Comprometido con brindar acompañamiento personalizado a cada cliente, garantizando seguridad, confianza y resultados efectivos."
   }
 };
 

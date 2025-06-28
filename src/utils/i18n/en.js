@@ -92,6 +92,13 @@ const en = {
     entregados: 'Delivered Projects',
     nosotros: 'About Us',
     renders: 'Featured Renders'
+  },
+  expertos: {
+    titulo: "Our team of",
+    highlight: "Experts",
+    saitama_nombre: "Saitama",
+    saitama_cargo: "Real Estate Advisor",
+    saitama_desc: "with extensive experience in urbanization and housing development projects. Committed to providing personalized support to each client, ensuring safety, trust, and effective results."
   }
 };
 

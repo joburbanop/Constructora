@@ -12,15 +12,25 @@ const Header = () => {
   };
 
   return (
-    <header className="header animate-fadeInDown">
+    <header className="header animate-fadeInDown" id="header">
       <div className="header__container">
         <img src={logo} alt="Logo Constructora" className="header__logo" />
         <nav className="header__nav">
           <ul>
-            <li><a href="#">{t.header.inicio}</a></li>
-            <li><a href="#">{t.header.proyectos}</a></li>
-            <li><a href="#">{t.header.nosotros}</a></li>
-            <li><a href="#">{t.header.contactanos}</a></li>
+            <li>
+              <a
+                href="#header"
+                onClick={e => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+              >
+                {t.header.inicio}
+              </a>
+            </li>
+            <li><a href="#proyectos">{t.header.proyectos}</a></li>
+            <li><a href="#nosotros">{t.header.nosotros}</a></li>
+            <li><a href="#contactanos">{t.header.contactanos}</a></li>
           </ul>
         </nav>
         <div className="header__lang-select">

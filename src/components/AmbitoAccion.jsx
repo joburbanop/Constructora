@@ -1,12 +1,8 @@
 import React from "react";
 import "../styles/AmbitoAccion.css"; // Crea este archivo para los estilos
 import Button from './Button'; // Importa tu botón reutilizable
-import imgColombia from '../assets/Colombia.webp';
-import imgUSA from '../assets/Usa.webp';
-import imgLujo from '../assets/casas.jpeg';
 import ambitos from '../utils/ambitos';
 import { useIdioma } from '../context/IdiomaContext';
-import SectionDivider from './SectionDivider';
 
 export default function AmbitoAccion() {
   const { t } = useIdioma();

@@ -10,7 +10,7 @@ export default function RendersDestacados() {
   const beneficios = t.renders.beneficios;
 
   return (
-    <section className="renders-section">
+    <section className="renders-section" id="nosotros">
       <SectionDivider textKey="nosotros" icon={<i className="fas fa-cube"></i>} />
       <div className="renders-grid">
         

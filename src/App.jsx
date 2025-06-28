@@ -7,19 +7,22 @@ import SectionDivider from './components/SectionDivider'
 import ProyectosEntregados from './components/ProyectosEntregados'
 import RendersDestacados from './components/RendersDestacados'
 import Footer from './components/Footer'
+import Expertos from './components/Expertos'
+
 
 function App() {
   return (
     <>
       <Header />
-      <Slider />
+      <Slider id="inicio" />
       <div className="main-content">
-        <AmbitoAccion />    
-        <ProyectosEnMarcha /> 
-        <RendersDestacados />
-        <ProyectosEntregados />
+        <section id="ambito"><AmbitoAccion /></section>
+        <section id="proyectos"><ProyectosEnMarcha /></section>
+        <section id="renders"><RendersDestacados /></section>
+        <section id="entregados"><ProyectosEntregados /></section>
+        <section id="expertos"><Expertos /></section>
       </div>
-      <Footer />
+      <Footer id="contactanos" />
     </>
   )
 }

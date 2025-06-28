@@ -106,3 +106,20 @@ button:focus-visible {
   width: 100%;
   background: transparent;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+#header {
+  scroll-margin-top: 80px;
+}
+
+#proyectos,
+#nosotros,
+#contactanos,
+#renders,
+#entregados,
+#expertos {
+  scroll-margin-top: 90px;
+}
