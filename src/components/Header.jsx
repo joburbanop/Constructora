@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../assets/LOGO.png";
 import "../styles/Header.css";
 import { flags, languages } from '../utils/idiomas';
+import { useIdioma } from '../context/IdiomaContext';
 
 const Header = () => {
-  const [idioma, setIdioma] = useState("es");
+  const { idioma, setIdioma, t } = useIdioma();
 
   const handleIdiomaChange = (e) => {
     setIdioma(e.target.value);
-    // Aquí podrías disparar lógica de traducción global
   };
 
   return (
@@ -17,10 +17,10 @@ const Header = () => {
         <img src={logo} alt="Logo Constructora" className="header__logo" />
         <nav className="header__nav">
           <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Proyectos</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Contáctanos</a></li>
+            <li><a href="#">{t.header.inicio}</a></li>
+            <li><a href="#">{t.header.proyectos}</a></li>
+            <li><a href="#">{t.header.nosotros}</a></li>
+            <li><a href="#">{t.header.contactanos}</a></li>
           </ul>
         </nav>
         <div className="header__lang-select">

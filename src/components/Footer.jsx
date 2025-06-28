@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import logo from '../assets/LOGO.png';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import '../styles/Footer.css';
+import { useIdioma } from '../context/IdiomaContext';
 
 export default function Footer() {
+  const { t } = useIdioma();
   const [form, setForm] = useState({ email: '', telefono: '' });
   const [enviado, setEnviado] = useState(false);
 
@@ -22,12 +24,12 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content footer-columns">
         <div className="footer-form-col">
-          <div className="footer-form-title">¿Quieres que te contactemos?</div>
+          <div className="footer-form-title">{t.footer.formTitle}</div>
           <form className="footer-form" onSubmit={handleSubmit}>
             <input
               type="email"
               name="email"
-              placeholder="Tu correo electrónico"
+              placeholder={t.footer.email}
               value={form.email}
               onChange={handleChange}
               required
@@ -35,21 +37,21 @@ export default function Footer() {
             <input
               type="tel"
               name="telefono"
-              placeholder="Tu número de teléfono"
+              placeholder={t.footer.telefono}
               value={form.telefono}
               onChange={handleChange}
               required
             />
-            <button type="submit">Enviar</button>
+            <button type="submit">{t.footer.enviar}</button>
           </form>
-          {enviado && <div className="footer-success">¡Gracias! Te contactaremos pronto.</div>}
+          {enviado && <div className="footer-success">{t.footer.exito}</div>}
         </div>
         <div className="footer-brand-col">
           <img src={logo} alt="Logo Constructora" className="footer-logo" />
           <div className="footer-links">
-            <a href="#">Política de Privacidad</a>
-            <a href="#">Términos de Servicio</a>
-            <a href="#">Configuración de Cookies</a>
+            <a href="#">{t.footer.privacidad}</a>
+            <a href="#">{t.footer.terminos}</a>
+            <a href="#">{t.footer.cookies}</a>
           </div>
           <div className="footer-social">
             <a href="#" aria-label="Facebook"><FaFacebookF /></a>
@@ -59,7 +61,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer-copy">© 2025 Relume. Todos los derechos reservados.</div>
+      <div className="footer-copy">{t.footer.copy}</div>
     </footer>
   );
 } 

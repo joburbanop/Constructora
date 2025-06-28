@@ -5,20 +5,20 @@ import imgLujo from '../assets/casas.jpeg';
 const ambitos = [
   {
     img: imgColombia,
-    title: 'Proyectos Colombia',
-    desc: 'Proyectos exclusivos que combinan lujo y confort en cada rincón.',
+    title: 'colombia_title',
+    desc: 'colombia_desc',
     bgPosition: 'center 35%'
   },
   {
     img: imgUSA,
-    title: 'Proyectos U.S.A',
-    desc: 'Proyectos que marcan la diferencia en el mercado inmobiliario actual.',
+    title: 'usa_title',
+    desc: 'usa_desc',
     bgPosition: 'center 35%'
   },
   {
     img: imgLujo,
-    title: 'Casas de Lujo',
-    desc: 'Exclusividad que redefine el confort.',
+    title: 'lujo_title',
+    desc: 'lujo_desc',
     bgPosition: 'center 0%'
   }
 ];

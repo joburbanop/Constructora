@@ -14,12 +14,9 @@ function App() {
       <Header />
       <Slider />
       <div className="main-content">
-        <AmbitoAccion />
-        <SectionDivider text="Proyectos" color="#ff6600" />
-        <ProyectosEnMarcha />
-        <SectionDivider text="Nosotros" color="#ff6600" />
+        <AmbitoAccion />    
+        <ProyectosEnMarcha /> 
         <RendersDestacados />
-        <SectionDivider text="Proyectos entregados" color="#ff6600" />
         <ProyectosEntregados />
       </div>
       <Footer />

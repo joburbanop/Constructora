@@ -5,14 +5,17 @@ import imgColombia from '../assets/Colombia.webp';
 import imgUSA from '../assets/Usa.webp';
 import imgLujo from '../assets/casas.jpeg';
 import ambitos from '../utils/ambitos';
+import { useIdioma } from '../context/IdiomaContext';
+import SectionDivider from './SectionDivider';
 
 export default function AmbitoAccion() {
+  const { t } = useIdioma();
   return (
     <section className="ambito">
-      <h2>Ámbito de acción</h2>
+     
+      <h2>{t.ambito.titulo}</h2>
       <p className="ambito-sub">
-        Casas de lujo, urbanizaciones, condominios campestres,<br />
-        Complejos comerciales, Estaciones de servicio.
+        {t.ambito.sub}
       </p>
       <div className="ambito-cards">
         {ambitos.map((card, idx) => (
@@ -24,10 +27,10 @@ export default function AmbitoAccion() {
                 backgroundPosition: card.bgPosition
               }}
             >
-              <span className="ambito-card-title">{card.title}</span>
+              <span className="ambito-card-title">{t.ambito[card.title]}</span>
             </div>
-            <p className="ambito-card-desc">{card.desc}</p>
-            <Button>Ver más</Button>
+            <p className="ambito-card-desc">{t.ambito[card.desc]}</p>
+            <Button>{t.ambito.boton || 'Ver más'}</Button>
           </div>
         ))}
       </div>

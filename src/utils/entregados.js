@@ -6,34 +6,34 @@ import PuertasDelSol from '../assets/puertas_del_sol.png';
 const entregados = [
   {
     imagen: PuertasDelSol,
-    nombre: 'Puertas del Sol',
-    ubicacion: 'Lote en Medellín',
-    descripcion: 'Perfecto para desarrollo urbano con excelentes servicios.',
-    etiquetas: ['Medellín', 'Urbano', 'Accesible'],
+    nombre: 'puertas_del_sol',
+    ubicacion: 'lote_medellin',
+    descripcion: 'desc_lote_medellin',
+    etiquetas: ['medellin', 'urbano', 'accesible'],
     enlace: '#'
   },
   {
     imagen: Dulce,
-    nombre: 'Caña Dulce',
-    ubicacion: 'Lote en Medellín',
-    descripcion: 'Perfecto para desarrollo urbano con excelentes servicios.',
-    etiquetas: ['Medellín', 'Urbano', 'Accesible'],
+    nombre: 'cana_dulce',
+    ubicacion: 'lote_medellin',
+    descripcion: 'desc_lote_medellin',
+    etiquetas: ['medellin', 'urbano', 'accesible'],
     enlace: '#'
   },
   {
     imagen: Brava,
-    nombre: 'Casa Brava',
-    ubicacion: 'Lote en Medellín',
-    descripcion: 'Perfecto para desarrollo urbano con excelentes servicios.',
-    etiquetas: ['Medellín', 'Urbano', 'Accesible'],
+    nombre: 'casa_brava',
+    ubicacion: 'lote_medellin',
+    descripcion: 'desc_lote_medellin',
+    etiquetas: ['medellin', 'urbano', 'accesible'],
     enlace: '#'
   },
   {
     imagen: Palmeras,
-    nombre: 'Palmeras de la Italia',
-    ubicacion: 'Lote en Medellín',
-    descripcion: 'Perfecto para desarrollo urbano con excelentes servicios.',
-    etiquetas: ['Medellín', 'Urbano', 'Accesible'],
+    nombre: 'palmeras_italia',
+    ubicacion: 'lote_medellin',
+    descripcion: 'desc_lote_medellin',
+    etiquetas: ['medellin', 'urbano', 'accesible'],
     enlace: '#'
   }
 ];
