@@ -4,11 +4,18 @@ import './index.css'
 import App from './App.jsx'
 import './styles/animations.css'
 import { IdiomaProvider } from './context/IdiomaContext';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProyectosColombia from './pages/ProyectosColombia';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <IdiomaProvider>
-      <App />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/proyectos-colombia" element={<ProyectosColombia />} />
+        </Routes>
+      </BrowserRouter>
     </IdiomaProvider>
   </StrictMode>,
 )

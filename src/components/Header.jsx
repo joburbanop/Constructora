@@ -3,9 +3,11 @@ import logo from "../assets/LOGO.png";
 import "../styles/Header.css";
 import { flags, languages } from '../utils/idiomas';
 import { useIdioma } from '../context/IdiomaContext';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const { idioma, setIdioma, t } = useIdioma();
+  const navigate = useNavigate();
 
   const handleIdiomaChange = (e) => {
     setIdioma(e.target.value);
@@ -14,7 +16,13 @@ const Header = () => {
   return (
     <header className="header animate-fadeInDown" id="header">
       <div className="header__container">
-        <img src={logo} alt="Logo Constructora" className="header__logo" />
+        <img
+          src={logo}
+          alt="Logo Constructora"
+          className="header__logo"
+          style={{ cursor: 'pointer' }}
+          onClick={() => navigate('/')}
+        />
         <nav className="header__nav">
           <ul>
             <li>
