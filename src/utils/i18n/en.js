@@ -108,6 +108,14 @@ const en = {
     saitama_nombre: "Saitama",
     saitama_cargo: "Real Estate Advisor",
     saitama_desc: "with extensive experience in urbanization and housing development projects. Committed to providing personalized support to each client, ensuring safety, trust, and effective results."
+  },
+  cta: {
+    titulo1: 'Ready to make your real estate',
+    titulo2: 'project a reality',
+    inmobiliario: 'dream',
+    desc1: 'Find the ideal place to build your future.',
+    desc2: 'We are ready to advise you every step of the way.',
+    boton: 'Contact us'
   }
 };
 

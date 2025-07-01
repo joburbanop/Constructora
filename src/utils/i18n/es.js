@@ -108,6 +108,14 @@ const es = {
     saitama_nombre: "Saitama",
     saitama_cargo: "Asesor inmobiliario",
     saitama_desc: "con amplia experiencia en proyectos de urbanización y desarrollo habitacional. Comprometido con brindar acompañamiento personalizado a cada cliente, garantizando seguridad, confianza y resultados efectivos."
+  },
+  cta: {
+    titulo1: '¿Listo para hacer realidad',
+    titulo2: 'tu proyecto',
+    inmobiliario: 'inmobiliario',
+    desc1: 'Encuentra el lugar ideal para construir tu futuro.',
+    desc2: 'Estamos listos para asesorarte en cada paso.',
+    boton: 'Contáctanos'
   }
 };
 

@@ -48,7 +48,6 @@ export default function ProyectosEnMarcha() {
                     window.open(proy.enlace, '_blank');
                   }
                 }}
-                disabled={proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo'}
               >
                 {t.proyectos.boton || 'Ver más'}
                 {(proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo') && (

@@ -36,8 +36,9 @@
 .ambito-btn.gray {
   background: #bdbdbd;
   color: #fff;
-  cursor: not-allowed;
   position: relative;
+  cursor: pointer;
+  opacity: 1;
 }
 .ambito-btn.lujo .proximamente-label {
   display: none;

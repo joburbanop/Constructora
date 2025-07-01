@@ -7,6 +7,13 @@ import Button from '../components/Button';
 import ColombiaBenefits from '../components/ColombiaBenefits';
 import Footer from '../components/Footer';
 import Expertos from '../components/Expertos';
+import ContactoCTA from '../components/ContactoCTA';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
+import '../styles/Slider.css';
 
 const ProyectosColombia = () => {
   const { t } = useIdioma();
@@ -18,57 +25,90 @@ const ProyectosColombia = () => {
   return (
     <>
       <Header />
-      <section
-        style={{
-          width: '100%',
-          height: '520px',
-          backgroundImage: `url(${heroImg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 35%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          position: 'relative',
-        }}
-      >
-        <div style={{
-          position: 'absolute',
-          left: 0, right: 0, top: 0, bottom: 0,
-          background: 'linear-gradient(180deg,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.15) 60%,rgba(0,0,0,0.7) 100%)',
-          zIndex: 1
-        }} />
-        <div style={{
-          position: 'relative',
-          zIndex: 2,
-          color: '#fff',
-          textAlign: 'center',
-          width: '100%',
-          padding: '2rem 1rem',
-        }}>
-          <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem', textShadow: '0 4px 16px rgba(0,0,0,0.4)' }}>
-            EXPERTOS EN CONSTRUCCIÓN
-          </h1>
-          <h2 style={{ fontSize: '2.2rem', fontWeight: 500, textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
-            Proyectos Colombia
-          </h2>
-        </div>
+      {/* Hero Slider animado */}
+      <section style={{ width: '100%', height: '520px', marginBottom: 0, padding: 0 }}>
+        <Swiper
+          modules={[Pagination, Autoplay, EffectFade]}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          effect="fade"
+          speed={1200}
+          loop
+          className="mySwiper"
+        >
+          {renders.slice(0, 3).map((r, idx) => (
+            <SwiperSlide key={idx}>
+              <div
+                className="slide-bg"
+                style={{
+                  backgroundImage: `url(${r.imagen})`,
+                  width: '100%',
+                  height: '520px',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center 35%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  position: 'relative',
+                }}
+              >
+                <div style={{
+                  position: 'absolute',
+                  left: 0, right: 0, top: 0, bottom: 0,
+                  background: 'linear-gradient(180deg,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.15) 60%,rgba(0,0,0,0.7) 100%)',
+                  zIndex: 1
+                }} />
+                <div style={{
+                  position: 'relative',
+                  zIndex: 2,
+                  color: '#fff',
+                  textAlign: 'center',
+                  width: '100%',
+                  padding: '2rem 1rem',
+                }}>
+                  <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem', textShadow: '0 4px 16px rgba(0,0,0,0.4)' }}>
+                    {t.proyectos.colombia_hero || 'EXPERTOS EN CONSTRUCCIÓN'}
+                  </h1>
+                  <h2 style={{ fontSize: '2.2rem', fontWeight: 500, textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
+                    {t.proyectos.colombia_title || 'Proyectos Colombia'}
+                  </h2>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
       <main style={{ maxWidth: 1200, margin: '40px auto', padding: 20 }}>
         <ColombiaBenefits />
         <h1 style={{ fontSize: '2.2rem', marginBottom: 32 }}>{t.proyectos.colombia_title || 'Proyectos Colombia'}</h1>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
-          {proyectosColombia.map((proy, idx) => (
-            <div key={idx} style={{ background: '#fff', borderRadius: 18, boxShadow: '0 4px 24px rgba(0,0,0,0.10)', padding: 24 }}>
-              <img src={proy.imagen} alt={t.proyectos[proy.titulo]} style={{ width: '100%', borderRadius: 12, marginBottom: 16 }} />
-              <h2 style={{ color: '#222', fontSize: '1.3rem', marginBottom: 8 }}>{t.proyectos[proy.titulo]}</h2>
-              <p style={{ color: '#444', marginBottom: 12 }}>{t.proyectos[proy.descripcion]}</p>
-              <Button onClick={() => window.open(proy.enlace, '_blank')}>{t.proyectos.boton || 'Ver más'}</Button>
-            </div>
-          ))}
+          {proyectosColombia.map((proy, idx) => {
+            const isUrbanizacion = proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo';
+            return (
+              <div key={idx} style={{ background: '#fff', borderRadius: 18, boxShadow: '0 4px 24px rgba(0,0,0,0.10)', padding: 24 }}>
+                <img src={proy.imagen} alt={t.proyectos[proy.titulo]} style={{ width: '100%', borderRadius: 12, marginBottom: 16 }} />
+                <h2 style={{ color: '#222', fontSize: '1.3rem', marginBottom: 8 }}>{t.proyectos[proy.titulo]}</h2>
+                <p style={{ color: '#444', marginBottom: 12 }}>{t.proyectos[proy.descripcion]}</p>
+                <Button
+                  className={`ambito-btn ${isUrbanizacion ? 'gray lujo' : 'orange'}`}
+                  onClick={() => {
+                    if (!isUrbanizacion) window.open(proy.enlace, '_blank');
+                  }}
+                >
+                  {t.proyectos.boton || 'Ver más'}
+                  {isUrbanizacion && (
+                    <span className="proximamente-label">Próximamente</span>
+                  )}
+                </Button>
+              </div>
+            );
+          })}
         </div>
        
       </main>
+    
       <Expertos />
+      <ContactoCTA />
       <Footer />
     </>
   );
