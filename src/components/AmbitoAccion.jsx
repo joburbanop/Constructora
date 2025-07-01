@@ -29,7 +29,13 @@ export default function AmbitoAccion() {
               <span className="ambito-card-title">{t.ambito[card.title]}</span>
             </div>
             <p className="ambito-card-desc">{t.ambito[card.desc]}</p>
-            <Button onClick={() => navigate('/proyectos-colombia')}>
+            <Button onClick={() => {
+              if (card.title === 'colombia_title') {
+                navigate('/proyectos-colombia');
+              } else if (card.title === 'usa_title') {
+                navigate('/proyectos-usa');
+              }
+            }}>
               {t.ambito.boton || 'Ver más'}
             </Button>
           </div>

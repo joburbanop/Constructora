@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import Slider from "../components/Slider";
+import renders from "../utils/renders";
 import proyectos from "../utils/proyectos";
 import { useIdioma } from '../context/IdiomaContext';
 import Button from '../components/Button';
@@ -9,11 +9,47 @@ const ProyectosColombia = () => {
   const { t } = useIdioma();
   // Filtrar proyectos de Colombia
   const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia');
+  // Usar el primer render como imagen de hero
+  const heroImg = renders[0]?.imagen;
 
   return (
     <>
       <Header />
-      <Slider />
+      <section
+        style={{
+          width: '100%',
+          height: '520px',
+          backgroundImage: `url(${heroImg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 35%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'relative',
+        }}
+      >
+        <div style={{
+          position: 'absolute',
+          left: 0, right: 0, top: 0, bottom: 0,
+          background: 'linear-gradient(180deg,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.15) 60%,rgba(0,0,0,0.7) 100%)',
+          zIndex: 1
+        }} />
+        <div style={{
+          position: 'relative',
+          zIndex: 2,
+          color: '#fff',
+          textAlign: 'center',
+          width: '100%',
+          padding: '2rem 1rem',
+        }}>
+          <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem', textShadow: '0 4px 16px rgba(0,0,0,0.4)' }}>
+            EXPERTOS EN CONSTRUCCIÓN
+          </h1>
+          <h2 style={{ fontSize: '2.2rem', fontWeight: 500, textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
+            Proyectos Colombia
+          </h2>
+        </div>
+      </section>
       <main style={{ maxWidth: 1200, margin: '40px auto', padding: 20 }}>
         <h1 style={{ fontSize: '2.2rem', marginBottom: 32 }}>{t.proyectos.colombia_title || 'Proyectos Colombia'}</h1>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
@@ -26,9 +62,7 @@ const ProyectosColombia = () => {
             </div>
           ))}
         </div>
-        <div style={{ marginTop: 40 }}>
-          <Button onClick={() => window.location.href = '/'}>Volver al inicio</Button>
-        </div>
+       
       </main>
     </>
   );
