@@ -42,14 +42,14 @@ export default function AmbitoAccion() {
                 onClick={() => {
                   if (card.title === 'colombia_title') {
                     navigate('/proyectos-colombia');
-                  } else if (card.title === 'usa_title') {
+                  } else if (card.title === 'usa_title' || card.title === 'locales_title') {
                     navigate('/proyectos-usa');
                   }
                 }}
                 disabled={isLujo}
               >
                 {t.ambito.boton || 'Ver más'}
-                {isLujo && <span className="proximamente-label">Próximamente</span>}
+                {isLujo && <span className="proximamente-label">{t.proyectos.proximamente}</span>}
               </Button>
             </div>
           );

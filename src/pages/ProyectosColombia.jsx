@@ -14,9 +14,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import '../styles/Slider.css';
+import { useNavigate } from 'react-router-dom';
 
 const ProyectosColombia = () => {
   const { t } = useIdioma();
+  const navigate = useNavigate();
   // Filtrar proyectos de Colombia
   const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia');
   // Usar el primer render como imagen de hero
@@ -91,13 +93,18 @@ const ProyectosColombia = () => {
                 <p style={{ color: '#444', marginBottom: 12 }}>{t.proyectos[proy.descripcion]}</p>
                 <Button
                   className={`ambito-btn ${isUrbanizacion ? 'gray lujo' : 'orange'}`}
-                  onClick={() => {
-                    if (!isUrbanizacion) window.open(proy.enlace, '_blank');
+                  onClick={(e) => {
+                    if (proy.titulo === 'coral_titulo') {
+                      e.preventDefault();
+                      navigate('/proyectos-usa');
+                    } else if (!isUrbanizacion && proy.enlace && proy.enlace !== '#') {
+                      window.open(proy.enlace, '_blank');
+                    }
                   }}
                 >
                   {t.proyectos.boton || 'Ver más'}
                   {isUrbanizacion && (
-                    <span className="proximamente-label">Próximamente</span>
+                    <span className="proximamente-label">{t.proyectos.proximamente}</span>
                   )}
                 </Button>
               </div>

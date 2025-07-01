@@ -5,6 +5,7 @@ import { MdLocationOn, MdLocationCity, MdHomeWork, MdStoreMallDirectory } from '
 import '../styles/ProyectosEnMarcha.css';
 import { useIdioma } from '../context/IdiomaContext';
 import SectionDivider from './SectionDivider';
+import { useNavigate } from 'react-router-dom';
 
 const iconosTipo = {
   urbanizacion: MdLocationCity,
@@ -14,6 +15,7 @@ const iconosTipo = {
 
 export default function ProyectosEnMarcha() {
   const { t } = useIdioma();
+  const navigate = useNavigate();
   return (
     <section className="proyectos-marcha">
          <SectionDivider textKey="proyectos" icon={<i className="fas fa-building"></i>} />
@@ -44,14 +46,16 @@ export default function ProyectosEnMarcha() {
               <Button
                 className={`ambito-btn ${(proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo') ? 'gray lujo' : 'orange'}`}
                 onClick={() => {
-                  if (!(proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo')) {
+                  if (proy.titulo === 'coral_titulo') {
+                    navigate('/proyectos-usa');
+                  } else if (!(proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo')) {
                     window.open(proy.enlace, '_blank');
                   }
                 }}
               >
                 {t.proyectos.boton || 'Ver más'}
                 {(proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo') && (
-                  <span className="proximamente-label">Próximamente</span>
+                  <span className="proximamente-label">{t.proyectos.proximamente}</span>
                 )}
               </Button>
             </div>

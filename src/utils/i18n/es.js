@@ -49,6 +49,7 @@ const es = {
     beneficio2_desc: 'Opciones flexibles para que puedas invertir sin preocupaciones.',
     beneficio3_titulo: 'Elige tu próximo hogar',
     beneficio3_desc: 'Encuentra la vivienda perfecta para ti y tu familia.',
+    proximamente: 'Próximamente',
   },
   entregados: {
     titulo: 'Proyectos entregados',

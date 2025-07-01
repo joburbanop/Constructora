@@ -49,6 +49,7 @@ const en = {
     beneficio2_desc: 'Flexible options so you can invest without worries.',
     beneficio3_titulo: 'Choose your next home',
     beneficio3_desc: 'Find the perfect home for you and your family.',
+    proximamente: 'Coming soon',
   },
   entregados: {
     titulo: 'Delivered Projects',
