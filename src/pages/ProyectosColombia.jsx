@@ -4,6 +4,9 @@ import renders from "../utils/renders";
 import proyectos from "../utils/proyectos";
 import { useIdioma } from '../context/IdiomaContext';
 import Button from '../components/Button';
+import ColombiaBenefits from '../components/ColombiaBenefits';
+import Footer from '../components/Footer';
+import Expertos from '../components/Expertos';
 
 const ProyectosColombia = () => {
   const { t } = useIdioma();
@@ -51,6 +54,7 @@ const ProyectosColombia = () => {
         </div>
       </section>
       <main style={{ maxWidth: 1200, margin: '40px auto', padding: 20 }}>
+        <ColombiaBenefits />
         <h1 style={{ fontSize: '2.2rem', marginBottom: 32 }}>{t.proyectos.colombia_title || 'Proyectos Colombia'}</h1>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
           {proyectosColombia.map((proy, idx) => (
@@ -64,6 +68,8 @@ const ProyectosColombia = () => {
         </div>
        
       </main>
+      <Expertos />
+      <Footer />
     </>
   );
 };

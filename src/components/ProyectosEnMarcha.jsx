@@ -41,7 +41,20 @@ export default function ProyectosEnMarcha() {
                 </span>
                 <span>{t.proyectos[proy.ubicacion]}</span>
               </div>
-              <Button className="proyecto-btn" onClick={() => window.open(proy.enlace, '_blank')}>{t.proyectos.boton || 'Ver'}</Button>
+              <Button
+                className={`ambito-btn ${(proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo') ? 'gray lujo' : 'orange'}`}
+                onClick={() => {
+                  if (!(proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo')) {
+                    window.open(proy.enlace, '_blank');
+                  }
+                }}
+                disabled={proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo'}
+              >
+                {t.proyectos.boton || 'Ver más'}
+                {(proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo') && (
+                  <span className="proximamente-label">Próximamente</span>
+                )}
+              </Button>
             </div>
           </div>
         ))}

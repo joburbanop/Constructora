@@ -39,7 +39,16 @@ const en = {
     coral_desc: 'The best opportunity to invest safely.',
     jamundi_colombia: 'Jamundí, Colombia',
     usa: 'United States',
-    boton: 'See more'
+    boton: 'See more',
+    beneficio_titulo1: 'We are',
+    beneficio_titulo2: 'builders with 17 years of experience',
+    beneficio_sub: 'in southwestern Colombia',
+    beneficio1_titulo: 'Secure investment',
+    beneficio1_desc: 'Your money is protected and backed in every project.',
+    beneficio2_titulo: 'Flexible payment options',
+    beneficio2_desc: 'Flexible options so you can invest without worries.',
+    beneficio3_titulo: 'Choose your next home',
+    beneficio3_desc: 'Find the perfect home for you and your family.',
   },
   entregados: {
     titulo: 'Delivered Projects',

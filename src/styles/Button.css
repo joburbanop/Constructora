@@ -25,3 +25,40 @@
   background: #e65c00;
   transform: scale(1.05);
 }
+
+.ambito-btn.orange {
+  background: #ff6600;
+  color: #fff;
+}
+.ambito-btn.orange:hover {
+  background: #e65c00;
+}
+.ambito-btn.gray {
+  background: #bdbdbd;
+  color: #fff;
+  cursor: not-allowed;
+  position: relative;
+}
+.ambito-btn.lujo .proximamente-label {
+  display: none;
+}
+.ambito-btn.lujo:hover .proximamente-label {
+  display: block;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #444;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  z-index: 10;
+  animation: fadeInProx 0.3s;
+}
+@keyframes fadeInProx {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
