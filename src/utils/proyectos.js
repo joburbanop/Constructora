@@ -15,7 +15,7 @@ const proyectos = [
     icono: 'condominio',
     iconoColor: '#222',
     ubicacion: 'jamundi_colombia',
-    enlace: '#',
+    enlace: '/rincon-del-lago',
     etiquetaColor: '#ff6600'
   },
   {
