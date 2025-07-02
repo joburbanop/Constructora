@@ -10,7 +10,10 @@ import Footer from '../components/Footer';
 export default function Home() {
   return (
     <>
-      <Header />
+      <Header 
+        showDefaultNav={true}
+        className="home-header"
+      />
       <Slider />
       <div className="main-content">
         <section id="ambito"><AmbitoAccion /></section>

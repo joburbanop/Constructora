@@ -6,6 +6,7 @@ import '../styles/ProyectosEnMarcha.css';
 import { useIdioma } from '../context/IdiomaContext';
 import SectionDivider from './SectionDivider';
 import { useNavigate } from 'react-router-dom';
+import { handleProyectoNavigation } from '../utils/navigation';
 
 const iconosTipo = {
   urbanizacion: MdLocationCity,
@@ -16,6 +17,11 @@ const iconosTipo = {
 export default function ProyectosEnMarcha() {
   const { t } = useIdioma();
   const navigate = useNavigate();
+
+  const isProyectoProximamente = (titulo) => {
+    return titulo === 'sanmiguel_titulo' || titulo === 'marbella_titulo';
+  };
+
   return (
     <section className="proyectos-marcha">
          <SectionDivider textKey="proyectos" icon={<i className="fas fa-building"></i>} />
@@ -44,17 +50,12 @@ export default function ProyectosEnMarcha() {
                 <span>{t.proyectos[proy.ubicacion]}</span>
               </div>
               <Button
-                className={`ambito-btn ${(proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo') ? 'gray lujo' : 'orange'}`}
-                onClick={() => {
-                  if (proy.titulo === 'coral_titulo') {
-                    navigate('/proyectos-usa');
-                  } else if (!(proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo')) {
-                    window.open(proy.enlace, '_blank');
-                  }
-                }}
+                className={`ambito-btn ${isProyectoProximamente(proy.titulo) ? 'gray lujo' : 'orange'}`}
+                onClick={() => handleProyectoNavigation(proy, navigate)}
+                aria-label={isProyectoProximamente(proy.titulo) ? t.proyectos.proximamente : t.proyectos.boton}
               >
                 {t.proyectos.boton || 'Ver más'}
-                {(proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo') && (
+                {isProyectoProximamente(proy.titulo) && (
                   <span className="proximamente-label">{t.proyectos.proximamente}</span>
                 )}
               </Button>

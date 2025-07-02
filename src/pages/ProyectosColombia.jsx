@@ -15,18 +15,74 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import '../styles/Slider.css';
 import { useNavigate } from 'react-router-dom';
+import { handleProyectoNavigation, navigateToSection } from '../utils/navigation';
 
 const ProyectosColombia = () => {
   const { t } = useIdioma();
   const navigate = useNavigate();
+  
   // Filtrar proyectos de Colombia
   const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia');
   // Usar el primer render como imagen de hero
   const heroImg = renders[0]?.imagen;
 
+  // Navegación específica para Colombia
+  const colombiaNavItems = (
+    <ul>
+      <li>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate('/');
+          }}
+        >
+          {t.header.inicio}
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate('/proyectos-usa');
+          }}
+        >
+          {t.proyectos.usa || 'Proyectos USA'}
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            navigateToSection('expertos', navigate);
+          }}
+        >
+          {t.header.nosotros}
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            navigateToSection('contactanos', navigate);
+          }}
+        >
+          {t.header.contactanos}
+        </a>
+      </li>
+    </ul>
+  );
+
   return (
     <>
-      <Header />
+      <Header 
+        customNavItems={colombiaNavItems}
+        showDefaultNav={false}
+        className="colombia-header"
+      />
       {/* Hero Slider animado */}
       <section style={{ width: '100%', height: '520px', marginBottom: 0, padding: 0 }}>
         <Swiper
@@ -94,12 +150,8 @@ const ProyectosColombia = () => {
                 <Button
                   className={`ambito-btn ${isUrbanizacion ? 'gray lujo' : 'orange'}`}
                   onClick={(e) => {
-                    if (proy.titulo === 'coral_titulo') {
-                      e.preventDefault();
-                      navigate('/proyectos-usa');
-                    } else if (!isUrbanizacion && proy.enlace && proy.enlace !== '#') {
-                      window.open(proy.enlace, '_blank');
-                    }
+                    e.preventDefault();
+                    handleProyectoNavigation(proy, navigate);
                   }}
                 >
                   {t.proyectos.boton || 'Ver más'}

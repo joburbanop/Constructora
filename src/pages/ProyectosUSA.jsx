@@ -8,16 +8,74 @@ import { useIdioma } from '../context/IdiomaContext';
 import Button from '../components/Button';
 import proyectos from "../utils/proyectos";
 import coralLogo from '../assets/coral.png';
+import { useNavigate } from 'react-router-dom';
+import { navigateToSection } from '../utils/navigation';
 
 const ProyectosUSA = () => {
   const { t } = useIdioma();
+  const navigate = useNavigate();
+  
   // Filtrar proyectos de USA
   const proyectosUSA = proyectos.filter(p => p.ubicacion === 'usa');
   const proyecto = proyectosUSA[0];
 
+  // Navegación específica para USA
+  const usaNavItems = (
+    <ul>
+      <li>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate('/');
+          }}
+        >
+          {t.header.inicio}
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate('/proyectos-colombia');
+          }}
+        >
+          {t.proyectos.colombia_title || 'Proyectos Colombia'}
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            navigateToSection('expertos', navigate);
+          }}
+        >
+          {t.header.nosotros}
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            navigateToSection('contactanos', navigate);
+          }}
+        >
+          {t.header.contactanos}
+        </a>
+      </li>
+    </ul>
+  );
+
   return (
     <>
-      <Header />
+      <Header 
+        customNavItems={usaNavItems}
+        showDefaultNav={false}
+        className="usa-header"
+      />
       <Hero
         imagen={proyecto.imagen}
         titulo={t.proyectos.usa || "Proyectos en Estados Unidos"}

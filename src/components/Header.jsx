@@ -5,7 +5,12 @@ import { flags, languages } from '../utils/idiomas';
 import { useIdioma } from '../context/IdiomaContext';
 import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ 
+  customNavItems = null, 
+  showDefaultNav = true, 
+  customLogoAction = null,
+  className = "" 
+}) => {
   const { idioma, setIdioma, t } = useIdioma();
   const navigate = useNavigate();
 
@@ -13,33 +18,55 @@ const Header = () => {
     setIdioma(e.target.value);
   };
 
+  const handleLogoClick = () => {
+    if (customLogoAction) {
+      customLogoAction();
+    } else {
+      navigate('/');
+    }
+  };
+
+  const renderNavItems = () => {
+    if (customNavItems) {
+      return customNavItems;
+    }
+
+    if (!showDefaultNav) {
+      return null;
+    }
+
+    return (
+      <ul>
+        <li>
+          <a
+            href="#header"
+            onClick={e => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >
+            {t.header.inicio}
+          </a>
+        </li>
+        <li><a href="#proyectos">{t.header.proyectos}</a></li>
+        <li><a href="#nosotros">{t.header.nosotros}</a></li>
+        <li><a href="#contactanos">{t.header.contactanos}</a></li>
+      </ul>
+    );
+  };
+
   return (
-    <header className="header animate-fadeInDown" id="header">
+    <header className={`header animate-fadeInDown ${className}`} id="header">
       <div className="header__container">
         <img
           src={logo}
           alt="Logo Constructora"
           className="header__logo"
           style={{ cursor: 'pointer' }}
-          onClick={() => navigate('/')}
+          onClick={handleLogoClick}
         />
         <nav className="header__nav">
-          <ul>
-            <li>
-              <a
-                href="#header"
-                onClick={e => {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-              >
-                {t.header.inicio}
-              </a>
-            </li>
-            <li><a href="#proyectos">{t.header.proyectos}</a></li>
-            <li><a href="#nosotros">{t.header.nosotros}</a></li>
-            <li><a href="#contactanos">{t.header.contactanos}</a></li>
-          </ul>
+          {renderNavItems()}
         </nav>
         <div className="header__lang-select">
           <select value={idioma} onChange={handleIdiomaChange}>

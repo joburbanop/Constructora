@@ -92,3 +92,55 @@
     padding: 0.3em 0.7em;
   }
 }
+
+/* Estilos específicos para cada página */
+.home-header {
+  /* Mantiene el estilo original */
+}
+
+.colombia-header {
+  background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%);
+}
+
+.colombia-header .header__nav ul li a {
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.colombia-header .header__nav ul li a:hover {
+  color: #ffcc00;
+  transform: translateY(-2px);
+}
+
+.usa-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+}
+
+.usa-header .header__nav ul li a {
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.usa-header .header__nav ul li a:hover {
+  color: #fbbf24;
+  transform: translateY(-2px);
+}
+
+/* Animación para los headers específicos */
+.colombia-header,
+.usa-header {
+  animation: slideInDown 0.8s ease-out;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
