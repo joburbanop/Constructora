@@ -8,8 +8,9 @@ import Button from './Button';
 import slides from '../utils/slides';
 import { useIdioma } from '../context/IdiomaContext';
 
-export default function Slider() {
+export default function Slider({contenido, namespace = 'home'}) {
   const { t } = useIdioma();
+  
   return (
     <div className="slider-container">
       <Swiper
@@ -21,16 +22,23 @@ export default function Slider() {
         loop
         className="mySwiper"
       >
-        {slides.map((slide, idx) => (
-          <SwiperSlide key={idx}>
+        {contenido.map((slide, idx) => (
+          console.log('Imagen recibida:', slide.image),
+          <SwiperSlide key={slide.title}>
             <div
               className="slide-bg"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               <div className="slide-content animate-fadeInUp">
-                <h1 className="animate-fadeIn">{t.slider[slide.title]}</h1>
-                <p className="animate-fadeIn" style={{ animationDelay: '0.3s' }}>{t.slider[slide.subtitle]}</p>
-                <Button style={{ animationDelay: '0.6s' }}>{t.slider.boton}</Button>
+                <h1 className="animate-fadeIn">
+                  {t.slider?.[namespace]?.[slide.title] || slide.title}
+                </h1>
+                <p className="animate-fadeIn" style={{ animationDelay: '0.3s' }}>
+                  {t.slider?.[namespace]?.[slide.subtitle] || slide.subtitle}
+                </p>
+                <Button style={{ animationDelay: '0.6s' }}>
+                  {t.slider?.[namespace]?.boton || "Ver más"}
+                </Button>
               </div>
             </div>
           </SwiperSlide>

@@ -5,13 +5,35 @@ import { flags, languages } from '../utils/idiomas';
 import { useIdioma } from '../context/IdiomaContext';
 import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({
+  customNavItems = null,
+  showDefaultNavItems = true,
+  customLogoaction = null, 
+  className = '',
+}) => {
   const { idioma, setIdioma, t } = useIdioma();
   const navigate = useNavigate();
 
   const handleIdiomaChange = (e) => {
     setIdioma(e.target.value);
   };
+  const handleLogoClick = () => {
+    if (customLogoaction) {
+      customLogoaction();
+    }else {
+      navigate('/');
+    }
+  };
+  const renderNavItems = () => {
+    if (customNavItems) {
+      return customNavItems;
+    }
+    if (showDefaultNavItems) {
+      return null;
+    }
+  };
+
+
 
   return (
     <header className="header animate-fadeInDown" id="header">
