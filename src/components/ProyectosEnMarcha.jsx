@@ -48,6 +48,10 @@ export default function ProyectosEnMarcha() {
                 onClick={() => {
                   if (proy.titulo === 'coral_titulo') {
                     navigate('/proyectos-usa');
+                  
+                  }else if (proy.titulo === 'rincon_titulo') {
+                    navigate('/rincon-del-lago');
+    
                   } else if (!(proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo')) {
                     window.open(proy.enlace, '_blank');
                   }
