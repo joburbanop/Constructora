@@ -10,6 +10,7 @@ import proyectos from "../utils/proyectos";
 import coralLogo from '../assets/coral.png';
 import { useNavigate } from 'react-router-dom';
 import { navigateToSection } from '../utils/navigation';
+import Expertos from '../components/Expertos';
 
 const ProyectosUSA = () => {
   const { t } = useIdioma();
@@ -49,7 +50,12 @@ const ProyectosUSA = () => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            navigateToSection('expertos', navigate);
+            const expertosSection = document.getElementById('expertos');
+            if (expertosSection) {
+              expertosSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              navigateToSection('expertos', navigate);
+            }
           }}
         >
           {t.header.nosotros}
@@ -60,7 +66,20 @@ const ProyectosUSA = () => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            navigateToSection('contactanos', navigate);
+            if (window.location.pathname === '/') {
+              const contactoSection = document.getElementById('contactanos');
+              if (contactoSection) {
+                contactoSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            } else {
+              navigate('/');
+              setTimeout(() => {
+                const contactoSection = document.getElementById('contactanos');
+                if (contactoSection) {
+                  contactoSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }, 500);
+            }
           }}
         >
           {t.header.contactanos}
@@ -74,7 +93,6 @@ const ProyectosUSA = () => {
       <Header 
         customNavItems={usaNavItems}
         showDefaultNav={false}
-        className="usa-header"
       />
       <Hero
         imagen={proyecto.imagen}
@@ -95,6 +113,7 @@ const ProyectosUSA = () => {
           pdf={proyecto.pdf}
         />
       </main>
+      <Expertos />
       <Footer />
     </>
   );

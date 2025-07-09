@@ -8,7 +8,7 @@ const Expertos = () => {
   const { t } = useIdioma();
 
   return (
-    <section className="expertos-tarjetas-section" id="contactanos">
+    <section className="expertos-tarjetas-section" id="expertos">
       <SectionDivider textKey="contactanos" />
       <h2>
         {t.expertos?.titulo || "Nuestro equipo de"} <span className="expertos-highlight">{t.expertos?.highlight || "Expertos"}</span>

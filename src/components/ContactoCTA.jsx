@@ -4,7 +4,7 @@ import { useIdioma } from '../context/IdiomaContext';
 const ContactoCTA = () => {
   const { t } = useIdioma();
   return (
-    <section style={{ textAlign: 'center', padding: '64px 0 48px 0', background: '#fff' }}>
+    <section id="contactanos" style={{ textAlign: 'center', padding: '64px 0 48px 0', background: '#fff' }}>
       <h2 style={{
         fontSize: '3rem',
         fontWeight: 800,

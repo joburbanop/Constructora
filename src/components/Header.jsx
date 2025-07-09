@@ -50,7 +50,15 @@ const Header = ({
         </li>
         <li><a href="#proyectos">{t.header.proyectos}</a></li>
         <li><a href="#nosotros">{t.header.nosotros}</a></li>
-        <li><a href="#contactanos">{t.header.contactanos}</a></li>
+        <li><a href="#contactanos" onClick={e => {
+          e.preventDefault();
+          const contactoSection = document.getElementById('contactanos');
+          if (contactoSection) {
+            contactoSection.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            window.location.href = '/#contactanos';
+          }
+        }}>{t.header.contactanos}</a></li>
       </ul>
     );
   };

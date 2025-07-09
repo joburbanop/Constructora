@@ -56,7 +56,12 @@ const ProyectosColombia = () => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            navigateToSection('expertos', navigate);
+            const expertosSection = document.getElementById('expertos');
+            if (expertosSection) {
+              expertosSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              navigateToSection('expertos', navigate);
+            }
           }}
         >
           {t.header.nosotros}
@@ -67,7 +72,18 @@ const ProyectosColombia = () => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            navigateToSection('contactanos', navigate);
+            const contactoSection = document.getElementById('contactanos');
+            if (window.location.pathname === '/proyectos-colombia' && contactoSection) {
+              contactoSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              navigate('/proyectos-colombia');
+              setTimeout(() => {
+                const contactoSection = document.getElementById('contactanos');
+                if (contactoSection) {
+                  contactoSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }, 500);
+            }
           }}
         >
           {t.header.contactanos}
@@ -81,7 +97,6 @@ const ProyectosColombia = () => {
       <Header 
         customNavItems={colombiaNavItems}
         showDefaultNav={false}
-        className="colombia-header"
       />
       {/* Hero Slider animado */}
       <section style={{ width: '100%', height: '520px', marginBottom: 0, padding: 0 }}>
