@@ -6,15 +6,13 @@ import RendersDestacados from '../components/RendersDestacados';
 import ProyectosEntregados from '../components/ProyectosEntregados';
 import Expertos from '../components/Expertos';
 import Footer from '../components/Footer';
+import slides from '../utils/slides';
 
 export default function Home() {
   return (
     <>
-      <Header 
-        showDefaultNav={true}
-        className="home-header"
-      />
-      <Slider />
+      <Header />
+      <Slider contenido={slides} namespace="home" />
       <div className="main-content">
         <section id="ambito"><AmbitoAccion /></section>
         <section id="proyectos"><ProyectosEnMarcha /></section>

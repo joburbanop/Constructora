@@ -16,6 +16,7 @@ export const handleProyectoNavigation = (proyecto, navigate) => {
   // Navegación específica por proyecto
   if (proyecto.titulo === 'coral_titulo') {
     navigate('/proyectos-usa');
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
     return;
   }
   
@@ -28,8 +29,10 @@ export const handleProyectoNavigation = (proyecto, navigate) => {
   // Navegación interna por ubicación
   if (proyecto.ubicacion === 'jamundi_colombia') {
     navigate('/proyectos-colombia');
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
   } else if (proyecto.ubicacion === 'usa') {
     navigate('/proyectos-usa');
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
   }
 };
 

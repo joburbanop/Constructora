@@ -5,6 +5,7 @@ import { flags, languages } from '../utils/idiomas';
 import { useIdioma } from '../context/IdiomaContext';
 import { useNavigate } from 'react-router-dom';
 
+
 const Header = ({ 
   customNavItems = null, 
   showDefaultNav = true, 
@@ -17,14 +18,14 @@ const Header = ({
   const handleIdiomaChange = (e) => {
     setIdioma(e.target.value);
   };
-
   const handleLogoClick = () => {
-    if (customLogoAction) {
-      customLogoAction();
-    } else {
+    if (customLogoaction) {
+      customLogoaction();
+    }else {
       navigate('/');
     }
   };
+
 
   const renderNavItems = () => {
     if (customNavItems) {

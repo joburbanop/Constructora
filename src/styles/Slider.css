@@ -26,6 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .slide-bg::before {
@@ -48,6 +49,8 @@
   color: #fff;
   text-align: center;
   padding: 2rem 1rem;
+  transition: opacity 0.5s ease;
+
 }
 
 .slide-content h1 {
@@ -101,4 +104,17 @@ html, body, #root {
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
+}
+
+.swiper-slide:not(.swiper-slide-active) .slide-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.swiper-slide:not(.swiper-slide-active) .slide-bg::before {
+  opacity: 0;
+}
+
+.slide-bg::before {
+  transition: opacity 0.4s ease;
 }

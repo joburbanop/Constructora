@@ -12,6 +12,8 @@ import { useNavigate } from 'react-router-dom';
 import { navigateToSection } from '../utils/navigation';
 import Expertos from '../components/Expertos';
 import ContactoCTA from '../components/ContactoCTA';
+import Slider from '../components/Slider';
+import slidesUSA from '../utils/slidesUSA';
 
 const ProyectosUSA = () => {
   const { t } = useIdioma();
@@ -93,11 +95,7 @@ const ProyectosUSA = () => {
         customNavItems={usaNavItems}
         showDefaultNav={false}
       />
-      <Hero
-        imagen={proyecto.imagen}
-        titulo={t.proyectos.usa || "Proyectos en Estados Unidos"}
-        subtitulo={t.proyectos.coral_desc || "Una gran oportunidad de inversión"}
-      />
+      <Slider contenido={slidesUSA} namespace="usa" />
       <main>
         <ProjectInfo
           nombre={t.proyectos[proyecto.titulo]}

@@ -87,16 +87,38 @@ const es = {
     boton: 'Ver más'
   },
   slider: {
-    slide1_title: 'DESCUBRE TU ESPACIO IDEAL',
-    slide1_subtitle: 'CASAS, CONDOMINIOS Y LOTES',
-    slide2_title: 'VIVE EN EL LUGAR QUE SUEÑAS',
-    slide2_subtitle: 'PROYECTOS MODERNOS Y LUGARES DE ALTA VALORACION',
-    slide3_title: 'INVIERTE CON CONFIANZA',
-    slide3_subtitle: 'PROYECTOS SEGUROS Y DE CALIDAD',
-    slide4_title: 'CREA TU FUTURO',
-    slide4_subtitle: 'SOLUCIONES INMOBILIARIAS PARA TI',
-    boton: 'Ver proyectos'
+    home: {
+      slide1_title: 'DESCUBRE TU ESPACIO IDEAL',
+      slide1_subtitle: 'CASAS, CONDOMINIOS Y LOTES',
+      slide2_title: 'VIVE EN EL LUGAR QUE SUEÑAS',
+      slide2_subtitle: 'PROYECTOS MODERNOS Y LUGARES DE ALTA VALORACION',
+      slide3_title: 'INVIERTE CON CONFIANZA',
+      slide3_subtitle: 'PROYECTOS SEGUROS Y DE CALIDAD',
+      slide4_title: 'CREA TU FUTURO',
+      slide4_subtitle: 'SOLUCIONES INMOBILIARIAS PARA TI',
+      boton: 'Ver proyectos'
   },
+    rincon: {
+      slide1_title: 'RINCÓN DEL LAGO: NATURALEZA Y ARQUITECTURA',
+      slide1_subtitle: 'Un proyecto pensado para reconectarte con lo esencial',
+      slide2_title: 'ESPACIOS MODERNOS EN ENTORNOS VERDES',
+      slide2_subtitle: 'Diseño, confort y calidad de vida',
+      slide3_title: 'VIVE EN ARMONÍA CON LA NATURALEZA',
+      slide3_subtitle: 'Un lugar donde cada detalle cuenta',
+      boton: 'Contáctanos'
+    
+  },
+  usa: {
+    slide1_title: 'Locales comerciales en USA',
+    slide1_subtitle: 'La mejor oportunidad para invertir con seguridad',
+    slide2_title: 'Render comercial',
+    slide2_subtitle: 'Espacios modernos y rentables',
+    slide3_title: 'Inversión en Estados Unidos',
+    slide3_subtitle: 'Diversifica tu portafolio con confianza',
+    boton: 'Ver más'
+  }
+},
+
   dividers: {
     proyectos: 'Proyectos',
     entregados: 'Proyectos entregados',
