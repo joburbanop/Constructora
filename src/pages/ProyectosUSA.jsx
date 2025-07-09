@@ -11,6 +11,7 @@ import coralLogo from '../assets/coral.png';
 import { useNavigate } from 'react-router-dom';
 import { navigateToSection } from '../utils/navigation';
 import Expertos from '../components/Expertos';
+import ContactoCTA from '../components/ContactoCTA';
 
 const ProyectosUSA = () => {
   const { t } = useIdioma();
@@ -66,13 +67,11 @@ const ProyectosUSA = () => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            if (window.location.pathname === '/') {
-              const contactoSection = document.getElementById('contactanos');
-              if (contactoSection) {
-                contactoSection.scrollIntoView({ behavior: 'smooth' });
-              }
+            const contactoSection = document.getElementById('contactanos');
+            if (window.location.pathname === '/proyectos-usa' && contactoSection) {
+              contactoSection.scrollIntoView({ behavior: 'smooth' });
             } else {
-              navigate('/');
+              navigate('/proyectos-usa');
               setTimeout(() => {
                 const contactoSection = document.getElementById('contactanos');
                 if (contactoSection) {
@@ -113,7 +112,9 @@ const ProyectosUSA = () => {
           pdf={proyecto.pdf}
         />
       </main>
+     
       <Expertos />
+      <ContactoCTA />
       <Footer />
     </>
   );
