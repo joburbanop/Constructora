@@ -19,6 +19,13 @@ export const handleProyectoNavigation = (proyecto, navigate) => {
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
     return;
   }
+
+  if (proyecto.titulo === 'rincon_titulo') {
+  navigate('/rincon-del-lago');
+  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+  return;
+}
+
   
   // Enlaces externos - solo si es un enlace real (no '#')
   if (proyecto.enlace && proyecto.enlace !== '#') {

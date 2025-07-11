@@ -1,0 +1,67 @@
+.espacios-compartidos {
+  margin-top: 2rem;
+  position: relative;
+  padding: 0 3rem;
+}
+
+.espacios-titulo {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.espacio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.espacio-icono {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.espacio-titulo {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Flechas de navegación */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #333;
+    transition: color 0.2s ease;
+    top: 50%;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #000;
+
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 2rem;      /* tamaño del ícono de flecha */
+}
+.espacios-wrapper {
+  max-width: 900px; /* o el valor que prefieras */
+  margin: 0 auto; /* centrar */
+  padding: 20px;
+  position: relative;
+ 
+}
+
+.espacios-swiper {
+  width: 100%;
+}

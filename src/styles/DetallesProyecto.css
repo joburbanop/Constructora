@@ -1,0 +1,104 @@
+.detalle-proyecto {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+.proyecto-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.logo-proyecto {
+  max-width: 280px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.proyecto-texto {
+  flex: 1;
+  min-width: 250px;
+}
+
+
+.logo-proyecto {
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto 2rem auto;
+}
+
+.detalle-proyecto h1 {
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.detalle-proyecto h2 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  color: #555;
+}
+
+.detalle-proyecto h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #777;
+}
+
+.detalle-proyecto .descripcion,
+.detalle-proyecto .area,
+.detalle-proyecto .precio,
+.detalle-proyecto .ubicacion {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.detalle-proyecto .precio {
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.detalle-proyecto .btn-pdf {
+  display: inline-block;
+  margin: 1.5rem auto;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff6600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.detalle-proyecto .btn-pdf:hover {
+  background-color: #e05500;
+}
+
+@media (max-width: 600px) {
+  .detalle-proyecto h1 {
+    font-size: 1.6rem;
+  }
+
+  .detalle-proyecto h2 {
+    font-size: 1.2rem;
+  }
+
+  .detalle-proyecto h3 {
+    font-size: 1rem;
+  }
+
+  .logo-proyecto {
+    max-width: 150px;
+  }
+}

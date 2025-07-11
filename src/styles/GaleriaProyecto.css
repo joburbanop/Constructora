@@ -1,0 +1,36 @@
+.galeria-proyecto {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.galeria-titulo {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns:  repeat(3, 1fr); 
+  gap: 1rem;
+
+}
+
+.galeria-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.galeria-img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -51,6 +51,47 @@ const es = {
     beneficio3_desc: 'Encuentra la vivienda perfecta para ti y tu familia.',
     proximamente: 'Próximamente',
   },
+
+ espacios_titulo: 'Espacios comunes', 
+ rincon_detalle: {
+  titulo: 'Rincón del Lago',
+  subtitulo: 'Más cerca de tus sueños',
+  subtitulo_2: 'CONDOMINIO CAMPESTRE',
+  descripcion: 'El condominio Rincón del Lago se ubica en Alfaguara, Jamundí, a solo 20 minutos de Cali y se destaca su entorno natural. Todas las vías asfaltadas, óptimos servicios públicos, telecomunicaciones, monitoreo permanente para disfrutar la seguridad, exclusividad y comodidad de vivir mejor. Obra en desarrollo continuo. Aprovecha precios de preventa en lotes. Entrega el 30 de abril de 2026.',
+  area: 'Lotes desde 150 m² a 346 m² para autoconstruir con arquitectura unificada. Puede adecuar el interior de la casa a su gusto y necesidades con los materiales y acabados que prefiera. Disfruta de casas con ubicación tipo esquina y jardines privados que te brindan mayor privacidad. Elige también lotes únicos con zonas verdes alrededor y sin vecinos contiguos.',
+  precio: 'Desde $00000',
+  ubicacion: 'Jamundí, Colombia',
+
+  espacios: [
+    'bronceo',
+    'piscina',
+    'social',
+    'gym',
+    'voley',
+    'multiple',
+    'infantiles',
+    'verdes',
+    'senderos',
+    'zonapet',
+    'bbq',
+    'comercial'
+  ]
+},
+
+espacios: {
+  bronceo: 'Zona bronceo',
+  piscina: 'Piscina',
+  social: 'Salón social',
+  gym: 'Gimnasio',
+  voley: 'Voleibol playa',
+  multiple: 'Cancha múltiple',
+  infantiles: 'Parques infantiles',
+  verdes: 'Zonas verdes',
+  senderos: 'Senderos verdes',
+  zonapet: 'Zona pet',
+  bbq: 'Zona BBQ',
+  comercial: 'Zona comercial'
+},
   entregados: {
     titulo: 'Proyectos entregados',
     puertas_del_sol: 'Puertas del Sol',
@@ -123,7 +164,10 @@ const es = {
     proyectos: 'Proyectos',
     entregados: 'Proyectos entregados',
     nosotros: 'Nosotros',
-    renders: 'Renders destacados'
+    renders: 'Renders destacados',
+    espacios: 'Espacios ',
+    galeria: 'Galería'
+
   },
   expertos: {
     titulo: "Nuestro equipo de",
