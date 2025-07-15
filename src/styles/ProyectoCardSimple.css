@@ -1,0 +1,64 @@
+.proyecto-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 24px;
+  transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-4px);
+}
+
+.proyecto-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.proyecto-card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.proyecto-card-desc {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 16px;
+  text-align: justify;
+  white-space: pre-line;
+}
+
+.ambito-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ambito-btn.orange {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.ambito-btn.gray.lujo {
+  background-color: #aaa;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.proximamente-label {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+}

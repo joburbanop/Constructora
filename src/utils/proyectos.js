@@ -47,7 +47,29 @@ const proyectos = [
     tipo: 'locales',
     icono: 'locales',
     iconoColor: '#222',
-    ubicacion: 'usa',
+    ubicacion: 'cape_coral_usa',
+    enlace: '#',
+    etiquetaColor: '#ffb347'
+  },
+  {
+    imagen: Coral,
+    titulo: 'casa_usa_1_title',
+    descripcion: 'casa_usa_1_desc',
+    tipo: 'locales',
+    icono: 'locales',
+    iconoColor: '#222',
+    ubicacion: 'cape_coral_usa',
+    enlace: '#',
+    etiquetaColor: '#ffb347'
+  },
+   {
+    imagen: Coral,
+    titulo: 'casa_usa_2_title',
+    descripcion: 'casa_usa_2_desc',
+    tipo: 'locales',
+    icono: 'locales',
+    iconoColor: '#222',
+    ubicacion: 'cape_coral_usa',
     enlace: '#',
     etiquetaColor: '#ffb347'
   }
