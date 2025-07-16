@@ -9,7 +9,9 @@ import { useIdioma } from '../context/IdiomaContext';
 import EspaciosSociales from "../components/EspaciosSociales";
 import Footer from "../components/Footer";
 import SectionDivider from "../components/SectionDivider";
-
+import AreaPrecioUbic from "../components/AreaPrecioUbic";
+import InfoZigZag from "../components/InfoZigZag";
+import infoZigZag  from "../utils/infoZigZag";
 const InfoRinconLago = () => {
    const { t } = useIdioma();
   console.log("InfoRinconLago renderizado");
@@ -20,6 +22,12 @@ const InfoRinconLago = () => {
       <DetallesProyecto id="rincon" />
       <SectionDivider textKey="espacios" />
       <EspaciosSociales id="rincon" claves={t.rincon_detalle.espacios} />
+      <SectionDivider textKey="detalles" />
+
+      <AreaPrecioUbic proyectoKey="rincon_lago" />
+      <SectionDivider textKey="detalles" />
+      <InfoZigZag elementos={infoZigZag} textoKey="info_ZigZag_rincon"/>
+
       <SectionDivider textKey="galeria" />
       <GaleriaProyecto id="rincon" />
       <Footer/>

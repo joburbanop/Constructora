@@ -42,7 +42,7 @@ const proyectos = [
   },
   {
     imagen: Coral,
-    titulo: 'coral_titulo',
+    titulo: 'coral_title',
     descripcion: 'coral_desc',
     tipo: 'locales',
     icono: 'locales',

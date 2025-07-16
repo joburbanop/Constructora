@@ -1,14 +1,14 @@
-import Rincon from '../assets/Logo_rincon.webp';
-import img1 from '../assets/Rincon_lago_galeria1.webp';
-import img2 from '../assets/Rincon_lago_galeria2.webp';
-import img3 from '../assets/Rincon_lago_galeria3.webp';
-import img4 from '../assets/Rincon_lago_galeria4.webp';
-import img5 from '../assets/Rincon_lago_galeria5.webp';
-import img6 from '../assets/Rincon_lago_galeria6.webp';
-import img7 from '../assets/Rincon_lago_galeria7.webp';
-import img8 from '../assets/Rincon_lago_galeria8.webp';
-import img9 from '../assets/Rincon_lago_galeria9.webp';
-import img10 from '../assets/Rincon_lago_galeria10.webp';
+import Rincon from '../assets/rincon_lago/Logo_rincon.webp';
+import img1 from '../assets/rincon_lago/Rincon_lago_galeria1.webp';
+import img2 from '../assets/rincon_lago/Rincon_lago_galeria2.webp';
+import img3 from '../assets/rincon_lago/Rincon_lago_galeria3.webp';
+import img4 from '../assets/rincon_lago/Rincon_lago_galeria4.webp';
+import img5 from '../assets/rincon_lago/Rincon_lago_galeria5.webp';
+import img6 from '../assets/rincon_lago/Rincon_lago_galeria6.webp';
+import img7 from '../assets/rincon_lago/Rincon_lago_galeria7.webp';
+import img8 from '../assets/rincon_lago/Rincon_lago_galeria8.webp';
+import img9 from '../assets/rincon_lago/Rincon_lago_galeria9.webp';
+import img10 from '../assets/rincon_lago/Rincon_lago_galeria10.webp';
 
 
 export const infoProyectos = {

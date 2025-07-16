@@ -1,0 +1,40 @@
+
+.contenedor-bloques {
+  display: flex;
+  justify-content: center;     /* centra el grupo horizontalmente */
+  gap: 20px;                   /* espacio entre los bloques */
+  padding: 20px;
+
+
+}
+.bloque {
+  flex: 1;                     /* hace que todos ocupen el mismo espacio */
+  max-width: 300px;            /* límite opcional para que no se estiren demasiado */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+
+
+}
+.bloque img {
+  display: block;
+  margin: 0;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+} 
+.bloque h3{
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ff6600;
+ 
+}
+.bloque p {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  max-width: 500px;
+}

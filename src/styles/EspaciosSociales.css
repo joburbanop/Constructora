@@ -65,3 +65,10 @@
 .espacios-swiper {
   width: 100%;
 }
+
+.espacios-descripcion {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}

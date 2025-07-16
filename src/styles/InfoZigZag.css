@@ -1,0 +1,44 @@
+.seccion-zigzag {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 40px 20px;
+}
+
+.fila-zigzag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.fila-zigzag .imagen,
+.fila-zigzag .texto {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.texto {
+  text-align: left;
+}
+
+.texto h3 {
+  font-size: 1.8rem;
+  color: #ff6600;
+  margin-bottom: 12px;
+}
+
+.texto p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}

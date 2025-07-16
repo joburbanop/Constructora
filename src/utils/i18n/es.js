@@ -52,16 +52,17 @@ const es = {
     proximamente: 'Próximamente',
   },
 
- espacios_titulo: 'Espacios comunes', 
+  // informaciòn componentes que forman infoRinconLago.jsx
+ 
+    // iformaciòn componente DetallesProyecto
  rincon_detalle: {
+  espacios_titulo: 'Espacios comunes', 
+  espacios_desc:'16 amenidades en 16.600 mts² de zonas comunes',
   titulo: 'Rincón del Lago',
   subtitulo: 'Más cerca de tus sueños',
   subtitulo_2: 'CONDOMINIO CAMPESTRE',
   descripcion: 'El condominio Rincón del Lago se ubica en Alfaguara, Jamundí, a solo 20 minutos de Cali y se destaca su entorno natural. Todas las vías asfaltadas, óptimos servicios públicos, telecomunicaciones, monitoreo permanente para disfrutar la seguridad, exclusividad y comodidad de vivir mejor. Obra en desarrollo continuo. Aprovecha precios de preventa en lotes. Entrega el 30 de abril de 2026.',
-  area: 'Lotes desde 150 m² a 346 m² para autoconstruir con arquitectura unificada. Puede adecuar el interior de la casa a su gusto y necesidades con los materiales y acabados que prefiera. Disfruta de casas con ubicación tipo esquina y jardines privados que te brindan mayor privacidad. Elige también lotes únicos con zonas verdes alrededor y sin vecinos contiguos.',
-  precio: 'Desde $00000',
-  ubicacion: 'Jamundí, Colombia',
-
+  // claves componente EspaciosCompartidos.jsx  del js infoEspacios.js
   espacios: [
     'bronceo',
     'piscina',
@@ -77,7 +78,44 @@ const es = {
     'comercial'
   ]
 },
+ // informaciòn componente AreaPrecioUbic.jsx
+ info_AreaPrecioUbic: {
+  rincon_lago: {
+    area: 'Área',
+    area_desc: 'Lotes desde 150 m² a 346 m² para autoconstruir con arquitectura unificada. Puede adecuar el interior de la casa a su gusto y necesidades con los materiales y acabados que prefiera. Disfruta de casas con ubicación tipo esquina y jardines privados que te brindan mayor privacidad. Elige también lotes únicos con zonas verdes alrededor y sin vecinos contiguos.',
+    precio: 'Precio',
+    precio_desc: 'Desde $00000',
+    ubicacion: 'Ubicación',
+    ubicacion_desc: 'Jamundí, Colombia',
+  },
+  proyecto2: {
+    slide_area_titulo: 'Área útil',
+    slide_area_subtitulo: '160 m² de construcción',
+   
+  }
+},
 
+// informacionn componente infoZigZag.jsx
+info_ZigZag_rincon: {
+  elemento1: {
+    titulo: "Lotes personalizables desde 150 m²",
+    descripcion: "Lotes desde 150 m² hasta 346 m² para autoconstrucción con arquitectura unificada. Puede adecuar el interior de la casa a su gusto y necesidades, con los materiales y acabados que prefiera."
+  },
+  elemento2: {
+    titulo: "Casas con mayor privacidad",
+    descripcion: "Todas las casas son prácticamente esquineras, gracias a sus zonas verdes de retiro privadas."
+  },
+  elemento3: {
+    titulo: "Lotes sin vecinos alrededor",
+    descripcion: "Opción de lotes con zona verde alrededor, sin vecinos colindantes."
+  },
+  elemento4: {
+    titulo: "Diseño sugerido con terraza y dos plantas",
+    descripcion: "Arquitectura interior sugerida para casa de dos plantas, con opción de terraza, para un total de 230,44 m² construidos en lote de 150 m²."
+  }
+},
+
+// Titulos componente EspaciosCompartidos.jsx  del js infoEspacios.js
 espacios: {
   bronceo: 'Zona bronceo',
   piscina: 'Piscina',
@@ -166,7 +204,8 @@ espacios: {
     nosotros: 'Nosotros',
     renders: 'Renders destacados',
     espacios: 'Espacios ',
-    galeria: 'Galería'
+    galeria: 'Galería',
+    detalles: 'Detalles',
 
   },
   expertos: {

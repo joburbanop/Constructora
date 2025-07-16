@@ -14,7 +14,10 @@ export default function EspaciosCompartidos({ id, claves }) {
 
   return (
     <div className="espacios-compartidos">
-      <h3 className="espacios-titulo">{t.espacios_titulo || 'Espacios comunes'}</h3>
+      <h3 className="espacios-titulo">{t.rincon_detalle.espacios_titulo || 'Espacios comunes'}</h3>
+      <p className="espacios-descripcion">
+        {t.rincon_detalle.espacios_desc || '16 amenidades en 16.600 mts2 de zonas comunes'}
+      </p>
         <div className="espacios-wrapper">
 
           
