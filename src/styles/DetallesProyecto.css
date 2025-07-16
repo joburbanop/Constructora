@@ -1,27 +1,42 @@
 .detalle-proyecto {
+  display: flex;
+  flex-direction: column;
   max-width: 960px;
-  margin: 0 auto;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
   padding: 2rem 1rem;
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   background-color: #fff;
+  gap: 2rem;
+
+}
+
+section.detalle-proyecto .detalle-proyecto-titulo h2 {
+  color: #ff6600;
 }
 .proyecto-contenido {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
+  align-items: center;
+  margin: 2rem;
+  justify-content: center;
+  border:#333 1px solid;
 }
 .logo-proyecto {
-  max-width: 280px;
+  
+  max-width: 400px;
   height: auto;
   flex-shrink: 0;
   border-radius: 8px;
+ 
 }
 
 .proyecto-texto {
   flex: 1;
   min-width: 250px;
+ 
 }
 
 

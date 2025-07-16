@@ -12,8 +12,12 @@ import SectionDivider from "../components/SectionDivider";
 import AreaPrecioUbic from "../components/AreaPrecioUbic";
 import InfoZigZag from "../components/InfoZigZag";
 import infoZigZag  from "../utils/infoZigZag";
+import VideoYoutube from "../components/VideoYoutube";
+import "../styles/VideoYoutube.css";
 const InfoRinconLago = () => {
    const { t } = useIdioma();
+   const video = t.videos?.rincon?.render;
+
   console.log("InfoRinconLago renderizado");
   return (
    <>
@@ -27,6 +31,8 @@ const InfoRinconLago = () => {
       <AreaPrecioUbic proyectoKey="rincon_lago" />
       <SectionDivider textKey="detalles" />
       <InfoZigZag elementos={infoZigZag} textoKey="info_ZigZag_rincon"/>
+      <SectionDivider textKey="video" />
+       <VideoYoutube videoId={video.id} titulo={video.titulo} />
 
       <SectionDivider textKey="galeria" />
       <GaleriaProyecto id="rincon" />

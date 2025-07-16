@@ -61,7 +61,8 @@ const es = {
   titulo: 'Rincón del Lago',
   subtitulo: 'Más cerca de tus sueños',
   subtitulo_2: 'CONDOMINIO CAMPESTRE',
-  descripcion: 'El condominio Rincón del Lago se ubica en Alfaguara, Jamundí, a solo 20 minutos de Cali y se destaca su entorno natural. Todas las vías asfaltadas, óptimos servicios públicos, telecomunicaciones, monitoreo permanente para disfrutar la seguridad, exclusividad y comodidad de vivir mejor. Obra en desarrollo continuo. Aprovecha precios de preventa en lotes. Entrega el 30 de abril de 2026.',
+  descripcion: 'El condominio Rincón del Lago se ubica en Alfaguara, Jamundí, a solo 20 minutos de Cali y se destaca su entorno natural. Todas las vías asfaltadas, óptimos servicios públicos, telecomunicaciones, monitoreo permanente para disfrutar la seguridad, exclusividad y comodidad de vivir mejor. Obra en desarrollo continuo.',
+  descripcion_2: 'Aprovecha precios de preventa en lotes. Entrega el 30 de abril de 2026.',
   // claves componente EspaciosCompartidos.jsx  del js infoEspacios.js
   espacios: [
     'bronceo',
@@ -129,6 +130,14 @@ espacios: {
   zonapet: 'Zona pet',
   bbq: 'Zona BBQ',
   comercial: 'Zona comercial'
+},
+
+// información videos de youtube 
+videos: {
+  rincon: {
+    video1: { id: 'BRmd52pMUW4', titulo: 'Presentación Rincón', visible: true },
+    render: { id: 'oSlfSdN70jQ', titulo: 'Recorre el Proyecto', visible: false }
+  },
 },
   entregados: {
     titulo: 'Proyectos entregados',

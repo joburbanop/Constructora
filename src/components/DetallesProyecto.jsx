@@ -11,8 +11,11 @@ export default function ProyectoDetalle({ id}) {
 
   return (
     <section className="detalle-proyecto">
-      <h1>{texto.titulo}</h1>
+     <div className="detalle-proyecto-titulo">
+       <h1>{texto.titulo}</h1>
        <h2>{texto.subtitulo}</h2>
+     </div>
+     
      <div className="proyecto-contenido">
     <img src={data.logo} alt={texto.titulo} className="logo-proyecto" />
 
@@ -20,16 +23,13 @@ export default function ProyectoDetalle({ id}) {
      
       <h3>{texto.subtitulo_2}</h3>
       <p className="descripcion">{texto.descripcion}</p>
+      <p  style={{ fontWeight: 'bold', color: '#ff6600' }} 
+          className="descripcion">{texto.descripcion_2}</p>
        <a href={data.pdf} target="_blank" rel="noopener noreferrer" className="btn-pdf">
         Ver PDF
       </a>
     </div>
   </div>
-
-
-     
-
-     {/* <EspaciosCompartidos espacios={texto.espacios} />*/} 
     </section>
   );
 }

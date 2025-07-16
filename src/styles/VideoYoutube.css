@@ -1,0 +1,37 @@
+.video-youtube {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+.video-titulo {
+  font-size: 1.6rem;
+  color: #ff6600;
+  margin-bottom: 1rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.video-container iframe:hover {
+  box-shadow: 0 0 0 4px rgba(255, 102, 0, 0.3);
+}
