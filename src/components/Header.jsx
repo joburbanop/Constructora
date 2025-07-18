@@ -77,6 +77,10 @@ const Header = ({
             <button className="menu-toggle" onClick={toggleMenu}>
               ☰
             </button>
+              {/* Menú de navegación */}
+            <nav className={`header__nav ${menuAbierto ? "activo" : ""}`}>
+              {renderNavItems()}
+            </nav>
 
             {/*Logo al centro */}
             <img
@@ -87,10 +91,7 @@ const Header = ({
               onClick={handleLogoClick}
             />
 
-            {/* Menú de navegación */}
-            <nav className={`header__nav ${menuAbierto ? "activo" : ""}`}>
-              {renderNavItems()}
-            </nav>
+          
 
             {/* Selector de idioma a la derecha */}
             <div  className="header__lang-select">
