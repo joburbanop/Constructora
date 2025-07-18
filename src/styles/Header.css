@@ -31,7 +31,7 @@
   color: #222;
   cursor: pointer;
   display: none; /* visible solo en móviles */
- 
+ border: #222 5px solid; 
 }
 
 /* ========== Logo al centro ========== */
@@ -39,7 +39,7 @@
   height: 60px;               /* Altura uniforme */
   display: flex;
   align-items: center;
-
+border: #222 5px solid; 
 }
 
 /* ========== Menú de navegación ========== */
