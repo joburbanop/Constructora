@@ -78,7 +78,6 @@ const Header = ({
              
               ☰
             </button>
-              {/* Menú de navegación */}
           
 
             {/*Logo al centro */}
@@ -89,10 +88,22 @@ const Header = ({
               style={{ cursor: "pointer"}}
               onClick={handleLogoClick}
             />
-              <nav className={`header__nav ${menuAbierto ? "activo" : ""}`}>
-              {renderNavItems()}
-            </nav>
-          
+               {/* Menú de navegación */}
+    <nav className={`header__nav ${menuAbierto ? 'activo' : ''}`}>
+      <ul className="nav-items">
+        {renderNavItems()}
+
+        {/* Botón para cerrar el menú */}
+        {menuAbierto && (
+          <li>
+            <button className="cerrar-menu" onClick={() => setMenuAbierto(false)}>
+              ✖ 
+            </button>
+          </li>
+        )}
+      </ul>
+    </nav>
+            
 
             {/* Selector de idioma a la derecha */}
             <div  className={`header__lang-select ${menuAbierto ? 'ocultar-en-movil' : ''}`}>
