@@ -125,6 +125,9 @@
     gap: 0;
      box-sizing: border-box;
   }
+  .ocultar-en-movil {
+    display: none !important;
+  }
 
   .menu-toggle,
   .header__logo,
@@ -162,20 +165,16 @@
     margin: 0;
    
 }
-
-  }
-
- .header__nav.activo {
+.header__nav.activo {
    display: flex;
   flex-direction: column;
   align-items: center;
+ 
   width: 100%;
   height: auto;                 /* 🔑 se adapta al contenido */
   padding: 1rem;
   box-sizing: border-box;      /* incluye padding en el tamaño total */
   overflow: visible;
-  
-  border: 3px dashed lime;
   
 }
 .nav-items {
@@ -196,16 +195,20 @@
 
   .nav-items li a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 0.1rem;
     border-radius: 0.5rem;
-    background-color: #f4f4f4;
     color: #333;
     width: 100%;
      display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    font-weight: bold;
   }
+
+  }
+
+ 
 
 
 

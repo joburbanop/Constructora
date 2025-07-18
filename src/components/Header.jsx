@@ -74,27 +74,28 @@ const Header = ({
     <header className={`header animate-fadeInDown ${className}`} id="header">
       <div className="header__container">
             {/*Hamburguesa a la izquierda */}
-            <button className="menu-toggle" onClick={toggleMenu}>
+            <button className={`menu-toggle ${menuAbierto ? 'ocultar-en-movil' : ''}`} onClick={toggleMenu}>
+             
               ☰
             </button>
               {/* Menú de navegación */}
-            <nav className={`header__nav ${menuAbierto ? "activo" : ""}`}>
-              {renderNavItems()}
-            </nav>
+          
 
             {/*Logo al centro */}
             <img
               src={logo}
               alt="Logo Constructora"
-              className="header__logo"
+              className={`header__logo ${menuAbierto ? 'ocultar-en-movil' : ''}`}
               style={{ cursor: "pointer"}}
               onClick={handleLogoClick}
             />
-
+              <nav className={`header__nav ${menuAbierto ? "activo" : ""}`}>
+              {renderNavItems()}
+            </nav>
           
 
             {/* Selector de idioma a la derecha */}
-            <div  className="header__lang-select">
+            <div  className={`header__lang-select ${menuAbierto ? 'ocultar-en-movil' : ''}`}>
               <select value={idioma} onChange={handleIdiomaChange}>
                 {languages.map((lang) => (
                   <option key={lang.code} value={lang.code}>
