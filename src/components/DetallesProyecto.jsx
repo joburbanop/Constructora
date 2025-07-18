@@ -1,7 +1,6 @@
 import React from 'react';
 import { useIdioma } from '../context/IdiomaContext';
 import { infoProyectos } from '../utils/infoProyectos';
-//import EspaciosCompartidos from './EspaciosCompartidos';
 import '../styles/DetallesProyecto.css';
 
 export default function ProyectoDetalle({ id}) {

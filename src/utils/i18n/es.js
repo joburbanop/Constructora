@@ -85,7 +85,7 @@ const es = {
     area: 'Área',
     area_desc: 'Lotes desde 150 m² a 346 m² para autoconstruir con arquitectura unificada. Puede adecuar el interior de la casa a su gusto y necesidades con los materiales y acabados que prefiera. Disfruta de casas con ubicación tipo esquina y jardines privados que te brindan mayor privacidad. Elige también lotes únicos con zonas verdes alrededor y sin vecinos contiguos.',
     precio: 'Precio',
-    precio_desc: 'Desde $00000',
+    precio_desc: 'Desde $65.000.000',
     ubicacion: 'Ubicación',
     ubicacion_desc: 'Jamundí, Colombia',
   },
