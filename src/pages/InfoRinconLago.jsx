@@ -14,14 +14,19 @@ import InfoZigZag from "../components/InfoZigZag";
 import infoZigZag  from "../utils/infoZigZag";
 import VideoYoutube from "../components/VideoYoutube";
 import "../styles/VideoYoutube.css";
+import { useNavigate } from 'react-router-dom';
 const InfoRinconLago = () => {
    const { t } = useIdioma();
    const video = t.videos?.rincon?.render;
+   const navigate = useNavigate();
+   const zigzagrincon=infoZigZag.datosRinconLago;
 
-  console.log("InfoRinconLago renderizado");
+ 
   return (
    <>
-      <Header />
+      <Header
+      />
+
       <Slider contenido={slidesRinconLago} namespace="rincon"/>
       <DetallesProyecto id="rincon" />
       <SectionDivider textKey="espacios" />
@@ -30,7 +35,7 @@ const InfoRinconLago = () => {
 
       <AreaPrecioUbic proyectoKey="rincon_lago" />
       <SectionDivider textKey="detalles" />
-      <InfoZigZag elementos={infoZigZag} textoKey="info_ZigZag_rincon"/>
+      <InfoZigZag elementos={zigzagrincon} textoKey="info_ZigZag_rincon"/>
       <SectionDivider textKey="video" />
        <VideoYoutube videoId={video.id} titulo={video.titulo} />
 

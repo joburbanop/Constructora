@@ -22,6 +22,7 @@ export default function ProyectoDetalle({ id}) {
      
       <h3>{texto.subtitulo_2}</h3>
       <p className="descripcion">{texto.descripcion}</p>
+      <p className="descripcion">{texto.descripcion_1}</p>
       <p  style={{ fontWeight: 'bold', color: '#ff6600' }} 
           className="descripcion">{texto.descripcion_2}</p>
        <a href={data.pdf} target="_blank" rel="noopener noreferrer" className="btn-pdf">

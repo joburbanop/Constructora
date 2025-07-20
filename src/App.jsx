@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import ProyectosColombia from './pages/ProyectosColombia';
 import ProyectosUSA from './pages/ProyectosUSA';
 import InfoRinconLago from "./pages/InfoRinconLago";
-
+import InfoCoralMole from "./pages/InfoCoralMole";
 export default function App() {
   return (
     <Routes>
@@ -11,6 +11,7 @@ export default function App() {
       <Route path="/proyectos-colombia" element={<ProyectosColombia />} />
       <Route path="/proyectos-usa" element={<ProyectosUSA />} />
       <Route path="/rincon-del-lago" element={<InfoRinconLago />} />
+      <Route path="/coral-mall" element={<InfoCoralMole />} />
     </Routes>
   );
 }

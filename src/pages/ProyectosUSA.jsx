@@ -16,6 +16,49 @@ export default function ProyectosUSA() {
   const { t } = useIdioma();
   const navigate = useNavigate();
 
+  const colombiaNavItems = (
+     <ul className="nav-items">
+         <li><a href="#" onClick={(e) => {e.preventDefault();
+             navigate('/');}}>
+           {t.header.inicio}
+         </a></li>
+
+       <li><a href="#" onClick={(e) => {e.preventDefault();
+             navigate('/proyectos-usa');}}>
+           {t.proyectos.usa || 'Proyectos USA'}
+         </a></li>
+
+       <li><a href="#" onClick={(e) => {e.preventDefault();
+             const expertosSection = document.getElementById('expertos');
+             if (expertosSection) {
+               expertosSection.scrollIntoView({ behavior: 'smooth' });
+             } else {
+               navigateToSection('expertos', navigate);
+             }
+           }}>
+           {t.header.nosotros}
+         </a></li>
+
+       <li><a href="#" onClick={(e) => {e.preventDefault();
+             const contactoSection = document.getElementById('contactanos');
+             if (window.location.pathname === '/proyectos-colombia' && contactoSection) {
+               contactoSection.scrollIntoView({ behavior: 'smooth' });
+             } else {
+               navigate('/proyectos-colombia');
+               setTimeout(() => {
+                 const contactoSection = document.getElementById('contactanos');
+                 if (contactoSection) {
+                   contactoSection.scrollIntoView({ behavior: 'smooth' });
+                 }
+               }, 500);
+             }
+           }}
+         >
+           {t.header.contactanos}
+         </a></li>
+     </ul>
+   );
+
   const proyectosUSA = proyectos.filter(p => p.ubicacion === 'cape_coral_usa');
 
   const handleNavigate = (proyecto) => {
@@ -24,7 +67,10 @@ export default function ProyectosUSA() {
 
   return (
     <>
-      <Header showDefaultNav={true} />
+      <Header  
+         customNavItems={colombiaNavItems}
+         showDefaultNav={false}
+      />
        <Slider contenido={slidesUSA} namespace="usa"/>
 
       <main className="usa-main">

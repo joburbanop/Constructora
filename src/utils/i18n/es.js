@@ -62,6 +62,7 @@ const es = {
   subtitulo: 'Más cerca de tus sueños',
   subtitulo_2: 'CONDOMINIO CAMPESTRE',
   descripcion: 'El condominio Rincón del Lago se ubica en Alfaguara, Jamundí, a solo 20 minutos de Cali y se destaca su entorno natural. Todas las vías asfaltadas, óptimos servicios públicos, telecomunicaciones, monitoreo permanente para disfrutar la seguridad, exclusividad y comodidad de vivir mejor. Obra en desarrollo continuo.',
+  descripcion_1:'',
   descripcion_2: 'Aprovecha precios de preventa en lotes. Entrega el 30 de abril de 2026.',
   // claves componente EspaciosCompartidos.jsx  del js infoEspacios.js
   espacios: [
@@ -78,6 +79,16 @@ const es = {
     'bbq',
     'comercial'
   ]
+},
+coral_detalle: {
+  espacios_titulo: 'Espacios comerciales',  
+  espacios_desc: 'Locales comerciales en Cape Coral, Florida', 
+  titulo: 'Locales comerciales en Cape Coral',
+  subtitulo: 'La mejor oportunidad para invertir con seguridad',
+  subtitulo_2: 'LOCAL COMERCIAL',
+  descripcion: 'Este complejo comercial se ubica estratégicamente en Lehigh Acres a 19 kilómetros al este de Fort Myers y cuenta con una comunidad diversa con una población de aproximadamente 200.000 habitantes.',
+  descripcion_1: 'Para atender la creciente demanda de productos y servicios de la zona, se desarrolla este moderno mall con 10 locales comerciales desde hasta 959 SQ FT hasta 1277 SQ FT con una amplia bahía de estacionamiento sobre  300 Chiquita  Boulevard.',
+  descripcion_2: 'Inversión y valorización aseguradas.',
 },
  // informaciòn componente AreaPrecioUbic.jsx
  info_AreaPrecioUbic: {
@@ -114,6 +125,29 @@ info_ZigZag_rincon: {
     titulo: "Diseño sugerido con terraza y dos plantas",
     descripcion: "Arquitectura interior sugerida para casa de dos plantas, con opción de terraza, para un total de 230,44 m² construidos en lote de 150 m²."
   }
+},
+info_ZigZag_coral:{
+  local_coral1: {
+    titulo: "Locales comerciales desde 959 SQ FT",
+    descripcion: "Locales comerciales desde 959 SQ FT hasta 1277 SQ FT, con una amplia bahía de estacionamiento."
+  },
+  local_coral2: {
+    titulo: "Ubicación estratégica",
+    descripcion: "Ubicado en Lehigh Acres, a 19 kilómetros al este de Fort Myers, en una comunidad diversa con aproximadamente 200.000 habitantes."
+  },
+  local_coral3: {
+    titulo: "Inversión y valorización aseguradas",
+    descripcion: "Oportunidad de inversión en un complejo comercial moderno y rentable."
+  },
+  local_coral4: {
+    titulo: "Diseño moderno y funcional",
+    descripcion: "Locales diseñados para atender la creciente demanda de productos y servicios en la zona."
+  },
+  local_coral5: {
+    titulo: "Bahía de estacionamiento amplia",
+    descripcion: "Amplia bahía de estacionamiento para comodidad de los clientes y visitantes."
+  }
+  
 },
 
 // Titulos componente EspaciosCompartidos.jsx  del js infoEspacios.js
@@ -204,6 +238,16 @@ videos: {
     slide3_title: 'Inversión en Estados Unidos',
     slide3_subtitle: 'Diversifica tu portafolio con confianza',
     boton: 'Contáctanos'
+  },
+  coral: {
+    slide1_title: 'Locales comerciales en Cape Coral',
+    slide1_subtitle: 'La mejor oportunidad para invertir con seguridad',
+    slide2_title: 'Locales comerciales en Cape Coral',
+    slide2_subtitle: 'Espacios modernos y rentables',
+    slide3_title: 'Inversión en Estados Unidos',
+    slide3_subtitle: 'Diversifica tu portafolio con confianza',
+    boton: 'Contáctanos'
+
   }
 },
 

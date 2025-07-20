@@ -5,24 +5,23 @@
   left: 0;
   width: 100%;
   background: #fff;
-  box-shadow: 0 6px 24px -8px rgba(0, 0, 0, 0.18), 0 1.5px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 6px 24px -8px rgba(0, 0, 0, 0.18),
+              0 1.5px 0 rgba(0, 0, 0, 0.04);
   z-index: 1000;
 }
 
-/* ========== Contenedor flex con orden semántico ========== */
+/* ========== Contenedor flex ========== */
 .header__container {
-  display: flex;                    /* Activa Flexbox */
-  align-items: center;             /* 🔑 Centra verticalmente todos los hijos */
-  justify-content: space-between;  /* Espacia horizontalmente entre extremos */
-  padding: 0 2rem;                 /* Margen horizontal interno */
-  height: 90px;                    /* Altura fija del contenedor */
-  width: 100%;                     /* Ocupa todo el ancho */
-  gap: 0rem;                       /* Espacio horizontal entre elementos */
-   
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 90px;
+  width: 100%;
+  gap: 0;
 }
 
-/* ========== Botón hamburguesa a la izquierda ========== */
+/* ========== Hamburguesa ========== */
 .menu-toggle {
   order: 0;
   font-size: 2rem;
@@ -30,36 +29,32 @@
   border: none;
   color: #222;
   cursor: pointer;
-  display: none; /* visible solo en móviles */
-
+  display: none;
 }
 
-/* ========== Logo al centro ========== */
+/* ========== Logo ========== */
 .header__logo {
-  height: 60px;               /* Altura uniforme */
+  height: 60px;
   display: flex;
   align-items: center;
-
 }
 
-/* ========== Menú de navegación ========== */
+/* ========== Menú horizontal base ========== */
 .header__nav {
-  height: 60px;               /* Altura uniforme */
+  height: 60px;
   display: flex;
   align-items: center;
-
 }
-/* ========== Selector de idioma alineado a la derecha ========== */
+
+/* ========== Idioma ========== */
 .header__lang-select {
-  height: 60px;               /* Altura uniforme */
+  height: 60px;
   display: flex;
   align-items: center;
- 
-
 }
 
 .header__lang-select select {
-  border: 2px solid #ff6600 !important; /* 🔶 Borde naranja (personalizable) */
+  border: 2px solid #ff6600 !important;
   border-radius: 2em;
   padding: 0.4em 1.2em;
   font-size: 1em;
@@ -72,6 +67,11 @@
   transition: box-shadow 0.2s, border-color 0.2s;
 }
 
+.header__lang-select select:focus {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+}
+
+/* ========== Ítems horizontales en escritorio ========== */
 .nav-items {
   display: flex;
   gap: 2rem;
@@ -92,40 +92,19 @@
   color: #ff6600;
 }
 
-
-
-.header__lang-select select {
-  border: none;
-  border-radius: 2em;
-  padding: 0.4em 1.2em;
-  font-size: 1em;
-  background: #f7f7f7;
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  cursor: pointer;
-  outline: none;
-  font-weight: 600;
-  transition: box-shadow 0.2s;
-}
-
-.header__lang-select select:focus {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
-}
-
-
 /* ========== Responsive ≤ 768px ========== */
 @media (max-width: 768px) {
- .header__container {
-    display: flex;
-    flex-direction: row;         /* ✅ mantiene horizontal */
+  .header__container {
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;           /* ✅ evita salto de línea */
-    height: auto; 
+    flex-wrap: nowrap;
     padding: 0.3rem 1rem;
+    height: auto;
     gap: 0;
-     box-sizing: border-box;
+    box-sizing: border-box;
   }
+
   .ocultar-en-movil {
     display: none !important;
   }
@@ -139,53 +118,47 @@
     margin: 0;
     padding: 0;
     flex: 0 0 auto;
-   
-
   }
 
-  
-  .header__lang-select select{
-  font-size: 0.7rem;               /* Más compacto */
-  padding: 0.3em 0.5em;            /* Menos relleno */
-  height: auto;                    /* Altura uniforme con otros elementos */
- 
-  border-radius: 2em;
-  background-color: #f9f9f9;
-  color: #333;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  outline: none;
-  cursor: pointer;
-  font-weight: 500;
-
-}
+  .header__lang-select select {
+    font-size: 0.7rem;
+    padding: 0.3em 0.5em;
+    height: auto;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
 
   .header__nav {
     display: none;
     flex-direction: column;
     align-items: center;
     margin: 0;
-   
-}
-.header__nav.activo {
-   display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  width: 100%;
-  height: auto;                 
-  padding: 1rem;
-  box-sizing: border-box;      /* incluye padding en el tamaño total */
-  overflow: visible;
-   padding-bottom: 3.5rem;
-}
-.nav-items {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr); /* o 1 si lo deseas vertical */
-  gap: 0.3rem;
-  width: 100%;
-  margin: 0;
- 
-}
+  }
+
+  .header__nav.activo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    padding-bottom: 3.5rem;
+    box-sizing: border-box;
+    overflow: visible;
+    position: relative;
+  }
+
+  .nav-items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.3rem;
+    width: 100%;
+    margin: 0;
+  }
 
   .nav-items li {
     display: flex;
@@ -199,44 +172,67 @@
     font-size: 1.3rem;
     padding: 0.1rem;
     border-radius: 0.5rem;
-    color: #000000;
+    color: #000;
     width: 100%;
-     display: flex;
-    justify-content: left;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     font-weight: bold;
   }
-.cerrar-menu {
-  
-  
-  bottom: 0.5rem;
-  left: 0.5rem;
-  background-color: #ff6600;
-  color: #fff;
-  border: none;
-  font-weight: bold;
-  padding: 0.6em 1.2em;
-  border-radius: 2em;
-  font-size: 1rem;
-  cursor: pointer;
-  z-index: 999;
-  transition: background-color 0.3s ease;
 
-  display: flex;                   /* 💡 Activamos Flexbox */
-  align-items: center;            /* Verticalmente al centro */
-  justify-content: center; 
-
-
-  
-}
-
-.cerrar-menu:hover {
-  background-color: #e65c00;
-}
-
+  .cerrar-menu {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    padding: 0.6em 1.2em;
+    border-radius: 2em;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
   }
 
- @keyframes deslizarY {
+  .cerrar-menu:hover {
+    background-color: #e65c00;
+  }
+}
+
+/* ========== Vista escritorio ≥ 769px ========== */
+@media (min-width: 769px) {
+  .header__nav.activo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+  }
+
+  .nav-items {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .nav-items li {
+    animation: none;
+  }
+
+  .nav-items li a {
+    font-size: 1.1rem;
+    justify-content: center;
+    font-weight: 500;
+  }
+}
+
+/* ========== Animación menú hamburguesa ========== */
+@keyframes deslizarY {
   from {
     opacity: 0;
     transform: translateY(-10px);
@@ -246,4 +242,3 @@
     transform: translateY(0);
   }
 }
-

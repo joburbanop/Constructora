@@ -3,7 +3,7 @@ import logo from "../assets/LOGO.png";
 import "../styles/Header.css";
 import { flags, languages } from "../utils/idiomas";
 import { useIdioma } from "../context/IdiomaContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useLocation  } from "react-router-dom";
 
 const Header = ({
   customNavItems = null,
@@ -13,11 +13,13 @@ const Header = ({
 }) => {
   const { idioma, setIdioma, t } = useIdioma();
   const navigate = useNavigate();
+  const location = useLocation(); 
   const [menuAbierto, setMenuAbierto] = useState(false);
 
   const handleIdiomaChange = (e) => setIdioma(e.target.value);
   const toggleMenu = () => setMenuAbierto((prev) => !prev);
 
+  
   const handleLogoClick = () => {
     customLogoAction ? customLogoAction() : navigate("/");
     setMenuAbierto(false);

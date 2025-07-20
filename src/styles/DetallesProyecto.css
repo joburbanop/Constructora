@@ -36,7 +36,9 @@ section.detalle-proyecto .detalle-proyecto-titulo h2 {
 .proyecto-texto {
   flex: 1;
   min-width: 250px;
- 
+  
+  padding: 1rem;
+  max-width: 500px;
 }
 
 

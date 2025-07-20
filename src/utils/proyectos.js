@@ -48,7 +48,7 @@ const proyectos = [
     icono: 'locales',
     iconoColor: '#222',
     ubicacion: 'cape_coral_usa',
-    enlace: '#',
+    enlace: '/coral-mall',
     etiquetaColor: '#ffb347'
   },
   {

@@ -28,7 +28,7 @@ const ProyectosColombia = () => {
 
   // Navegación específica para Colombia
   const colombiaNavItems = (
-    <ul>
+    <ul className="nav-items">
       <li>
         <a
           href="#"
