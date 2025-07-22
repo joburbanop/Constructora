@@ -94,11 +94,11 @@ coral_detalle: {
  info_AreaPrecioUbic: {
   rincon_lago: {
     area: 'Área',
-    area_desc: 'Lotes desde 150 m² a 346 m² para autoconstruir con arquitectura unificada. Puede adecuar el interior de la casa a su gusto y necesidades con los materiales y acabados que prefiera. Disfruta de casas con ubicación tipo esquina y jardines privados que te brindan mayor privacidad. Elige también lotes únicos con zonas verdes alrededor y sin vecinos contiguos.',
+    area_desc: 'Lotes desde 150 m² ',
     precio: 'Precio',
-    precio_desc: 'Desde $65.000.000',
+    precio_desc: 'Desde $180 millones. Financiación a 6 años.',
     ubicacion: 'Ubicación',
-    ubicacion_desc: 'Jamundí, Colombia',
+    ubicacion_desc: 'Alfaguara, Jamundí – Colombia.',
   },
   proyecto2: {
     slide_area_titulo: 'Área útil',
@@ -169,8 +169,9 @@ espacios: {
 // información videos de youtube 
 videos: {
   rincon: {
-    video1: { id: 'BRmd52pMUW4', titulo: 'Presentación Rincón', visible: true },
-    render: { id: 'oSlfSdN70jQ', titulo: 'Recorre el Proyecto', visible: false }
+    video1: { id: 'BRmd52pMUW4', titulo: 'Avances de obra', visible: true },
+    render: { id: 'oSlfSdN70jQ', titulo: 'Conozca Rincón del Lago', visible: false },
+    Avance_en_Zona_comercial: { id: 'LS0EhS0oSbM', titulo: 'Avances de obra', visible: true }
   },
 },
   entregados: {
@@ -221,12 +222,12 @@ videos: {
       boton: 'Contáctanos'
   },
     rincon: {
-      slide1_title: 'RINCÓN DEL LAGO: NATURALEZA Y ARQUITECTURA',
-      slide1_subtitle: 'Un proyecto pensado para reconectarte con lo esencial',
-      slide2_title: 'ESPACIOS MODERNOS EN ENTORNOS VERDES',
-      slide2_subtitle: 'Diseño, confort y calidad de vida',
-      slide3_title: 'VIVE EN ARMONÍA CON LA NATURALEZA',
-      slide3_subtitle: 'Un lugar donde cada detalle cuenta',
+      slide1_title: 'Lotes con facilidad de pago',
+      slide1_subtitle: 'Adquiere tu lote directamente con nuestra constructora, sin intermediarios.',
+      slide2_title: 'Lotes con facilidad de pago',
+      slide2_subtitle: 'Adquiere tu lote directamente con nuestra constructora, sin intermediarios.',
+      slide3_title: 'Lotes con facilidad de pago',
+      slide3_subtitle: 'Adquiere tu lote directamente con nuestra constructora, sin intermediarios.',
       boton: 'Contáctanos'
     
   },

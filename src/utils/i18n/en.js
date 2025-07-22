@@ -1,4 +1,4 @@
-const en = {
+const es = { // Should remain 'es' if you are keeping original variable names or 'en' if you decide to change this variable name to 'en' in your actual code.
   header: {
     inicio: 'Home',
     proyectos: 'Projects',
@@ -6,20 +6,20 @@ const en = {
     contactanos: 'Contact Us',
   },
   renders: {
-    titulo: 'Your new beginning\nbegins here',
-    desc: 'Explore our selected homes for those looking for more than just a place to live.',
+    titulo: 'Your new beginning\nstarts here',
+    desc: 'Explore our handpicked homes for those seeking more than just a place to live.',
     beneficios: [
       {
-        titulo: 'Find the ideal home',
-        desc: 'Easily explore properties that fit what you are looking for: location, size, style, and environment.'
+        titulo: 'Find your ideal home',
+        desc: 'Easily explore properties that match what you\'re looking for: location, size, style, and environment.'
       },
       {
         titulo: 'Personalized advice',
-        desc: 'Our team is ready to listen to you, answer your questions, and accompany you throughout the process.'
+        desc: 'Our team is ready to listen, answer your questions, and guide you through the entire process.'
       },
       {
         titulo: 'Ready to move in',
-        desc: 'Homes with immediate delivery, up-to-date documentation, and all the details ready for you to move in without worries.'
+        desc: 'Homes with immediate delivery, up-to-date documentation, and all details ready for you to move in worry-free.'
       }
     ]
   },
@@ -28,90 +28,151 @@ const en = {
     subtitulo: 'We are expert builders with 17 years of experience in southwestern Colombia and now in the United States.',
     condominio: 'Condominium',
     urbanizacion: 'Urbanization',
-    locales: 'Stores',
+    locales: 'Commercial Units',
     rincon_titulo: 'Exclusive country condominium',
-    rincon_desc: 'With green areas, 16 amenities and a commercial area',
+    rincon_desc: 'With green areas, 16 amenities, and a commercial zone',
     sanmiguel_titulo: 'Open urbanization',
-    sanmiguel_desc: 'Located in Rozo, on the road to Cerrito.',
+    sanmiguel_desc: 'Located in Rozo, on the road leading to Cerrito.',
     marbella_titulo: 'Open urbanization',
-    marbella_desc: 'Build as you wish. Larger lots and the best price in the area. South of Jamundí',
-    coral_titulo: 'Commercial stores',
-    coral_desc: 'The best opportunity to invest safely.',
+    marbella_desc: 'To build to your liking. Larger lots with the best price in the area. South of Jamundí',
+    coral_titulo: 'Commercial units',
+    coral_desc: 'The best opportunity to invest securely.',
     jamundi_colombia: 'Jamundí, Colombia',
     usa: 'United States',
-    boton: 'See more',
+    boton: 'View more',
     beneficio_titulo1: 'We are',
     beneficio_titulo2: 'builders with 17 years of experience',
     beneficio_sub: 'in southwestern Colombia',
     beneficio1_titulo: 'Secure investment',
     beneficio1_desc: 'Your money is protected and backed in every project.',
-    beneficio2_titulo: 'Flexible payment options',
-    beneficio2_desc: 'Flexible options so you can invest without worries.',
+    beneficio2_titulo: 'Payment facilities',
+    beneficio2_desc: 'Flexible options so you can invest worry-free.',
     beneficio3_titulo: 'Choose your next home',
     beneficio3_desc: 'Find the perfect home for you and your family.',
-    proximamente: 'Coming soon',
+    proximamente: 'Coming Soon',
   },
+
+  // informaciòn componentes que forman infoRinconLago.jsx
+
+  // iformaciòn componente DetallesProyecto
   rincon_detalle: {
-  titulo: 'Rincón del Lago',
-  subtitulo: 'Closer to your dreams',
-  subtitulo_2: 'Closer to your dreams',
-  descripcion: 'Rincón del Lago condominium is located in Alfaguara, Jamundí, just 20 minutes from Cali, and stands out for its natural surroundings. All roads are paved, with optimal public services, telecommunications, and constant monitoring to enjoy the safety, exclusivity, and comfort of better living. Project in continuous development. Take advantage of pre-sale prices on lots. Delivery on April 30, 2026.',
-  area: 'Lots from 150 m² to 346 m² for self-construction with unified architecture. You can adapt the interior of the house to your taste and needs with the materials and finishes you prefer. Enjoy corner-located homes with private gardens that provide greater privacy. Also, choose unique lots with surrounding green areas and no adjacent neighbors.',
-  precio: 'From $00000',
-  ubicacion: 'Jamundí, Colombia',
+    espacios_titulo: 'Common areas',
+    espacios_desc: '16 amenities across 16,600 m² of common areas',
+    titulo: 'Rincón del Lago',
+    subtitulo: 'Closer to your dreams',
+    subtitulo_2: 'COUNTRY CONDOMINIUM',
+    descripcion: 'The Rincón del Lago condominium is located in Alfaguara, Jamundí, just 20 minutes from Cali, and stands out for its natural surroundings. All paved roads, optimal public services, telecommunications, and permanent monitoring to enjoy the security, exclusivity, and comfort of better living. Work in continuous development.',
+    descripcion_1: '',
+    descripcion_2: 'Take advantage of pre-sale prices on lots. Delivery on April 30, 2026.',
+    // claves componente EspaciosCompartidos.jsx del js infoEspacios.js
+    espacios: [
+      'bronceo',
+    'piscina',
+    'social',
+    'gym',
+    'voley',
+    'multiple',
+    'infantiles',
+    'verdes',
+    'senderos',
+    'zonapet',
+    'bbq',
+    'comercial'
+    ]
+  },
+  coral_detalle: {
+    espacios_titulo: 'Commercial spaces',
+    espacios_desc: 'Commercial units in Cape Coral, Florida',
+    titulo: 'Commercial units in Cape Coral',
+    subtitulo: 'The best opportunity to invest securely',
+    subtitulo_2: 'COMMERCIAL UNIT',
+    descripcion: 'This commercial complex is strategically located in Lehigh Acres, 19 kilometers east of Fort Myers, and boasts a diverse community with a population of approximately 200,000 inhabitants.',
+    descripcion_1: 'To meet the growing demand for products and services in the area, this modern mall is being developed with 10 commercial units ranging from 959 SQ FT to 1277 SQ FT, with ample parking space on 300 Chiquita Boulevard.',
+    descripcion_2: 'Guaranteed investment and appreciation.',
+  },
+  // informaciòn componente AreaPrecioUbic.jsx
+  info_AreaPrecioUbic: {
+    rincon_lago: {
+      area: 'Area',
+      area_desc: 'Lots from 150 m² to 346 m² for self-construction with unified architecture. You can adapt the interior of the house to your taste and needs with the materials and finishes you prefer. Enjoy corner-type houses with private gardens that provide greater privacy. Also choose unique lots with green areas around and no adjoining neighbors.',
+      precio: 'Price',
+      precio_desc: 'From $65,000,000',
+      ubicacion: 'Location',
+      ubicacion_desc: 'Jamundí, Colombia',
+    },
+    proyecto2: {
+      slide_area_titulo: 'Usable area',
+      slide_area_subtitulo: '160 m² of construction',
 
-  espacios: [
-    {
-      icono: 'icon1',
-      titulo: 'Central green zone'
-    },
-    {
-      icono: 'icon2',
-      titulo: 'Social hall'
-    },
-    {
-      icono: 'icon3',
-      titulo: 'Adult swimming pool'
-    },
-    {
-      icono: 'icon4',
-      titulo: 'Children’s pool'
-    },
-    {
-      icono: 'icon5',
-      titulo: 'Outdoor gym'
-    },
-    {
-      icono: 'icon6',
-      titulo: 'Multipurpose court'
-    },
-    {
-      icono: 'icon7',
-      titulo: 'Internal bike lane'
-    },
-    {
-      icono: 'icon8',
-      titulo: 'Pet zone'
-    },
-    {
-      icono: 'icon9',
-      titulo: 'Playground'
-    },
-    {
-      icono: 'icon10',
-      titulo: 'BBQ area'
-    },
-    {
-      icono: 'icon11',
-      titulo: 'Social café'
-    },
-    {
-      icono: 'icon12',
-      titulo: 'Gatehouse with security'
     }
-  ]
-},
+  },
 
+  // informacionn componente infoZigZag.jsx
+  info_ZigZag_rincon: {
+    elemento1: {
+      titulo: "Customizable lots from 150 m²",
+      descripcion: "Lots from 150 m² to 346 m² for self-construction with unified architecture. You can adapt the interior of the house to your taste and needs, with the materials and finishes you prefer."
+    },
+    elemento2: {
+      titulo: "Homes with greater privacy",
+      descripcion: "All homes are practically corner units, thanks to their private setback green areas."
+    },
+    elemento3: {
+      titulo: "Lots without surrounding neighbors",
+      descripcion: "Option for lots with surrounding green areas, without adjoining neighbors."
+    },
+    elemento4: {
+      titulo: "Suggested design with terrace and two floors",
+      descripcion: "Suggested interior architecture for a two-story house, with a terrace option, for a total of 230.44 m² built on a 150 m² lot."
+    }
+  },
+  info_ZigZag_coral: {
+    local_coral1: {
+      titulo: "Commercial units from 959 SQ FT",
+      descripcion: "Commercial units from 959 SQ FT to 1277 SQ FT, with ample parking space."
+    },
+    local_coral2: {
+      titulo: "Strategic location",
+      descripcion: "Located in Lehigh Acres, 19 kilometers east of Fort Myers, in a diverse community with approximately 200,000 inhabitants."
+    },
+    local_coral3: {
+      titulo: "Guaranteed investment and appreciation",
+      descripcion: "Investment opportunity in a modern and profitable commercial complex."
+    },
+    local_coral4: {
+      titulo: "Modern and functional design",
+      descripcion: "Units designed to meet the growing demand for products and services in the area."
+    },
+    local_coral5: {
+      titulo: "Ample parking bay",
+      descripcion: "Ample parking bay for the convenience of customers and visitors."
+    }
+
+  },
+
+  // Titulos componente EspaciosCompartidos.jsx del js infoEspacios.js
+  espacios: {
+    bronceo: 'Sundeck area',
+    piscina: 'Pool',
+    social: 'Social Hall',
+    gym: 'Gym',
+    voley: 'Beach Volleyball',
+    multiple: 'Multi-sport court',
+    infantiles: 'Playgrounds',
+    verdes: 'Green areas',
+    senderos: 'Green trails',
+    zonapet: 'Pet zone',
+    bbq: 'BBQ area',
+    comercial: 'Commercial zone'
+  },
+
+  // información videos de youtube
+  videos: {
+    rincon: {
+      video1: { id: 'BRmd52pMUW4', titulo: 'Rincón Presentation', visible: true },
+      render: { id: 'oSlfSdN70jQ', titulo: 'Tour the Project', visible: false }
+    },
+  },
   entregados: {
     titulo: 'Delivered Projects',
     puertas_del_sol: 'Puertas del Sol',
@@ -137,69 +198,101 @@ const en = {
     copy: '© 2025 Relume. All rights reserved.'
   },
   ambito: {
-    titulo: 'Scope of Action',
+    titulo: 'Scope of action',
     sub: 'Luxury homes, urbanizations, country condominiums,\nCommercial complexes, Service stations.',
-    colombia_title: 'Colombia Projects',
+    colombia_title: 'Projects in Colombia',
     colombia_desc: 'Exclusive projects that combine luxury and comfort in every corner.',
-    usa_title: 'U.S.A Projects',
-    usa_desc: "Projects that make a difference in today's real estate market.",
+    usa_title: 'Projects in U.S.A',
+    usa_desc: 'Projects that make a difference in today\'s real estate market.',
     lujo_title: 'Luxury Homes',
     lujo_desc: 'Exclusivity that redefines comfort.',
-    boton: 'See more'
+    boton: 'View more'
   },
   slider: {
-      home:{
-        slide1_title: 'DISCOVER YOUR IDEAL SPACE',
-        slide1_subtitle: 'HOUSES, CONDOMINIUMS AND LOTS',
-        slide2_title: 'LIVE WHERE YOU DREAM',
-        slide2_subtitle: 'MODERN PROJECTS AND HIGH VALUE LOCATIONS',
-        slide3_title: 'INVEST WITH CONFIDENCE',
-        slide3_subtitle: 'SAFE AND QUALITY PROJECTS',
-        slide4_title: 'CREATE YOUR FUTURE',
-        slide4_subtitle: 'REAL ESTATE SOLUTIONS FOR YOU',
-        boton: 'View projects'
-      },
-      rincon: {
-        slide1_title: 'RINCÓN DEL LAGO: NATURE AND ARCHITECTURE',
-        slide1_subtitle: 'A project designed to reconnect you with what truly matters',
-        slide2_title: 'MODERN SPACES IN GREEN ENVIRONMENTS',
-        slide2_subtitle: 'Design, comfort, and quality of life',
-        slide3_title: 'LIVE IN HARMONY WITH NATURE',
-        slide3_subtitle: 'A place where every detail matters',
-        boton: 'Contact us'
-      },
+    home: {
+      slide1_title: 'DISCOVER YOUR IDEAL SPACE',
+      slide1_subtitle: 'HOMES, CONDOMINIUMS AND LOTS',
+      slide2_title: 'LIVE IN THE PLACE YOU DREAM OF',
+      slide2_subtitle: 'MODERN PROJECTS AND HIGH-VALUE LOCATIONS',
+      slide3_title: 'INVEST WITH CONFIDENCE',
+      slide3_subtitle: 'SECURE AND QUALITY PROJECTS',
+      slide4_title: 'CREATE YOUR FUTURE',
+      slide4_subtitle: 'REAL ESTATE SOLUTIONS FOR YOU',
+      boton: 'Contact Us'
+    },
+    rincon: {
+      slide1_title: 'RINCÓN DEL LAGO: NATURE AND ARCHITECTURE',
+      slide1_subtitle: 'A project designed to reconnect you with the essentials',
+      slide2_title: 'MODERN SPACES IN GREEN ENVIRONMENTS',
+      slide2_subtitle: 'Design, comfort, and quality of life',
+      slide3_title: 'LIVE IN HARMONY WITH NATURE',
+      slide3_subtitle: 'A place where every detail matters',
+      boton: 'Contact Us'
 
-      usa: {
-          slide1_title: 'Commercial spaces in the USA',
-          slide1_subtitle: 'The best opportunity to invest securely',
-          slide2_title: 'Commercial render',
-          slide2_subtitle: 'Modern and profitable spaces',
-          slide3_title: 'Investment in the United States',
-          slide3_subtitle: 'Diversify your portfolio with confidence',
-          boton: 'See more'
-      }
+    },
+    usa: {
+      slide1_title: 'Commercial units in USA',
+      slide1_subtitle: 'The best opportunity to invest securely',
+      slide2_title: 'Commercial units in Cape Coral',
+      slide2_subtitle: 'Modern and profitable spaces',
+      slide3_title: 'Investment in the United States',
+      slide3_subtitle: 'Diversify your portfolio with confidence',
+      boton: 'Contact Us'
+    },
+    coral: {
+      slide1_title: 'Commercial units in Cape Coral',
+      slide1_subtitle: 'The best opportunity to invest securely',
+      slide2_title: 'Commercial units in Cape Coral',
+      slide2_subtitle: 'Modern and profitable spaces',
+      slide3_title: 'Investment in the United States',
+      slide3_subtitle: 'Diversify your portfolio with confidence',
+      boton: 'Contact Us'
+
+    }
   },
+
   dividers: {
     proyectos: 'Projects',
     entregados: 'Delivered Projects',
     nosotros: 'About Us',
-    renders: 'Featured Renders'
+    renders: 'Featured Renders',
+    espacios: 'Spaces',
+    galeria: 'Gallery',
+    detalles: 'Details',
+
   },
   expertos: {
     titulo: "Our team of",
     highlight: "Experts",
     saitama_nombre: "Saitama",
     saitama_cargo: "Real Estate Advisor",
-    saitama_desc: "with extensive experience in urbanization and housing development projects. Committed to providing personalized support to each client, ensuring safety, trust, and effective results."
+    saitama_desc: "with extensive experience in urbanization and housing development projects. Committed to providing personalized support to each client, guaranteeing security, trust, and effective results."
   },
   cta: {
-    titulo1: 'Ready to make your real estate',
-    titulo2: 'project a reality',
-    inmobiliario: 'dream',
+    titulo1: 'Ready to make your',
+    titulo2: 'real estate',
+    inmobiliario: 'project a reality',
     desc1: 'Find the ideal place to build your future.',
     desc2: 'We are ready to advise you every step of the way.',
-    boton: 'Contact us'
-  }
+    boton: 'Contact Us'
+  },
+  //Pagina de Proyectos USA
+  proyectos_usa: {
+    titulo: 'USA Projects',
+    descripcion: `We are in Cape Coral, Florida, 160 miles from Miami. This city is known as the "Coastal Wonderland,” a true paradise with canals and rivers for those seeking a life of fulfillment and for water sports.
+
+              Guaranteed investment and appreciation.`
+  },
+  proyectos_card_simple: {
+    coral_title: 'Commercial units, Chiquita BLVD, FL',
+    coral_desc: 'The best opportunity to invest securely.',
+    casa_usa_1_title: 'Single-family home for sale',
+    casa_usa_1_desc: 'New single-family home for sale · Lehigh Acres, FL',
+    casa_usa_2_title: 'Property sold',
+    casa_usa_2_desc: 'Single-family home sold. Lehigh Acres, FL',
+    boton: 'View more',
+    proximamente: 'Coming Soon'
+  },
 };
 
-export default en; 
+export default es; // Again, this should remain 'es' if you don't intend to change the variable name.

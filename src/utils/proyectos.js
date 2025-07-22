@@ -2,6 +2,8 @@ import Rincon from '../assets/Rincon.png';
 import SanMiguel from '../assets/San_Miguel.png';
 import Marbella from '../assets/Marbella.png';
 import Coral from '../assets/coral.png';
+import casa_1 from '../assets/casas/casa_1.webp';
+import casa_2 from '../assets/casas/casa_2.webp';
 import { HiOfficeBuilding } from 'react-icons/hi';
 import { BsBuilding } from 'react-icons/bs';
 import { PiStorefrontBold } from 'react-icons/pi';
@@ -52,7 +54,7 @@ const proyectos = [
     etiquetaColor: '#ffb347'
   },
   {
-    imagen: Coral,
+    imagen: casa_1,
     titulo: 'casa_usa_1_title',
     descripcion: 'casa_usa_1_desc',
     tipo: 'locales',
@@ -63,7 +65,7 @@ const proyectos = [
     etiquetaColor: '#ffb347'
   },
    {
-    imagen: Coral,
+    imagen: casa_2,
     titulo: 'casa_usa_2_title',
     descripcion: 'casa_usa_2_desc',
     tipo: 'locales',

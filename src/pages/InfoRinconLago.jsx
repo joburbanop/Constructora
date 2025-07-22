@@ -28,16 +28,17 @@ const InfoRinconLago = () => {
       />
 
       <Slider contenido={slidesRinconLago} namespace="rincon"/>
-      <DetallesProyecto id="rincon" />
+      <DetallesProyecto id="rincon"  videoId={video.id} videoTitulo={video.titulo} />
       <SectionDivider textKey="espacios" />
       <EspaciosSociales id="rincon" claves={t.rincon_detalle.espacios} />
       <SectionDivider textKey="detalles" />
 
       <AreaPrecioUbic proyectoKey="rincon_lago" />
+      <SectionDivider textKey="video" />
+      <VideoYoutube videoId={video.id} titulo={video.titulo} />
       <SectionDivider textKey="detalles" />
       <InfoZigZag elementos={zigzagrincon} textoKey="info_ZigZag_rincon"/>
-      <SectionDivider textKey="video" />
-       <VideoYoutube videoId={video.id} titulo={video.titulo} />
+      
 
       <SectionDivider textKey="galeria" />
       <GaleriaProyecto id="rincon" />

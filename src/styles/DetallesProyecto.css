@@ -1,7 +1,7 @@
 .detalle-proyecto {
   display: flex;
   flex-direction: column;
-  max-width: 960px;
+  max-width: 90%;
   margin-top: 5rem;
   margin-left: auto;
   margin-right: auto;
@@ -10,64 +10,136 @@
   color: #333;
   background-color: #fff;
   gap: 2rem;
-
+ 
 }
 
 section.detalle-proyecto .detalle-proyecto-titulo h2 {
   color: #ff6600;
 }
-.proyecto-contenido {
-  display: flex;
-  flex-wrap: wrap;
+.proyecto-contenido.con-video {
+   display: flex;
+  flex-direction: row;
   align-items: center;
-  margin: 2rem;
-  justify-content: center;
-
+  gap: 2rem;
+ 
 }
-.logo-proyecto {
+ .video-youtubee {
+ 
+  flex: 1;
+  width: 50%;
+  box-sizing: border-box;
+  }
+  .video-container-{
+     position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* ratio 16:9 */
+  height: 0;
+  overflow: hidden;
   
-  max-width: 400px;
-  height: auto;
-  flex-shrink: 0;
-  border-radius: 8px;
+     
+  }
+  .logo-proyecto{
+    display: flex;
+    justify-items: center;
+    height: 50%;
+  }
+
+   .proyecto-texto{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+   }
+   .proyecto-contenido .proyecto-texto img{
+    width: 200px;
+   } 
+  proyecto-contenido.con-video .proyecto-texto{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      width: 50%;
+      box-sizing: border-box;
+    
+  }
+
+/* 🟩 Con video: dos columnas */
+.proyecto-contenido.con-video .video-youtube{
+  flex: 1;
+  width: 50%;
+  box-sizing: border-box;
  
 }
 
-.proyecto-texto {
+.proyecto-contenido.con-video .proyecto-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex: 1;
-  min-width: 250px;
-  
-  padding: 1rem;
-  max-width: 500px;
+  width: 50%;
+  box-sizing: border-box;
+ 
 }
-
-
-.logo-proyecto {
-  max-width: 400px;
-  height: auto;
+ .video-container- iframe {
+     position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
   display: block;
-  margin: 0 auto 2rem auto;
 }
-
+/* 🟥 Sin video: texto ocupa todo el ancho */
+.proyecto-contenido.sin-video .proyecto-texto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:4rem;
+ 
+}
+.proyecto-contenido.sin-video .proyecto-info {
+  display: flex;
+  width: 50%;
+  
+}
+.proyecto-contenido.sin-video .logo-proyecto{
+  width: 50%;
+  
+  display: flex;
+  justify-content: center;
+}
+.proyecto-contenido.con-video .logo-proyecto{
+  display: flex;
+  justify-content: center;
+ 
+}
 .detalle-proyecto h1 {
   font-size: 2.6rem;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin: 0.2rem;
   color: #222;
 }
 
 .detalle-proyecto h2 {
   font-size: 1.4rem;
   text-align: center;
-  margin-bottom: 0.25rem;
+  margin: 0.2rem;
   color: #555;
 }
 
 .detalle-proyecto h3 {
   font-size: 1.2rem;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin: 0.5rem;
   color: #777;
+}
+.detalle-proyecto p {
+  padding: 0rem;
+  margin: 0rem;
+  color: #000000;
 }
 
 .detalle-proyecto .descripcion,
@@ -97,12 +169,92 @@ section.detalle-proyecto .detalle-proyecto-titulo h2 {
   text-align: center;
   transition: background-color 0.3s ease;
 }
-
+  .video-youtube h3{
+    color:#000;
+    margin:1rem;
+   
+  }
+ 
+ 
 .detalle-proyecto .btn-pdf:hover {
   background-color: #e05500;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .proyecto-contenido.sin-video .proyecto-texto {
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
+  gap: 0rem;
+ 
+}
+.proyecto-contenido.sin-video .proyecto-info {
+    display: flex;
+    width: 100%;
+}
+
+ .proyecto-contenido.con-video .proyecto-texto {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  align-items: center;
+ 
+}
+.detalle-proyecto .proyecto-texto .proyecto-info{
+   gap:0rem;
+  }
+
+.detalle-proyecto .proyecto-texto .logo-proyecto {
+    max-width: 150px;
+    margin-bottom: 1rem;
+  }
+  .proyecto-contenido.con-video {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   
+  padding: 0rem;
+}
+.proyecto-contenido{
+ width: 100%;
+
+}
+
+.video-youtubee {
+    width: 100%;
+  }
+  .video-titulo{
+   
+    color:#000;
+     margin: 0px;
+     padding: 0px;
+  }
+   .video-youtubee h3{
+    color:#000;
+    margin: 0.5rem;
+    
+  }
+.proyecto-contenido .proyecto-texto img{
+    width: 100px;
+   } 
+  .video-container- iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+  .video-container{
+   
+   
+  
+  }
+
   .detalle-proyecto h1 {
     font-size: 1.6rem;
   }
