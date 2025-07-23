@@ -57,17 +57,4 @@ export const handleProyectoNavigation = (proyecto, navigate) => {
   }
 };
 
-/**
- * Navega a una sección específica en la página Home
- * @param {string} sectionId - ID de la sección
- * @param {Function} navigate - Función de navegación de React Router
- */
-export const navigateToSection = (sectionId, navigate) => {
-  navigate('/');
-  setTimeout(() => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, 100);
-}; 
+ 
