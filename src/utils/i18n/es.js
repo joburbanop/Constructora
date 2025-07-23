@@ -93,7 +93,7 @@ const es = {
     anos_experiencia: 'Años de experiencia',
     anos_desc: 'Construyendo sueños',
     proyectos_completados: 'Proyectos completados',
-    proyectos_desc: 'Entregados con éxito',
+    proyectos_desc: 'Finalizados con éxito',
     clientes_satisfechos: 'Clientes satisfechos',
     clientes_desc: 'Confían en nosotros',
     garantia_calidad: 'Garantía de calidad',
@@ -262,8 +262,8 @@ videos: {
   },
 },
   entregados: {
-    titulo: 'Proyectos entregados',
-    subtitulo: 'Proyectos completados con éxito y entregados a nuestros clientes',
+    titulo: 'Proyectos Finalizados',
+    subtitulo: 'Proyectos completados con éxito y finalizados para nuestros clientes',
     puertas_del_sol: 'Puertas del Sol',
     cana_dulce: 'Caña Dulce',
     casa_brava: 'Casa Brava',
@@ -287,7 +287,7 @@ videos: {
     copy: '© 2025 Relume. Todos los derechos reservados.'
   },
   ambito: {
-    titulo: 'Ámbito de acción',
+    titulo: 'Nuestros Servicios',
     sub: 'Casas de lujo, urbanizaciones, condominios campestres,\nComplejos comerciales, Estaciones de servicio.',
     colombia_title: 'Proyectos Colombia',
     colombia_desc: 'Proyectos exclusivos que combinan lujo y confort en cada rincón.',
@@ -342,7 +342,7 @@ videos: {
 
   dividers: {
     proyectos: 'Proyectos',
-    entregados: 'Proyectos entregados',
+    entregados: 'Proyectos Finalizados',
     nosotros: 'Nosotros',
     renders: 'Renders destacados',
     espacios: 'Espacios ',

@@ -11,7 +11,7 @@ export default function RendersDestacados() {
 
   return (
     <section className="renders-section" id="nosotros">
-      <SectionDivider textKey="nosotros" icon={<i className="fas fa-cube"></i>} />
+      <SectionDivider textKey="nosotros" icon={<i className="fas fa-cube"></i>} variant="accent" />
       <div className="renders-grid">
         
         <div className="renders-imgs">

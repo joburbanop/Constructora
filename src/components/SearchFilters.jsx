@@ -53,14 +53,10 @@ const SearchFilters = () => {
 
   return (
     <section className="search-filters-section">
-      <div className="search-filters-container">
-     
-
-        {/* Contenedor principal de filtros */}
-        <div className="search-filters-card">
-          <div className="search-filters-content">
+      <div className="search-filters-content">
             {/* Título */}
             <div className="search-title">
+             
               <p>{t.search?.subtitulo || 'Selecciona la ubicación y el tipo de proyecto que deseas'}</p>
             </div>
 
@@ -139,8 +135,6 @@ const SearchFilters = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </section>
   );
 };

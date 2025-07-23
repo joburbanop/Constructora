@@ -51,7 +51,7 @@ const StatsSection = () => {
       number: '50',
       suffix: '+',
       label: t.stats?.proyectos_completados || 'Proyectos completados',
-      description: t.stats?.proyectos_desc || 'Entregados con éxito',
+              description: t.stats?.proyectos_desc || 'Finalizados con éxito',
       color: '#2ecc71',
       bgColor: 'rgba(46, 204, 113, 0.1)',
       delay: 100

@@ -25,7 +25,7 @@ export default function Home() {
   const titulosDeseados = ['rincon_titulo', 'coral_titulo', 'marbella_titulo', 'sanmiguel_titulo'];
   const proyectosFiltrados = proyectos.filter(p => titulosDeseados.includes(p.titulo));
   
-  // Proyectos entregados (filtrados)
+  // Proyectos finalizados (filtrados)
   const titulosDeseados2 = ['cana_title', 'palmeras_title', 'caña_dulce_title', 'puertas_sol_title'];
   const proyectosFiltrados2 = proyectos.filter(p => titulosDeseados2.includes(p.titulo));
 
@@ -72,7 +72,7 @@ export default function Home() {
       {/* Sección de Filtros de Búsqueda */}
       <SearchFilters />
 
-      {/* Sección Ámbito de Acción */}
+      {/* Sección Nuestros Servicios */}
       <section id="ambito" className="section-ambito">
         <div className="section-container">
           <AmbitoAccion />
@@ -83,7 +83,7 @@ export default function Home() {
       <section id="proyectos" className="section-proyectos">
         <div className="section-container">
           <div className="section-header">
-            <SectionDivider textKey="proyectos" icon={<i className="fas fa-building"></i>} />
+            <SectionDivider textKey="proyectos" icon={<i className="fas fa-building"></i>} variant="accent" />
             <div className="section-title-container">
               <h2 className="section-title">{t.proyectos.titulo}</h2>
               <p className="section-subtitle">{t.proyectos.subtitulo}</p>
@@ -99,14 +99,14 @@ export default function Home() {
         <StatsSection />
       </section>
 
-      {/* Sección Proyectos Entregados */}
+      {/* Sección Proyectos Finalizados */}
       <section id="proyectos-entregados" className="section-entregados">
         <div className="section-container">
           <div className="section-header">
-            <SectionDivider textKey="proyectos" />
+            <SectionDivider textKey="proyectos" variant="subtle" />
             <div className="section-title-container">
               <h2 className="section-title">{t.entregados.titulo}</h2>
-              <p className="section-subtitle">{t.entregados.subtitulo || 'Proyectos completados con éxito'}</p>
+              <p className="section-subtitle">{t.entregados.subtitulo || 'Proyectos finalizados con éxito'}</p>
             </div>
           </div>
           <ProyectosEnMarcha proyectosFiltrados={proyectosFiltrados2} />

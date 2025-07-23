@@ -47,24 +47,24 @@ const InfoRinconLago = () => {
       <Slider contenido={slidesRinconLago} namespace="rincon"/>
       <DetallesProyecto id="rincon"  videoId={video.id} videoTitulo={video.titulo} />
       
-      <SectionDivider textKey="espacios" />
+              <SectionDivider textKey="espacios" variant="subtle" />
       <EspaciosSociales id="rincon" claves={t.rincon_detalle.espacios} />
       
-      <SectionDivider textKey="detalles" />
+      <SectionDivider textKey="detalles" variant="subtle" />
       <AreaPrecioUbic proyectoKey="rincon_lago" />
 
-      <SectionDivider textKey="ubicacion" />
+      <SectionDivider textKey="ubicacion" variant="subtle" />
       <UbicacionMaps mapSrc={jamundiCoord.mapSrc}/>
 
-      <SectionDivider textKey="video" />
+      <SectionDivider textKey="video" variant="subtle" />
       <VideoYoutube videoId={video2.id} titulo={video2.titulo} />
 
 
-      <SectionDivider textKey="detalles" />
+      <SectionDivider textKey="detalles" variant="subtle" />
       <InfoZigZag elementos={zigzagrincon} textoKey="info_ZigZag_rincon"/>
       
 
-      <SectionDivider textKey="mapa_obra" />
+      <SectionDivider textKey="mapa_obra" variant="subtle" />
       <div>
       <img 
          src={mapaRinconLago}
@@ -74,7 +74,7 @@ const InfoRinconLago = () => {
 
       </div>
 
-      <SectionDivider textKey="galeria" />
+      <SectionDivider textKey="galeria" variant="subtle" />
       <GaleriaProyecto id="rincon" />
       <div className="expertos-section-rincon">
         <Expertos listaFiltrada={listaFiltrada}/>

@@ -1,0 +1,241 @@
+/* Section Divider - Separador de secciones profesional */
+
+/* Base styles */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 0;
+  position: relative;
+}
+
+/* Variante Subtle - Sutil y elegante */
+.section-divider-subtle {
+  padding: 30px 0;
+}
+
+.divider-line-subtle {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+  max-width: 200px;
+}
+
+.divider-content-subtle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.divider-icon-subtle {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.divider-text-subtle {
+  white-space: nowrap;
+}
+
+/* Variante Accent - Con acento corporativo */
+.section-divider-accent {
+  padding: 40px 0;
+}
+
+.divider-line-accent {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff6600, transparent);
+  max-width: 150px;
+}
+
+.divider-content-accent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 24px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.divider-icon-accent {
+  font-size: 16px;
+  color: #ff6600;
+}
+
+.divider-text-accent {
+  white-space: nowrap;
+}
+
+/* Variante Bold - Más prominente */
+.section-divider-bold {
+  padding: 50px 0;
+}
+
+.divider-line-bold {
+  flex: 1;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #1e293b, transparent);
+  max-width: 120px;
+}
+
+.divider-content-bold {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 30px;
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.divider-icon-bold {
+  font-size: 18px;
+  color: #ff6600;
+}
+
+.divider-text-bold {
+  white-space: nowrap;
+}
+
+/* Estados hover para interactividad sutil */
+.section-divider-subtle:hover .divider-line-subtle {
+  background: linear-gradient(90deg, transparent, #d1d5db, transparent);
+}
+
+.section-divider-accent:hover .divider-line-accent {
+  background: linear-gradient(90deg, transparent, #e55a00, transparent);
+}
+
+.section-divider-bold:hover .divider-line-bold {
+  background: linear-gradient(90deg, transparent, #374151, transparent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-divider {
+    padding: 30px 20px;
+  }
+  
+  .section-divider-subtle {
+    padding: 20px 20px;
+  }
+  
+  .section-divider-accent {
+    padding: 30px 20px;
+  }
+  
+  .section-divider-bold {
+    padding: 40px 20px;
+  }
+  
+  .divider-line-subtle,
+  .divider-line-accent,
+  .divider-line-bold {
+    max-width: 100px;
+  }
+  
+  .divider-content-subtle,
+  .divider-content-accent,
+  .divider-content-bold {
+    padding: 0 15px;
+  }
+  
+  .divider-text-subtle {
+    font-size: 12px;
+  }
+  
+  .divider-text-accent {
+    font-size: 13px;
+  }
+  
+  .divider-text-bold {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-divider {
+    padding: 20px 15px;
+  }
+  
+  .section-divider-subtle {
+    padding: 15px 15px;
+  }
+  
+  .section-divider-accent {
+    padding: 25px 15px;
+  }
+  
+  .section-divider-bold {
+    padding: 30px 15px;
+  }
+  
+  .divider-line-subtle,
+  .divider-line-accent,
+  .divider-line-bold {
+    max-width: 60px;
+  }
+  
+  .divider-content-subtle,
+  .divider-content-accent,
+  .divider-content-bold {
+    padding: 0 10px;
+    gap: 6px;
+  }
+  
+  .divider-text-subtle {
+    font-size: 11px;
+  }
+  
+  .divider-text-accent {
+    font-size: 12px;
+  }
+  
+  .divider-text-bold {
+    font-size: 13px;
+  }
+  
+  .divider-icon-subtle {
+    font-size: 12px;
+  }
+  
+  .divider-icon-accent {
+    font-size: 14px;
+  }
+  
+  .divider-icon-bold {
+    font-size: 16px;
+  }
+}
+
+/* Accesibilidad */
+.section-divider:focus-within {
+  outline: 2px solid #ff6600;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Animaciones sutiles */
+.section-divider {
+  transition: all 0.3s ease;
+}
+
+.divider-line {
+  transition: background 0.3s ease;
+}
+
+.divider-content {
+  transition: color 0.3s ease;
+} 

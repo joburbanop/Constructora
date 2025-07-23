@@ -34,7 +34,7 @@ const InfoRinconLago = () => {
 
       <Slider contenido={slidesCoral} namespace="coral"/>
       <DetallesProyecto id="coral" />
-      <SectionDivider textKey="detalles" />
+              <SectionDivider textKey="detalles" variant="subtle" />
        <InfoZigZag elementos={zigzagcoral} textoKey="info_ZigZag_coral"/>
        <div className="expertos-section-coral">
          <Expertos />

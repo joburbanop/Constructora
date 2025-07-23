@@ -8,7 +8,7 @@ export default function ProyectosEntregados() {
   const { t } = useIdioma();
   return (
     <section className="entregados-section">
-        <SectionDivider textKey="entregados" icon={<i className="fas fa-check-circle"></i>} />
+        <SectionDivider textKey="entregados" icon={<i className="fas fa-check-circle"></i>} variant="bold" />
       <h2 className="entregados-titulo">{t.entregados.titulo}</h2>
       
       <div className="entregados-grid">

@@ -264,8 +264,8 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     },
   },
   entregados: {
-    titulo: 'Delivered Projects',
-    subtitulo: 'Successfully completed projects delivered to our clients',
+    titulo: 'Completed Projects',
+    subtitulo: 'Successfully completed projects finished for our clients',
     puertas_del_sol: 'Puertas del Sol',
     cana_dulce: 'Caña Dulce',
     casa_brava: 'Casa Brava',
@@ -289,7 +289,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     copy: '© 2025 Relume. All rights reserved.'
   },
   ambito: {
-    titulo: 'Scope of action',
+    titulo: 'Our Services',
     sub: 'Luxury homes, urbanizations, country condominiums,\nCommercial complexes, Service stations.',
     colombia_title: 'Projects in Colombia',
     colombia_desc: 'Exclusive projects that combine luxury and comfort in every corner.',
@@ -344,7 +344,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
 
   dividers: {
     proyectos: 'Projects',
-    entregados: 'Delivered Projects',
+    entregados: 'Completed Projects',
     nosotros: 'About Us',
     renders: 'Featured Renders',
     espacios: 'Spaces',
