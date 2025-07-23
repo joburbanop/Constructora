@@ -123,17 +123,7 @@ const SearchFilters = () => {
               </div>
             </div>
 
-            {/* Información adicional */}
-            <div className="search-info">
-              <div className="info-item">
-                <MdLocationOn />
-                <span>{t.search?.info_ubicacion || 'Proyectos en Colombia y Estados Unidos'}</span>
-              </div>
-              <div className="info-item">
-                <MdHomeWork />
-                <span>{t.search?.info_tipos || 'Condominios, urbanizaciones y locales comerciales'}</span>
-              </div>
-            </div>
+           
           </div>
     </section>
   );
