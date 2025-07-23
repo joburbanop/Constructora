@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Breadcrumb from '../components/Breadcrumb';
 import BreadcrumbSimple from '../components/BreadcrumbSimple';
@@ -14,14 +14,35 @@ import { useIdioma } from '../context/IdiomaContext';
 import '../styles/ProyectosUSA.css';
 import Slider from '../components/Slider';
 import slidesUSA from '../utils/slidesUSA';
+import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
 
 export default function ProyectosUSA() {
   const { t } = useIdioma();
   const navigate = useNavigate();
+  const [activeSection, setActiveSection] = useState('inicio');
 
   // Efecto para hacer scroll hacia arriba cuando se carga la página
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  // Efecto para detectar sección activa
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['inicio', 'expertos', 'contactanos'];
+      const scrollPosition = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
 
@@ -35,27 +56,39 @@ export default function ProyectosUSA() {
 
   const usaNavItems = (
      <ul className="nav-items">
-         <li><a href="#" onClick={(e) => {e.preventDefault();
+         <li className={activeSection === 'inicio' ? "active" : ""}>
+           <a href="#" onClick={(e) => {e.preventDefault();
              navigate('/');}}>
-           {t.header.inicio}
-         </a></li>
+             <span className="nav-icon">{<FaHome />}</span>
+             <span className="nav-text">{t.header.inicio}</span>
+           </a>
+         </li>
 
-       <li><a href="#" onClick={(e) => {e.preventDefault();
+       <li>
+         <a href="#" onClick={(e) => {e.preventDefault();
              navigate('/proyectos-colombia');}}>
-           {t.proyectos.colombia || 'Proyectos Colombia'}
-         </a></li>
+           <span className="nav-icon">{<FaBuilding />}</span>
+           <span className="nav-text">{t.proyectos.colombia || 'Proyectos Colombia'}</span>
+         </a>
+       </li>
 
-       <li><a href="#" onClick={(e) => {e.preventDefault();
+       <li className={activeSection === 'expertos' ? "active" : ""}>
+         <a href="#" onClick={(e) => {e.preventDefault();
              handleSectionNavigation('expertos');
            }}>
-           {t.header.nosotros}
-         </a></li>
+           <span className="nav-icon">{<FaUsers />}</span>
+           <span className="nav-text">{t.header.nosotros}</span>
+         </a>
+       </li>
 
-       <li><a href="#" onClick={(e) => {e.preventDefault();
+       <li className={activeSection === 'contactanos' ? "active" : ""}>
+         <a href="#" onClick={(e) => {e.preventDefault();
              handleSectionNavigation('contactanos');
            }}>
-           {t.header.contactanos}
-         </a></li>
+           <span className="nav-icon">{<FaEnvelope />}</span>
+           <span className="nav-text">{t.header.contactanos}</span>
+         </a>
+       </li>
      </ul>
    );
 
@@ -75,7 +108,9 @@ export default function ProyectosUSA() {
       {/* Breadcrumb Navigation */}
       <BreadcrumbSimple />
       
-       <Slider contenido={slidesUSA} namespace="usa"/>
+      <section id="inicio">
+        <Slider contenido={slidesUSA} namespace="usa"/>
+      </section>
 
       <main className="usa-main">
         <h2 className="classtitulo">{t.proyectos_usa.titulo}</h2>

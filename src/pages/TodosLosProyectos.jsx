@@ -20,6 +20,7 @@ import '../styles/TodosLosProyectos.css';
 import renderRincon from '../assets/render_rincon.png';
 import renderSanMiguel from '../assets/render_san_miguel.png';
 import renderQuintas from '../assets/render_quintas.png';
+import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
 
 const TodosLosProyectos = () => {
   const { t } = useIdioma();
@@ -30,6 +31,7 @@ const TodosLosProyectos = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showFilters, setShowFilters] = useState(true);
   const [lastFilterChange, setLastFilterChange] = useState(null);
+  const [activeSection, setActiveSection] = useState('inicio');
 
   // Efecto para manejar scroll hacia arriba y filtros desde SearchFilters
   useEffect(() => {
@@ -53,6 +55,25 @@ const TodosLosProyectos = () => {
       }, 300);
     }
   }, [location.state]);
+
+  // Efecto para detectar sección activa
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['inicio', 'expertos', 'contactanos'];
+      const scrollPosition = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Simular carga al cambiar filtros
   const handleFilterChange = (type, value) => {
@@ -108,10 +129,17 @@ const TodosLosProyectos = () => {
     return titulo === 'sanmiguel_titulo' || titulo === 'marbella_titulo';
   };
 
+  const handleSectionNavigation = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   // Navegación personalizada para esta página
   const navItems = (
     <ul className="nav-items">
-      <li>
+      <li className={activeSection === 'inicio' ? "active" : ""}>
         <a
           href="#"
           onClick={(e) => {
@@ -119,7 +147,8 @@ const TodosLosProyectos = () => {
             navigate('/');
           }}
         >
-          {t.header.inicio}
+          <span className="nav-icon">{<FaHome />}</span>
+          <span className="nav-text">{t.header.inicio}</span>
         </a>
       </li>
       <li>
@@ -130,7 +159,8 @@ const TodosLosProyectos = () => {
             navigate('/proyectos-colombia');
           }}
         >
-          {t.proyectos.colombia || 'Colombia'}
+          <span className="nav-icon">{<FaBuilding />}</span>
+          <span className="nav-text">{t.proyectos.colombia || 'Colombia'}</span>
         </a>
       </li>
       <li>
@@ -141,35 +171,32 @@ const TodosLosProyectos = () => {
             navigate('/proyectos-usa');
           }}
         >
-          {t.proyectos.usa || 'Estados Unidos'}
+          <span className="nav-icon">{<FaBuilding />}</span>
+          <span className="nav-text">{t.proyectos.usa || 'Estados Unidos'}</span>
         </a>
       </li>
-      <li>
+      <li className={activeSection === 'expertos' ? "active" : ""}>
         <a
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            const expertosSection = document.getElementById('expertos');
-            if (expertosSection) {
-              expertosSection.scrollIntoView({ behavior: 'smooth' });
-            }
+            handleSectionNavigation('expertos');
           }}
         >
-          {t.header.nosotros}
+          <span className="nav-icon">{<FaUsers />}</span>
+          <span className="nav-text">{t.header.nosotros}</span>
         </a>
       </li>
-      <li>
+      <li className={activeSection === 'contactanos' ? "active" : ""}>
         <a
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            const contactoSection = document.getElementById('contactanos');
-            if (contactoSection) {
-              contactoSection.scrollIntoView({ behavior: 'smooth' });
-            }
+            handleSectionNavigation('contactanos');
           }}
         >
-          {t.header.contactanos}
+          <span className="nav-icon">{<FaEnvelope />}</span>
+          <span className="nav-text">{t.header.contactanos}</span>
         </a>
       </li>
     </ul>
@@ -188,7 +215,7 @@ const TodosLosProyectos = () => {
       <BreadcrumbSimple />
       
       {/* Hero Slider */}
-      <section className="hero-slider">
+      <section id="inicio" className="hero-slider">
         <Swiper
           modules={[Pagination, Autoplay, EffectFade]}
           pagination={{ clickable: true }}
@@ -456,7 +483,7 @@ const TodosLosProyectos = () => {
         )}
       </main>
 
-      <div className="expertos-section-todos">
+      <div id="expertos" className="expertos-section-todos">
         <Expertos />
       </div>
       <ContactoCTA />

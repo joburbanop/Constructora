@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Breadcrumb from "../components/Breadcrumb";
 import BreadcrumbSimple from "../components/BreadcrumbSimple";
@@ -20,10 +20,12 @@ import '../styles/Slider.css';
 import '../styles/ProyectosColombia.css';
 import { useNavigate } from 'react-router-dom';
 import { handleProyectoNavigation, navigateToSection } from '../utils/navigation';
+import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
 
 const ProyectosColombia = () => {
   const { t } = useIdioma();
   const navigate = useNavigate();
+  const [activeSection, setActiveSection] = useState('inicio');
   
   // Filtrar proyectos de Colombia
   const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia');
@@ -33,6 +35,25 @@ const ProyectosColombia = () => {
   // Efecto para hacer scroll hacia arriba cuando se carga la página
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  // Efecto para detectar sección activa
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['inicio', 'expertos', 'contactanos'];
+      const scrollPosition = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
 
@@ -47,7 +68,7 @@ const ProyectosColombia = () => {
   // Navegación específica para Colombia
   const colombiaNavItems = (
     <ul className="nav-items">
-      <li>
+      <li className={activeSection === 'inicio' ? "active" : ""}>
         <a
           href="#"
           onClick={(e) => {
@@ -55,7 +76,8 @@ const ProyectosColombia = () => {
             navigate('/');
           }}
         >
-          {t.header.inicio}
+          <span className="nav-icon">{<FaHome />}</span>
+          <span className="nav-text">{t.header.inicio}</span>
         </a>
       </li>
       <li>
@@ -66,10 +88,11 @@ const ProyectosColombia = () => {
             navigate('/proyectos-usa');
           }}
         >
-          {t.proyectos.usa || 'Proyectos USA'}
+          <span className="nav-icon">{<FaBuilding />}</span>
+          <span className="nav-text">{t.proyectos.usa || 'Proyectos USA'}</span>
         </a>
       </li>
-      <li>
+      <li className={activeSection === 'expertos' ? "active" : ""}>
         <a
           href="#"
           onClick={(e) => {
@@ -77,10 +100,11 @@ const ProyectosColombia = () => {
             handleSectionNavigation('expertos');
           }}
         >
-          {t.header.nosotros}
+          <span className="nav-icon">{<FaUsers />}</span>
+          <span className="nav-text">{t.header.nosotros}</span>
         </a>
       </li>
-      <li>
+      <li className={activeSection === 'contactanos' ? "active" : ""}>
         <a
           href="#"
           onClick={(e) => {
@@ -88,7 +112,8 @@ const ProyectosColombia = () => {
             handleSectionNavigation('contactanos');
           }}
         >
-          {t.header.contactanos}
+          <span className="nav-icon">{<FaEnvelope />}</span>
+          <span className="nav-text">{t.header.contactanos}</span>
         </a>
       </li>
     </ul>
@@ -105,7 +130,7 @@ const ProyectosColombia = () => {
       <BreadcrumbSimple />
       
       {/* Hero Slider animado */}
-      <section style={{ width: '100%', height: '520px', marginBottom: 0, padding: 0 }}>
+      <section id="inicio" style={{ width: '100%', height: '520px', marginBottom: 0, padding: 0 }}>
         <Swiper
           modules={[Pagination, Autoplay, EffectFade]}
           pagination={{ clickable: true }}
