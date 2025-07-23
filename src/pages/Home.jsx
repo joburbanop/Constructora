@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Slider from '../components/Slider';
+import SearchFilters from '../components/SearchFilters';
 import AmbitoAccion from '../components/AmbitoAccion';
 import ProyectosEnMarcha from '../components/ProyectosEnMarcha';
 import RendersDestacados from '../components/RendersDestacados';
@@ -67,6 +68,9 @@ export default function Home() {
       <section className="hero-section">
         <Slider contenido={slides} namespace="home" />
       </section>
+
+      {/* Sección de Filtros de Búsqueda */}
+      <SearchFilters />
 
       {/* Sección Ámbito de Acción */}
       <section id="ambito" className="section-ambito">

@@ -120,6 +120,20 @@ const es = {
     navegacion: 'Navegación',
   },
 
+  search: {
+    titulo: 'Encuentra tu proyecto ideal',
+    subtitulo: 'Selecciona la ubicación y el tipo de proyecto que deseas',
+    ubicacion: 'Ubicación',
+    seleccionar_ubicacion: 'Selecciona una ubicación',
+    tipo_proyecto: 'Tipo de proyecto',
+    seleccionar_tipo: 'Selecciona un tipo',
+    buscar: 'Buscar',
+    limpiar: 'Limpiar filtros',
+    info_ubicacion: 'Proyectos en Colombia y Estados Unidos',
+    info_tipos: 'Condominios, urbanizaciones y locales comerciales',
+    entrega_inmediata: 'Entrega inmediata',
+  },
+
   // informaciòn componentes que forman infoRinconLago.jsx
  
     // iformaciòn componente DetallesProyecto

@@ -119,6 +119,20 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     navegacion: 'Navigation',
   },
 
+  search: {
+    titulo: 'Find your ideal project',
+    subtitulo: 'Select the location and type of project you want',
+    ubicacion: 'Location',
+    seleccionar_ubicacion: 'Select a location',
+    tipo_proyecto: 'Project type',
+    seleccionar_tipo: 'Select a type',
+    buscar: 'Search',
+    limpiar: 'Clear filters',
+    info_ubicacion: 'Projects in Colombia and United States',
+    info_tipos: 'Condominiums, housing developments and commercial units',
+    entrega_inmediata: 'Immediate delivery',
+  },
+
   // informaciòn componentes que forman infoRinconLago.jsx
 
   // iformaciòn componente DetallesProyecto
