@@ -4,6 +4,7 @@ import ProyectoCard from '../components/ProyectoCardSimple';
 import Expertos from '../components/Expertos';
 import ContactoCTA from '../components/ContactoCTA';
 import Footer from '../components/Footer';
+import WhatsAppFloat from '../components/WhatsAppFloat';
 import proyectos from '../utils/proyectos';
 import { useNavigate } from 'react-router-dom';
 import { handleProyectoNavigation } from '../utils/navigation';
@@ -93,6 +94,7 @@ export default function ProyectosUSA() {
       <Expertos />
       <ContactoCTA />
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 }

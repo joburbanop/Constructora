@@ -13,6 +13,7 @@ import AreaPrecioUbic from "../components/AreaPrecioUbic";
 import InfoZigZag from "../components/InfoZigZag";
 import infoZigZag  from "../utils/infoZigZag";
 import VideoYoutube from "../components/VideoYoutube";
+import WhatsAppFloat from "../components/WhatsAppFloat";
 import "../styles/VideoYoutube.css";
 import { useNavigate } from 'react-router-dom';
 import UbicacionMaps from '../components/UbicacionMaps';
@@ -71,6 +72,7 @@ const InfoRinconLago = () => {
       <GaleriaProyecto id="rincon" />
       <Expertos listaFiltrada={listaFiltrada}/>
       <Footer/>
+      <WhatsAppFloat />
 
    
    </>

@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Expertos from "../components/Expertos";
 import ContactoCTA from "../components/ContactoCTA";
+import WhatsAppFloat from "../components/WhatsAppFloat";
 import proyectos from "../utils/proyectos";
 import { useIdioma } from '../context/IdiomaContext';
 import { useNavigate } from 'react-router-dom';
@@ -298,6 +299,7 @@ const TodosLosProyectos = () => {
       <Expertos />
       <ContactoCTA />
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 };

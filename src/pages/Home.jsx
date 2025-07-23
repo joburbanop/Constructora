@@ -6,6 +6,7 @@ import RendersDestacados from '../components/RendersDestacados';
 import ProyectosEntregados from '../components/ProyectosEntregados';
 import Expertos from '../components/Expertos';
 import Footer from '../components/Footer';
+import WhatsAppFloat from '../components/WhatsAppFloat';
 import slides from '../utils/slides';
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -71,6 +72,7 @@ export default function Home() {
       <section id="contactanos">
         <Footer />
       </section>
+      <WhatsAppFloat />
     </>
   );
 }

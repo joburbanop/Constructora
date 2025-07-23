@@ -8,6 +8,7 @@ import GaleriaProyecto from "../components/GaleriaProyecto";
 import { useIdioma } from '../context/IdiomaContext';
 import Footer from "../components/Footer";
 import SectionDivider from "../components/SectionDivider";
+import WhatsAppFloat from "../components/WhatsAppFloat";
 import "../styles/VideoYoutube.css";
 import { useNavigate } from 'react-router-dom';
 import infoZigZag  from "../utils/infoZigZag";
@@ -32,6 +33,7 @@ const InfoRinconLago = () => {
        <Expertos />
       <ContactoCTA />
       <Footer/>
+      <WhatsAppFloat />
 
    
    </>

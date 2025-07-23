@@ -8,6 +8,7 @@ import ColombiaBenefits from '../components/ColombiaBenefits';
 import Footer from '../components/Footer';
 import Expertos from '../components/Expertos';
 import ContactoCTA from '../components/ContactoCTA';
+import WhatsAppFloat from '../components/WhatsAppFloat';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
@@ -184,6 +185,7 @@ const ProyectosColombia = () => {
       <Expertos />
       <ContactoCTA />
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 };

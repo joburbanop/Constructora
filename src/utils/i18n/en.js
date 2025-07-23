@@ -78,6 +78,16 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     limpiar_filtros: 'Clear filters',
   },
 
+  whatsapp: {
+    contactar: 'Chat with us!',
+    abrir_chat: 'Open chat',
+    titulo: 'Construction Company',
+    en_linea: 'Online',
+    mensaje_bienvenida: 'Hello! How can we help you?',
+    abrir_whatsapp: 'Open WhatsApp',
+    llamar: 'Call',
+  },
+
   // informaciòn componentes que forman infoRinconLago.jsx
 
   // iformaciòn componente DetallesProyecto

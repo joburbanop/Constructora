@@ -79,6 +79,16 @@ const es = {
     limpiar_filtros: 'Limpiar filtros',
   },
 
+  whatsapp: {
+    contactar: '¡Chatea con nosotros!',
+    abrir_chat: 'Abrir chat',
+    titulo: 'Constructora',
+    en_linea: 'En línea',
+    mensaje_bienvenida: '¡Hola! ¿En qué podemos ayudarte?',
+    abrir_whatsapp: 'Abrir WhatsApp',
+    llamar: 'Llamar',
+  },
+
   // informaciòn componentes que forman infoRinconLago.jsx
  
     // iformaciòn componente DetallesProyecto
