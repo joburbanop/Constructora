@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "../components/Header";
+import Breadcrumb from "../components/Breadcrumb";
+import BreadcrumbSimple from "../components/BreadcrumbSimple";
 import renders from "../utils/renders";
 import proyectos from "../utils/proyectos";
 import { useIdioma } from '../context/IdiomaContext';
@@ -8,7 +10,7 @@ import ColombiaBenefits from '../components/ColombiaBenefits';
 import Footer from '../components/Footer';
 import Expertos from '../components/Expertos';
 import ContactoCTA from '../components/ContactoCTA';
-import WhatsAppFloat from '../components/WhatsAppFloat';
+import WhatsAppFloat from "../components/WhatsAppFloat";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
@@ -107,6 +109,10 @@ const ProyectosColombia = () => {
         customNavItems={colombiaNavItems}
         showDefaultNav={false}
       />
+      
+      {/* Breadcrumb Navigation */}
+      <BreadcrumbSimple />
+      
       {/* Hero Slider animado */}
       <section style={{ width: '100%', height: '520px', marginBottom: 0, padding: 0 }}>
         <Swiper

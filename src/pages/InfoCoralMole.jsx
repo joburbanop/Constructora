@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
+import Breadcrumb from "../components/Breadcrumb";
+import BreadcrumbSimple from "../components/BreadcrumbSimple";
 import Slider from "../components/Slider";
 import slidesCoral from "../utils/slidesCoral";
 import Button from "../components/Button";
@@ -26,6 +28,9 @@ const InfoRinconLago = () => {
    <div className="info-coral-container">
       <Header 
       />
+
+      {/* Breadcrumb Navigation */}
+      <BreadcrumbSimple />
 
       <Slider contenido={slidesCoral} namespace="coral"/>
       <DetallesProyecto id="coral" />

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
+import Breadcrumb from "../components/Breadcrumb";
+import BreadcrumbSimple from "../components/BreadcrumbSimple";
 import Footer from "../components/Footer";
 import Expertos from "../components/Expertos";
 import ContactoCTA from "../components/ContactoCTA";
@@ -140,12 +142,17 @@ const TodosLosProyectos = () => {
     </ul>
   );
 
+  console.log('TodosLosProyectos component rendering');
+
   return (
     <div className="todos-proyectos-container">
       <Header 
         customNavItems={navItems}
         showDefaultNav={false}
       />
+      
+      {/* Breadcrumb Navigation */}
+      <BreadcrumbSimple />
       
       {/* Hero Slider */}
       <section className="hero-slider">

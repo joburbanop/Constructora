@@ -114,6 +114,12 @@ const es = {
     cta_ver_proyectos: 'Ver Proyectos',
   },
 
+  breadcrumb: {
+    inicio: 'Inicio',
+    ubicacion_actual: 'Ubicación actual',
+    navegacion: 'Navegación',
+  },
+
   // informaciòn componentes que forman infoRinconLago.jsx
  
     // iformaciòn componente DetallesProyecto

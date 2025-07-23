@@ -113,6 +113,12 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     cta_ver_proyectos: 'View Projects',
   },
 
+  breadcrumb: {
+    inicio: 'Home',
+    ubicacion_actual: 'Current location',
+    navegacion: 'Navigation',
+  },
+
   // informaciòn componentes que forman infoRinconLago.jsx
 
   // iformaciòn componente DetallesProyecto

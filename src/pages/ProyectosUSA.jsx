@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
+import Breadcrumb from '../components/Breadcrumb';
+import BreadcrumbSimple from '../components/BreadcrumbSimple';
 import ProyectoCard from '../components/ProyectoCardSimple';
 import Expertos from '../components/Expertos';
 import ContactoCTA from '../components/ContactoCTA';
@@ -79,6 +81,10 @@ export default function ProyectosUSA() {
          customNavItems={usaNavItems}
          showDefaultNav={false}
       />
+      
+      {/* Breadcrumb Navigation */}
+      <BreadcrumbSimple />
+      
        <Slider contenido={slidesUSA} namespace="usa"/>
 
       <main className="usa-main">

@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
+import Breadcrumb from "../components/Breadcrumb";
+import BreadcrumbSimple from "../components/BreadcrumbSimple";
 import Slider from "../components/Slider";
 import slidesRinconLago from "../utils/slidesRinconLago";
 import Button from "../components/Button";
@@ -38,6 +40,9 @@ const InfoRinconLago = () => {
    <div className="info-rincon-container">
       <Header
       />
+
+      {/* Breadcrumb Navigation */}
+      <BreadcrumbSimple />
 
       <Slider contenido={slidesRinconLago} namespace="rincon"/>
       <DetallesProyecto id="rincon"  videoId={video.id} videoTitulo={video.titulo} />
