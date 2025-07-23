@@ -50,10 +50,10 @@ export const handleProyectoNavigation = (proyecto, navigate) => {
   // Navegación interna por ubicación
   if (proyecto.ubicacion === 'jamundi_colombia') {
     navigate('/proyectos-colombia');
-    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 200);
   } else if (proyecto.ubicacion === 'cope_coral') {
     navigate('/proyectos-usa');
-    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 200);
   }
 };
 

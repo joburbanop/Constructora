@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import ProyectoCard from '../components/ProyectoCardSimple';
 import Expertos from '../components/Expertos';
@@ -16,6 +16,11 @@ import slidesUSA from '../utils/slidesUSA';
 export default function ProyectosUSA() {
   const { t } = useIdioma();
   const navigate = useNavigate();
+
+  // Efecto para hacer scroll hacia arriba cuando se carga la página
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
 
 

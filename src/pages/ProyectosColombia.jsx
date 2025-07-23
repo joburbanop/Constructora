@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import renders from "../utils/renders";
 import proyectos from "../utils/proyectos";
@@ -27,6 +27,11 @@ const ProyectosColombia = () => {
   const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia');
   // Usar el primer render como imagen de hero
   const heroImg = renders[0]?.imagen;
+
+  // Efecto para hacer scroll hacia arriba cuando se carga la página
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
 
 
