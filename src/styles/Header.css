@@ -6,10 +6,16 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
-  box-shadow: 0 6px 24px -8px rgba(0, 0, 0, 0.18),
-              0 1.5px 0 rgba(0, 0, 0, 0.04);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* ========== Contenedor flex ========== */
@@ -18,226 +24,345 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  height: 90px;
+  height: 80px;
   width: 100%;
-  gap: 0;
+  max-width: 1200px;
+  gap: 2rem;
 }
 
 /* ========== Hamburguesa ========== */
 .menu-toggle {
-  order: 0;
-  font-size: 2rem;
+  display: none;
   background: none;
   border: none;
-  color: #222;
+  color: #333;
   cursor: pointer;
-  display: none;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.menu-toggle:hover {
+  background: rgba(255, 102, 0, 0.1);
+  color: #ff6600;
+}
+
+.menu-toggle.active {
+  color: #ff6600;
 }
 
 /* ========== Logo ========== */
 .header__logo {
-  height: 60px;
-  display: flex;
-  align-items: center;
-}
-
-/* ========== Menú horizontal base ========== */
-.header__nav {
-  height: 60px;
-  display: flex;
-  align-items: center;
-}
-
-/* ========== Idioma ========== */
-.header__lang-select {
-  height: 60px;
-  display: flex;
-  align-items: center;
-}
-
-.header__lang-select select {
-  border: 2px solid #ff6600 !important;
-  border-radius: 2em;
-  padding: 0.4em 1.2em;
-  font-size: 1em;
-  background: #f7f7f7;
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  height: 50px;
   cursor: pointer;
-  outline: none;
-  font-weight: 600;
-  transition: box-shadow 0.2s, border-color 0.2s;
+  transition: transform 0.3s ease;
 }
 
-.header__lang-select select:focus {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+.header__logo:hover {
+  transform: scale(1.05);
 }
 
-/* ========== Ítems horizontales en escritorio ========== */
+/* ========== Navegación ========== */
+.header__nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .nav-items {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
+}
+
+.nav-items li {
+  position: relative;
 }
 
 .nav-items li a {
   text-decoration: none;
-  color: #222;
-  font-size: 1.2rem;
-  font-family: 'serif';
-  transition: color 0.2s;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 12px 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 80px;
+  background: transparent;
 }
 
 .nav-items li a:hover {
   color: #ff6600;
+  background: rgba(255, 102, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav-items li a.active {
+  color: #ff6600;
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.15) 0%, rgba(255, 145, 77, 0.1) 100%);
+  box-shadow: 0 4px 16px rgba(255, 102, 0, 0.25);
+  transform: translateY(-1px);
+  border: 1px solid rgba(255, 102, 0, 0.2);
+}
+
+.nav-items li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6600, #ff914d);
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(255, 102, 0, 0.3);
+}
+
+/* ========== Iconos de navegación ========== */
+.nav-icon {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+}
+
+.nav-items li a:hover .nav-icon {
+  transform: scale(1.1);
+}
+
+.nav-items li a.active .nav-icon {
+  transform: scale(1.15);
+  color: #ff6600;
+  filter: drop-shadow(0 2px 4px rgba(255, 102, 0, 0.3));
+}
+
+/* ========== Selector de idioma ========== */
+.header__lang-select {
+  display: flex;
+  align-items: center;
+}
+
+.lang-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lang-icon {
+  position: absolute;
+  left: 12px;
+  color: #666;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.header__lang-select select {
+  border: 2px solid #e2e8f0;
+  border-radius: 25px;
+  padding: 8px 16px 8px 35px;
+  font-size: 0.9rem;
+  background: #ffffff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.header__lang-select select:hover {
+  border-color: #ff6600;
+  box-shadow: 0 2px 8px rgba(255, 102, 0, 0.1);
+}
+
+.header__lang-select select:focus {
+  border-color: #ff6600;
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.1);
+}
+
+/* ========== Overlay del menú ========== */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
 }
 
 /* ========== Responsive ≤ 768px ========== */
 @media (max-width: 768px) {
   .header__container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    padding: 0.3rem 1rem;
-    height: auto;
-    gap: 0;
-    box-sizing: border-box;
+    padding: 0 1rem;
+    height: 70px;
+    gap: 1rem;
   }
 
-  .ocultar-en-movil {
-    display: none !important;
-  }
-
-  .menu-toggle,
-  .header__logo,
-  .header__lang-select {
+  .menu-toggle {
     display: flex;
     align-items: center;
+    justify-content: center;
+    order: 1;
+  }
+
+  .header__logo {
     height: 40px;
-    margin: 0;
-    padding: 0;
-    flex: 0 0 auto;
+    order: 2;
+  }
+
+  .header__lang-select {
+    order: 3;
   }
 
   .header__lang-select select {
-    font-size: 0.7rem;
-    padding: 0.3em 0.5em;
-    height: auto;
-    background-color: #f9f9f9;
-    color: #333;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-    outline: none;
-    cursor: pointer;
-    font-weight: 500;
+    font-size: 0.8rem;
+    padding: 6px 12px 6px 30px;
+    min-width: 100px;
+  }
+
+  .lang-icon {
+    left: 10px;
+    font-size: 0.8rem;
   }
 
   .header__nav {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 2rem;
   }
 
-  .header__nav.activo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    padding: 1rem;
-    padding-bottom: 3.5rem;
-    box-sizing: border-box;
-    overflow: visible;
-    position: relative;
+  .header__nav.active {
+    transform: translateX(0);
+  }
+
+  .menu-overlay {
+    display: block;
   }
 
   .nav-items {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 0.3rem;
+    flex-direction: column;
+    gap: 1rem;
     width: 100%;
-    margin: 0;
+    max-width: 300px;
+    padding: 0 1rem;
   }
 
   .nav-items li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: deslizarY 0.5s ease forwards;
+    width: 100%;
   }
 
   .nav-items li a {
-    text-decoration: none;
-    font-size: 1.3rem;
-    padding: 0.1rem;
-    border-radius: 0.5rem;
-    color: #000;
-    width: 100%;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
-    align-items: center;
-    font-weight: bold;
-  }
-
-  .cerrar-menu {
-   
-   
-    background-color: #ff6600;
-    
-    padding: 0.6em 1.2em;
-    border-radius: 2em;
+    width: 100%;
+    padding: 16px 20px;
     font-size: 1rem;
-    cursor: pointer;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    text-align: left;
+    border-radius: 12px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    gap: 12px;
+    min-width: auto;
   }
 
-  .cerrar-menu:hover {
-    background-color: #e65c00;
+  .nav-items li a:hover {
+    background: #ff6600;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
+  }
+
+  .nav-items li a.active {
+    background: linear-gradient(135deg, #ff6600 0%, #ff914d 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .nav-items li a.active::after {
+    display: none;
+  }
+
+  .nav-icon {
+    font-size: 1.1rem;
+    min-width: 20px;
+  }
+
+  .nav-text {
+    font-size: 0.9rem;
+  }
+
+  .hidden {
+    display: none !important;
   }
 }
 
 /* ========== Vista escritorio ≥ 769px ========== */
 @media (min-width: 769px) {
-  .header__nav.activo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-  }
-
-  .nav-items {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-  }
-
-  .nav-items li {
-    animation: none;
-  }
-
-  .nav-items li a {
-    font-size: 1.1rem;
-    justify-content: center;
-    font-weight: 500;
+  .header__nav {
+    display: flex !important;
   }
 }
 
-/* ========== Animación menú hamburguesa ========== */
-@keyframes deslizarY {
+/* ========== Animaciones ========== */
+@keyframes slideInFromTop {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.header {
+  animation: slideInFromTop 0.5s ease;
+}
+
+/* ========== Estados de focus para accesibilidad ========== */
+.menu-toggle:focus,
+.header__lang-select select:focus,
+.nav-items li a:focus {
+  outline: 2px solid #ff6600;
+  outline-offset: 2px;
+}
+
+/* ========== Transiciones suaves ========== */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }

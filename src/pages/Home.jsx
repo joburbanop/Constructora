@@ -35,7 +35,6 @@ export default function Home() {
     const scrollToTop = location.state?.scrollToTop;
 
     if (scrollToTop) {
-      // Aumentar el delay para asegurar que la página se haya cargado completamente
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }, 200);
@@ -53,7 +52,6 @@ export default function Home() {
 
   // Efecto para hacer scroll hacia arriba cuando se carga la página
   useEffect(() => {
-    // Si no hay estado específico, hacer scroll hacia arriba por defecto
     if (!location.state?.seccionDestino && !location.state?.scrollToTop) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -61,11 +59,10 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      {/* Header */}
       <Header />
       
       {/* Hero Section con Slider */}
-      <section className="hero-section">
+      <section id="inicio" className="hero-section">
         <Slider contenido={slides} namespace="home" />
       </section>
 
@@ -93,9 +90,8 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* Sección de Estadísticas */}
-      <section className="section-stats">
+      <section id="stats" className="section-stats">
         <StatsSection />
       </section>
 
@@ -125,7 +121,6 @@ export default function Home() {
         <Footer />
       </section>
 
-      {/* WhatsApp Float */}
       <WhatsAppFloat />
     </div>
   );

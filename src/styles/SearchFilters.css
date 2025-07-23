@@ -186,6 +186,7 @@
   padding-top: 30px;
   border-top: 1px solid #e5e7eb;
   margin-top: 15px;
+  text-align: center;
 }
 
 .info-item {
@@ -195,6 +196,7 @@
   color: #6b7280;
   font-size: 15px;
   font-weight: 500;
+  justify-content: center;
 }
 
 .info-item svg {

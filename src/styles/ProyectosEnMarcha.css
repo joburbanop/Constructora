@@ -128,7 +128,7 @@
   color: #444;
   margin-bottom: 1.1rem;
   font-family: 'Times New Roman', Times, serif;
-  text-align: left;
+  text-align: center;
 }
 
 .proyecto-ubicacion {
@@ -139,8 +139,9 @@
   color: #ff6600;
   margin-bottom: 1.2rem;
   font-weight: 500;
-  text-align: left;
+  text-align: center;
   width: 100%;
+  justify-content: center;
 }
 
 .proyecto-ubicacion-icon {

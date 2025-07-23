@@ -335,13 +335,7 @@ const TodosLosProyectos = () => {
         {/* Contador de resultados con animación */}
         <div className="resultados-info">
           <div className="resultados-stats">
-            <span className="resultados-count">
-              {isLoading ? (
-                <span className="loading-dots">...</span>
-              ) : (
-                proyectosFiltrados.length
-              )}
-            </span>
+            
             <span className="resultados-text">
               {t.todos_proyectos?.mostrando || 'Mostrando'} {proyectosFiltrados.length} {t.todos_proyectos?.de_proyectos || 'de proyectos'}
             </span>
