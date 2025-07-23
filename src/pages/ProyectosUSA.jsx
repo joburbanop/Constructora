@@ -24,7 +24,7 @@ export default function ProyectosUSA() {
 
 
 
-  const colombiaNavItems = (
+  const usaNavItems = (
      <ul className="nav-items">
          <li><a href="#" onClick={(e) => {e.preventDefault();
              navigate('/');}}>
@@ -32,8 +32,8 @@ export default function ProyectosUSA() {
          </a></li>
 
        <li><a href="#" onClick={(e) => {e.preventDefault();
-             navigate('/proyectos-usa');}}>
-           {t.proyectos.usa || 'Proyectos USA'}
+             navigate('/proyectos-colombia');}}>
+           {t.proyectos.colombia || 'Proyectos Colombia'}
          </a></li>
 
        <li><a href="#" onClick={(e) => {e.preventDefault();
@@ -76,7 +76,7 @@ export default function ProyectosUSA() {
   return (
     <div className="proyectos-usa-container">
       <Header  
-         customNavItems={colombiaNavItems}
+         customNavItems={usaNavItems}
          showDefaultNav={false}
       />
        <Slider contenido={slidesUSA} namespace="usa"/>
