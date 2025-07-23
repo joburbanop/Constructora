@@ -26,6 +26,13 @@ export default function ProyectosUSA() {
 
 
 
+  const handleSectionNavigation = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const usaNavItems = (
      <ul className="nav-items">
          <li><a href="#" onClick={(e) => {e.preventDefault();
@@ -39,31 +46,14 @@ export default function ProyectosUSA() {
          </a></li>
 
        <li><a href="#" onClick={(e) => {e.preventDefault();
-             const expertosSection = document.getElementById('expertos');
-             if (expertosSection) {
-               expertosSection.scrollIntoView({ behavior: 'smooth' });
-             } else {
-               navigateToSection('expertos', navigate);
-             }
+             handleSectionNavigation('expertos');
            }}>
            {t.header.nosotros}
          </a></li>
 
        <li><a href="#" onClick={(e) => {e.preventDefault();
-             const contactoSection = document.getElementById('contactanos');
-             if (window.location.pathname === '/proyectos-colombia' && contactoSection) {
-               contactoSection.scrollIntoView({ behavior: 'smooth' });
-             } else {
-               navigate('/proyectos-colombia');
-               setTimeout(() => {
-                 const contactoSection = document.getElementById('contactanos');
-                 if (contactoSection) {
-                   contactoSection.scrollIntoView({ behavior: 'smooth' });
-                 }
-               }, 500);
-             }
-           }}
-         >
+             handleSectionNavigation('contactanos');
+           }}>
            {t.header.contactanos}
          </a></li>
      </ul>
@@ -104,7 +94,7 @@ export default function ProyectosUSA() {
         </div>
       </main>
 
-      <div className="expertos-section-usa">
+      <div id="expertos" className="expertos-section-usa">
         <Expertos />
       </div>
       <ContactoCTA />

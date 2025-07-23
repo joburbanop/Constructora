@@ -37,6 +37,13 @@ const ProyectosColombia = () => {
 
 
 
+  const handleSectionNavigation = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   // Navegación específica para Colombia
   const colombiaNavItems = (
     <ul className="nav-items">
@@ -67,12 +74,7 @@ const ProyectosColombia = () => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            const expertosSection = document.getElementById('expertos');
-            if (expertosSection) {
-              expertosSection.scrollIntoView({ behavior: 'smooth' });
-            } else {
-              navigateToSection('expertos', navigate);
-            }
+            handleSectionNavigation('expertos');
           }}
         >
           {t.header.nosotros}
@@ -83,18 +85,7 @@ const ProyectosColombia = () => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            const contactoSection = document.getElementById('contactanos');
-            if (window.location.pathname === '/proyectos-colombia' && contactoSection) {
-              contactoSection.scrollIntoView({ behavior: 'smooth' });
-            } else {
-              navigate('/proyectos-colombia');
-              setTimeout(() => {
-                const contactoSection = document.getElementById('contactanos');
-                if (contactoSection) {
-                  contactoSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }, 500);
-            }
+            handleSectionNavigation('contactanos');
           }}
         >
           {t.header.contactanos}
@@ -196,7 +187,7 @@ const ProyectosColombia = () => {
         </div>
       </main>
     
-      <div className="expertos-section-colombia">
+      <div id="expertos" className="expertos-section-colombia">
         <Expertos />
       </div>
       <ContactoCTA />
