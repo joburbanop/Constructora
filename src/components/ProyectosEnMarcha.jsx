@@ -19,7 +19,13 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
   const navigate = useNavigate();
    const listado = proyectosFiltrados || proyectos;
   const isProyectoProximamente = (titulo) => {
-    return titulo === 'sanmiguel_titulo' || titulo === 'marbella_titulo';
+    // Proyectos próximamente (urbanizaciones de lujo)
+    const proyectosProximamente = ['sanmiguel_titulo', 'marbella_titulo'];
+    
+    // Proyectos entregados (todos deben estar deshabilitados)
+    const proyectosEntregados = ['cana_title', 'palmeras_title', 'caña_dulce_title', 'puertas_sol_title'];
+    
+    return proyectosProximamente.includes(titulo) || proyectosEntregados.includes(titulo);
   };
 
   return (
@@ -48,7 +54,8 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
               </div>
               <Button
                 className={`ambito-btn ${isProyectoProximamente(proy.titulo) ? 'gray lujo' : 'orange'}`}
-                onClick={() => handleProyectoNavigation(proy, navigate)}
+                onClick={isProyectoProximamente(proy.titulo) ? undefined : () => handleProyectoNavigation(proy, navigate)}
+                disabled={isProyectoProximamente(proy.titulo)}
                 aria-label={isProyectoProximamente(proy.titulo) ? t.proyectos.proximamente : t.proyectos.boton}
               >
                 {t.proyectos.boton || 'Ver más'}

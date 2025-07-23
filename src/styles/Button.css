@@ -40,6 +40,16 @@
   cursor: pointer;
   opacity: 1;
 }
+
+.ambito-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.ambito-btn.gray:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
 .ambito-btn.lujo .proximamente-label {
   display: none;
 }
