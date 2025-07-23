@@ -38,3 +38,34 @@
   line-height: 1.5;
   max-width: 500px;
 }
+
+@media (max-width: 768px) {
+
+  .contenedor-bloques{
+    
+      padding: 0;
+  }
+
+  .bloque {
+   
+    gap:0.1rem;
+    padding: 0;
+  }
+  .bloque img {
+    width: 50px;
+    height: 50px;
+   
+    
+  }
+
+  .bloque h3 {
+     font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: justify;
+    color: #ff6600;
+    margin: 0px;
+  }
+  
+
+}

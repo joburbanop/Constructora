@@ -149,6 +149,10 @@ info_ZigZag_coral:{
   }
   
 },
+imagenes_add:{
+  mapa_rincon:'Mapa de obra'
+
+},
 
 // Titulos componente EspaciosCompartidos.jsx  del js infoEspacios.js
 espacios: {
@@ -170,8 +174,9 @@ espacios: {
 videos: {
   rincon: {
     video1: { id: 'BRmd52pMUW4', titulo: 'Avances de obra', visible: true },
-    render: { id: 'oSlfSdN70jQ', titulo: 'Conozca Rincón del Lago', visible: false },
-    Avance_en_Zona_comercial: { id: 'LS0EhS0oSbM', titulo: 'Avances de obra', visible: true }
+    render: { id: 'oSlfSdN70jQ', titulo: 'Avances de obra', visible: false },
+    Avance_en_Zona_comercial: { id: 'LS0EhS0oSbM', titulo: 'Avances de obra', visible: true },
+    rincon_lago_nuevo_sur:{id:'BRmd52pMUW4', titulo: 'Conozca Rincón del Lago', visible: true}
   },
 },
   entregados: {
@@ -260,6 +265,8 @@ videos: {
     espacios: 'Espacios ',
     galeria: 'Galería',
     detalles: 'Detalles',
+    mapa_obra:'Mapa de obra',
+    ubicacion:'Ubicación'
 
   },
   expertos: {

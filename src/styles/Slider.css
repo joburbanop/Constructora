@@ -118,3 +118,44 @@ html, body, #root {
 .slide-bg::before {
   transition: opacity 0.4s ease;
 }
+
+.slider-container .animate-big .slide-content {
+border:#e65c00  1px solid;
+}
+.slider-container .animate-fadeIn .animate-fadeIn{
+margin: 0px;
+
+}
+
+@media (max-width: 768px) {
+
+.slide-content h1 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  
+}
+
+.slide-content p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.slide-content button {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9em;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  transition: background 0.2s, transform 0.2s;
+  font-weight: 500;
+}
+
+
+}
+

@@ -10,16 +10,16 @@ import { useIdioma } from '../context/IdiomaContext';
 
 export default function Slider({ contenido = [], namespace = 'home' }) {
   const { t } = useIdioma();
-  
+  //  autoplay={{ delay: 4000, disableOnInteraction: false }}  loop
   return (
     <div className="slider-container">
       <Swiper
         modules={[Pagination, Autoplay, EffectFade]}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+      
         effect="fade"
         speed={1200}
-        loop
+       
         className="mySwiper"
       >
         {contenido.map((slide, idx) => (

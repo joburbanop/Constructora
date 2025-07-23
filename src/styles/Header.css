@@ -161,9 +161,7 @@
   }
 
   .nav-items li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     animation: deslizarY 0.5s ease forwards;
   }
 
@@ -181,13 +179,10 @@
   }
 
   .cerrar-menu {
-    position: absolute;
-    bottom: 0.5rem;
-    left: 0.5rem;
+   
+   
     background-color: #ff6600;
-    color: #fff;
-    border: none;
-    font-weight: bold;
+    
     padding: 0.6em 1.2em;
     border-radius: 2em;
     font-size: 1rem;
