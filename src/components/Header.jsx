@@ -51,7 +51,7 @@ const Header = ({
           </Link>
         </li>
         <li>
-          <Link to="/proyectos-colombia" onClick={() => setMenuAbierto(false)}>
+          <Link to="/todos-los-proyectos" onClick={() => setMenuAbierto(false)}>
             {t.header.proyectos}
           </Link>
         </li>

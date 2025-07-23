@@ -49,6 +49,7 @@ const es = {
     cana_desc:'100% vendida en la vereda San José.',
 
     usa: 'Estados Unidos',
+    colombia: 'Colombia',
     cope_coral:'Cope Coral, Florida',
     boton: 'Ver más',
     beneficio_titulo1: 'Somos',
@@ -61,6 +62,21 @@ const es = {
     beneficio3_titulo: 'Elige tu próximo hogar',
     beneficio3_desc: 'Encuentra la vivienda perfecta para ti y tu familia.',
     proximamente: 'Próximamente',
+  },
+
+  todos_proyectos: {
+    hero_titulo: 'NUESTROS PROYECTOS',
+    hero_subtitulo: 'Descubre todas nuestras opciones',
+    hero_descripcion: 'Explora nuestra cartera completa de proyectos en Colombia y Estados Unidos',
+    filtro_tipo: 'Tipo de proyecto',
+    filtro_ubicacion: 'Ubicación',
+    todos: 'Todos',
+    todas_ubicaciones: 'Todas las ubicaciones',
+    mostrando: 'Mostrando',
+    de_proyectos: 'de proyectos',
+    sin_resultados_titulo: 'No se encontraron proyectos',
+    sin_resultados_desc: 'Intenta cambiar los filtros para ver más opciones',
+    limpiar_filtros: 'Limpiar filtros',
   },
 
   // informaciòn componentes que forman infoRinconLago.jsx

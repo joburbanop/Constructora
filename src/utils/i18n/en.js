@@ -48,6 +48,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     cana_title: 'Caña Brava',
     cana_desc: '100% sold in the San José area.',
     usa: 'U.S.A',
+    colombia: 'Colombia',
     cope_coral:'Cope Coral, Florida',
     boton: 'View more',
     beneficio_titulo1: 'We are',
@@ -60,6 +61,21 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     beneficio3_titulo: 'Choose your next home',
     beneficio3_desc: 'Find the perfect home for you and your family.',
     proximamente: 'Coming Soon',
+  },
+
+  todos_proyectos: {
+    hero_titulo: 'OUR PROJECTS',
+    hero_subtitulo: 'Discover all our options',
+    hero_descripcion: 'Explore our complete portfolio of projects in Colombia and the United States',
+    filtro_tipo: 'Project type',
+    filtro_ubicacion: 'Location',
+    todos: 'All',
+    todas_ubicaciones: 'All locations',
+    mostrando: 'Showing',
+    de_proyectos: 'projects',
+    sin_resultados_titulo: 'No projects found',
+    sin_resultados_desc: 'Try changing the filters to see more options',
+    limpiar_filtros: 'Clear filters',
   },
 
   // informaciòn componentes que forman infoRinconLago.jsx
