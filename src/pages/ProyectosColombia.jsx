@@ -15,6 +15,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import '../styles/Slider.css';
+import '../styles/ProyectosColombia.css';
 import { useNavigate } from 'react-router-dom';
 import { handleProyectoNavigation, navigateToSection } from '../utils/navigation';
 
@@ -26,6 +27,8 @@ const ProyectosColombia = () => {
   const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia');
   // Usar el primer render como imagen de hero
   const heroImg = renders[0]?.imagen;
+
+
 
   // Navegación específica para Colombia
   const colombiaNavItems = (
@@ -94,7 +97,7 @@ const ProyectosColombia = () => {
   );
 
   return (
-    <>
+    <div className="proyectos-colombia-container">
       <Header 
         customNavItems={colombiaNavItems}
         showDefaultNav={false}
@@ -152,17 +155,18 @@ const ProyectosColombia = () => {
           ))}
         </Swiper>
       </section>
-      <main style={{ maxWidth: 1200, margin: '40px auto', padding: 20 }}>
+      
+      <main className="proyectos-colombia-main">
         <ColombiaBenefits />
-        <h1 style={{ fontSize: '2.2rem', marginBottom: 32 }}>{t.proyectos.colombia_title || 'Proyectos Colombia'}</h1>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+        <h1 style={{ fontSize: '2.2rem', marginBottom: 32, textAlign: 'center' }}>{t.proyectos.colombia_title || 'Proyectos Colombia'}</h1>
+        <div className="proyectos-colombia-grid">
           {proyectosColombia.map((proy, idx) => {
             const isUrbanizacion = proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo';
             return (
-              <div key={idx} style={{ background: '#fff', borderRadius: 18, boxShadow: '0 4px 24px rgba(0,0,0,0.10)', padding: 24 }}>
-                <img src={proy.imagen} alt={t.proyectos[proy.titulo]} style={{ width: '100%', borderRadius: 12, marginBottom: 16 }} />
-                <h2 style={{ color: '#222', fontSize: '1.3rem', marginBottom: 8 }}>{t.proyectos[proy.titulo]}</h2>
-                <p style={{ color: '#444', marginBottom: 12 }}>{t.proyectos[proy.descripcion]}</p>
+              <div key={idx} className="proyecto-colombia-card">
+                <img src={proy.imagen} alt={t.proyectos[proy.titulo]} />
+                <h2>{t.proyectos[proy.titulo]}</h2>
+                <p>{t.proyectos[proy.descripcion]}</p>
                 <Button
                   className={`ambito-btn ${isUrbanizacion ? 'gray lujo' : 'orange'}`}
                   onClick={(e) => {
@@ -179,14 +183,17 @@ const ProyectosColombia = () => {
             );
           })}
         </div>
-       
       </main>
     
-      <Expertos />
+      <div className="expertos-section-colombia">
+        <Expertos />
+      </div>
       <ContactoCTA />
-      <Footer />
+      <section id="contactanos" className="footer-section">
+        <Footer />
+      </section>
       <WhatsAppFloat />
-    </>
+    </div>
   );
 };
 

@@ -1,0 +1,115 @@
+/* Proyectos Colombia Page Styles */
+.proyectos-colombia-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proyectos-colombia-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proyectos-colombia-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.proyecto-colombia-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-colombia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+.proyecto-colombia-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.proyecto-colombia-card h2 {
+  color: #222;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.proyecto-colombia-card p {
+  color: #444;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* Expertos Section Centering */
+.expertos-section-colombia {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f8f9fa;
+}
+
+.expertos-section-colombia .expertos-tarjetas-section {
+  margin: 0 auto;
+}
+
+/* Footer Section Centering */
+.footer-section-colombia {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #ff6600;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .proyectos-colombia-main {
+    max-width: 1000px;
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .proyectos-colombia-main {
+    padding: 0 20px;
+    margin: 20px auto;
+  }
+  
+  .proyectos-colombia-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .proyecto-colombia-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .proyectos-colombia-main {
+    padding: 0 15px;
+    margin: 15px auto;
+  }
+  
+  .proyecto-colombia-card {
+    padding: 16px;
+  }
+} 

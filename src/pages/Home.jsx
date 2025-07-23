@@ -7,6 +7,7 @@ import ProyectosEntregados from '../components/ProyectosEntregados';
 import Expertos from '../components/Expertos';
 import Footer from '../components/Footer';
 import WhatsAppFloat from '../components/WhatsAppFloat';
+import StatsSection from '../components/StatsSection';
 import slides from '../utils/slides';
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -14,19 +15,20 @@ import proyectos from '../utils/proyectos';
 import { useIdioma } from '../context/IdiomaContext';
 import SectionDivider from '../components/SectionDivider';
 import '../styles/Home.css';
-export default function Home() {
-   const { t } = useIdioma();
- const location = useLocation();
- const titulosDeseados = [ 'rincon_titulo','coral_titulo', 'marbella_titulo','sanmiguel_titulo'];
- const titulosDeseados2 = [ 'cana_title','palmeras_title', 'caña_dulce_title','puertas_sol_title'];
 
- const proyectosFiltrados = proyectos.filter(p =>
-    titulosDeseados.includes(p.titulo)
-  );
-  const proyectosFiltrados2 = proyectos.filter(p =>
-    titulosDeseados2.includes(p.titulo)
-  );
- useEffect(() => {
+export default function Home() {
+  const { t } = useIdioma();
+  const location = useLocation();
+  
+  // Proyectos en marcha (filtrados)
+  const titulosDeseados = ['rincon_titulo', 'coral_titulo', 'marbella_titulo', 'sanmiguel_titulo'];
+  const proyectosFiltrados = proyectos.filter(p => titulosDeseados.includes(p.titulo));
+  
+  // Proyectos entregados (filtrados)
+  const titulosDeseados2 = ['cana_title', 'palmeras_title', 'caña_dulce_title', 'puertas_sol_title'];
+  const proyectosFiltrados2 = proyectos.filter(p => titulosDeseados2.includes(p.titulo));
+
+  useEffect(() => {
     const destino = location.state?.seccionDestino;
     const scrollToTop = location.state?.scrollToTop;
 
@@ -43,36 +45,72 @@ export default function Home() {
       }, 100);
     }
   }, [location.state]);
+
   return (
-    <>
+    <div className="home-container">
+      {/* Header */}
       <Header />
-      <Slider contenido={slides} namespace="home" />
-      <div className="main-content">
-        <section id="ambito"><AmbitoAccion /></section>
-         
-        <SectionDivider textKey="proyectos" icon={<i className="fas fa-building"></i>} />
-       
-        <div className='container-title'>
-           <h2 className="proyectos-titulo">{t.proyectos.titulo}</h2>
-            <p className="proyectos-sub">{t.proyectos.subtitulo}</p>
+      
+      {/* Hero Section con Slider */}
+      <section className="hero-section">
+        <Slider contenido={slides} namespace="home" />
+      </section>
+
+      {/* Sección Ámbito de Acción */}
+      <section id="ambito" className="section-ambito">
+        <div className="section-container">
+          <AmbitoAccion />
         </div>
-        <section id="proyectos"><ProyectosEnMarcha proyectosFiltrados={proyectosFiltrados}/></section>
-        
-        <section id="renders"><RendersDestacados /></section>
-         
-          <SectionDivider textKey="proyectos" />
-         <div className='container-title'>
-           <h2 className="proyectos-titulo">{t.entregados.titulo}</h2>
+      </section>
+
+      {/* Sección Proyectos en Marcha */}
+      <section id="proyectos" className="section-proyectos">
+        <div className="section-container">
+          <div className="section-header">
+            <SectionDivider textKey="proyectos" icon={<i className="fas fa-building"></i>} />
+            <div className="section-title-container">
+              <h2 className="section-title">{t.proyectos.titulo}</h2>
+              <p className="section-subtitle">{t.proyectos.subtitulo}</p>
+            </div>
+          </div>
+          <ProyectosEnMarcha proyectosFiltrados={proyectosFiltrados} />
         </div>
-        <section id="proyectoss"><ProyectosEnMarcha proyectosFiltrados={proyectosFiltrados2}/></section>
-        
-       {/* <section id="entregados"><ProyectosEntregados /></section>*/}
-        <section id="expertos"><Expertos /></section>
-      </div>x
-      <section id="contactanos">
+      </section>
+
+
+      {/* Sección de Estadísticas */}
+      <section className="section-stats">
+        <StatsSection />
+      </section>
+
+      {/* Sección Proyectos Entregados */}
+      <section id="proyectos-entregados" className="section-entregados">
+        <div className="section-container">
+          <div className="section-header">
+            <SectionDivider textKey="proyectos" />
+            <div className="section-title-container">
+              <h2 className="section-title">{t.entregados.titulo}</h2>
+              <p className="section-subtitle">{t.entregados.subtitulo || 'Proyectos completados con éxito'}</p>
+            </div>
+          </div>
+          <ProyectosEnMarcha proyectosFiltrados={proyectosFiltrados2} />
+        </div>
+      </section>
+
+      {/* Sección Expertos */}
+      <section id="expertos" className="section-expertos">
+        <div className="section-container">
+          <Expertos />
+        </div>
+      </section>
+
+      {/* Footer */}
+      <section id="contactanos" className="footer-section">
         <Footer />
       </section>
+
+      {/* WhatsApp Float */}
       <WhatsAppFloat />
-    </>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
-/* Info Coral Mole Page Styles */
-.info-coral-container {
+/* Info Rincon Lago Page Styles */
+.info-rincon-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
 }
 
 /* Expertos Section Centering */
-.expertos-section-coral {
+.expertos-section-rincon {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@
   background: #f8f9fa;
 }
 
-.expertos-section-coral .expertos-tarjetas-section {
+.expertos-section-rincon .expertos-tarjetas-section {
   margin: 0 auto;
 }
 
@@ -31,13 +31,13 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .expertos-section-coral {
+  .expertos-section-rincon {
     padding: 30px 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .expertos-section-coral {
+  .expertos-section-rincon {
     padding: 20px 10px;
   }
-}
+} 

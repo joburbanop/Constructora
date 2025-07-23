@@ -5,6 +5,7 @@ import ambitos from '../utils/ambitos';
 import { useIdioma } from '../context/IdiomaContext';
 import { useNavigate } from "react-router-dom";
 
+
 export default function AmbitoAccion() {
   const { t } = useIdioma();
   const navigate = useNavigate();

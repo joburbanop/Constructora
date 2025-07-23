@@ -1,7 +1,11 @@
 .proyectos-marcha {
   text-align: center;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin: 0;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .proyectos-titulo {
@@ -22,9 +26,11 @@
 .proyectos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.2rem;
+  gap: 1rem;
   justify-content: center;
   align-items: stretch;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .proyecto-card {

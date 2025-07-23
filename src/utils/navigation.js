@@ -3,6 +3,21 @@
  */
 
 /**
+ * Navega a una sección específica
+ * @param {string} seccion - ID de la sección
+ * @param {Function} navigate - Función de navegación de React Router
+ */
+export const navigateToSection = (seccion, navigate) => {
+  navigate('/');
+  setTimeout(() => {
+    const target = document.getElementById(seccion);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, 100);
+};
+
+/**
  * Maneja la navegación de proyectos de manera inteligente
  * @param {Object} proyecto - Objeto del proyecto
  * @param {Function} navigate - Función de navegación de React Router
@@ -21,11 +36,10 @@ export const handleProyectoNavigation = (proyecto, navigate) => {
   }
 
   if (proyecto.titulo === 'rincon_titulo') {
-  navigate('/rincon-del-lago');
-  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
-  return;
-}
-
+    navigate('/rincon-del-lago');
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+    return;
+  }
   
   // Enlaces externos - solo si es un enlace real (no '#')
   if (proyecto.enlace && proyecto.enlace !== '#') {
@@ -37,7 +51,7 @@ export const handleProyectoNavigation = (proyecto, navigate) => {
   if (proyecto.ubicacion === 'jamundi_colombia') {
     navigate('/proyectos-colombia');
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
-  } else if (proyecto.ubicacion === 'usa') {
+  } else if (proyecto.ubicacion === 'cope_coral') {
     navigate('/proyectos-usa');
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
   }

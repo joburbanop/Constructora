@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import WhatsAppFloat from '../components/WhatsAppFloat';
 import proyectos from '../utils/proyectos';
 import { useNavigate } from 'react-router-dom';
-import { handleProyectoNavigation } from '../utils/navigation';
+import { handleProyectoNavigation, navigateToSection } from '../utils/navigation';
 import { useIdioma } from '../context/IdiomaContext';
 import '../styles/ProyectosUSA.css';
 import Slider from '../components/Slider';
@@ -16,6 +16,8 @@ import slidesUSA from '../utils/slidesUSA';
 export default function ProyectosUSA() {
   const { t } = useIdioma();
   const navigate = useNavigate();
+
+
 
   const colombiaNavItems = (
      <ul className="nav-items">
@@ -67,7 +69,7 @@ export default function ProyectosUSA() {
   };
 
   return (
-    <>
+    <div className="proyectos-usa-container">
       <Header  
          customNavItems={colombiaNavItems}
          showDefaultNav={false}
@@ -91,10 +93,14 @@ export default function ProyectosUSA() {
         </div>
       </main>
 
-      <Expertos />
+      <div className="expertos-section-usa">
+        <Expertos />
+      </div>
       <ContactoCTA />
-      <Footer />
+      <section id="contactanos" className="footer-section">
+        <Footer />
+      </section>
       <WhatsAppFloat />
-    </>
+    </div>
   );
 }

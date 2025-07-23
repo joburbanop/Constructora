@@ -88,6 +88,17 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     llamar: 'Call',
   },
 
+  stats: {
+    anos_experiencia: 'Years of experience',
+    anos_desc: 'Building dreams',
+    proyectos_completados: 'Completed projects',
+    proyectos_desc: 'Successfully delivered',
+    clientes_satisfechos: 'Satisfied clients',
+    clientes_desc: 'Trust in us',
+    garantia_calidad: 'Quality guarantee',
+    garantia_desc: 'Total commitment',
+  },
+
   // informaciòn componentes que forman infoRinconLago.jsx
 
   // iformaciòn componente DetallesProyecto
@@ -220,6 +231,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
   },
   entregados: {
     titulo: 'Delivered Projects',
+    subtitulo: 'Successfully completed projects delivered to our clients',
     puertas_del_sol: 'Puertas del Sol',
     cana_dulce: 'Caña Dulce',
     casa_brava: 'Casa Brava',

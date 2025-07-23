@@ -1,6 +1,7 @@
 .renders-section {
+  width: 100%;
   max-width: 1200px;
-  margin: 40px auto 0 auto;
+  margin: 40px 0 0 0;
   padding: 2rem;
   background: #fff;
   border-radius: 16px;

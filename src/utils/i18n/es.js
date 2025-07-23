@@ -89,6 +89,17 @@ const es = {
     llamar: 'Llamar',
   },
 
+  stats: {
+    anos_experiencia: 'Años de experiencia',
+    anos_desc: 'Construyendo sueños',
+    proyectos_completados: 'Proyectos completados',
+    proyectos_desc: 'Entregados con éxito',
+    clientes_satisfechos: 'Clientes satisfechos',
+    clientes_desc: 'Confían en nosotros',
+    garantia_calidad: 'Garantía de calidad',
+    garantia_desc: 'Compromiso total',
+  },
+
   // informaciòn componentes que forman infoRinconLago.jsx
  
     // iformaciòn componente DetallesProyecto
@@ -218,6 +229,7 @@ videos: {
 },
   entregados: {
     titulo: 'Proyectos entregados',
+    subtitulo: 'Proyectos completados con éxito y entregados a nuestros clientes',
     puertas_del_sol: 'Puertas del Sol',
     cana_dulce: 'Caña Dulce',
     casa_brava: 'Casa Brava',

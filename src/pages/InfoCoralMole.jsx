@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import SectionDivider from "../components/SectionDivider";
 import WhatsAppFloat from "../components/WhatsAppFloat";
 import "../styles/VideoYoutube.css";
+import "../styles/InfoCoralMole.css";
 import { useNavigate } from 'react-router-dom';
 import infoZigZag  from "../utils/infoZigZag";
 import InfoZigZag from "../components/InfoZigZag";
@@ -22,7 +23,7 @@ const InfoRinconLago = () => {
    const zigzagcoral=infoZigZag.datosCoralMall;
     console.log("se renderizo coral mole");
   return (
-   <>
+   <div className="info-coral-container">
       <Header 
       />
 
@@ -30,13 +31,17 @@ const InfoRinconLago = () => {
       <DetallesProyecto id="coral" />
       <SectionDivider textKey="detalles" />
        <InfoZigZag elementos={zigzagcoral} textoKey="info_ZigZag_coral"/>
-       <Expertos />
+       <div className="expertos-section-coral">
+         <Expertos />
+       </div>
       <ContactoCTA />
-      <Footer/>
+      <section id="contactanos" className="footer-section">
+        <Footer/>
+      </section>
       <WhatsAppFloat />
 
    
-   </>
+   </div>
   );
 };
 

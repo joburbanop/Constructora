@@ -15,6 +15,7 @@ import infoZigZag  from "../utils/infoZigZag";
 import VideoYoutube from "../components/VideoYoutube";
 import WhatsAppFloat from "../components/WhatsAppFloat";
 import "../styles/VideoYoutube.css";
+import "../styles/InfoRinconLago.css";
 import { useNavigate } from 'react-router-dom';
 import UbicacionMaps from '../components/UbicacionMaps';
 import {mapaRinconLago} from "../utils/imgadicional";
@@ -34,7 +35,7 @@ const InfoRinconLago = () => {
    const clavesDeseadas = ['sofia'];
   const listaFiltrada = expertos.filter(e => clavesDeseadas.includes(e.clave));
   return (
-   <>
+   <div className="info-rincon-container">
       <Header
       />
 
@@ -70,12 +71,16 @@ const InfoRinconLago = () => {
 
       <SectionDivider textKey="galeria" />
       <GaleriaProyecto id="rincon" />
-      <Expertos listaFiltrada={listaFiltrada}/>
-      <Footer/>
+      <div className="expertos-section-rincon">
+        <Expertos listaFiltrada={listaFiltrada}/>
+      </div>
+      <section id="contactanos" className="footer-section">
+        <Footer/>
+      </section>
       <WhatsAppFloat />
 
    
-   </>
+   </div>
   );
 };
 

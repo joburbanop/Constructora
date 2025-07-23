@@ -1,33 +1,36 @@
 .slider-container {
   width: 100%;
-  max-width: 100%;
+  height: 520px;
   margin: 0;
+  padding: 0;
   border-radius: 0;
   overflow: hidden;
   box-shadow: 0 4px 24px rgba(0,0,0,0.15);
   background: #fff;
   position: relative;
-  left: 0;
-  right: 0;
-  transform: none;
 }
 
-.mySwiper, .slide-bg {
+.mySwiper {
   width: 100%;
   height: 520px;
+  margin: 0;
+  padding: 0;
 }
 
 .slide-bg {
   width: 100%;
   height: 520px;
   background-size: cover;
-  background-position: center 35%;
+  background-position: center;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  margin: 0;
+  padding: 0;
 }
+
+
 
 .slide-bg::before {
   content: '';
@@ -50,20 +53,22 @@
   text-align: center;
   padding: 2rem 1rem;
   transition: opacity 0.5s ease;
-
+  margin: 0;
 }
 
 .slide-content h1 {
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
   text-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  text-align: center;
 }
 
 .slide-content p {
   font-size: 1.4rem;
-  margin-bottom: 2rem;
+  margin: 0 0 2rem 0;
   text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  text-align: center;
 }
 
 .slide-content button {
@@ -104,6 +109,26 @@ html, body, #root {
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
+}
+
+/* Centrar el slider */
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Swiper styles */
+.swiper-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-slide {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 520px;
 }
 
 .swiper-slide:not(.swiper-slide-active) .slide-content {

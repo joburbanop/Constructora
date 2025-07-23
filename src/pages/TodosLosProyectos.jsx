@@ -132,7 +132,7 @@ const TodosLosProyectos = () => {
   );
 
   return (
-    <>
+    <div className="todos-proyectos-container">
       <Header 
         customNavItems={navItems}
         showDefaultNav={false}
@@ -296,11 +296,15 @@ const TodosLosProyectos = () => {
         )}
       </main>
 
-      <Expertos />
+      <div className="expertos-section-todos">
+        <Expertos />
+      </div>
       <ContactoCTA />
-      <Footer />
+      <section id="contactanos" className="footer-section">
+        <Footer />
+      </section>
       <WhatsAppFloat />
-    </>
+    </div>
   );
 };
 

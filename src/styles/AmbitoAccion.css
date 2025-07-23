@@ -1,36 +1,45 @@
 .ambito {
   text-align: center;
-  margin-top: 2rem;
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ambito h2 {
   font-size: 2.6rem;
   font-weight: bold;
   color: #222;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.3rem 0;
   letter-spacing: -1px;
   font-family: Georgia, serif;
 }
 
 .ambito-sub {
   color: #444;
-  margin-bottom: 2.5rem;
+  margin: 0 0 0.8rem 0;
   font-size: 1.2rem;
   font-family: 'Times New Roman', Times, serif;
 }
 
 .ambito-cards {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .ambito-card {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  padding: 1.5rem 1rem 2rem 1rem;
+  padding: 1rem 0.8rem 1.5rem 0.8rem;
   width: 320px;
   display: flex;
   flex-direction: column;
@@ -41,11 +50,11 @@
 .ambito-img {
   position: relative;
   width: 100%;
-  height: 260px;
+  height: 220px;
   background-size: cover;
   background-position: center 35%;
   border-radius: 12px 12px 0 0;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -78,7 +87,7 @@
 
 .ambito-card-desc {
   font-weight: 600;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
   font-size: 1.1rem;
   font-family: 'Times New Roman', Times, serif;
   color: #222;
