@@ -81,23 +81,23 @@ const StatsSection = () => {
   const features = [
     {
       icon: <FaCheckCircle />,
-      title: 'Certificaciones',
-      description: 'ISO 9001, ISO 14001, OHSAS 18001'
+      title: t.stats?.certificaciones || 'Certificaciones',
+      description: t.stats?.certificaciones_desc || 'ISO 9001, ISO 14001, OHSAS 18001'
     },
     {
       icon: <MdSecurity />,
-      title: 'Seguridad',
-      description: 'Protocolos de seguridad certificados'
+      title: t.stats?.seguridad || 'Seguridad',
+      description: t.stats?.seguridad_desc || 'Protocolos de seguridad certificados'
     },
     {
       icon: <FaMapMarkerAlt />,
-      title: 'Cobertura',
-      description: 'Colombia y Estados Unidos'
+      title: t.stats?.cobertura || 'Cobertura',
+      description: t.stats?.cobertura_desc || 'Colombia y Estados Unidos'
     },
     {
       icon: <FaHandshake />,
-      title: 'Confianza',
-      description: 'Más de 200 familias confían en nosotros'
+      title: t.stats?.confianza || 'Confianza',
+      description: t.stats?.confianza_desc || 'Más de 200 familias confían en nosotros'
     }
   ];
 
@@ -112,10 +112,10 @@ const StatsSection = () => {
         <div className="stats-header">
           <div className="stats-title-container">
             <h2 className="stats-main-title">
-              <span className="stats-highlight">Nuestros</span> Logros
+              <span className="stats-highlight">{t.stats?.titulo_principal?.split(' ')[0] || 'Nuestros'}</span> {t.stats?.titulo_principal?.split(' ').slice(1).join(' ') || 'Logros'}
             </h2>
             <p className="stats-subtitle">
-              Más de una década construyendo sueños y transformando espacios
+              {t.stats?.subtitulo || 'Más de una década construyendo sueños y transformando espacios'}
             </p>
           </div>
         </div>
@@ -184,18 +184,18 @@ const StatsSection = () => {
         {/* Call to Action */}
         <div className="stats-cta">
           <div className="cta-content">
-            <h3 className="cta-title">¿Listo para construir tu sueño?</h3>
+            <h3 className="cta-title">{t.stats?.cta_titulo || '¿Listo para construir tu sueño?'}</h3>
             <p className="cta-description">
-              Únete a más de 200 familias que ya confían en nosotros
+              {t.stats?.cta_descripcion || 'Únete a más de 200 familias que ya confían en nosotros'}
             </p>
             <div className="cta-buttons">
               <button className="cta-btn primary">
                 <FaHandshake />
-                <span>Contáctanos</span>
+                <span>{t.stats?.cta_contactar || 'Contáctanos'}</span>
               </button>
               <button className="cta-btn secondary">
                 <FaStar />
-                <span>Ver Proyectos</span>
+                <span>{t.stats?.cta_ver_proyectos || 'Ver Proyectos'}</span>
               </button>
             </div>
           </div>
