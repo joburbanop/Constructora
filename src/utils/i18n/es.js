@@ -38,7 +38,18 @@ const es = {
     coral_titulo: 'Locales comerciales',
     coral_desc: 'La mejor oportunidad para invertir con seguridad.',
     jamundi_colombia: 'Jamundí, Colombia',
+    san_jose:'San Jose, San Pedro',
+    puertas_sol_title: 'Puertas del Sol',
+    puertas_sol_desc: 'Urbanización finalizada.',
+    caña_dulce_title:'Caña Dulce ',
+    caña_dulce__desc:'Proyecto finalizado en zona campestr.',
+    palmeras_title:'Palmeras de la Italia',
+    palmeras_desc:'Conjunto finalizado para descanso y bienestar.',
+    cana_title:'Caña Brava ',
+    cana_desc:'100% vendida en la vereda San José.',
+
     usa: 'Estados Unidos',
+    cope_coral:'Cope Coral, Florida',
     boton: 'Ver más',
     beneficio_titulo1: 'Somos',
     beneficio_titulo2: 'constructores con 17 años de trayectoria',
@@ -270,11 +281,11 @@ videos: {
 
   },
   expertos: {
-    titulo: "Nuestro equipo de",
-    highlight: "Expertos",
-    saitama_nombre: "Saitama",
-    saitama_cargo: "Asesor inmobiliario",
-    saitama_desc: "con amplia experiencia en proyectos de urbanización y desarrollo habitacional. Comprometido con brindar acompañamiento personalizado a cada cliente, garantizando seguridad, confianza y resultados efectivos."
+    titulo: 'Nuestro equipo',
+    atencion:'Atención directa:',
+    dirComercialCYL: 'Directora comercial Casas & Lotes SAS',
+    ejecComQuintas: 'Ejecutiva comercial Quintas de Marbella',
+    ejecComSanMiguel: 'Ejecutiva comercial San Miguel'
   },
   cta: {
     titulo1: '¿Listo para hacer realidad',
@@ -292,7 +303,7 @@ videos: {
               Inversión y valorización aseguradas.`
 },
  proyectos_card_simple: {
-    coral_title: 'Locales comerciales, chiquita BLVD, FL',
+    coral_titulo: 'Locales comerciales, chiquita BLVD, FL',
     coral_desc: 'La mejor oportunidad para invertir con seguridad.',
     casa_usa_1_title: 'Casa unifamiliar en venta',
     casa_usa_1_desc: 'Nueva casa unifamiliar en venta · Lehigh Acres, FL',

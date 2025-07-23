@@ -59,7 +59,7 @@ export default function ProyectosUSA() {
      </ul>
    );
 
-  const proyectosUSA = proyectos.filter(p => p.ubicacion === 'cape_coral_usa');
+  const proyectosUSA = proyectos.filter(p => p.ubicacion === 'cope_coral');
 
   const handleNavigate = (proyecto) => {
     handleProyectoNavigation(proyecto, navigate);

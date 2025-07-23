@@ -1,29 +1,30 @@
-import LOGO from '../assets/LOGO.png';
-
+import lina from '../assets/expertos/LINA.webp';
+import ludi from '../assets/expertos/LUDI.webp';
+import sofia from '../assets/expertos/SOFIA.webp';
 const expertos = [
   {
-    nombre: 'saitama_nombre',
-    cargo: 'saitama_cargo',
-    descripcion: 'saitama_desc',
-    imagen: LOGO
+    clave: 'sofia',
+    nombre:'Sofía Saavedra',
+    especialidadClave: 'dirComercialCYL',
+    atencion:'atencion',
+    telefono:'3234708860',
+    imagen: sofia
   },
   {
-    nombre: 'saitama_nombre',
-    cargo: 'saitama_cargo',
-    descripcion: 'saitama_desc',
-    imagen: LOGO
+    clave: 'ludivia',
+    nombre:'Ludivia Guapacha',
+    especialidadClave: 'ejecComQuintas',
+    atencion:'atencion',
+    telefono:'3332488488',
+    imagen: ludi
   },
   {
-    nombre: 'saitama_nombre',
-    cargo: 'saitama_cargo',
-    descripcion: 'saitama_desc',
-    imagen: LOGO
-  },
-  {
-    nombre: 'saitama_nombre',
-    cargo: 'saitama_cargo',
-    descripcion: 'saitama_desc',
-    imagen: LOGO
+    clave: 'lina',
+    nombre:'Lina Encizo',
+    especialidadClave: 'ejecComSanMiguel',
+    atencion:'atencion',
+    telefono:'3244414141',
+    imagen: lina
   }
 ];
 

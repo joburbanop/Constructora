@@ -1,0 +1,12 @@
+.proyectos-sub,
+.cproyectos-titulo{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.container-title{
+ display: flex;
+justify-content: center;
+ flex-direction: column;
+}

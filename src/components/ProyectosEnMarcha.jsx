@@ -14,22 +14,19 @@ const iconosTipo = {
   locales: MdStoreMallDirectory
 };
 
-export default function ProyectosEnMarcha() {
+export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
   const { t } = useIdioma();
   const navigate = useNavigate();
-
+   const listado = proyectosFiltrados || proyectos;
   const isProyectoProximamente = (titulo) => {
     return titulo === 'sanmiguel_titulo' || titulo === 'marbella_titulo';
   };
 
   return (
     <section className="proyectos-marcha">
-         <SectionDivider textKey="proyectos" icon={<i className="fas fa-building"></i>} />
-      <h2 className="proyectos-titulo">{t.proyectos.titulo}</h2>
-      <p className="proyectos-sub">{t.proyectos.subtitulo}</p>
-   
+     
       <div className="proyectos-grid">
-        {proyectos.map((proy, idx) => (
+        {listado.map((proy, idx) => (
           <div className="proyecto-card" key={idx}>
             <span className="proyecto-etiqueta" style={{background: proy.etiquetaColor}}>{t.proyectos[proy.tipo]}</span>
             <div className="proyecto-img-wrap">

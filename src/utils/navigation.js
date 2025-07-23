@@ -15,7 +15,7 @@ export const handleProyectoNavigation = (proyecto, navigate) => {
   
   // Navegación específica por proyecto
   if (proyecto.titulo === 'coral_titulo') {
-    navigate('/proyectos-usa');
+    navigate('/coral-mall');
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
     return;
   }

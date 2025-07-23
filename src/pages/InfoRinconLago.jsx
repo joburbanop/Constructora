@@ -17,6 +17,8 @@ import "../styles/VideoYoutube.css";
 import { useNavigate } from 'react-router-dom';
 import UbicacionMaps from '../components/UbicacionMaps';
 import {mapaRinconLago} from "../utils/imgadicional";
+import expertos from '../utils/expertos';
+import Expertos from "../components/Expertos";
 const InfoRinconLago = () => {
    const { t } = useIdioma();
    const video = t.videos?.rincon?.rincon_lago_nuevo_sur;
@@ -28,7 +30,8 @@ const InfoRinconLago = () => {
       lng: -76.5408,// Longitud de Jamundí
       mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3812.240232958078!2d-76.56931072524975!3d3.2498028525261127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3099e34939565f%3A0x7c4a30a48d886678!2sRinc%C3%B3n%20del%20LAGO!5e1!3m2!1ses-419!2sco!4v1753214846388!5m2!1ses-419!2sco"
    };
-  
+   const clavesDeseadas = ['sofia'];
+  const listaFiltrada = expertos.filter(e => clavesDeseadas.includes(e.clave));
   return (
    <>
       <Header
@@ -66,6 +69,7 @@ const InfoRinconLago = () => {
 
       <SectionDivider textKey="galeria" />
       <GaleriaProyecto id="rincon" />
+      <Expertos listaFiltrada={listaFiltrada}/>
       <Footer/>
 
    
