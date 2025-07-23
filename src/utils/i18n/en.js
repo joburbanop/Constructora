@@ -94,11 +94,12 @@ const es = { // Should remain 'es' if you are keeping original variable names or
   info_AreaPrecioUbic: {
     rincon_lago: {
       area: 'Area',
-      area_desc: 'Lots from 150 m² to 346 m² for self-construction with unified architecture. You can adapt the interior of the house to your taste and needs with the materials and finishes you prefer. Enjoy corner-type houses with private gardens that provide greater privacy. Also choose unique lots with green areas around and no adjoining neighbors.',
+      area_desc: 'Lots starting at 150 m²',
       precio: 'Price',
-      precio_desc: 'From $65,000,000',
+      precio_desc: 'From $180 million. Financing up to 6 years.',
       ubicacion: 'Location',
-      ubicacion_desc: 'Jamundí, Colombia',
+      ubicacion_desc: 'Alfaguara, Jamundí – Colombia.'
+
     },
     proyecto2: {
       slide_area_titulo: 'Usable area',
@@ -149,6 +150,11 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     }
 
   },
+  imagenes_add: {
+  mapa_rincon: 'Site map'
+ 
+},
+
 
   // Titulos componente EspaciosCompartidos.jsx del js infoEspacios.js
   espacios: {
@@ -169,8 +175,11 @@ const es = { // Should remain 'es' if you are keeping original variable names or
   // información videos de youtube
   videos: {
     rincon: {
-      video1: { id: 'BRmd52pMUW4', titulo: 'Rincón Presentation', visible: true },
-      render: { id: 'oSlfSdN70jQ', titulo: 'Tour the Project', visible: false }
+    video1: { id: 'BRmd52pMUW4', titulo: 'Work progress', visible: true },
+    render: { id: 'oSlfSdN70jQ', titulo: 'Work progress', visible: false },
+    Avance_en_Zona_comercial: { id: 'LS0EhS0oSbM', titulo: 'Work progress', visible: true },
+    rincon_lago_nuevo_sur: { id: 'BRmd52pMUW4', titulo: 'Discover Rincón del Lago', visible: true }
+
     },
   },
   entregados: {
@@ -259,6 +268,8 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     espacios: 'Spaces',
     galeria: 'Gallery',
     detalles: 'Details',
+    mapa_obra: 'Construction Map',
+    ubicacion: 'Location'
 
   },
   expertos: {

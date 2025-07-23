@@ -1,5 +1,7 @@
 /* ========== Estructura base del header ========== */
 .header {
+  display: flex;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -161,7 +163,9 @@
   }
 
   .nav-items li {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: deslizarY 0.5s ease forwards;
   }
 
