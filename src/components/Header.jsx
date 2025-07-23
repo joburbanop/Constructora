@@ -20,7 +20,11 @@ const Header = ({
   const toggleMenu = () => setMenuAbierto((prev) => !prev);
 
   const handleLogoClick = () => {
-    customLogoAction ? customLogoAction() : navigate("/");
+    if (customLogoAction) {
+      customLogoAction();
+    } else {
+      navigate("/", { state: { scrollToTop: true } });
+    }
     setMenuAbierto(false);
   };
 
@@ -51,7 +55,10 @@ const Header = ({
           </Link>
         </li>
         <li>
-          <Link to="/todos-los-proyectos" onClick={() => setMenuAbierto(false)}>
+          <Link 
+            to="/todos-los-proyectos" 
+            state={{ scrollToTop: true }}
+            onClick={() => setMenuAbierto(false)}>
             {t.header.proyectos}
           </Link>
         </li>

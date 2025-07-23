@@ -28,12 +28,16 @@ export default function Home() {
   const titulosDeseados2 = ['cana_title', 'palmeras_title', 'caña_dulce_title', 'puertas_sol_title'];
   const proyectosFiltrados2 = proyectos.filter(p => titulosDeseados2.includes(p.titulo));
 
+  // Efecto para manejar navegación y scroll
   useEffect(() => {
     const destino = location.state?.seccionDestino;
     const scrollToTop = location.state?.scrollToTop;
 
     if (scrollToTop) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      // Aumentar el delay para asegurar que la página se haya cargado completamente
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 200);
     }
 
     if (destino) {
@@ -45,6 +49,14 @@ export default function Home() {
       }, 100);
     }
   }, [location.state]);
+
+  // Efecto para hacer scroll hacia arriba cuando se carga la página
+  useEffect(() => {
+    // Si no hay estado específico, hacer scroll hacia arriba por defecto
+    if (!location.state?.seccionDestino && !location.state?.scrollToTop) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, []);
 
   return (
     <div className="home-container">

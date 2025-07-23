@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Expertos from "../components/Expertos";
@@ -6,7 +6,7 @@ import ContactoCTA from "../components/ContactoCTA";
 import WhatsAppFloat from "../components/WhatsAppFloat";
 import proyectos from "../utils/proyectos";
 import { useIdioma } from '../context/IdiomaContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { handleProyectoNavigation } from '../utils/navigation';
 import { MdLocationOn, MdLocationCity, MdHomeWork, MdStoreMallDirectory } from 'react-icons/md';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -22,8 +22,17 @@ import renderQuintas from '../assets/render_quintas.png';
 const TodosLosProyectos = () => {
   const { t } = useIdioma();
   const navigate = useNavigate();
+  const location = useLocation();
   const [filtroActivo, setFiltroActivo] = useState('todos');
   const [ubicacionFiltro, setUbicacionFiltro] = useState('todas');
+
+  // Efecto para manejar scroll hacia arriba
+  useEffect(() => {
+    const scrollToTop = location.state?.scrollToTop;
+    if (scrollToTop) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location.state]);
 
   // Obtener renders para el hero slider
   const renders = [
