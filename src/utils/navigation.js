@@ -35,10 +35,11 @@ export const handleProyectoNavigation = (proyecto, navigate) => {
     return;
   }
   if (proyecto.titulo === 'rincon_titulo') {
-    navigate('/rincon-del-lago');
-    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
-    return;
-  }
+
+  navigate('/rincon-del-lago');
+  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+  return;
+}
   if (proyecto.titulo === 'puertas_sol_title') {
   navigate('/puertas-sol');
   setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
@@ -70,7 +71,7 @@ if (proyecto.titulo === 'casa_usa_2_title') {
   return;
 }
 
-  
+
   // Enlaces externos - solo si es un enlace real (no '#')
   if (proyecto.enlace && proyecto.enlace !== '#') {
     window.open(proyecto.enlace, '_blank', 'noopener,noreferrer');
