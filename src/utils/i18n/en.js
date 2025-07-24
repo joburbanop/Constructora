@@ -374,11 +374,13 @@ const es = { // Should remain 'es' if you are keeping original variable names or
   },
   //Pagina de Proyectos USA
   proyectos_usa: {
-    titulo: 'USA Projects',
-    descripcion: `We are in Cape Coral, Florida, 160 miles from Miami. This city is known as the "Coastal Wonderland,” a true paradise with canals and rivers for those seeking a life of fulfillment and for water sports.
+  titulo: 'U.S.A Projects',
+  titulo_2: 'Investment Opportunities in ',
+  titulo_3: 'Cape Coral, Florida',
+  descripcion: `We are located in Cape Coral, Florida, 160 miles from Miami. This city is known as the "Coastal Wonderland," a true paradise of canals and rivers for those seeking a fulfilling life and a haven for water sports.`,
+  descripcion_2: ' Guaranteed investment and property appreciation.'
+},
 
-              Guaranteed investment and appreciation.`
-  },
   proyectos_card_simple: {
     coral_title: 'Commercial units, Chiquita BLVD, FL',
     coral_desc: 'The best opportunity to invest securely.',

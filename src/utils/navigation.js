@@ -34,12 +34,42 @@ export const handleProyectoNavigation = (proyecto, navigate) => {
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
     return;
   }
-
   if (proyecto.titulo === 'rincon_titulo') {
     navigate('/rincon-del-lago');
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
     return;
   }
+  if (proyecto.titulo === 'puertas_sol_title') {
+  navigate('/puertas-sol');
+  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+  return;
+}
+if (proyecto.titulo === 'palmeras_title') {
+  navigate('/palmeras-italia');
+  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+  return;
+}
+if (proyecto.titulo === 'caña_dulce_title') {
+  navigate('/cana-dulce');
+  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+  return;
+}
+if (proyecto.titulo === 'cana_title') {
+  navigate('/cana-brava');
+  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+  return;
+}
+if (proyecto.titulo === 'casa_usa_1_title') {
+  navigate('/casa-usa-primera');
+  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+  return;
+}
+if (proyecto.titulo === 'casa_usa_2_title') {
+  navigate('/casa-usa-segunda');
+  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+  return;
+}
+
   
   // Enlaces externos - solo si es un enlace real (no '#')
   if (proyecto.enlace && proyecto.enlace !== '#') {

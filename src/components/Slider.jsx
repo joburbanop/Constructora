@@ -16,10 +16,10 @@ export default function Slider({ contenido = [], namespace = 'home' }) {
       <Swiper
         modules={[Pagination, Autoplay, EffectFade]}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+       // autoplay={{ delay: 4000, disableOnInteraction: false }}
         effect="fade"
         speed={1200}
-        loop
+        //loop
         className="mySwiper"
       >
         {contenido.map((slide, idx) => (

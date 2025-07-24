@@ -10,18 +10,70 @@
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap:5rem;
+}
+p {
+  font-family: 'Times New Roman', Times, serif;
+ 
+}
+.clasdescripcion{
+  
+  width: 100%;
+  margin: 0;
+}
+
+.dec-usa .clasdescripcion{
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .classtitulo {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 0rem;
   color: #222;
+  padding: 0;
+}
+.class-title{
+
+gap:1rem;
+ display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.title-ini{
+  display: flex;
+  flex-direction: column;
+  gap: 0;  
+}
+.title-ini h2 {
+  margin: 0;
+  padding: 0;
+}
+ .dec-usa p {
+    color:#222;
+  }
+  
+  .dec-usa {
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   gap:3rem;
+  }
+@media (min-width: 769px) {
+  .dec-usa p {
+    font-size: 1.2rem;
+  }
+}
+
+.title-ini,
+.dec-usa{
+ 
 }
 
 .clasdescripcion {
@@ -89,5 +141,12 @@
   .usa-main {
     padding: 0 15px;
     margin: 15px auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .title-ini .classtitulo{
+    font-size: 1.6rem;
   }
 }

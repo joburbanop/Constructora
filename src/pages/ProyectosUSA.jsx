@@ -112,9 +112,24 @@ export default function ProyectosUSA() {
         <Slider contenido={slidesUSA} namespace="usa"/>
       </section>
 
+      
+
       <main className="usa-main">
-        <h2 className="classtitulo">{t.proyectos_usa.titulo}</h2>
-        <p className="clasdescripcion">{t.proyectos_usa.descripcion}</p>
+        <div className='class-title'>
+
+          <div className='title-ini'>
+            <h2 className="classtitulo">{t.proyectos_usa.titulo}</h2>
+            <h2  style={{color:'#ff6600'}} className="classtitulo">{t.proyectos_usa.titulo_2}</h2>
+            <h2 className="classtitulo">{t.proyectos_usa.titulo_3}</h2>
+          </div>
+        
+          <div className='dec-usa'>
+                  <p className="clasdescripcion">{t.proyectos_usa.descripcion}</p>
+                  <p style={{ fontWeight: 'bold'}} className="clasdescripcion">{t.proyectos_usa.descripcion_2}</p>
+          </div>
+        </div>
+       
+        
 
         <div className="usa-grid">
           {proyectosUSA.map((proy, idx) => (

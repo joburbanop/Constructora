@@ -374,10 +374,11 @@ videos: {
 //Pagina de Proyectos USA
   proyectos_usa: {
   titulo: 'Proyectos U.S.A',
-  descripcion: `Estamos en Cape Coral, Florida, a 160 millas de Miami. Esta ciudad es conocida como el "País de las Maravillas Costeras”, un verdadero paraíso con canales y ríos para quienes buscan una vida de plenitud y para la práctica de deportes náuticos.
-
-              Inversión y valorización aseguradas.`
-},
+  titulo_2:'Oportunidades de Inversión en ',
+  titulo_3:'Cape Coral, Florida',
+  descripcion: `Estamos en Cape Coral, Florida, a 160 millas de Miami. Esta ciudad es conocida como el "País de las Maravillas Costeras”, un verdadero paraíso con canales y ríos para quienes buscan una vida de plenitud y para la práctica de deportes náuticos.`,
+  descripcion_2:' Inversión y valorización aseguradas.'
+  },
  proyectos_card_simple: {
     coral_titulo: 'Locales comerciales, chiquita BLVD, FL',
     coral_desc: 'La mejor oportunidad para invertir con seguridad.',

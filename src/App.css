@@ -4,6 +4,19 @@
   padding: 2rem;
   text-align: center;
 }
+p {
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.h1,
+.h2,
+.h3 {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 .logo {
   height: 6em;
