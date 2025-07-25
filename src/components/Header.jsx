@@ -90,7 +90,44 @@ const Header = ({
   };
 
   const renderNavItems = () => {
-    if (customNavItems) return customNavItems;
+    if (customNavItems) {
+      // Si estamos en la página todos-los-proyectos, no agregar el botón de proyectos
+      if (location.pathname === "/todos-los-proyectos") {
+        return customNavItems;
+      }
+      
+      // Si hay customNavItems, agregar el botón de proyectos después de inicio
+      const children = React.Children.toArray(customNavItems.props.children);
+      
+      // Encontrar el índice del botón de inicio (primer elemento)
+      const inicioIndex = 0;
+      
+      // Crear el botón de proyectos
+      const proyectosButton = (
+        <li key="proyectos-nav-item" className="proyectos-nav-item">
+          <Link
+            to="/todos-los-proyectos"
+            state={{ scrollToTop: true }}
+            onClick={() => {
+              setMenuAbierto(false);
+              document.body.style.overflow = 'unset';
+            }}
+          >
+            <span className="nav-icon"><FaBuilding /></span>
+            <span className="nav-text">{t.header.proyectos}</span>
+          </Link>
+        </li>
+      );
+      
+      // Insertar el botón de proyectos después del botón de inicio
+      children.splice(inicioIndex + 1, 0, proyectosButton);
+      
+      return (
+        <ul className="nav-items">
+          {children}
+        </ul>
+      );
+    }
     if (!showDefaultNav) return null;
 
     const navItems = [
