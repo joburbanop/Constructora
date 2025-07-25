@@ -1,3 +1,5 @@
+import React, { useEffect, useMemo, useCallback } from 'react';
+import { useLocation } from "react-router-dom";
 import Header from '../components/Header';
 import Slider from '../components/Slider';
 import SearchFilters from '../components/SearchFilters';
@@ -9,118 +11,176 @@ import Expertos from '../components/Expertos';
 import Footer from '../components/Footer';
 import WhatsAppFloat from '../components/WhatsAppFloat';
 import StatsSection from '../components/StatsSection';
+import SectionDivider from '../components/SectionDivider';
 import slides from '../utils/slides';
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import proyectos from '../utils/proyectos';
 import { useIdioma } from '../context/IdiomaContext';
-import SectionDivider from '../components/SectionDivider';
 import '../styles/Home.css';
 
 export default function Home() {
   const { t } = useIdioma();
   const location = useLocation();
   
-  // Proyectos en marcha (filtrados)
-  const titulosDeseados = ['rincon_titulo', 'coral_titulo', 'marbella_titulo', 'sanmiguel_titulo'];
-  const proyectosFiltrados = proyectos.filter(p => titulosDeseados.includes(p.titulo));
-  
-  // Proyectos finalizados (filtrados)
-  const titulosDeseados2 = ['cana_title', 'palmeras_title', 'caña_dulce_title', 'puertas_sol_title'];
-  const proyectosFiltrados2 = proyectos.filter(p => titulosDeseados2.includes(p.titulo));
+  // Memoized filtered projects for better performance
+  const { proyectosEnMarcha, proyectosEntregados } = useMemo(() => {
+    const titulosEnMarcha = ['rincon_titulo', 'coral_titulo', 'marbella_titulo', 'sanmiguel_titulo'];
+    const titulosEntregados = ['cana_title', 'palmeras_title', 'caña_dulce_title', 'puertas_sol_title'];
+    
+    return {
+      proyectosEnMarcha: proyectos.filter(p => titulosEnMarcha.includes(p.titulo)),
+      proyectosEntregados: proyectos.filter(p => titulosEntregados.includes(p.titulo))
+    };
+  }, [proyectos]);
 
-  // Efecto para manejar navegación y scroll
-  useEffect(() => {
-    const destino = location.state?.seccionDestino;
-    const scrollToTop = location.state?.scrollToTop;
-
-    if (scrollToTop) {
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }, 200);
-    }
-
-    if (destino) {
-      setTimeout(() => {
-        const seccion = document.getElementById(destino);
-        if (seccion) {
-          seccion.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    }
-  }, [location.state]);
-
-  // Efecto para hacer scroll hacia arriba cuando se carga la página
-  useEffect(() => {
-    if (!location.state?.seccionDestino && !location.state?.scrollToTop) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+  // Optimized scroll handling with useCallback
+  const handleScrollToSection = useCallback((sectionId) => {
+    const seccion = document.getElementById(sectionId);
+    if (seccion) {
+      seccion.scrollIntoView({ 
+        behavior: "smooth",
+        block: "start"
+      });
     }
   }, []);
 
+  const handleScrollToTop = useCallback(() => {
+    window.scrollTo({ 
+      top: 0, 
+      behavior: "smooth" 
+    });
+  }, []);
+
+  // Navigation and scroll effects
+  useEffect(() => {
+    const { seccionDestino, scrollToTop } = location.state || {};
+
+    if (scrollToTop) {
+      setTimeout(handleScrollToTop, 200);
+    }
+
+    if (seccionDestino) {
+      setTimeout(() => handleScrollToSection(seccionDestino), 100);
+    }
+  }, [location.state, handleScrollToSection, handleScrollToTop]);
+
+  // Auto scroll to top on mount (only if no specific destination)
+  useEffect(() => {
+    const hasSpecificDestination = location.state?.seccionDestino || location.state?.scrollToTop;
+    
+    if (!hasSpecificDestination) {
+      handleScrollToTop();
+    }
+  }, [handleScrollToTop, location.state]);
+
   return (
-    <div className="home-container">
+    <div className="home-container" role="main">
+      {/* Header */}
       <Header />
       
-      {/* Hero Section con Slider */}
-      <section id="inicio" className="hero-section">
+      {/* Hero Section with Slider */}
+      <section 
+        id="inicio" 
+        className="hero-section"
+        aria-label="Sección principal con presentación"
+      >
         <Slider contenido={slides} namespace="home" />
       </section>
 
-      {/* Sección de Filtros de Búsqueda */}
-      <SearchFilters />
+      {/* Search Filters Section */}
+      <section 
+        className="search-filters-section"
+        aria-label="Filtros de búsqueda"
+      >
+        <SearchFilters />
+      </section>
 
-      {/* Sección Nuestros Servicios */}
-      <section id="ambito" className="section-ambito">
+      {/* Services Section */}
+      <section 
+        id="ambito" 
+        className="section-ambito"
+        aria-label="Nuestros servicios"
+      >
         <div className="section-container">
           <AmbitoAccion />
         </div>
       </section>
 
-      {/* Sección Proyectos en Marcha */}
-      <section id="proyectos" className="section-proyectos">
+      {/* Active Projects Section */}
+      <section 
+        id="proyectos" 
+        className="section-proyectos"
+        aria-label="Proyectos en marcha"
+      >
         <div className="section-container">
           <div className="section-header">
-            <SectionDivider textKey="proyectos" icon={<i className="fas fa-building"></i>} variant="accent" />
+            <SectionDivider 
+              textKey="proyectos" 
+              icon={<i className="fas fa-building" aria-hidden="true"></i>} 
+              variant="accent" 
+            />
             <div className="section-title-container">
               <h2 className="section-title">{t.proyectos.titulo}</h2>
               <p className="section-subtitle">{t.proyectos.subtitulo}</p>
             </div>
           </div>
-          <ProyectosEnMarcha proyectosFiltrados={proyectosFiltrados} />
+          <ProyectosEnMarcha proyectosFiltrados={proyectosEnMarcha} />
         </div>
       </section>
 
-      {/* Sección de Estadísticas */}
-      <section id="stats" className="section-stats">
+      {/* Statistics Section */}
+      <section 
+        id="stats" 
+        className="section-stats"
+        aria-label="Estadísticas de la empresa"
+      >
         <StatsSection />
       </section>
 
-      {/* Sección Proyectos Finalizados */}
-      <section id="proyectos-entregados" className="section-entregados">
+      {/* Completed Projects Section */}
+      <section 
+        id="proyectos-entregados" 
+        className="section-entregados"
+        aria-label="Proyectos finalizados"
+      >
         <div className="section-container">
           <div className="section-header">
-            <SectionDivider textKey="proyectos" variant="subtle" />
+            <SectionDivider 
+              textKey="proyectos" 
+              variant="subtle" 
+            />
             <div className="section-title-container">
               <h2 className="section-title">{t.entregados.titulo}</h2>
-              <p className="section-subtitle">{t.entregados.subtitulo || 'Proyectos finalizados con éxito'}</p>
+              <p className="section-subtitle">
+                {t.entregados.subtitulo || 'Proyectos finalizados con éxito'}
+              </p>
             </div>
           </div>
-          <ProyectosEnMarcha proyectosFiltrados={proyectosFiltrados2} />
+          <ProyectosEnMarcha proyectosFiltrados={proyectosEntregados} />
         </div>
       </section>
 
-      {/* Sección Expertos */}
-      <section id="expertos" className="section-expertos">
+      {/* Experts Section */}
+      <section 
+        id="expertos" 
+        className="section-expertos"
+        aria-label="Nuestro equipo de expertos"
+      >
         <div className="section-container">
           <Expertos />
         </div>
       </section>
 
-      {/* Footer */}
-      <section id="contactanos" className="footer-section">
+      {/* Footer Section */}
+      <footer 
+        id="contactanos" 
+        className="footer-section"
+        role="contentinfo"
+        aria-label="Información de contacto y pie de página"
+      >
         <Footer />
-      </section>
+      </footer>
 
+      {/* Floating WhatsApp Button */}
       <WhatsAppFloat />
     </div>
   );
