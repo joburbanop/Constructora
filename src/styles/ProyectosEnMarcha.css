@@ -854,4 +854,76 @@
   letter-spacing: 0.5px !important;
 }
 
+/* ========== CORRECCIÓN ESPECÍFICA PARA IMÁGENES PROBLEMÁTICAS ========== */
+
+/* Puertas del Sol - Ajuste para evitar que se corte el texto */
+.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-img-marcha {
+  object-fit: contain;
+  padding: 0.8rem;
+  background: white;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+/* Caña Dulce - Reducir espacio blanco */
+.proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-img-marcha {
+  object-fit: contain;
+  padding: 0.5rem;
+  background: white;
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 8px;
+}
+
+/* Palmeras de la Italia - Reducir espacio blanco */
+.proyecto-card[data-proyecto="palmeras_title"] .proyecto-img-marcha {
+  object-fit: contain;
+  padding: 0.5rem;
+  background: white;
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 8px;
+}
+
+/* Quintas de Marbella (Urbanización abierta) - Optimización específica */
+.proyecto-card[data-proyecto="marbella_titulo"] .proyecto-img-marcha {
+  object-fit: contain;
+  padding: 0.6rem;
+  background: white;
+  max-width: 92%;
+  max-height: 92%;
+  border-radius: 8px;
+}
+
+.proyecto-card[data-proyecto="marbella_titulo"] .proyecto-img-wrap {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid rgba(255, 102, 0, 0.1);
+  height: 220px;
+}
+
+/* Contenedores específicos para estos proyectos */
+.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-img-wrap,
+.proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-img-wrap,
+.proyecto-card[data-proyecto="palmeras_title"] .proyecto-img-wrap,
+.proyecto-card[data-proyecto="marbella_titulo"] .proyecto-img-wrap {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid rgba(255, 102, 0, 0.1);
+  height: 220px; /* Aumentar altura para Puertas del Sol */
+}
+
+/* Altura específica para Puertas del Sol */
+.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-img-wrap {
+  height: 240px; /* Más altura para evitar cortes */
+}
+
+/* Efectos hover específicos para estos proyectos */
+.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-img-marcha,
+.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-img-marcha,
+.proyecto-card[data-proyecto="palmeras_title"]:hover .proyecto-img-marcha,
+.proyecto-card[data-proyecto="marbella_titulo"]:hover .proyecto-img-marcha {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 /* Estilos de debug removidos - tarjetas con diseño original */ 
