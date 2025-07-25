@@ -1,0 +1,78 @@
+/* ========== Estilos específicos para InfoCanaDulce ========== */
+
+.info-cana-dulce-container {
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* ========== Sección de expertos específica para Caña Dulce ========== */
+.expertos-section-cana-dulce {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 4rem 0;
+  margin: 2rem 0;
+}
+
+/* ========== Estilos para el slider específico de Caña Dulce ========== */
+.info-cana-dulce-container .slider-container {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.info-cana-dulce-container .slide-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+.info-cana-dulce-container .slide-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.info-cana-dulce-container .slide-content h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .info-cana-dulce-container .slider-container {
+    height: 50vh;
+    min-height: 400px;
+  }
+
+  .info-cana-dulce-container .slide-content h1 {
+    font-size: 2rem;
+  }
+
+  .info-cana-dulce-container .slide-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .expertos-section-cana-dulce {
+    padding: 2rem 0;
+  }
+}
+
+/* ========== Animaciones específicas ========== */
+.info-cana-dulce-container .slide-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

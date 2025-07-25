@@ -11,6 +11,12 @@ import img9 from '../assets/rincon_lago/Rincon_lago_galeria9.webp';
 import img10 from '../assets/rincon_lago/Rincon_lago_galeria10.webp';
 import Coral from '../assets/coral_mall/logo_coral_mall.webp';
 import pdf_coral from '../assets/pdfs/planos_coral.pdf';
+import CanaDulce from '../assets/cana_dulce/cana_dulce_logo.webp';
+import cana_dulce1 from '../assets/cana_dulce/cana_dulce_galeria1.webp';
+import cana_dulce2 from '../assets/cana_dulce/cana_dulce_galeria2.webp';
+import cana_dulce3 from '../assets/cana_dulce/cana_dulce_galeria3.webp';
+import cana_dulce4 from '../assets/cana_dulce/cana_dulce_galeria4.webp';
+import cana_dulce5 from '../assets/cana_dulce/cana_dulce_galeria5.webp';
 
 export const infoProyectos = {
   rincon: {
@@ -47,6 +53,18 @@ export const infoProyectos = {
         img8,
         img9,
         img10
+    ]
+  },
+  cana_dulce:{
+    id: 'cana_dulce',
+    slug: 'cana-dulce',
+    logo: CanaDulce,
+    galeria: [
+        cana_dulce1,
+        cana_dulce2,
+        cana_dulce3,
+        cana_dulce4,
+        cana_dulce5
     ]
   }
 };

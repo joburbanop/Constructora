@@ -25,7 +25,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     puertas_sol_title: 'Puertas del Sol',
     puertas_sol_desc: 'Completed housing development.',
     caña_dulce_title: 'Caña Dulce',
-    caña_dulce__desc: 'Completed project in a countryside area.',
+    caña_dulce_desc: 'Exclusive countryside urbanization of 46 lots. Last available lots of 12x21 mts. Fully equipped social area with pool, jacuzzi, sauna and 300 m² social hall.',
     palmeras_title: 'Palmeras de la Italia',
     palmeras_desc: 'Completed residential complex for rest and well-being.',
     cana_title: 'Caña Brava',
@@ -158,6 +158,16 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     descripcion_1: 'To meet the growing demand for products and services in the area, this modern mall is being developed with 10 commercial units ranging from 959 SQ FT to 1277 SQ FT, with ample parking space on 300 Chiquita Boulevard.',
     descripcion_2: 'Guaranteed investment and appreciation.',
   },
+  cana_dulce_detalle: {
+    espacios_titulo: 'Countryside urbanization',
+    espacios_desc: 'Exclusive countryside urbanization of 46 lots',
+    titulo: 'Caña Dulce',
+    subtitulo: 'Exclusive countryside urbanization of 46 lots',
+    subtitulo_2: 'Located 20 minutes from Tuluá in the San José area of San Pedro municipality',
+    descripcion: 'Completely finished and delivered. Features sub-base roads and all functional public services.',
+    descripcion_1: 'Last lots of 12x21 mts, to enjoy with family all the tranquility and security that this natural setting offers.',
+    descripcion_2: 'Schedule your appointment and visit us: 3204210000'
+  },
   // informaciòn componente AreaPrecioUbic.jsx
   info_AreaPrecioUbic: {
     rincon_lago: {
@@ -167,6 +177,15 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       precio_desc: 'From $180 million. Financing up to 6 years.',
       ubicacion: 'Location',
       ubicacion_desc: 'Alfaguara, Jamundí – Colombia.'
+
+    },
+    cana_dulce: {
+      area: 'Area',
+      area_desc: 'Lots of 12x21 mts (252 m²)',
+      precio: 'Price',
+      precio_desc: 'Last lots available. Inquire about prices.',
+      ubicacion: 'Location',
+      ubicacion_desc: 'San José area, San Pedro – Colombia.'
 
     },
     proyecto2: {
@@ -218,6 +237,28 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     }
 
   },
+  info_ZigZag_cana_dulce: {
+    cana_dulce1: {
+      titulo: "Exclusive countryside urbanization of 46 lots",
+      descripcion: "Located 20 minutes from Tuluá in the San José area of San Pedro municipality. Completely finished and delivered."
+    },
+    cana_dulce2: {
+      titulo: "Last lots of 12x21 mts",
+      descripcion: "To enjoy with family all the tranquility and security that this natural setting offers."
+    },
+    cana_dulce3: {
+      titulo: "Fully equipped social area",
+      descripcion: "Pool for adults and children, Jacuzzi, Sauna, showers, changing rooms, bathrooms, 300 m² social hall with kitchen and furniture."
+    },
+    cana_dulce4: {
+      titulo: "Additional services",
+      descripcion: "Office, machine room, restroom, playground, visitor parking."
+    },
+    cana_dulce5: {
+      titulo: "Security and administration",
+      descripcion: "Gatehouse, reception, administration and UTB. Schedule your appointment: 3204210000"
+    }
+  },
   imagenes_add: {
   mapa_rincon: 'Site map'
  
@@ -237,7 +278,11 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     senderos: 'Green trails',
     zonapet: 'Pet zone',
     bbq: 'BBQ area',
-    comercial: 'Commercial zone'
+    comercial: 'Commercial zone',
+    jacuzzi: 'Jacuzzi',
+    sauna: 'Sauna',
+    parqueadero: 'Parking',
+    porteria: 'Gatehouse'
   },
 
   // información videos de youtube
@@ -326,6 +371,15 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       slide3_subtitle: 'Diversify your portfolio with confidence',
       boton: 'Contact Us'
 
+    },
+    cana_dulce: {
+      slide1_title: 'Exclusive countryside urbanization',
+      slide1_subtitle: '46 lots located 20 minutes from Tuluá in the San José area',
+      slide2_title: 'Completely finished and delivered',
+      slide2_subtitle: 'Last lots of 12x21 mts to enjoy with family',
+      slide3_title: 'Fully equipped social area',
+      slide3_subtitle: 'Pool, Jacuzzi, Sauna, 300 m² social hall and more',
+      boton: 'Schedule appointment'
     },
     colombia: {
       slide1_title: 'A new chapter begins here',

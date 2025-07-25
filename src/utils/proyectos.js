@@ -92,12 +92,12 @@ const proyectos = [
    {
     imagen: CanaDulce,
     titulo: 'caña_dulce_title',
-    descripcion: 'caña_dulce__desc',
+    descripcion: 'caña_dulce_desc',
     tipo: 'urbanizacion',
     icono: 'urbanizacion',
     iconoColor: '#222',
     ubicacion: 'san_jose',
-    enlace: '#',
+    enlace: '/cana-dulce',
     etiquetaColor: '#ffb347'
   },
    {

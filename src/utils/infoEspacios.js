@@ -30,5 +30,15 @@ export const infoEspacios = {
   coral: {
     locales: iconBBQ,
     parqueadero: iconComercial
+  },
+  cana_dulce: {
+    piscina: iconPiscina,
+    social: iconSocial,
+    infantiles: iconinfatiles,
+    verdes: iconVerdes,
+    jacuzzi: iconBronceo,
+    sauna: iconGym,
+    parqueadero: iconComercial,
+    porteria: iconBBQ
   }
 };

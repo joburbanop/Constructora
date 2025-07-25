@@ -22,8 +22,8 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
     // Proyectos próximamente (urbanizaciones de lujo)
     const proyectosProximamente = ['sanmiguel_titulo', 'marbella_titulo'];
     
-    // Proyectos finalizados (todos deben estar deshabilitados)
-    const proyectosEntregados = ['cana_title', 'palmeras_title', 'caña_dulce_title', 'puertas_sol_title'];
+    // Proyectos finalizados (solo algunos están deshabilitados)
+    const proyectosEntregados = ['cana_title', 'palmeras_title', 'puertas_sol_title'];
     
     return proyectosProximamente.includes(titulo) || proyectosEntregados.includes(titulo);
   };
@@ -33,7 +33,7 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
      
       <div className="proyectos-grid">
         {listado.map((proy, idx) => (
-          <div className="proyecto-card" key={idx}>
+          <div className="proyecto-card" key={idx} data-proyecto={proy.titulo}>
             <span className="proyecto-etiqueta" style={{background: proy.etiquetaColor}}>{t.proyectos[proy.tipo]}</span>
             <div className="proyecto-img-wrap">
               <img src={proy.imagen} alt={proy.titulo} className="proyecto-img-marcha" />

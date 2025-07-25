@@ -24,8 +24,8 @@ const es = {
     san_jose:'San Jose, San Pedro',
     puertas_sol_title: 'Puertas del Sol',
     puertas_sol_desc: 'Urbanización finalizada.',
-    caña_dulce_title:'Caña Dulce ',
-    caña_dulce__desc:'Proyecto finalizado en zona campestr.',
+    caña_dulce_title:'Caña Dulce',
+    caña_dulce_desc:'Exclusiva urbanización campestre de 46 lotes. Últimos lotes disponibles de 12x21 mts. Zona social completamente equipada con piscina, jacuzzi, sauna y salón social de 300 m².',
     palmeras_title:'Palmeras de la Italia',
     palmeras_desc:'Conjunto finalizado para descanso y bienestar.',
     cana_title:'Caña Brava ',
@@ -159,6 +159,16 @@ coral_detalle: {
   descripcion_1: 'Para atender la creciente demanda de productos y servicios de la zona, se desarrolla este moderno mall con 10 locales comerciales desde hasta 959 SQ FT hasta 1277 SQ FT con una amplia bahía de estacionamiento sobre  300 Chiquita  Boulevard.',
   descripcion_2: 'Inversión y valorización aseguradas.',
 },
+cana_dulce_detalle: {
+  espacios_titulo: 'Urbanización campestre',  
+  espacios_desc: 'Exclusiva urbanización campestre de 46 lotes', 
+  titulo: 'Caña Dulce',
+  subtitulo: 'Exclusiva urbanización campestre de 46 lotes',
+  subtitulo_2: 'Ubicada a 20 minutos de Tuluá en la vereda San José del municipio de San Pedro',
+  descripcion: 'Completamente terminada y entregada. Cuenta con sus vías en sub base y todos los servicios públicos funcionales.',
+  descripcion_1: 'Últimos lotes de 12x21 mts, para disfrutar en familia de toda la tranquilidad y seguridad que ofrece este paraje natural.',
+  descripcion_2: 'Agende su cita y visitemos: 3204210000'
+},
  // informaciòn componente AreaPrecioUbic.jsx
  info_AreaPrecioUbic: {
   rincon_lago: {
@@ -168,6 +178,14 @@ coral_detalle: {
     precio_desc: 'Desde $180 millones. Financiación a 6 años.',
     ubicacion: 'Ubicación',
     ubicacion_desc: 'Alfaguara, Jamundí – Colombia.',
+  },
+  cana_dulce: {
+    area: 'Área',
+    area_desc: 'Lotes de 12x21 mts (252 m²)',
+    precio: 'Precio',
+    precio_desc: 'Últimos lotes disponibles. Consulte precios.',
+    ubicacion: 'Ubicación',
+    ubicacion_desc: 'Vereda San José, San Pedro – Colombia.',
   },
   proyecto2: {
     slide_area_titulo: 'Área útil',
@@ -218,26 +236,52 @@ info_ZigZag_coral:{
   }
   
 },
+info_ZigZag_cana_dulce:{
+  cana_dulce1: {
+    titulo: "Exclusiva urbanización campestre de 46 lotes",
+    descripcion: "Ubicada a 20 minutos de Tuluá en la vereda San José del municipio de San Pedro. Completamente terminada y entregada."
+  },
+  cana_dulce2: {
+    titulo: "Últimos lotes de 12x21 mts",
+    descripcion: "Para disfrutar en familia de toda la tranquilidad y seguridad que ofrece este paraje natural."
+  },
+  cana_dulce3: {
+    titulo: "Zona social completamente equipada",
+    descripcion: "Piscina para adultos y niños, Jacuzzi, Sauna, duchas, camerinos, baños, salón social de 300 mts² con cocina y mobiliario."
+  },
+  cana_dulce4: {
+    titulo: "Servicios adicionales",
+    descripcion: "Oficina, cuarto de máquinas, cuarto de aseo, parque infantil, estacionamiento para visitantes."
+  },
+  cana_dulce5: {
+    titulo: "Seguridad y administración",
+    descripcion: "Portería, recepción, administración y UTB. Agende su cita: 3204210000"
+  }
+},
 imagenes_add:{
   mapa_rincon:'Mapa de obra'
 
 },
 
 // Titulos componente EspaciosCompartidos.jsx  del js infoEspacios.js
-espacios: {
-  bronceo: 'Zona bronceo',
-  piscina: 'Piscina',
-  social: 'Salón social',
-  gym: 'Gimnasio',
-  voley: 'Voleibol playa',
-  multiple: 'Cancha múltiple',
-  infantiles: 'Parques infantiles',
-  verdes: 'Zonas verdes',
-  senderos: 'Senderos verdes',
-  zonapet: 'Zona pet',
-  bbq: 'Zona BBQ',
-  comercial: 'Zona comercial'
-},
+  espacios: {
+    bronceo: 'Zona bronceo',
+    piscina: 'Piscina',
+    social: 'Salón social',
+    gym: 'Gimnasio',
+    voley: 'Voleibol playa',
+    multiple: 'Cancha múltiple',
+    infantiles: 'Parques infantiles',
+    verdes: 'Zonas verdes',
+    senderos: 'Senderos verdes',
+    zonapet: 'Zona pet',
+    bbq: 'Zona BBQ',
+    comercial: 'Zona comercial',
+    jacuzzi: 'Jacuzzi',
+    sauna: 'Sauna',
+    parqueadero: 'Parqueadero',
+    porteria: 'Portería'
+  },
 
 // información videos de youtube 
 videos: {
@@ -323,6 +367,15 @@ videos: {
     slide3_title: 'Inversión en Estados Unidos',
     slide3_subtitle: 'Diversifica tu portafolio con confianza',
     boton: 'Contáctanos'
+  },
+  cana_dulce: {
+    slide1_title: 'Exclusiva urbanización campestre',
+    slide1_subtitle: '46 lotes ubicados a 20 minutos de Tuluá en la vereda San José',
+    slide2_title: 'Completamente terminada y entregada',
+    slide2_subtitle: 'Últimos lotes de 12x21 mts para disfrutar en familia',
+    slide3_title: 'Zona social completamente equipada',
+    slide3_subtitle: 'Piscina, Jacuzzi, Sauna, salón social de 300 mts² y más',
+    boton: 'Agendar cita'
   }, 
   colombia: {
       slide1_title: 'Tu nuevo comienzo\nempieza aquí',

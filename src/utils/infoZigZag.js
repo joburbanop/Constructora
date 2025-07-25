@@ -7,6 +7,11 @@ import local_coral2 from '../assets/coral_mall/local_coral2.webp';
 import local_coral3 from '../assets/coral_mall/local_coral3.webp';
 import local_coral4 from '../assets/coral_mall/local_coral4.webp';
 import local_coral5 from '../assets/coral_mall/local_coral5.webp';
+import cana_dulce1 from '../assets/cana_dulce/cana_dulce_galeria1.webp';
+import cana_dulce2 from '../assets/cana_dulce/cana_dulce_galeria2.webp';
+import cana_dulce3 from '../assets/cana_dulce/cana_dulce_galeria3.webp';
+import cana_dulce4 from '../assets/cana_dulce/cana_dulce_galeria4.webp';
+import cana_dulce5 from '../assets/cana_dulce/cana_dulce_galeria5.webp';
 
 const datosRinconLago = [
   { imagen: img1, clave: 'elemento1' },
@@ -23,7 +28,16 @@ const datosCoralMall = [
   { imagen: local_coral5, clave: 'local_coral5' },
 ];
 
+const datosCanaDulce = [
+  { imagen: cana_dulce1, clave: 'cana_dulce1' },
+  { imagen: cana_dulce2, clave: 'cana_dulce2' },
+  { imagen: cana_dulce3, clave: 'cana_dulce3' },
+  { imagen: cana_dulce4, clave: 'cana_dulce4' },
+  { imagen: cana_dulce5, clave: 'cana_dulce5' },
+];
+
 export default {
   datosRinconLago,
-  datosCoralMall
+  datosCoralMall,
+  datosCanaDulce
 };
