@@ -1,0 +1,107 @@
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #ff6600, #ff914d);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.scroll-to-top-btn:hover {
+  background: linear-gradient(135deg, #ff914d, #ff6600);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(255, 102, 0, 0.4);
+}
+
+.scroll-to-top-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3);
+}
+
+.scroll-to-top-icon {
+  transition: transform 0.3s ease;
+  font-size: 1.8rem;
+  color: white !important;
+  display: block;
+}
+
+.scroll-to-top-btn:hover .scroll-to-top-icon {
+  transform: translateY(-2px);
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scroll-to-top-btn {
+    bottom: 90px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-to-top-btn {
+    bottom: 85px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Efecto de pulso para llamar la atención */
+.scroll-to-top-btn::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #ff6600, #ff914d);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+} 

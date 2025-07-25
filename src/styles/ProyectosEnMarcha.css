@@ -221,21 +221,7 @@
 
 /* Badge "EN MARCHA" para proyectos en desarrollo */
 .proyecto-card::after {
-  content: 'EN MARCHA';
-  position: absolute;
-  top: 1.5em;
-  left: 1.5em;
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-  color: white;
-  font-size: 0.75rem;
-  font-weight: 800;
-  padding: 0.3em 0.8em;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
-  z-index: 10;
-  animation: pulse 2s infinite;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  display: none;
 }
 
 @keyframes pulse {
@@ -251,11 +237,6 @@
 }
 
 /* Estilos específicos para Caña Dulce - Diseño premium */
-.proyecto-card[data-proyecto="caña_dulce_title"]::after {
-  content: 'ENTREGADO';
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-  animation: pulse 2s infinite;
-}
 
 .proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-img-wrap {
   position: relative;
@@ -363,21 +344,7 @@
 
 /* Badge de estado para Caña Dulce */
 .proyecto-card[data-proyecto="caña_dulce_title"]::after {
-  content: 'ENTREGADO';
-  position: absolute;
-  top: 1.5em;
-  left: 1.5em;
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-  color: white;
-  font-size: 0.7rem;
-  font-weight: 800;
-  padding: 0.3em 0.8em;
-  border-radius: 15px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
-  z-index: 10;
-  animation: pulse 2s infinite;
+  display: none;
 }
 
 @keyframes pulse {
@@ -412,9 +379,7 @@
 
 /* ========== Estilos específicos para Puertas del Sol - Diseño premium ========== */
 .proyecto-card[data-proyecto="puertas_sol_title"]::after {
-  content: 'ENTREGADO';
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-  animation: pulse 2s infinite;
+  display: none;
 }
 
 .proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-img-wrap {
@@ -523,7 +488,6 @@
 
 /* Badge de estado para Puertas del Sol */
 .proyecto-card[data-proyecto="puertas_sol_title"]::after {
-  content: 'ENTREGADO';
   position: absolute;
   top: 1.5em;
   left: 1.5em;
@@ -794,66 +758,27 @@
 
 /* Mostrar "EN MARCHA" solo para proyectos en desarrollo */
 .proyecto-card:not([data-proyecto="caña_dulce_title"]):not([data-proyecto="puertas_sol_title"]):not([data-proyecto="palmeras_title"]):not([data-proyecto="cana_title"])::after {
-  content: 'EN MARCHA';
-  display: block !important;
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
-  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3) !important;
+  display: none;
 }
 
 /* ========== Estilos específicos para Palmeras de la Italia ========== */
 .proyecto-card[data-proyecto="palmeras_title"]::after {
-  content: 'ENTREGADO' !important;
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
-  animation: pulse 2s infinite !important;
-  display: block !important;
+  display: none;
 }
 
 /* ========== Estilos específicos para Caña Brava ========== */
 .proyecto-card[data-proyecto="cana_title"]::after {
-  content: 'ENTREGADO' !important;
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
-  animation: pulse 2s infinite !important;
-  display: block !important;
+  display: none;
 }
 
 /* ========== Estilos específicos para Caña Dulce - Sobrescribir display: none ========== */
 .proyecto-card[data-proyecto="caña_dulce_title"]::after {
-  content: 'ENTREGADO' !important;
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
-  animation: pulse 2s infinite !important;
-  display: block !important;
-  position: absolute !important;
-  top: 1.5em !important;
-  left: 1.5em !important;
-  color: white !important;
-  font-size: 0.75rem !important;
-  font-weight: 800 !important;
-  padding: 0.3em 0.8em !important;
-  border-radius: 15px !important;
-  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3) !important;
-  z-index: 10 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
+  display: none;
 }
 
 /* ========== Estilos específicos para Puertas del Sol - Sobrescribir display: none ========== */
 .proyecto-card[data-proyecto="puertas_sol_title"]::after {
-  content: 'ENTREGADO' !important;
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
-  animation: pulse 2s infinite !important;
-  display: block !important;
-  position: absolute !important;
-  top: 1.5em !important;
-  left: 1.5em !important;
-  color: white !important;
-  font-size: 0.75rem !important;
-  font-weight: 800 !important;
-  padding: 0.3em 0.8em !important;
-  border-radius: 15px !important;
-  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3) !important;
-  z-index: 10 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
+  display: none;
 }
 
 /* ========== CORRECCIÓN ESPECÍFICA PARA IMÁGENES PROBLEMÁTICAS ========== */
@@ -1086,4 +1011,6 @@
 .proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-img-wrap::before,
 .proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-img-wrap::before {
   opacity: 1;
-} 
+}
+
+ 
