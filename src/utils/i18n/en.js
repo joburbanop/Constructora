@@ -313,6 +313,9 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     puertas_sol: {
       video_principal: { id: 'dWO2LGUfFdY', titulo: 'Discover Puertas del Sol', visible: true }
     },
+    cana_dulce: {
+      video_principal: { id: 'A7EXkNPyiF8', titulo: 'Discover Caña Dulce', visible: true }
+    },
   },
   entregados: {
     titulo: 'Completed Projects',

@@ -23,6 +23,7 @@ import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
 
 const InfoCanaDulce = () => {
    const { t } = useIdioma();
+   const video = t.videos?.cana_dulce?.video_principal;
    const navigate = useNavigate();
    const zigzagCanaDulce = infoZigZag.datosCanaDulce;
    const [activeSection, setActiveSection] = useState('inicio');
@@ -97,7 +98,7 @@ const InfoCanaDulce = () => {
         </section>
 
         <section className="detalles-proyecto">
-          <DetallesProyecto id="cana_dulce" />
+          <DetallesProyecto id="cana_dulce" videoId={video.id} videoTitulo={video.titulo} />
         </section>
         
         <section className="area-precio-ubic">

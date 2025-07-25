@@ -346,6 +346,9 @@ videos: {
   puertas_sol: {
     video_principal: { id: 'dWO2LGUfFdY', titulo: 'Conozca Puertas del Sol', visible: true }
   },
+  cana_dulce: {
+    video_principal: { id: 'A7EXkNPyiF8', titulo: 'Conozca Caña Dulce', visible: true }
+  },
 },
   entregados: {
     titulo: 'Proyectos Finalizados',
