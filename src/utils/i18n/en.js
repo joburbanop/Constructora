@@ -21,7 +21,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     coral_titulo: 'Commercial units',
     coral_desc: 'Luxurious single-family home with 3+1 spacious bedrooms, 3 bathrooms, and a 2-car garage. Granite countertops, appliances, and high-quality floors give the house an elegant look. Large impact-resistant doors and windows flood the house with natural light and offer impressive views of the surroundings. Prepared to withstand hurricanes thanks to its solid structure and flat roof.',
     jamundi_colombia: 'Jamundí, Colombia',
-    san_jose: 'San Jose, San Pedro',
+    san_jose: '20 min from Tuluá - San José Village, San Pedro',
     puertas_sol_title: 'Puertas del Sol',
     puertas_sol_desc: 'Completely finished urbanization. Last lots of 8x15 mts (120 m²) with payment facilities. Equipped with gas station, service center, 21 commercial premises and supermarket.',
     caña_dulce_title: 'Caña Dulce',

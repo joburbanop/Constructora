@@ -26,7 +26,7 @@ const ContactoCTA = () => {
       <Button
         whatsapp={true}
         style={{
-          background: 'linear-gradient(135deg, #25d366 0%, #128c7e 100%)',
+          background: 'linear-gradient(135deg, #ff6600 0%, #ff914d 100%)',
           color: '#fff',
           fontWeight: 700,
           fontSize: '1.4rem',
@@ -34,7 +34,7 @@ const ContactoCTA = () => {
           border: 'none',
           borderRadius: 50,
           cursor: 'pointer',
-          boxShadow: '0 4px 24px rgba(37, 211, 102, 0.3)',
+          boxShadow: '0 4px 24px rgba(255, 102, 0, 0.3)',
           letterSpacing: 1,
           transition: 'all 0.3s ease',
           display: 'inline-flex',

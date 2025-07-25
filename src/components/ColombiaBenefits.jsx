@@ -1,32 +1,24 @@
 import React from "react";
 import { useIdioma } from '../context/IdiomaContext';
-
-const icons = [
-  // Escudo (Inversión segura)
-  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" key="shield"><rect width="56" height="56" rx="28" fill="#fff"/><path d="M28 14L40 18V28C40 36 28 42 28 42C28 42 16 36 16 28V18L28 14Z" stroke="#222" strokeWidth="2"/><path d="M28 26C29.1046 26 30 26.8954 30 28C30 29.1046 29.1046 30 28 30C26.8954 30 26 29.1046 26 28C26 26.8954 26.8954 26 28 26Z" stroke="#222" strokeWidth="2"/></svg>,
-  // Tarjeta (Facilidades de pago)
-  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" key="card"><rect width="56" height="56" rx="28" fill="#fff"/><rect x="16" y="22" width="24" height="12" rx="2" stroke="#222" strokeWidth="2"/><rect x="20" y="28" width="6" height="2" rx="1" fill="#222"/><rect x="28" y="28" width="8" height="2" rx="1" fill="#222"/></svg>,
-  // Llaves (Elige tu próximo hogar)
-  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" key="keys"><rect width="56" height="56" rx="28" fill="#fff"/><circle cx="36" cy="32" r="4" stroke="#222" strokeWidth="2"/><path d="M36 32L24 20" stroke="#222" strokeWidth="2"/><rect x="20" y="16" width="6" height="4" rx="2" stroke="#222" strokeWidth="2"/><rect x="18" y="22" width="4" height="2" rx="1" fill="#222"/></svg>
-];
+import { FaShieldAlt, FaCreditCard, FaHome, FaMapMarkerAlt } from 'react-icons/fa';
 
 const ColombiaBenefits = () => {
   const { t } = useIdioma();
   const items = [
     {
-      icon: icons[0],
+      icon: <FaShieldAlt size={56} color="#ff6600" />,
       title: t.proyectos.beneficio1_titulo || 'Inversión segura',
-      desc: t.proyectos.beneficio1_desc || ''
+      desc: t.proyectos.beneficio1_desc || 'Tu dinero está protegido y respaldado en cada proyecto.'
     },
     {
-      icon: icons[1],
+      icon: <FaCreditCard size={56} color="#ff6600" />,
       title: t.proyectos.beneficio2_titulo || 'Facilidades de pago',
-      desc: t.proyectos.beneficio2_desc || ''
+      desc: t.proyectos.beneficio2_desc || 'Opciones flexibles para que puedas invertir sin preocupaciones.'
     },
     {
-      icon: icons[2],
+      icon: <FaHome size={56} color="#ff6600" />,
       title: t.proyectos.beneficio3_titulo || 'Elige tu próximo hogar',
-      desc: t.proyectos.beneficio3_desc || ''
+      desc: t.proyectos.beneficio3_desc || 'Encuentra la vivienda perfecta para ti y tu familia.'
     }
   ];
   return (
@@ -45,9 +37,22 @@ const ColombiaBenefits = () => {
       <div style={{display: 'flex', justifyContent: 'center', gap: 80, flexWrap: 'wrap'}}>
         {items.map((item, idx) => (
           <div key={idx} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 220, maxWidth: 320}}>
-            {item.icon}
-            <div style={{fontSize: '1.25rem', fontWeight: 700, marginTop: 16, fontFamily: 'Georgia, serif', color: '#222'}}>{item.title}</div>
-            {item.desc && <div style={{color: '#222', fontSize: '1.05rem', marginTop: 10, fontFamily: 'Times New Roman, Times, serif', textAlign: 'center'}}>{item.desc}</div>}
+            <div style={{
+              width: 80,
+              height: 80,
+              borderRadius: '50%',
+              backgroundColor: '#fff',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 4px 20px rgba(255, 102, 0, 0.2)',
+              marginBottom: 16,
+              border: '2px solid rgba(255, 102, 0, 0.1)'
+            }}>
+              {item.icon}
+            </div>
+            <div style={{fontSize: '1.25rem', fontWeight: 700, marginBottom: 12, fontFamily: 'Georgia, serif', color: '#222'}}>{item.title}</div>
+            <div style={{color: '#666', fontSize: '1.05rem', fontFamily: 'Times New Roman, Times, serif', textAlign: 'center', lineHeight: 1.5}}>{item.desc}</div>
           </div>
         ))}
       </div>

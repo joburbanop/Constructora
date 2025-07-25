@@ -21,7 +21,7 @@ const es = {
     coral_titulo: 'Locales comerciales',
     coral_desc: 'Lujosa casa unifamiliar con 3+1 amplios dormitorios, 3 baños y un garaje para 2 autos. Encimeras de granito, electrodomésticos y pisos de alta calidad le dan a la casa un aspecto elegante. Amplias puertas y ventanas a prueba de impactos inundan la casa de luz natural y ofrecen impresionantes vistas de los alrededores. Preparada para resistir huracanes gracias a su sólida estructura y techo plano.',
     jamundi_colombia: 'Jamundí, Colombia',
-    san_jose:'San Jose, San Pedro',
+    san_jose:'20 min de Tuluá - Vereda San José, San Pedro',
     puertas_sol_title: 'Puertas del Sol',
     puertas_sol_desc: 'Urbanización completamente terminada. Últimos lotes de 8x15 mts (120 m²) con facilidad de pago. Equipada con gasolinera, centro de servicios, 21 locales comerciales y supermercado.',
     caña_dulce_title:'Caña Dulce',

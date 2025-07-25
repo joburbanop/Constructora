@@ -20,17 +20,42 @@ import Slider from '../components/Slider';
 import '../styles/ProyectosColombia.css';
 import { useNavigate } from 'react-router-dom';
 import { handleProyectoNavigation, navigateToSection } from '../utils/navigation';
-import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaBuilding, FaUsers, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const ProyectosColombia = () => {
   const { t } = useIdioma();
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState('inicio');
+  const [tooltipVisible, setTooltipVisible] = useState(null);
   
   // Filtrar proyectos de Colombia
-  const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia');
+  const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia' || p.ubicacion === 'san_jose');
+  
   // Usar el primer render como imagen de hero
   const heroImg = renders[0]?.imagen;
+
+  // Función para determinar si un proyecto está en "Próximamente"
+  const isProyectoProximamente = (titulo) => {
+    // Proyectos próximamente (los que no tienen enlace o tienen enlace '#')
+    const proyectosProximamente = [
+      'sanmiguel_titulo',    // San Miguel Urbanización
+      'marbella_titulo',     // Quintas de Marbella
+      'palmeras_title',      // Palmeras de la Italia
+      'cana_title'           // Caña Brava
+    ];
+    
+    return proyectosProximamente.includes(titulo);
+  };
+
+  const handleMouseEnter = (titulo) => {
+    if (isProyectoProximamente(titulo)) {
+      setTooltipVisible(titulo);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setTooltipVisible(null);
+  };
 
   // Efecto para hacer scroll hacia arriba cuando se carga la página
   useEffect(() => {
@@ -40,7 +65,7 @@ const ProyectosColombia = () => {
   // Efecto para detectar sección activa
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['inicio', 'expertos', 'contactanos'];
+      const sections = ['inicio', 'proyectos', 'expertos', 'contactanos'];
       const scrollPosition = window.scrollY + 100;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -55,8 +80,6 @@ const ProyectosColombia = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-
 
   const handleSectionNavigation = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -130,45 +153,77 @@ const ProyectosColombia = () => {
       <BreadcrumbSimple />
       
       {/* Hero Slider animado */}
-       <section id="inicio">
+      <section id="inicio">
         <Slider contenido={renders} namespace="colombia"/>
       </section>
       
-      <main className="proyectos-colombia-main">
-        <ColombiaBenefits />
-        <h1 style={{ fontSize: '2.2rem', marginBottom: 32, textAlign: 'center' }}>{t.proyectos.colombia_title || 'Proyectos Colombia'}</h1>
+      {/* Sección de beneficios de Colombia */}
+      <ColombiaBenefits />
+      
+      {/* Sección principal de proyectos */}
+      <section id="proyectos" className="proyectos-section">
+        <div className="proyectos-header">
+          <h1 className="proyectos-title">
+            {t.proyectos.colombia_title || 'Proyectos Colombia'}
+          </h1>
+          <p className="proyectos-subtitle">
+            Descubre nuestra cartera de proyectos inmobiliarios en Jamundí, Colombia
+          </p>
+        </div>
+        
+        {/* Grid de proyectos */}
         <div className="proyectos-colombia-grid">
           {proyectosColombia.map((proy, idx) => {
             const isUrbanizacion = proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo';
             const isProximamente = proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo' || proy.titulo === 'cana_title';
+            const isEntregado = proy.titulo === 'puertas_sol_title' || proy.titulo === 'palmeras_title' || proy.titulo === 'caña_dulce_title' || proy.titulo === 'cana_title';
+            
             return (
-              <div key={idx} className="proyecto-colombia-card" data-proyecto={proy.titulo}>
+              <article key={idx} className="proyecto-colombia-card" data-proyecto={proy.titulo}>
+                {/* Badge de estado */}
+                <div className={`proyecto-status-badge ${isEntregado ? 'entregado' : 'en-marcha'}`}>
+                  {isEntregado ? 'ENTREGADO' : 'EN MARCHA'}
+                </div>
+                
                 <div className="proyecto-img-wrap">
                   <img src={proy.imagen} alt={t.proyectos[proy.titulo]} />
                 </div>
-                <h2>{t.proyectos[proy.titulo]}</h2>
-                <p>{t.proyectos[proy.descripcion]}</p>
-                <div className="proyecto-ubicacion">
-                  <span>📍</span>
-                  <span>{t.proyectos[proy.ubicacion]}</span>
+                
+                <div className="proyecto-content">
+                  <h2>{t.proyectos[proy.titulo]}</h2>
+                  <p>{t.proyectos[proy.descripcion]}</p>
+                  
+                  <div className="proyecto-ubicacion">
+                    <FaMapMarkerAlt className="ubicacion-icon" />
+                    <span>{t.proyectos[proy.ubicacion]}</span>
+                  </div>
+                  
+                  <div className="button-container" style={{ position: 'relative' }}>
+                    <Button
+                      className={`ambito-btn ${isProyectoProximamente(proy.titulo) ? 'gray lujo proximamente' : 'orange'}`}
+                      onClick={isProyectoProximamente(proy.titulo) ? undefined : (e) => {
+                        e.preventDefault();
+                        handleProyectoNavigation(proy, navigate);
+                      }}
+                      disabled={isProyectoProximamente(proy.titulo)}
+                      onMouseEnter={() => handleMouseEnter(proy.titulo)}
+                      onMouseLeave={handleMouseLeave}
+                      aria-label={isProyectoProximamente(proy.titulo) ? t.proyectos.proximamente : t.proyectos.boton}
+                    >
+                      {isProyectoProximamente(proy.titulo) ? t.proyectos.proximamente : (t.proyectos.boton || 'Ver más')}
+                    </Button>
+                    {tooltipVisible === proy.titulo && isProyectoProximamente(proy.titulo) && (
+                      <div className="tooltip-proximamente">
+                        {t.proyectos.proximamente}
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <Button
-                  className={`ambito-btn ${isProximamente ? 'gray lujo' : 'orange'}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleProyectoNavigation(proy, navigate);
-                  }}
-                >
-                  {t.proyectos.boton || 'Ver más'}
-                  {isProximamente && (
-                    <span className="proximamente-label">{t.proyectos.proximamente}</span>
-                  )}
-                </Button>
-              </div>
+              </article>
             );
           })}
         </div>
-      </main>
+      </section>
     
       <div id="expertos" className="expertos-section-colombia">
         <Expertos />
