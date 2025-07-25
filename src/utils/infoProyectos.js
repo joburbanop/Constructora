@@ -10,13 +10,14 @@ import img8 from '../assets/rincon_lago/Rincon_lago_galeria8.webp';
 import img9 from '../assets/rincon_lago/Rincon_lago_galeria9.webp';
 import img10 from '../assets/rincon_lago/Rincon_lago_galeria10.webp';
 import Coral from '../assets/coral_mall/logo_coral_mall.webp';
+import pdf_coral from '../assets/pdfs/planos_coral.pdf';
 
 export const infoProyectos = {
   rincon: {
     id: 'rincon',
     slug: 'rincon-del-lago',
     logo: Rincon,
-    pdf: '#',
+   
     galeria: [
         img1,
         img2,
@@ -34,7 +35,7 @@ export const infoProyectos = {
     id: 'coral',
     slug: 'coral-mole',
     logo: Coral,
-    pdf: '#',
+    pdf: pdf_coral,
     galeria: [
         img1,
         img2,

@@ -18,6 +18,7 @@ import infoZigZag  from "../utils/infoZigZag";
 import InfoZigZag from "../components/InfoZigZag";
 import Expertos from '../components/Expertos';
 import ContactoCTA from '../components/ContactoCTA';
+import UbicacionMaps from '../components/UbicacionMaps';
 import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
 const InfoRinconLago = () => {
    const { t } = useIdioma();
@@ -26,7 +27,9 @@ const InfoRinconLago = () => {
    const zigzagcoral=infoZigZag.datosCoralMall;
    const [activeSection, setActiveSection] = useState('inicio');
    
-   console.log("se renderizo coral mole");
+   const jamundiCoord = {
+      mapSrc: "https:www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d154316.29482324014!2d-81.98548449329058!3d26.631715713372515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88db44a7e78016f5%3A0xafd1a4163a9b6ff2!2sCabo%20Coral%2C%20Florida%2C%20EE.%20UU.!5e1!3m2!1ses-419!2sco!4v1753422019982!5m2!1ses-419!2sco" 
+   };
 
    // Efecto para detectar sección activa
    useEffect(() => {
@@ -92,6 +95,8 @@ const InfoRinconLago = () => {
       <DetallesProyecto id="coral" />
               <SectionDivider textKey="detalles" variant="subtle" />
        <InfoZigZag elementos={zigzagcoral} textoKey="info_ZigZag_coral"/>
+      
+         <UbicacionMaps mapSrc={jamundiCoord.mapSrc}/>
        <div id="expertos" className="expertos-section-coral">
          <Expertos />
        </div>

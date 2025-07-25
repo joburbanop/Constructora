@@ -1,4 +1,9 @@
 /* Proyectos USA Container */
+section#inicio {
+  width: 100%;
+  height: auto; /* o mínimo 520px */
+}
+
 .proyectos-usa-container {
   width: 100%;
   display: flex;

@@ -11,7 +11,7 @@ export default function ProyectoDetalle({ id, videoId = null, videoTitulo = '' }
   const url = videoId ? `https://www.youtube.com/embed/${videoId}` : null;
   
   const tieneVideo = Boolean(videoId);
-
+   const tienePdf = Boolean(data.pdf);
   return (
     <section className="detalle-proyecto">
       <div className="detalle-proyecto-titulo">
@@ -50,9 +50,16 @@ export default function ProyectoDetalle({ id, videoId = null, videoTitulo = '' }
               <p className="descripcion" style={{ fontWeight: 'bold', color: '#ff6600' }}>
                 {texto.descripcion_2}
               </p>
-              <a href={data.pdf} target="_blank" rel="noopener noreferrer" className="btn-pdf">
-                Ver PDF
+               {tienePdf && (
+              <a
+                href={data.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                className="btn-pdf">
+                Descargar PDF
               </a>
+            )}
 
           </div>
 

@@ -102,6 +102,7 @@ section.detalle-proyecto .detalle-proyecto-titulo h2 {
 }
 .proyecto-contenido.sin-video .proyecto-info {
   display: flex;
+  flex-direction: column;
   width: 50%;
   
 }

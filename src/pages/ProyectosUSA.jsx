@@ -100,11 +100,7 @@ export default function ProyectosUSA() {
 
   return (
     <div className="proyectos-usa-container">
-      <Header  
-         customNavItems={usaNavItems}
-         showDefaultNav={false}
-      />
-      
+      <Header customNavItems={usaNavItems} showDefaultNav={false}/>
       {/* Breadcrumb Navigation */}
       <BreadcrumbSimple />
       
