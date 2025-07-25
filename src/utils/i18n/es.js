@@ -23,7 +23,7 @@ const es = {
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose:'San Jose, San Pedro',
     puertas_sol_title: 'Puertas del Sol',
-    puertas_sol_desc: 'Urbanización finalizada.',
+    puertas_sol_desc: 'Urbanización completamente terminada. Últimos lotes de 8x15 mts (120 m²) con facilidad de pago. Equipada con gasolinera, centro de servicios, 21 locales comerciales y supermercado.',
     caña_dulce_title:'Caña Dulce',
     caña_dulce_desc:'Exclusiva urbanización campestre de 46 lotes. Últimos lotes disponibles de 12x21 mts. Zona social completamente equipada con piscina, jacuzzi, sauna y salón social de 300 m².',
     palmeras_title:'Palmeras de la Italia',

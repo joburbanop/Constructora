@@ -86,8 +86,8 @@ const proyectos = [
     icono: 'urbanizacion',
     iconoColor: '#222',
     ubicacion: 'jamundi_colombia',
-    enlace: '#',
-    etiquetaColor: '#ffb347'
+    enlace: '/puertas-del-sol',
+    etiquetaColor: '#ff6600'
   },
    {
     imagen: CanaDulce,
