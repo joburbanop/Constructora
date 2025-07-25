@@ -8,7 +8,9 @@ import {
   FaCheckCircle, 
   FaStar,
   FaMapMarkerAlt,
-  FaHandshake
+  FaHandshake,
+  FaEye,
+  FaBullseye
 } from 'react-icons/fa';
 import { MdEngineering, MdSecurity, MdTrendingUp } from 'react-icons/md';
 import '../styles/StatsSection.css';
@@ -47,26 +49,6 @@ const StatsSection = () => {
       delay: 0
     },
     {
-      icon: <FaBuilding />,
-      number: '50',
-      suffix: '+',
-      label: t.stats?.proyectos_completados || 'Proyectos completados',
-              description: t.stats?.proyectos_desc || 'Finalizados con éxito',
-      color: '#2ecc71',
-      bgColor: 'rgba(46, 204, 113, 0.1)',
-      delay: 100
-    },
-    {
-      icon: <FaUsers />,
-      number: '200',
-      suffix: '+',
-      label: t.stats?.clientes_satisfechos || 'Clientes satisfechos',
-      description: t.stats?.clientes_desc || 'Confían en nosotros',
-      color: '#3498db',
-      bgColor: 'rgba(52, 152, 219, 0.1)',
-      delay: 200
-    },
-    {
       icon: <FaAward />,
       number: '100',
       suffix: '%',
@@ -74,30 +56,34 @@ const StatsSection = () => {
       description: t.stats?.garantia_desc || 'Compromiso total',
       color: '#9b59b6',
       bgColor: 'rgba(155, 89, 182, 0.1)',
+      delay: 100
+    }
+  ];
+
+  const misionVision = [
+    {
+      icon: <FaBullseye />,
+      title: 'Misión',
+      description: 'Somos un equipo comprometido con la calidad y el cumplimiento de cada una de nuestras obras urbanísticas demostrando honestidad y solidez para brindar respaldo, confianza y satisfacción a clientes e inversionistas, promoviendo un desarrollo sostenible para mejorar la calidad de vida de los entornos en los cuales interactuamos.',
+      color: '#2ecc71',
+      bgColor: 'rgba(46, 204, 113, 0.1)',
+      delay: 200
+    },
+    {
+      icon: <FaEye />,
+      title: 'Visión',
+      description: 'Estamos comprometidos con el mejoramiento de cada proceso que involucre a clientes internos y externos para consolidar nuestro posicionamiento empresarial a nivel nacional e internacional para ser reconocidos como una de las empresas líderes del sur occidente colombiano en la prestación de servicios de construcción, ingeniería y arquitectura de proyectos urbanísticos.',
+      color: '#3498db',
+      bgColor: 'rgba(52, 152, 219, 0.1)',
       delay: 300
     }
   ];
 
   const features = [
     {
-      icon: <FaCheckCircle />,
-      title: t.stats?.certificaciones || 'Certificaciones',
-      description: t.stats?.certificaciones_desc || 'ISO 9001, ISO 14001, OHSAS 18001'
-    },
-    {
-      icon: <MdSecurity />,
-      title: t.stats?.seguridad || 'Seguridad',
-      description: t.stats?.seguridad_desc || 'Protocolos de seguridad certificados'
-    },
-    {
       icon: <FaMapMarkerAlt />,
       title: t.stats?.cobertura || 'Cobertura',
       description: t.stats?.cobertura_desc || 'Colombia y Estados Unidos'
-    },
-    {
-      icon: <FaHandshake />,
-      title: t.stats?.confianza || 'Confianza',
-      description: t.stats?.confianza_desc || 'Más de 200 familias confían en nosotros'
     }
   ];
 
@@ -160,6 +146,39 @@ const StatsSection = () => {
           ))}
         </div>
 
+        {/* Misión y Visión Section */}
+        <div className="mision-vision-section">
+          <div className="mision-vision-grid">
+            {misionVision.map((item, index) => (
+              <div 
+                key={index} 
+                className={`mision-vision-item ${isVisible ? 'animate-in' : ''}`}
+                style={{ 
+                  animationDelay: `${item.delay}ms`,
+                  '--item-color': item.color,
+                  '--item-bg-color': item.bgColor
+                }}
+              >
+                <div className="mision-vision-icon-wrapper">
+                  <div className="mision-vision-icon">
+                    {item.icon}
+                  </div>
+                  <div className="mision-vision-icon-glow"></div>
+                </div>
+                
+                <div className="mision-vision-content">
+                  <h3 className="mision-vision-title">{item.title}</h3>
+                  <p className="mision-vision-description">{item.description}</p>
+                </div>
+                
+                <div className="mision-vision-decoration">
+                  <div className="mision-vision-line"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Features Section */}
         <div className="stats-features">
           <div className="features-grid">
@@ -186,7 +205,7 @@ const StatsSection = () => {
           <div className="cta-content">
             <h3 className="cta-title">{t.stats?.cta_titulo || '¿Listo para construir tu sueño?'}</h3>
             <p className="cta-description">
-              {t.stats?.cta_descripcion || 'Únete a más de 200 familias que ya confían en nosotros'}
+              {t.stats?.cta_descripcion || 'Construye con la mejor constructora del sur occidente colombiano'}
             </p>
             <div className="cta-buttons">
               <button className="cta-btn primary">
