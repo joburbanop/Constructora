@@ -20,6 +20,10 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     marbella_desc: 'To build to your liking. Larger lots with the best price in the area. South of Jamundí',
     coral_titulo: 'Commercial units',
     coral_desc: 'Luxurious single-family home with 3+1 spacious bedrooms, 3 bathrooms, and a 2-car garage. Granite countertops, appliances, and high-quality floors give the house an elegant look. Large impact-resistant doors and windows flood the house with natural light and offer impressive views of the surroundings. Prepared to withstand hurricanes thanks to its solid structure and flat roof.',
+    casa_usa_1_title: 'USA House First',
+    casa_usa_1_desc: 'Beautiful single-family home with modern design and luxury finishes.',
+    casa_usa_2_title: 'USA House Second',
+    casa_usa_2_desc: 'Elegant house with spacious areas and contemporary design.',
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose: '20 min from Tuluá - San José Village, San Pedro',
     puertas_sol_title: 'Puertas del Sol',
@@ -168,8 +172,20 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     descripcion_1: 'Last lots of 12x21 mts, to enjoy with family all the tranquility and security that this natural setting offers.',
     descripcion_2: 'Schedule your appointment and visit us: 3204210000'
   },
+  puertas_sol_detalle: {
+    espacios_titulo: 'Commercial urbanization',
+    espacios_desc: 'Completely finished urbanization',
+    titulo: 'Puertas del Sol',
+    subtitulo: 'Completely finished urbanization',
+    subtitulo_2: 'Located at kilometer 2 via Jamundí - Potrerito, just 20 minutes south of Cali',
+    descripcion: 'Last available lots of 8x15 mts (120 m²) with payment facility up to 12 months.',
+    descripcion_1: 'Equipped with gas station, service center, 21 commercial premises, supermarket, food court and 6 green areas.',
+    descripcion_2: 'Schedule your visit: 3204210000'
+  },
   // informaciòn componente AreaPrecioUbic.jsx
   info_AreaPrecioUbic: {
+    titulo_seccion: 'Project Information',
+    subtitulo_seccion: 'Discover the most important details',
     rincon_lago: {
       area: 'Area',
       area_desc: 'Lots starting at 150 m²',
@@ -293,6 +309,9 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     Avance_en_Zona_comercial: { id: 'LS0EhS0oSbM', titulo: 'Work progress', visible: true },
     rincon_lago_nuevo_sur: { id: 'BRmd52pMUW4', titulo: 'Discover Rincón del Lago', visible: true }
 
+    },
+    puertas_sol: {
+      video_principal: { id: 'dWO2LGUfFdY', titulo: 'Discover Puertas del Sol', visible: true }
     },
   },
   entregados: {

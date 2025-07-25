@@ -1,12 +1,10 @@
-
 .contenedor-bloques {
   display: flex;
   justify-content: center;     /* centra el grupo horizontalmente */
   gap: 20px;                   /* espacio entre los bloques */
   padding: 20px;
-
-
 }
+
 .bloque {
   flex: 1;                     /* hace que todos ocupen el mismo espacio */
   max-width: 300px;            /* límite opcional para que no se estiren demasiado */
@@ -15,9 +13,8 @@
   align-items: center;
   text-align: center;
   padding: 20px;
-
-
 }
+
 .bloque img {
   display: block;
   margin: 0;
@@ -25,12 +22,13 @@
   height: 80px;
   object-fit: contain;
 } 
+
 .bloque h3{
   margin: 0;
   font-size: 1.5rem;
   color: #ff6600;
- 
 }
+
 .bloque p {
   margin: 0;
   font-size: 1rem;
@@ -39,27 +37,29 @@
   max-width: 500px;
 }
 
-@media (max-width: 768px) {
+/* Estilos específicos para Puertas del Sol */
+.info-puertas-sol-container .contenedor-bloques .bloque h3 {
+  color: #ff6600 !important;
+  font-weight: 600;
+}
 
+@media (max-width: 768px) {
   .contenedor-bloques{
-    
-      padding: 0;
+    padding: 0;
   }
 
   .bloque {
-   
     gap:0.1rem;
     padding: 0;
   }
+  
   .bloque img {
     width: 50px;
     height: 50px;
-   
-    
   }
 
   .bloque h3 {
-     font-size: 1rem;
+    font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
     text-align: justify;
@@ -67,5 +67,9 @@
     margin: 0px;
   }
   
-
+  /* Estilos específicos para Puertas del Sol en móvil */
+  .info-puertas-sol-container .contenedor-bloques .bloque h3 {
+    color: #ff6600 !important;
+    font-weight: 600;
+  }
 }
