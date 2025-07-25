@@ -169,6 +169,16 @@ cana_dulce_detalle: {
   descripcion_1: 'Últimos lotes de 12x21 mts, para disfrutar en familia de toda la tranquilidad y seguridad que ofrece este paraje natural.',
   descripcion_2: 'Agende su cita y visitemos: 3204210000'
 },
+puertas_sol_detalle: {
+  espacios_titulo: 'Urbanización comercial',  
+  espacios_desc: 'Urbanización completamente terminada', 
+  titulo: 'Puertas del Sol',
+  subtitulo: 'Urbanización completamente terminada',
+  subtitulo_2: 'Ubicada en el kilómetro 2 vía Jamundí - Potrerito a solo 20 minutos del sur de Cali',
+  descripcion: 'Últimos lotes disponibles de 8x15 mts (120 m²) con facilidad de pago a 12 meses.',
+  descripcion_1: 'Equipada con gasolinera, centro de servicios, 21 locales comerciales, supermercado, plazoleta de comidas y 6 zonas verdes.',
+  descripcion_2: 'Agende su visita: 3204210000'
+},
  // informaciòn componente AreaPrecioUbic.jsx
  info_AreaPrecioUbic: {
   rincon_lago: {
@@ -186,6 +196,14 @@ cana_dulce_detalle: {
     precio_desc: 'Últimos lotes disponibles. Consulte precios.',
     ubicacion: 'Ubicación',
     ubicacion_desc: 'Vereda San José, San Pedro – Colombia.',
+  },
+  puertas_sol: {
+    area: 'Área',
+    area_desc: 'Lotes de 8x15 mts (120 m²)',
+    precio: 'Precio',
+    precio_desc: 'Facilidad de pago a 12 meses. Consulte precios.',
+    ubicacion: 'Ubicación',
+    ubicacion_desc: 'Km 2 vía Jamundí - Potrerito, Sur de Cali – Colombia.',
   },
   proyecto2: {
     slide_area_titulo: 'Área útil',
@@ -258,6 +276,28 @@ info_ZigZag_cana_dulce:{
     descripcion: "Portería 24/7, recepción elegante, administración profesional y UTB. Agende su cita exclusiva: 3204210000"
   }
 },
+info_ZigZag_puertas_sol:{
+  puertas_sol1: {
+    titulo: "Urbanización completamente terminada",
+    descripcion: "Ubicada en el kilómetro 2 vía Jamundí - Potrerito a solo 20 minutos del sur de Cali. Proyecto entregado y listo para inversión."
+  },
+  puertas_sol2: {
+    titulo: "Últimos lotes de 8x15 mts (120 m²)",
+    descripcion: "Facilidad de pago a 12 meses. Excelentes vías de acceso y todos los servicios públicos funcionales para su comodidad."
+  },
+  puertas_sol3: {
+    titulo: "Gasolinera y centro de servicios",
+    descripcion: "Equipada con gasolinera, centro de servicios, 21 locales comerciales, supermercado y plazoleta de comidas para su conveniencia."
+  },
+  puertas_sol4: {
+    titulo: "6 zonas verdes y espacios recreativos",
+    descripcion: "Disfrute de 6 zonas verdes distribuidas estratégicamente para crear un ambiente agradable y familiar en la urbanización."
+  },
+  puertas_sol5: {
+    titulo: "Inversión comercial y residencial",
+    descripcion: "Ideal para inversión comercial y residencial con alta rentabilidad. Agende su visita exclusiva: 3204210000"
+  }
+},
 imagenes_add:{
   mapa_rincon:'Mapa de obra'
 
@@ -280,7 +320,13 @@ imagenes_add:{
     jacuzzi: 'Jacuzzi',
     sauna: 'Sauna',
     parqueadero: 'Parqueadero',
-    porteria: 'Portería'
+    porteria: 'Portería',
+    gasolinera: 'Gasolinera',
+    servicios: 'Centro de Servicios',
+    comerciales: '21 Locales Comerciales',
+    supermercado: 'Supermercado',
+    comidas: 'Plazoleta de Comidas',
+    verdes: '6 Zonas Verdes'
   },
 
 // información videos de youtube 
@@ -368,15 +414,24 @@ videos: {
     slide3_subtitle: 'Diversifica tu portafolio con confianza',
     boton: 'Contáctanos'
   },
-  cana_dulce: {
-    slide1_title: 'Exclusiva urbanización campestre de lujo',
-    slide1_subtitle: '46 lotes premium ubicados a solo 20 minutos de Tuluá en la vereda San José',
-    slide2_title: 'Proyecto completamente terminado y entregado',
-    slide2_subtitle: 'Últimos lotes premium de 12x21 mts para familias exigentes',
-    slide3_title: 'Zona social de primera categoría',
-    slide3_subtitle: 'Amenidades de lujo: piscina, jacuzzi, sauna, salón social de 300 m² y más',
-    boton: 'Agendar cita exclusiva'
-  }, 
+      cana_dulce: {
+      slide1_title: 'Exclusiva urbanización campestre de lujo',
+      slide1_subtitle: '46 lotes premium ubicados a solo 20 minutos de Tuluá en la vereda San José',
+      slide2_title: 'Proyecto completamente terminado y entregado',
+      slide2_subtitle: 'Últimos lotes premium de 12x21 mts para familias exigentes',
+      slide3_title: 'Zona social de primera categoría',
+      slide3_subtitle: 'Amenidades de lujo: piscina, jacuzzi, sauna, salón social de 300 m² y más',
+      boton: 'Agendar cita exclusiva'
+    },
+    puertas_sol: {
+      slide1_title: 'Urbanización completamente terminada',
+      slide1_subtitle: 'Ubicada en el kilómetro 2 vía Jamundí - Potrerito a solo 20 minutos del sur de Cali',
+      slide2_title: 'Últimos lotes disponibles de 8x15 mts',
+      slide2_subtitle: '120 m² con facilidad de pago a 12 meses. Excelentes vías de acceso y todos los servicios públicos',
+      slide3_title: 'Equipada con gasolinera y centro de servicios',
+      slide3_subtitle: '21 locales comerciales, supermercado, plazoleta de comidas y 6 zonas verdes',
+      boton: 'Agendar visita'
+    }, 
   colombia: {
       slide1_title: 'Tu nuevo comienzo\nempieza aquí',
       slide1_subtitle: 'Explora nuestras casas seleccionadas para quienes buscan más que un lugar donde vivir.',

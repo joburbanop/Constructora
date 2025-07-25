@@ -23,7 +23,7 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
     const proyectosProximamente = ['sanmiguel_titulo', 'marbella_titulo'];
     
     // Proyectos finalizados (solo algunos están deshabilitados)
-    const proyectosEntregados = ['cana_title', 'palmeras_title', 'puertas_sol_title'];
+    const proyectosEntregados = ['cana_title', 'palmeras_title'];
     
     return proyectosProximamente.includes(titulo) || proyectosEntregados.includes(titulo);
   };

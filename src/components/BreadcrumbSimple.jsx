@@ -41,11 +41,16 @@ const BreadcrumbSimple = () => {
         parent: 'proyectos-usa', // Viene de Estados Unidos
         icon: <MdLocationOn />
       },
-      'cana-dulce': {
-        label: 'Caña Dulce',
-        parent: 'proyectos-colombia', // Viene de Colombia
-        icon: <MdLocationOn />
-      }
+                        'cana-dulce': {
+                    label: 'Caña Dulce',
+                    parent: 'proyectos-colombia', // Viene de Colombia
+                    icon: <MdLocationOn />
+                  },
+                  'puertas-del-sol': {
+                    label: 'Puertas del Sol',
+                    parent: 'proyectos-colombia', // Viene de Colombia
+                    icon: <MdLocationOn />
+                  }
     };
 
     // Lógica para determinar la ruta padre basada en el contexto y navegación
@@ -86,6 +91,23 @@ const BreadcrumbSimple = () => {
       }
       
       if (currentSegment === 'cana-dulce') {
+        // Si hay información de navegación previa, usarla
+        if (previousPath) {
+          if (previousPath.includes('todos-los-proyectos')) {
+            return 'todos-los-proyectos';
+          } else if (previousPath.includes('proyectos-colombia')) {
+            return 'proyectos-colombia';
+          }
+        }
+        // Si el usuario vino de todos-los-proyectos, mostrar esa ruta
+        if (allSegments.includes('todos-los-proyectos')) {
+          return 'todos-los-proyectos';
+        }
+        // Por defecto, viene de Colombia
+        return 'proyectos-colombia';
+      }
+      
+      if (currentSegment === 'puertas-del-sol') {
         // Si hay información de navegación previa, usarla
         if (previousPath) {
           if (previousPath.includes('todos-los-proyectos')) {

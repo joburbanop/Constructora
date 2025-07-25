@@ -381,6 +381,15 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     slide3_subtitle: 'Luxury amenities: pool, jacuzzi, sauna, 300 m² social hall and more',
     boton: 'Schedule exclusive appointment'
   },
+  puertas_sol: {
+    slide1_title: 'Completely finished urbanization',
+    slide1_subtitle: 'Located at kilometer 2 via Jamundí - Potrerito just 20 minutes from southern Cali',
+    slide2_title: 'Last available lots of 8x15 mts',
+    slide2_subtitle: '120 m² with payment facilities for 12 months. Excellent access roads and all public services',
+    slide3_title: 'Equipped with gas station and service center',
+    slide3_subtitle: '21 commercial premises, supermarket, food court and 6 green areas',
+    boton: 'Schedule visit'
+  },
     colombia: {
       slide1_title: 'A new chapter begins here',
       slide1_subtitle: 'Explore our handpicked homes for those seeking more than just a place to live.',

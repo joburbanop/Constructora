@@ -1,20 +1,21 @@
-import img1 from '../assets/cana_dulce/slider_cana_dulce1.webp';
-import img2 from '../assets/cana_dulce/slider_cana_dulce2.webp';
-import img3 from '../assets/cana_dulce/slider_cana_dulce3.webp';
+import cana_dulce_logo from '../assets/cana_dulce/cana_dulce_logo.webp';
+import cana_dulce_slide1 from '../assets/cana_dulce/cana_dulce_galeria1.JPG';
+import cana_dulce_slide2 from '../assets/cana_dulce/cana_dulce_galeria2.JPG';
+import cana_dulce_slide3 from '../assets/cana_dulce/cana_dulce_galeria3.JPG';
 
 const slidesCanaDulce = [
     {
-        image: img1,
+        image: cana_dulce_slide1,
         title: 'slide1_title',
         subtitle: 'slide1_subtitle'
     },
     {
-        image: img2,
+        image: cana_dulce_slide2,
         title: 'slide2_title',
         subtitle: 'slide2_subtitle'
     },
     {
-        image: img3,
+        image: cana_dulce_slide3,
         title: 'slide3_title',
         subtitle: 'slide3_subtitle'
     }

@@ -40,5 +40,13 @@ export const infoEspacios = {
     sauna: iconGym,
     parqueadero: iconComercial,
     porteria: iconBBQ
+  },
+  puertas_sol: {
+    gasolinera: iconComercial,
+    servicios: iconSocial,
+    comerciales: iconComercial,
+    supermercado: iconComercial,
+    comidas: iconBBQ,
+    verdes: iconVerdes
   }
 };

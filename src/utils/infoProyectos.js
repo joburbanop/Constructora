@@ -12,11 +12,11 @@ import img10 from '../assets/rincon_lago/Rincon_lago_galeria10.webp';
 import Coral from '../assets/coral_mall/logo_coral_mall.webp';
 import pdf_coral from '../assets/pdfs/planos_coral.pdf';
 import CanaDulce from '../assets/cana_dulce/cana_dulce_logo.webp';
-import cana_dulce1 from '../assets/cana_dulce/cana_dulce_galeria1.webp';
-import cana_dulce2 from '../assets/cana_dulce/cana_dulce_galeria2.webp';
-import cana_dulce3 from '../assets/cana_dulce/cana_dulce_galeria3.webp';
-import cana_dulce4 from '../assets/cana_dulce/cana_dulce_galeria4.webp';
-import cana_dulce5 from '../assets/cana_dulce/cana_dulce_galeria5.webp';
+import cana_dulce1 from '../assets/cana_dulce/cana_dulce_galeria1.JPG';
+import cana_dulce2 from '../assets/cana_dulce/cana_dulce_galeria2.JPG';
+import cana_dulce3 from '../assets/cana_dulce/cana_dulce_galeria3.JPG';
+import cana_dulce4 from '../assets/cana_dulce/cana_dulce_galeria4.JPG';
+import cana_dulce5 from '../assets/cana_dulce/cana_dulce_galeria5.JPG';
 
 export const infoProyectos = {
   rincon: {
