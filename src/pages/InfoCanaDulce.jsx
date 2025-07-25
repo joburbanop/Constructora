@@ -96,32 +96,40 @@ const InfoCanaDulce = () => {
           <Slider contenido={slidesCanaDulce} namespace="cana_dulce"/>
         </section>
 
-        <DetallesProyecto id="cana_dulce" />
+        <section className="detalles-proyecto">
+          <DetallesProyecto id="cana_dulce" />
+        </section>
         
-        <SectionDivider textKey="detalles" variant="subtle" />
+        <section className="area-precio-ubic">
+          <AreaPrecioUbic proyectoKey="cana_dulce" />
+        </section>
         
-        <AreaPrecioUbic proyectoKey="cana_dulce" />
+        <section className="galeria-proyecto">
+          <GaleriaProyecto id="cana_dulce" />
+        </section>
         
-        <SectionDivider textKey="galeria" variant="subtle" />
+        <section className="espacios-sociales">
+          <EspaciosSociales 
+            id="cana_dulce" 
+            claves={['piscina', 'social', 'infantiles', 'verdes', 'jacuzzi', 'sauna', 'parqueadero', 'porteria']} 
+          />
+        </section>
         
-        <GaleriaProyecto id="cana_dulce" />
+        <section className="info-zigzag">
+          <InfoZigZag elementos={zigzagCanaDulce} textoKey="info_ZigZag_cana_dulce"/>
+        </section>
         
-        <SectionDivider textKey="espacios" variant="subtle" />
-        
-        <EspaciosSociales 
-          id="cana_dulce" 
-          claves={['piscina', 'social', 'infantiles', 'verdes', 'jacuzzi', 'sauna', 'parqueadero', 'porteria']} 
-        />
-        
-        <InfoZigZag elementos={zigzagCanaDulce} textoKey="info_ZigZag_cana_dulce"/>
-        
-        <UbicacionMaps mapSrc={sanPedroCoord.mapSrc}/>
+        <section className="ubicacion-maps">
+          <UbicacionMaps mapSrc={sanPedroCoord.mapSrc}/>
+        </section>
         
         <div id="expertos" className="expertos-section-cana-dulce">
           <Expertos />
         </div>
         
-        <ContactoCTA />
+        <section className="contacto-cta">
+          <ContactoCTA />
+        </section>
         
         <section id="contactanos" className="footer-section">
           <Footer/>

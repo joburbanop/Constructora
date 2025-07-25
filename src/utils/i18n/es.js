@@ -238,24 +238,24 @@ info_ZigZag_coral:{
 },
 info_ZigZag_cana_dulce:{
   cana_dulce1: {
-    titulo: "Exclusiva urbanización campestre de 46 lotes",
-    descripcion: "Ubicada a 20 minutos de Tuluá en la vereda San José del municipio de San Pedro. Completamente terminada y entregada."
+    titulo: "Exclusiva urbanización campestre de lujo",
+    descripcion: "46 lotes premium ubicados a solo 20 minutos de Tuluá en la vereda San José del municipio de San Pedro. Proyecto completamente terminado y entregado."
   },
   cana_dulce2: {
-    titulo: "Últimos lotes de 12x21 mts",
-    descripcion: "Para disfrutar en familia de toda la tranquilidad y seguridad que ofrece este paraje natural."
+    titulo: "Últimos lotes premium de 12x21 mts",
+    descripcion: "Disfrute de la tranquilidad y seguridad que ofrece este exclusivo paraje natural, perfecto para familias que buscan calidad de vida."
   },
   cana_dulce3: {
-    titulo: "Zona social completamente equipada",
-    descripcion: "Piscina para adultos y niños, Jacuzzi, Sauna, duchas, camerinos, baños, salón social de 300 mts² con cocina y mobiliario."
+    titulo: "Zona social de primera categoría",
+    descripcion: "Amenidades de lujo: piscina para adultos y niños, jacuzzi, sauna, duchas, camerinos, baños, y salón social de 300 m² con cocina gourmet y mobiliario premium."
   },
   cana_dulce4: {
-    titulo: "Servicios adicionales",
-    descripcion: "Oficina, cuarto de máquinas, cuarto de aseo, parque infantil, estacionamiento para visitantes."
+    titulo: "Servicios premium incluidos",
+    descripcion: "Oficina administrativa, cuarto de máquinas, cuarto de aseo, parque infantil de lujo, estacionamiento VIP para visitantes."
   },
   cana_dulce5: {
-    titulo: "Seguridad y administración",
-    descripcion: "Portería, recepción, administración y UTB. Agende su cita: 3204210000"
+    titulo: "Seguridad y administración profesional",
+    descripcion: "Portería 24/7, recepción elegante, administración profesional y UTB. Agende su cita exclusiva: 3204210000"
   }
 },
 imagenes_add:{
@@ -369,13 +369,13 @@ videos: {
     boton: 'Contáctanos'
   },
   cana_dulce: {
-    slide1_title: 'Exclusiva urbanización campestre',
-    slide1_subtitle: '46 lotes ubicados a 20 minutos de Tuluá en la vereda San José',
-    slide2_title: 'Completamente terminada y entregada',
-    slide2_subtitle: 'Últimos lotes de 12x21 mts para disfrutar en familia',
-    slide3_title: 'Zona social completamente equipada',
-    slide3_subtitle: 'Piscina, Jacuzzi, Sauna, salón social de 300 mts² y más',
-    boton: 'Agendar cita'
+    slide1_title: 'Exclusiva urbanización campestre de lujo',
+    slide1_subtitle: '46 lotes premium ubicados a solo 20 minutos de Tuluá en la vereda San José',
+    slide2_title: 'Proyecto completamente terminado y entregado',
+    slide2_subtitle: 'Últimos lotes premium de 12x21 mts para familias exigentes',
+    slide3_title: 'Zona social de primera categoría',
+    slide3_subtitle: 'Amenidades de lujo: piscina, jacuzzi, sauna, salón social de 300 m² y más',
+    boton: 'Agendar cita exclusiva'
   }, 
   colombia: {
       slide1_title: 'Tu nuevo comienzo\nempieza aquí',

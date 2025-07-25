@@ -40,6 +40,11 @@ const BreadcrumbSimple = () => {
         label: 'Coral Mall',
         parent: 'proyectos-usa', // Viene de Estados Unidos
         icon: <MdLocationOn />
+      },
+      'cana-dulce': {
+        label: 'Caña Dulce',
+        parent: 'proyectos-colombia', // Viene de Colombia
+        icon: <MdLocationOn />
       }
     };
 
@@ -78,6 +83,23 @@ const BreadcrumbSimple = () => {
         }
         // Por defecto, viene de Estados Unidos
         return 'proyectos-usa';
+      }
+      
+      if (currentSegment === 'cana-dulce') {
+        // Si hay información de navegación previa, usarla
+        if (previousPath) {
+          if (previousPath.includes('todos-los-proyectos')) {
+            return 'todos-los-proyectos';
+          } else if (previousPath.includes('proyectos-colombia')) {
+            return 'proyectos-colombia';
+          }
+        }
+        // Si el usuario vino de todos-los-proyectos, mostrar esa ruta
+        if (allSegments.includes('todos-los-proyectos')) {
+          return 'todos-los-proyectos';
+        }
+        // Por defecto, viene de Colombia
+        return 'proyectos-colombia';
       }
       
       return null;

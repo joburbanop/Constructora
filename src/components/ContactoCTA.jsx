@@ -23,17 +23,17 @@ const ContactoCTA = () => {
       </div>
       <button
         style={{
-          background: '#111c2b',
+          background: 'linear-gradient(135deg, #ff6600 0%, #ff914d 100%)',
           color: '#fff',
           fontWeight: 700,
           fontSize: '1.4rem',
           padding: '18px 56px',
           border: 'none',
-          borderRadius: 4,
+          borderRadius: 50,
           cursor: 'pointer',
-          boxShadow: '0 4px 24px rgba(0,0,0,0.10)',
+          boxShadow: '0 4px 24px rgba(255, 102, 0, 0.3)',
           letterSpacing: 1,
-          transition: 'background 0.2s',
+          transition: 'all 0.3s ease',
           display: 'inline-flex',
           alignItems: 'center',
           gap: 12
@@ -41,6 +41,14 @@ const ContactoCTA = () => {
         onClick={() => {
           const el = document.getElementById('contactanos');
           if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.transform = 'translateY(-3px)';
+          e.target.style.boxShadow = '0 8px 32px rgba(255, 102, 0, 0.4)';
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.transform = 'translateY(0)';
+          e.target.style.boxShadow = '0 4px 24px rgba(255, 102, 0, 0.3)';
         }}
       >
         {t.cta?.boton || 'Contáctanos'}

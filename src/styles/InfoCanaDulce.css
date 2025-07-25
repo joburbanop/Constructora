@@ -1,78 +1,427 @@
-/* ========== Estilos específicos para InfoCanaDulce ========== */
+/* ========== Estilos Premium para InfoCanaDulce ========== */
 
 .info-cana-dulce-container {
   min-height: 100vh;
-  background: #fff;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* ========== Sección de expertos específica para Caña Dulce ========== */
-.expertos-section-cana-dulce {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  padding: 4rem 0;
-  margin: 2rem 0;
-}
-
-/* ========== Estilos para el slider específico de Caña Dulce ========== */
+/* ========== Hero Section Premium ========== */
 .info-cana-dulce-container .slider-container {
   position: relative;
-  height: 70vh;
-  min-height: 500px;
+  height: 85vh;
+  min-height: 600px;
   overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
 }
 
 .info-cana-dulce-container .slide-content {
   text-align: center;
-  color: white;
+  color: #1a1a1a;
   z-index: 2;
   position: relative;
+  padding: 0 2rem;
 }
 
 .info-cana-dulce-container .slide-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+  line-height: 1.1;
 }
 
 .info-cana-dulce-container .slide-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
-  margin-bottom: 2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  color: #555;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
 }
 
-/* ========== Responsive ========== */
-@media (max-width: 768px) {
-  .info-cana-dulce-container .slider-container {
-    height: 50vh;
-    min-height: 400px;
-  }
-
-  .info-cana-dulce-container .slide-content h1 {
-    font-size: 2rem;
-  }
-
-  .info-cana-dulce-container .slide-content h2 {
-    font-size: 1.2rem;
-  }
-
-  .expertos-section-cana-dulce {
-    padding: 2rem 0;
-  }
+/* ========== Overlay Premium para Slider ========== */
+.info-cana-dulce-container .slider-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 102, 0, 0.1) 0%, 
+    rgba(255, 102, 0, 0.05) 50%, 
+    rgba(255, 102, 0, 0.15) 100%);
+  z-index: 1;
 }
 
-/* ========== Animaciones específicas ========== */
+/* ========== Sección de Expertos Premium ========== */
+.expertos-section-cana-dulce {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 6rem 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expertos-section-cana-dulce::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ff6600, transparent);
+}
+
+/* Centrado específico para expertos en Caña Dulce */
+.expertos-section-cana-dulce .expertos-tarjetas-section {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.expertos-section-cana-dulce .expertos-grid {
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* ========== Estilos para Detalles del Proyecto ========== */
+.info-cana-dulce-container .detalles-proyecto {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  padding: 5rem 0;
+  position: relative;
+}
+
+.info-cana-dulce-container .detalles-proyecto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6600, #ff914d, #ffb347);
+}
+
+/* ========== Estilos para Galería Premium ========== */
+.info-cana-dulce-container .galeria-proyecto {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 5rem 0;
+  position: relative;
+}
+
+/* ========== Estilos para Área Precio Ubicación ========== */
+.info-cana-dulce-container .area-precio-ubic {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  padding: 5rem 0;
+  position: relative;
+}
+
+/* ========== Estilos para Espacios Sociales ========== */
+.info-cana-dulce-container .espacios-sociales {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 5rem 0;
+  position: relative;
+}
+
+/* ========== Estilos para Info ZigZag ========== */
+.info-cana-dulce-container .info-zigzag {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  padding: 5rem 0;
+  position: relative;
+}
+
+/* ========== Estilos para Ubicación Maps ========== */
+.info-cana-dulce-container .ubicacion-maps {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 5rem 0;
+  position: relative;
+}
+
+/* ========== Estilos para Contacto CTA ========== */
+.info-cana-dulce-container .contacto-cta {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 5rem 0;
+  position: relative;
+  color: #1a1a1a;
+}
+
+/* ========== Efectos de Scroll y Animaciones ========== */
+.info-cana-dulce-container section {
+  position: relative;
+  overflow: hidden;
+}
+
+.info-cana-dulce-container section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff6600, transparent);
+  opacity: 0.3;
+}
+
+/* ========== Animaciones Premium ========== */
 .info-cana-dulce-container .slide-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+.info-cana-dulce-container section {
   animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.info-cana-dulce-container section:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.info-cana-dulce-container section:nth-child(even) {
+  animation-delay: 0.4s;
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ========== Efectos de Hover Premium ========== */
+.info-cana-dulce-container .slide-content h1:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* ========== Estilos para Contenido de Texto ========== */
+.info-cana-dulce-container h1, 
+.info-cana-dulce-container h2, 
+.info-cana-dulce-container h3 {
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.info-cana-dulce-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  font-weight: 400;
+}
+
+/* ========== Estilos para Botones Premium ========== */
+.info-cana-dulce-container .btn-premium {
+  background: linear-gradient(135deg, #ff6600 0%, #ff914d 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-cana-dulce-container .btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.info-cana-dulce-container .btn-premium:hover::before {
+  left: 100%;
+}
+
+.info-cana-dulce-container .btn-premium:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 102, 0, 0.4);
+  background: linear-gradient(135deg, #ff914d 0%, #ff6600 100%);
+}
+
+/* ========== Estilos para Cards Premium ========== */
+.info-cana-dulce-container .card-premium {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 102, 0, 0.1);
+}
+
+.info-cana-dulce-container .card-premium:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 102, 0, 0.3);
+}
+
+/* ========== Estilos para Iconos Premium ========== */
+.info-cana-dulce-container .icon-premium {
+  color: #ff6600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.info-cana-dulce-container .card-premium:hover .icon-premium {
+  transform: scale(1.1);
+  color: #ff914d;
+}
+
+/* ========== Responsive Design Premium ========== */
+@media (max-width: 1200px) {
+  .info-cana-dulce-container .slide-content h1 {
+    font-size: 3.5rem;
+  }
+  
+  .info-cana-dulce-container .slide-content h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-cana-dulce-container .slider-container {
+    height: 60vh;
+    min-height: 450px;
+  }
+
+  .info-cana-dulce-container .slide-content h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .info-cana-dulce-container .slide-content h2 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+
+  .expertos-section-cana-dulce {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .expertos-section-cana-dulce .expertos-tarjetas-section {
+    margin: 0 auto;
+    padding: 20px 15px;
+  }
+
+  .expertos-section-cana-dulce .expertos-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .info-cana-dulce-container .detalles-proyecto,
+  .info-cana-dulce-container .galeria-proyecto,
+  .info-cana-dulce-container .area-precio-ubic,
+  .info-cana-dulce-container .espacios-sociales,
+  .info-cana-dulce-container .info-zigzag,
+  .info-cana-dulce-container .ubicacion-maps,
+  .info-cana-dulce-container .contacto-cta {
+    padding: 3rem 0;
+  }
+
+  .info-cana-dulce-container .card-premium {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-cana-dulce-container .btn-premium {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-cana-dulce-container .slide-content h1 {
+    font-size: 2rem;
+  }
+
+  .info-cana-dulce-container .slide-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .info-cana-dulce-container .slide-content {
+    padding: 0 1rem;
+  }
+}
+
+/* ========== Efectos de Partículas Premium ========== */
+.info-cana-dulce-container .particles-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.info-cana-dulce-container .particle {
+  position: absolute;
+  background: rgba(255, 102, 0, 0.1);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+/* ========== Scrollbar Personalizada ========== */
+.info-cana-dulce-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.info-cana-dulce-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.info-cana-dulce-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff6600, #ff914d);
+  border-radius: 4px;
+}
+
+.info-cana-dulce-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ff914d, #ff6600);
 }

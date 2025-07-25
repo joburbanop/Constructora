@@ -239,24 +239,24 @@ const es = { // Should remain 'es' if you are keeping original variable names or
   },
   info_ZigZag_cana_dulce: {
     cana_dulce1: {
-      titulo: "Exclusive countryside urbanization of 46 lots",
-      descripcion: "Located 20 minutes from Tuluá in the San José area of San Pedro municipality. Completely finished and delivered."
+      titulo: "Exclusive luxury countryside urbanization",
+      descripcion: "46 premium lots located just 20 minutes from Tuluá in the San José area of San Pedro municipality. Project completely finished and delivered."
     },
     cana_dulce2: {
-      titulo: "Last lots of 12x21 mts",
-      descripcion: "To enjoy with family all the tranquility and security that this natural setting offers."
+      titulo: "Last premium lots of 12x21 mts",
+      descripcion: "Enjoy the tranquility and security offered by this exclusive natural setting, perfect for families seeking quality of life."
     },
     cana_dulce3: {
-      titulo: "Fully equipped social area",
-      descripcion: "Pool for adults and children, Jacuzzi, Sauna, showers, changing rooms, bathrooms, 300 m² social hall with kitchen and furniture."
+      titulo: "First-class social area",
+      descripcion: "Luxury amenities: pool for adults and children, jacuzzi, sauna, showers, changing rooms, bathrooms, and 300 m² social hall with gourmet kitchen and premium furniture."
     },
     cana_dulce4: {
-      titulo: "Additional services",
-      descripcion: "Office, machine room, restroom, playground, visitor parking."
+      titulo: "Premium services included",
+      descripcion: "Administrative office, machine room, restroom, luxury children's park, VIP visitor parking."
     },
     cana_dulce5: {
-      titulo: "Security and administration",
-      descripcion: "Gatehouse, reception, administration and UTB. Schedule your appointment: 3204210000"
+      titulo: "Professional security and administration",
+      descripcion: "24/7 gatehouse, elegant reception, professional administration and UTB. Schedule your exclusive appointment: 3204210000"
     }
   },
   imagenes_add: {
@@ -372,15 +372,15 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       boton: 'Contact Us'
 
     },
-    cana_dulce: {
-      slide1_title: 'Exclusive countryside urbanization',
-      slide1_subtitle: '46 lots located 20 minutes from Tuluá in the San José area',
-      slide2_title: 'Completely finished and delivered',
-      slide2_subtitle: 'Last lots of 12x21 mts to enjoy with family',
-      slide3_title: 'Fully equipped social area',
-      slide3_subtitle: 'Pool, Jacuzzi, Sauna, 300 m² social hall and more',
-      boton: 'Schedule appointment'
-    },
+      cana_dulce: {
+    slide1_title: 'Exclusive luxury countryside urbanization',
+    slide1_subtitle: '46 premium lots located just 20 minutes from Tuluá in the San José area',
+    slide2_title: 'Project completely finished and delivered',
+    slide2_subtitle: 'Last premium lots of 12x21 mts for demanding families',
+    slide3_title: 'First-class social area',
+    slide3_subtitle: 'Luxury amenities: pool, jacuzzi, sauna, 300 m² social hall and more',
+    boton: 'Schedule exclusive appointment'
+  },
     colombia: {
       slide1_title: 'A new chapter begins here',
       slide1_subtitle: 'Explore our handpicked homes for those seeking more than just a place to live.',
