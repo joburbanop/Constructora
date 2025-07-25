@@ -96,7 +96,7 @@ const proyectos = [
     tipo: 'urbanizacion',
     icono: 'urbanizacion',
     iconoColor: '#222',
-    ubicacion: 'san_jose',
+    ubicacion: 'jamundi_colombia',
     enlace: '/cana-dulce',
     etiquetaColor: '#ffb347'
   },
@@ -118,7 +118,7 @@ const proyectos = [
     tipo: 'urbanizacion',
     icono: 'urbanizacion',
     iconoColor: '#222',
-    ubicacion: 'san_jose',
+    ubicacion: 'jamundi_colombia',
     enlace: '#',
     etiquetaColor: '#ffb347'
   }

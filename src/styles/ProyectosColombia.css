@@ -1,120 +1,585 @@
-/* Proyectos Colombia Page Styles */
-section#inicio {
-  width: 100%;
-  height: auto; /* o mínimo 520px */
+/* ========== PROYECTOS COLOMBIA - RESPONSIVE DESIGN ========== */
+
+/* CSS Custom Properties para consistencia */
+:root {
+  --colombia-primary: #ff6600;
+  --colombia-secondary: #222;
+  --colombia-text: #444;
+  --colombia-bg: #f8f9fa;
+  --colombia-card-bg: #fff;
+  --colombia-shadow: rgba(0, 0, 0, 0.1);
+  --colombia-shadow-hover: rgba(0, 0, 0, 0.15);
+  
+  /* Espaciado fluido */
+  --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --spacing-sm: clamp(0.75rem, 1.5vw, 1rem);
+  --spacing-md: clamp(1rem, 2vw, 1.5rem);
+  --spacing-lg: clamp(1.5rem, 3vw, 2rem);
+  --spacing-xl: clamp(2rem, 4vw, 3rem);
+  
+  /* Tipografía fluida */
+  --font-size-xs: clamp(0.75rem, 2vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 2.5vw, 1rem);
+  --font-size-md: clamp(1rem, 3vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 3.5vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 4vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 5vw, 2rem);
+  --font-size-3xl: clamp(2rem, 6vw, 2.5rem);
+  
+  /* Bordes y radios */
+  --border-radius-sm: clamp(8px, 1.5vw, 12px);
+  --border-radius-md: clamp(12px, 2vw, 18px);
+  --border-radius-lg: clamp(16px, 2.5vw, 24px);
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 8px var(--colombia-shadow);
+  --shadow-md: 0 4px 16px var(--colombia-shadow);
+  --shadow-lg: 0 8px 32px var(--colombia-shadow);
+  --shadow-hover: 0 12px 40px var(--colombia-shadow-hover);
 }
 
+/* ========== LAYOUT PRINCIPAL ========== */
 .proyectos-colombia-container {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
+/* Hero Section */
+section#inicio {
+  width: 100%;
+  height: auto;
+  min-height: clamp(300px, 50vh, 500px);
+}
+
+/* Main Content */
 .proyectos-colombia-main {
   width: 100%;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
+  max-width: min(1200px, 95vw);
+  margin: var(--spacing-xl) auto;
+  padding: 0 var(--spacing-md);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--spacing-lg);
 }
 
+/* Título principal */
+.proyectos-colombia-main h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--colombia-secondary);
+  text-align: center;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* ========== GRID DE PROYECTOS ========== */
 .proyectos-colombia-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 40vw, 350px), 1fr));
+  gap: 6rem 4rem;
   width: 100%;
   max-width: 1200px;
+  align-items: start;
+  margin-bottom: 4rem;
 }
 
+/* ========== TARJETAS DE PROYECTOS - ESTILO PREMIUM COMO HOME ========== */
 .proyecto-colombia-card {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  padding: 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid rgba(255, 102, 0, 0.1);
+  box-shadow: 0 6px 30px rgba(255, 102, 0, 0.08);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: clamp(300px, 60vh, 400px);
+}
+
+/* Línea superior con gradiente */
+.proyecto-colombia-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6600, #ff914d, #ffb347);
+  z-index: 1;
 }
 
 .proyecto-colombia-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(255, 102, 0, 0.15);
+  border-color: rgba(255, 102, 0, 0.2);
 }
 
+/* Badge de estado (EN MARCHA/ENTREGADO) */
+.proyecto-colombia-card::after {
+  content: 'EN MARCHA';
+  position: absolute;
+  top: 1.5em;
+  left: 1.5em;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.3em 0.8em;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+  z-index: 10;
+  animation: pulse 2s infinite;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Badge específico para proyectos entregados */
+.proyecto-colombia-card[data-proyecto="caña_dulce_title"]::after,
+.proyecto-colombia-card[data-proyecto="puertas_sol_title"]::after,
+.proyecto-colombia-card[data-proyecto="palmeras_title"]::after,
+.proyecto-colombia-card[data-proyecto="cana_title"]::after {
+  content: 'ENTREGADO';
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* Animación pulse para badges */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 2px 12px rgba(0, 123, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+  }
+}
+
+/* Contenedor de imagen con overlay */
+.proyecto-colombia-card .proyecto-img-wrap {
+  position: relative;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Overlay de imagen */
+.proyecto-colombia-card .proyecto-img-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 102, 0, 0.1) 0%, 
+    rgba(255, 102, 0, 0.05) 50%, 
+    rgba(255, 102, 0, 0.15) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.proyecto-colombia-card:hover .proyecto-img-wrap::before {
+  opacity: 1;
+}
+
+/* Imagen del proyecto */
 .proyecto-colombia-card img {
   width: 100%;
+  height: clamp(150px, 25vh, 200px);
+  object-fit: cover;
   border-radius: 12px;
-  margin-bottom: 16px;
+  margin-bottom: var(--spacing-md);
+  transition: transform 0.3s ease;
 }
 
+.proyecto-colombia-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Título del proyecto */
 .proyecto-colombia-card h2 {
-  color: #222;
-  font-size: 1.3rem;
-  margin-bottom: 8px;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.8rem 0;
+  line-height: 1.3;
+  transition: color 0.3s ease;
 }
 
+.proyecto-colombia-card:hover h2 {
+  color: #ff6600;
+}
+
+/* Descripción del proyecto */
 .proyecto-colombia-card p {
-  color: #444;
-  margin-bottom: 12px;
+  color: #555;
+  font-size: 0.95rem;
   line-height: 1.5;
+  margin: 0 0 1.2rem 0;
+  transition: color 0.3s ease;
+  flex-grow: 1;
 }
 
-/* Expertos Section Centering */
+.proyecto-colombia-card:hover p {
+  color: #333;
+}
+
+/* Contenedor de ubicación */
+.proyecto-colombia-card .proyecto-ubicacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 102, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.proyecto-colombia-card:hover .proyecto-ubicacion {
+  background: linear-gradient(135deg, #fff5f0 0%, #ffe8d6 100%);
+  border-color: rgba(255, 102, 0, 0.2);
+  color: #ff6600;
+  transform: translateY(-2px);
+}
+
+/* Botón del proyecto - Estilo premium */
+.proyecto-colombia-card .ambito-btn {
+  background: linear-gradient(135deg, #ff6600 0%, #ff914d 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: center;
+  margin-top: auto;
+  min-width: 140px;
+  text-align: center;
+}
+
+/* Efecto shimmer en botón */
+.proyecto-colombia-card .ambito-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.proyecto-colombia-card .ambito-btn:hover::before {
+  left: 100%;
+}
+
+.proyecto-colombia-card .ambito-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
+  background: linear-gradient(135deg, #e65c00 0%, #ff6600 100%);
+}
+
+/* Botón deshabilitado para proyectos próximamente */
+.proyecto-colombia-card .ambito-btn.gray.lujo {
+  background: #6c757d;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.proyecto-colombia-card .ambito-btn.gray.lujo:hover {
+  transform: none;
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
+  background: #6c757d;
+}
+
+/* Label "Próximamente" */
+.proximamente-label {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: #adb5bd;
+  margin-top: var(--spacing-xs);
+  font-style: italic;
+}
+
+/* ========== SECCIÓN EXPERTOS ========== */
 .expertos-section-colombia {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 40px 20px;
-  background: #f8f9fa;
+  padding: var(--spacing-xl) var(--spacing-md);
+  background: var(--colombia-bg);
+  margin-top: var(--spacing-xl);
 }
 
 .expertos-section-colombia .expertos-tarjetas-section {
   margin: 0 auto;
+  max-width: min(1200px, 95vw);
 }
 
-/* Footer Section Centering */
-.footer-section-colombia {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: #ff6600;
-  margin: 0;
-  padding: 0;
-}
+/* ========== RESPONSIVE DESIGN GRANULAR ========== */
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .proyectos-colombia-main {
-    max-width: 1000px;
-    padding: 0 30px;
+/* Tablets grandes */
+@media (max-width: 1024px) {
+  .proyectos-colombia-grid {
+    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 35vw, 300px), 1fr));
+    gap: 5rem 3.5rem;
+  }
+  
+  .proyecto-colombia-card {
+    padding: var(--spacing-md);
   }
 }
 
+/* Tablets medianas */
 @media (max-width: 768px) {
   .proyectos-colombia-main {
-    padding: 0 20px;
-    margin: 20px auto;
+    margin: var(--spacing-lg) auto;
+    padding: 0 var(--spacing-sm);
   }
   
   .proyectos-colombia-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 4rem;
+    max-width: 500px;
   }
   
   .proyecto-colombia-card {
-    padding: 20px;
+    padding: var(--spacing-md);
+    min-height: clamp(250px, 50vh, 350px);
+  }
+  
+  .proyecto-colombia-card img {
+    height: clamp(120px, 20vh, 160px);
+  }
+  
+  .proyecto-colombia-card h2 {
+    font-size: 1.3rem;
+  }
+  
+  .proyecto-colombia-card p {
+    font-size: 0.9rem;
+  }
+  
+  .proyecto-colombia-card .ambito-btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.8rem;
   }
 }
 
+/* Móviles grandes */
 @media (max-width: 480px) {
   .proyectos-colombia-main {
-    padding: 0 15px;
-    margin: 15px auto;
+    margin: var(--spacing-md) auto;
+    padding: 0 var(--spacing-xs);
+  }
+  
+  .proyectos-colombia-grid {
+    gap: 3.5rem;
   }
   
   .proyecto-colombia-card {
-    padding: 16px;
+    padding: var(--spacing-sm);
+    min-height: clamp(200px, 45vh, 300px);
+  }
+  
+  .proyecto-colombia-card img {
+    height: clamp(100px, 18vh, 140px);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .proyecto-colombia-card h2 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .proyecto-colombia-card p {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .proyecto-colombia-card .ambito-btn {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+  
+  .proyecto-colombia-card::after {
+    font-size: 0.65rem;
+    padding: 0.25em 0.6em;
+    top: 1em;
+    left: 1em;
+  }
+}
+
+/* Móviles medianos */
+@media (max-width: 375px) {
+  .proyectos-colombia-main {
+    padding: 0 calc(var(--spacing-xs) / 2);
+  }
+  
+  .proyectos-colombia-grid {
+    gap: 3rem;
+  }
+  
+  .proyecto-colombia-card {
+    padding: calc(var(--spacing-sm) / 2);
+    min-height: clamp(180px, 40vh, 250px);
+  }
+  
+  .proyecto-colombia-card img {
+    height: clamp(80px, 15vh, 120px);
+  }
+  
+  .proyecto-colombia-card h2 {
+    font-size: var(--font-size-md);
+  }
+  
+  .proyecto-colombia-card p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+  
+  .proyecto-colombia-card .ambito-btn {
+    font-size: 0.8rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Móviles pequeños (iPhone SE, etc.) */
+@media (max-width: 320px) {
+  .proyectos-colombia-main {
+    margin: calc(var(--spacing-sm) / 2) auto;
+    padding: 0 calc(var(--spacing-xs) / 4);
+  }
+  
+  .proyectos-colombia-grid {
+    gap: 2.5rem;
+  }
+  
+  .proyectos-colombia-main h1 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .proyecto-colombia-card {
+    padding: calc(var(--spacing-xs) / 2);
+    min-height: clamp(160px, 35vh, 220px);
+    border-radius: calc(var(--border-radius-sm) / 2);
+  }
+  
+  .proyecto-colombia-card img {
+    height: clamp(70px, 12vh, 100px);
+    border-radius: calc(var(--border-radius-sm) / 2);
+  }
+  
+  .proyecto-colombia-card h2 {
+    font-size: var(--font-size-sm);
+    margin-bottom: calc(var(--spacing-xs) / 2);
+  }
+  
+  .proyecto-colombia-card p {
+    font-size: 0.7rem;
+    line-height: 1.4;
+    margin-bottom: calc(var(--spacing-sm) / 2);
+  }
+  
+  .proyecto-colombia-card .ambito-btn {
+    font-size: 0.7rem;
+    padding: calc(var(--spacing-xs) / 2) calc(var(--spacing-sm) / 2);
+    border-radius: 15px;
+  }
+  
+  .proximamente-label {
+    font-size: 0.6rem;
+  }
+  
+  .proyecto-colombia-card::after {
+    font-size: 0.6rem;
+    padding: 0.2em 0.5em;
+    top: 0.8em;
+    left: 0.8em;
+  }
+}
+
+/* ========== ORIENTACIÓN LANDSCAPE ========== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .proyectos-colombia-main {
+    margin: var(--spacing-sm) auto;
+  }
+  
+  .proyecto-colombia-card {
+    min-height: clamp(120px, 30vh, 180px);
+  }
+  
+  .proyecto-colombia-card img {
+    height: clamp(60px, 10vh, 80px);
+  }
+}
+
+/* ========== ACCESIBILIDAD ========== */
+@media (prefers-reduced-motion: reduce) {
+  .proyecto-colombia-card,
+  .proyecto-colombia-card img,
+  .proyecto-colombia-card .ambito-btn {
+    transition: none;
+  }
+  
+  .proyecto-colombia-card:hover {
+    transform: none;
+  }
+}
+
+/* ========== DISPOSITIVOS TÁCTILES ========== */
+@media (hover: none) and (pointer: coarse) {
+  .proyecto-colombia-card:hover {
+    transform: none;
+  }
+  
+  .proyecto-colombia-card:active {
+    transform: translateY(-2px) scale(1.01);
+  }
+  
+  .proyecto-colombia-card .ambito-btn:active {
+    transform: scale(0.98);
+  }
+}
+
+/* ========== ALTO CONTRASTE ========== */
+@media (prefers-contrast: high) {
+  .proyecto-colombia-card {
+    border: 2px solid var(--colombia-secondary);
+  }
+  
+  .proyecto-colombia-card h2 {
+    color: #000;
+  }
+  
+  .proyecto-colombia-card p {
+    color: #333;
   }
 } 

@@ -140,20 +140,27 @@ const ProyectosColombia = () => {
         <div className="proyectos-colombia-grid">
           {proyectosColombia.map((proy, idx) => {
             const isUrbanizacion = proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo';
+            const isProximamente = proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo' || proy.titulo === 'cana_title';
             return (
-              <div key={idx} className="proyecto-colombia-card">
-                <img src={proy.imagen} alt={t.proyectos[proy.titulo]} />
+              <div key={idx} className="proyecto-colombia-card" data-proyecto={proy.titulo}>
+                <div className="proyecto-img-wrap">
+                  <img src={proy.imagen} alt={t.proyectos[proy.titulo]} />
+                </div>
                 <h2>{t.proyectos[proy.titulo]}</h2>
                 <p>{t.proyectos[proy.descripcion]}</p>
+                <div className="proyecto-ubicacion">
+                  <span>📍</span>
+                  <span>{t.proyectos[proy.ubicacion]}</span>
+                </div>
                 <Button
-                  className={`ambito-btn ${isUrbanizacion ? 'gray lujo' : 'orange'}`}
+                  className={`ambito-btn ${isProximamente ? 'gray lujo' : 'orange'}`}
                   onClick={(e) => {
                     e.preventDefault();
                     handleProyectoNavigation(proy, navigate);
                   }}
                 >
                   {t.proyectos.boton || 'Ver más'}
-                  {isUrbanizacion && (
+                  {isProximamente && (
                     <span className="proximamente-label">{t.proyectos.proximamente}</span>
                   )}
                 </Button>
