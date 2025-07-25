@@ -33,6 +33,11 @@ const TodosLosProyectos = () => {
   const [lastFilterChange, setLastFilterChange] = useState(null);
   const [activeSection, setActiveSection] = useState('inicio');
 
+  // Efecto para hacer scroll al inicio cuando se carga la página
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   // Efecto para manejar scroll hacia arriba y filtros desde SearchFilters
   useEffect(() => {
     const scrollToTop = location.state?.scrollToTop;

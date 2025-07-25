@@ -50,7 +50,7 @@ const BreadcrumbSimple = () => {
                     label: 'Puertas del Sol',
                     parent: 'proyectos-colombia', // Viene de Colombia
                     icon: <MdLocationOn />
-                  }
+      }
     };
 
     // Lógica para determinar la ruta padre basada en el contexto y navegación

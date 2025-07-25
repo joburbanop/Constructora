@@ -1,23 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { useIdioma } from '../context/IdiomaContext';
+import { useNavigate } from 'react-router-dom';
+import { useWhatsApp } from '../hooks/useWhatsApp';
 import { 
-  FaBuilding, 
-  FaHome, 
   FaUsers, 
-  FaAward, 
-  FaCheckCircle, 
-  FaStar,
-  FaMapMarkerAlt,
-  FaHandshake,
+  FaMapMarkerAlt, 
+  FaHandshake, 
+  FaStar, 
+  FaBullseye, 
   FaEye,
-  FaBullseye
+  FaAward
 } from 'react-icons/fa';
 import { MdEngineering, MdSecurity, MdTrendingUp } from 'react-icons/md';
+import Button from './Button';
 import '../styles/StatsSection.css';
 
 const StatsSection = () => {
   const { t } = useIdioma();
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
+  const { openWhatsApp } = useWhatsApp();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -208,11 +210,32 @@ const StatsSection = () => {
               {t.stats?.cta_descripcion || 'Construye con la mejor constructora del sur occidente colombiano'}
             </p>
             <div className="cta-buttons">
-              <button className="cta-btn primary">
+              <Button
+                whatsapp={true}
+                className="cta-btn primary"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  background: 'linear-gradient(135deg, #ff6600 0%, #ff914d 100%)',
+                  color: '#fff',
+                  fontWeight: 700,
+                  fontSize: '1.1rem',
+                  padding: '12px 24px',
+                  border: 'none',
+                  borderRadius: '25px',
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 16px rgba(255, 102, 0, 0.3)',
+                  transition: 'all 0.3s ease'
+                }}
+              >
                 <FaHandshake />
                 <span>{t.stats?.cta_contactar || 'Contáctanos'}</span>
-              </button>
-              <button className="cta-btn secondary">
+              </Button>
+              <button 
+                className="cta-btn secondary"
+                onClick={() => navigate('/todos-los-proyectos')}
+              >
                 <FaStar />
                 <span>{t.stats?.cta_ver_proyectos || 'Ver Proyectos'}</span>
               </button>

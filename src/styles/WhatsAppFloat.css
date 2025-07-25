@@ -80,8 +80,8 @@
 
 /* Botón de chat */
 .chat-button {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background: #ff6600;
   border: none;
   border-radius: 50%;
@@ -92,6 +92,7 @@
   box-shadow: 0 4px 16px rgba(255, 102, 0, 0.3);
   transition: all 0.3s ease;
   opacity: 0.9;
+  position: relative;
 }
 
 .chat-button:hover {
@@ -105,9 +106,40 @@
   transform: rotate(180deg);
 }
 
+/* Cambio de color cuando está sobre el mismo color anaranjado */
+.chat-button.orange-contrast {
+  background: #2c3e50;
+  color: #ffffff;
+  border: 2px solid #34495e;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.4);
+}
+
+.chat-button.orange-contrast:hover {
+  background: #34495e;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.6);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.chat-button.orange-contrast.active {
+  background: #1a252f;
+  color: #ffffff;
+  border-color: #2c3e50;
+}
+
 .chat-icon {
   color: white;
-  font-size: 20px;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.chat-button.orange-contrast .chat-icon {
+  color: #ffffff;
+}
+
+.chat-button.orange-contrast:hover .chat-icon,
+.chat-button.orange-contrast.active .chat-icon {
+  color: #ffffff;
 }
 
 /* Panel de chat */
@@ -125,7 +157,7 @@
 
 /* Header del chat */
 .chat-header {
-  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  background: linear-gradient(135deg, #ff6600 0%, #e55a00 100%);
   color: white;
   padding: 16px;
   display: flex;
@@ -295,12 +327,12 @@
   }
   
   .chat-button {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
   }
   
   .chat-icon {
-    font-size: 18px;
+    font-size: 20px;
   }
   
   .chat-panel {

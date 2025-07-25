@@ -225,13 +225,13 @@
   position: absolute;
   top: 1.5em;
   left: 1.5em;
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
   color: white;
   font-size: 0.75rem;
   font-weight: 800;
   padding: 0.3em 0.8em;
   border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
   z-index: 10;
   animation: pulse 2s infinite;
   text-transform: uppercase;
@@ -240,13 +240,13 @@
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
   }
   50% {
-    box-shadow: 0 2px 12px rgba(40, 167, 69, 0.5);
+    box-shadow: 0 2px 12px rgba(0, 123, 255, 0.5);
   }
   100% {
-    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
   }
 }
 
@@ -796,6 +796,8 @@
 .proyecto-card:not([data-proyecto="caña_dulce_title"]):not([data-proyecto="puertas_sol_title"]):not([data-proyecto="palmeras_title"]):not([data-proyecto="cana_title"])::after {
   content: 'EN MARCHA';
   display: block !important;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3) !important;
 }
 
 /* ========== Estilos específicos para Palmeras de la Italia ========== */
@@ -927,3 +929,161 @@
 }
 
 /* Estilos de debug removidos - tarjetas con diseño original */ 
+
+/* ========== TOOLTIP Y BOTÓN PRÓXIMAMENTE ========== */
+
+.button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-proximamente {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ff6600 0%, #ff914d 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
+  z-index: 1000;
+  margin-bottom: 8px;
+  animation: tooltipFadeIn 0.3s ease;
+}
+
+.tooltip-proximamente::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #ff6600;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Botón deshabilitado para proyectos próximamente */
+.ambito-btn.proximamente {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%) !important;
+  color: #ffffff !important;
+  cursor: not-allowed !important;
+  opacity: 0.8;
+  position: relative;
+  overflow: hidden;
+}
+
+.ambito-btn.proximamente::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.ambito-btn.proximamente:hover::before {
+  left: 100%;
+}
+
+.ambito-btn.proximamente:hover {
+  background: linear-gradient(135deg, #5a6268 0%, #343a40 100%) !important;
+  transform: none !important;
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3) !important;
+}
+
+.ambito-btn.proximamente:active {
+  transform: none !important;
+}
+
+/* Responsive para tooltip */
+@media (max-width: 768px) {
+  .tooltip-proximamente {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    margin-bottom: 6px;
+  }
+  
+  .tooltip-proximamente::after {
+    border-width: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tooltip-proximamente {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+  }
+} 
+
+/* ========== HOVER UNIFICADO PARA PUERTAS DEL SOL Y CAÑA DULCE ========== */
+
+/* Hover general de la tarjeta - igual que las otras */
+.proyecto-card[data-proyecto="puertas_sol_title"]:hover,
+.proyecto-card[data-proyecto="caña_dulce_title"]:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(255, 102, 0, 0.15);
+  border-color: rgba(255, 102, 0, 0.2);
+}
+
+/* Hover de la imagen - igual que las otras */
+.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-img-marcha,
+.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-img-marcha {
+  transform: scale(1.05);
+}
+
+/* Hover del nombre - igual que las otras */
+.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-nombre,
+.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-nombre {
+  color: #ff6600;
+}
+
+/* Hover de la descripción - igual que las otras */
+.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-desc-marcha,
+.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-desc-marcha {
+  color: #333;
+}
+
+/* Hover de la ubicación - igual que las otras */
+.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-ubicacion-marcha,
+.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-ubicacion-marcha {
+  background: linear-gradient(135deg, #fff5f0 0%, #ffe8d6 100%);
+  border-color: rgba(255, 102, 0, 0.2);
+  color: #ff6600;
+  transform: translateY(-2px);
+}
+
+/* Hover del icono de ubicación - igual que las otras */
+.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-ubicacion-icon,
+.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-ubicacion-icon {
+  transform: scale(1.1);
+}
+
+/* Hover de la etiqueta - igual que las otras */
+.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-etiqueta,
+.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-etiqueta {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 102, 0, 0.4);
+}
+
+/* Efecto de brillo en hover - igual que las otras */
+.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-img-wrap::before,
+.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-img-wrap::before {
+  opacity: 1;
+} 

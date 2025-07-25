@@ -83,7 +83,7 @@ const InfoPuertasSol = () => {
      </ul>
    );
 
-   return (
+    return (
      <div className="info-puertas-sol-container">
         <Header
           customNavItems={puertasSolNavItems}
@@ -137,8 +137,8 @@ const InfoPuertasSol = () => {
         </section>
         
         <WhatsAppFloat />
-     </div>
-   );
+        </div>
+    );
 };
 
 export default InfoPuertasSol;

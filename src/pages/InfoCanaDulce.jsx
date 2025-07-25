@@ -82,7 +82,7 @@ const InfoCanaDulce = () => {
      </ul>
    );
 
-   return (
+    return (
      <div className="info-cana-dulce-container">
         <Header
           customNavItems={canaDulceNavItems}
@@ -136,8 +136,8 @@ const InfoCanaDulce = () => {
         </section>
         
         <WhatsAppFloat />
-     </div>
-   );
+        </div>
+    );
 };
 
 export default InfoCanaDulce;

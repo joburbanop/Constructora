@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import proyectos from '../utils/proyectos';
 import Button from './Button';
 import { MdLocationOn, MdLocationCity, MdHomeWork, MdStoreMallDirectory } from 'react-icons/md';
@@ -17,15 +17,33 @@ const iconosTipo = {
 export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
   const { t } = useIdioma();
   const navigate = useNavigate();
-   const listado = proyectosFiltrados || proyectos;
+  const [tooltipVisible, setTooltipVisible] = useState(null);
+  
+  const listado = proyectosFiltrados || proyectos;
+  
   const isProyectoProximamente = (titulo) => {
-    // Proyectos próximamente (urbanizaciones de lujo)
-    const proyectosProximamente = ['sanmiguel_titulo', 'marbella_titulo'];
+    // Proyectos próximamente (urbanizaciones de lujo + los nuevos)
+    const proyectosProximamente = [
+      'sanmiguel_titulo', 
+      'marbella_titulo',    // Urbanización abierta
+      'palmeras_title',     // Palmeras de la Italia
+      'cana_title'          // Caña Brava
+    ];
     
     // Proyectos finalizados (ninguno está deshabilitado - todos tienen botón "Ver más")
     const proyectosEntregados = [];
     
     return proyectosProximamente.includes(titulo) || proyectosEntregados.includes(titulo);
+  };
+
+  const handleMouseEnter = (titulo) => {
+    if (isProyectoProximamente(titulo)) {
+      setTooltipVisible(titulo);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setTooltipVisible(null);
   };
 
   return (
@@ -52,17 +70,23 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
                 </span>
                 <span>{t.proyectos[proy.ubicacion]}</span>
               </div>
-              <Button
-                className={`ambito-btn ${isProyectoProximamente(proy.titulo) ? 'gray lujo' : 'orange'}`}
-                onClick={isProyectoProximamente(proy.titulo) ? undefined : () => handleProyectoNavigation(proy, navigate)}
-                disabled={isProyectoProximamente(proy.titulo)}
-                aria-label={isProyectoProximamente(proy.titulo) ? t.proyectos.proximamente : t.proyectos.boton}
-              >
-                {t.proyectos.boton || 'Ver más'}
-                {isProyectoProximamente(proy.titulo) && (
-                  <span className="proximamente-label">{t.proyectos.proximamente}</span>
+              <div className="button-container" style={{ position: 'relative' }}>
+                <Button
+                  className={`ambito-btn ${isProyectoProximamente(proy.titulo) ? 'gray lujo proximamente' : 'orange'}`}
+                  onClick={isProyectoProximamente(proy.titulo) ? undefined : () => handleProyectoNavigation(proy, navigate)}
+                  disabled={isProyectoProximamente(proy.titulo)}
+                  onMouseEnter={() => handleMouseEnter(proy.titulo)}
+                  onMouseLeave={handleMouseLeave}
+                  aria-label={isProyectoProximamente(proy.titulo) ? t.proyectos.proximamente : t.proyectos.boton}
+                >
+                  {isProyectoProximamente(proy.titulo) ? t.proyectos.proximamente : (t.proyectos.boton || 'Ver más')}
+                </Button>
+                {tooltipVisible === proy.titulo && isProyectoProximamente(proy.titulo) && (
+                  <div className="tooltip-proximamente">
+                    {t.proyectos.proximamente}
+                  </div>
                 )}
-              </Button>
+              </div>
             </div>
           </div>
         ))}

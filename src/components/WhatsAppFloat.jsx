@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { FaWhatsapp, FaTimes, FaComments } from 'react-icons/fa';
+import React, { useState, useEffect, useRef } from 'react';
+import { FaTimes, FaComments } from 'react-icons/fa';
 import { useIdioma } from '../context/IdiomaContext';
 import '../styles/WhatsAppFloat.css';
 
@@ -7,6 +7,8 @@ const WhatsAppFloat = () => {
   const { t, idioma } = useIdioma();
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isOverOrange, setIsOverOrange] = useState(false);
+  const buttonRef = useRef(null);
 
   // Mostrar el botón después de 2 segundos
   useEffect(() => {
@@ -17,15 +19,45 @@ const WhatsAppFloat = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleWhatsAppClick = () => {
-    const phoneNumber = '+573204210000'; 
-    const message = idioma === 'es' 
-      ? 'Hola! Me interesa conocer más sobre sus proyectos inmobiliarios.'
-      : 'Hello! I am interested in learning more about your real estate projects.';
+  // Detectar si el botón está sobre un fondo anaranjado
+  useEffect(() => {
+    const checkBackgroundColor = () => {
+      if (!buttonRef.current) return;
+
+      const rect = buttonRef.current.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+
+      // Obtener el elemento en esa posición
+      const elementAtPoint = document.elementFromPoint(centerX, centerY);
+      if (!elementAtPoint) return;
+
+      // Obtener el color de fondo del elemento
+      const computedStyle = window.getComputedStyle(elementAtPoint);
+      const backgroundColor = computedStyle.backgroundColor;
+      
+      // Detectar específicamente el mismo color anaranjado del botón (#ff6600)
+      const isSameOrange = backgroundColor.includes('255, 102, 0') || 
+                          backgroundColor.includes('rgb(255, 102, 0)') ||
+                          backgroundColor.includes('rgba(255, 102, 0') ||
+                          backgroundColor.includes('#ff6600');
+
+      setIsOverOrange(isSameOrange);
+    };
+
+    // Verificar cada 300ms para mayor responsividad
+    const interval = setInterval(checkBackgroundColor, 300);
     
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-  };
+    // También verificar al hacer scroll
+    window.addEventListener('scroll', checkBackgroundColor);
+    window.addEventListener('resize', checkBackgroundColor);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('scroll', checkBackgroundColor);
+      window.removeEventListener('resize', checkBackgroundColor);
+    };
+  }, []);
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
@@ -35,22 +67,10 @@ const WhatsAppFloat = () => {
 
   return (
     <div className="whatsapp-float">
-      {/* Botón principal de WhatsApp */}
-      <button 
-        className="whatsapp-button"
-        onClick={handleWhatsAppClick}
-        aria-label="Contactar por WhatsApp"
-        title={t.whatsapp?.contactar || 'Contactar por WhatsApp'}
-      >
-        <FaWhatsapp className="whatsapp-icon" />
-        <span className="whatsapp-tooltip">
-          {t.whatsapp?.contactar || '¡Chatea con nosotros!'}
-        </span>
-      </button>
-
       {/* Botón de chat flotante */}
       <button 
-        className={`chat-button ${isOpen ? 'active' : ''}`}
+        ref={buttonRef}
+        className={`chat-button ${isOpen ? 'active' : ''} ${isOverOrange ? 'orange-contrast' : ''}`}
         onClick={toggleChat}
         aria-label="Abrir chat"
         title={t.whatsapp?.abrir_chat || 'Abrir chat'}
@@ -63,7 +83,7 @@ const WhatsAppFloat = () => {
         <div className="chat-panel">
           <div className="chat-header">
             <div className="chat-avatar">
-              <FaWhatsapp className="avatar-icon" />
+              <FaComments className="avatar-icon" />
             </div>
             <div className="chat-info">
               <h4>{t.whatsapp?.titulo || 'Constructora'}</h4>
@@ -88,15 +108,23 @@ const WhatsAppFloat = () => {
           <div className="chat-actions">
             <button 
               className="action-button whatsapp-action"
-              onClick={handleWhatsAppClick}
+              onClick={() => {
+                const phoneNumber = '+573204210000'; 
+                const message = idioma === 'es' 
+                  ? 'Hola! Me interesa conocer más sobre sus proyectos inmobiliarios.'
+                  : 'Hello! I am interested in learning more about your real estate projects.';
+                
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+              }}
             >
-              <FaWhatsapp />
+              <span>📱</span>
               <span>{t.whatsapp?.abrir_whatsapp || 'Abrir WhatsApp'}</span>
             </button>
             
             <button 
               className="action-button call-action"
-              onClick={() => window.open('tel:+573001234567')}
+              onClick={() => window.open('tel:+573204210000')}
             >
               <span>📞</span>
               <span>{t.whatsapp?.llamar || 'Llamar'}</span>
