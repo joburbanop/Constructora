@@ -14,7 +14,7 @@ const Expertos = ({ listaFiltrada = null }) => {
         <span className="expertos-highlight">{t.expertos?.highlight || "Expertos"}</span>
       </h2>
 
-      <div className="expertos-grid">
+      <div className={`expertos-grid ${asesores.length === 1 ? 'una-columna' : 'multi-columna'}`}>
         {asesores.map((asesor, idx) => (
           <div className="experto-card" key={idx}>
             <img

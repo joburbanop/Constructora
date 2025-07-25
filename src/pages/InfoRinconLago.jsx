@@ -112,6 +112,7 @@ const InfoRinconLago = () => {
       <SectionDivider textKey="ubicacion" variant="subtle" />
       <UbicacionMaps mapSrc={jamundiCoord.mapSrc}/>
 
+     
       <SectionDivider textKey="video" variant="subtle" />
       <VideoYoutube videoId={video2.id} titulo={video2.titulo} />
 
@@ -132,6 +133,7 @@ const InfoRinconLago = () => {
 
       <SectionDivider textKey="galeria" variant="subtle" />
       <GaleriaProyecto id="rincon" />
+
       <div id="expertos" className="expertos-section-rincon">
         <Expertos listaFiltrada={listaFiltrada}/>
       </div>

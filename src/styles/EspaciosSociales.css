@@ -74,7 +74,10 @@
 }
 @media (max-width: 768px) {
 
-  
+.bloque p{
+
+  line-height: 1.2 !important;
+}
   .espacios-titulo{
 
     display: flex;
@@ -82,7 +85,7 @@
     justify-content: center;
   }
   .espacios-compartidos h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 1rem;
     text-align: justify;

@@ -5,24 +5,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     nosotros: 'About Us',
     contactanos: 'Contact Us',
   },
-  renders: {
-    titulo: 'Your new beginning\nstarts here',
-    desc: 'Explore our handpicked homes for those seeking more than just a place to live.',
-    beneficios: [
-      {
-        titulo: 'Find your ideal home',
-        desc: 'Easily explore properties that match what you\'re looking for: location, size, style, and environment.'
-      },
-      {
-        titulo: 'Personalized advice',
-        desc: 'Our team is ready to listen, answer your questions, and guide you through the entire process.'
-      },
-      {
-        titulo: 'Ready to move in',
-        desc: 'Homes with immediate delivery, up-to-date documentation, and all details ready for you to move in worry-free.'
-      }
-    ]
-  },
+
   proyectos: {
     titulo: 'Ongoing Projects',
     subtitulo: 'We are expert builders with 17 years of experience in southwestern Colombia and now in the United States.',
@@ -343,7 +326,17 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       slide3_subtitle: 'Diversify your portfolio with confidence',
       boton: 'Contact Us'
 
-    }
+    },
+    colombia: {
+      slide1_title: 'A new chapter begins here',
+      slide1_subtitle: 'Explore our handpicked homes for those seeking more than just a place to live.',
+      slide2_title: 'Find the ideal home',
+      slide2_subtitle: 'Easily browse properties that match your needs: location, size, style, and surroundings.',
+      slide3_title: 'Personalized guidance',
+      slide3_subtitle: 'Our team is ready to listen, answer your questions, and support you throughout the process.',
+      boton: 'Contact us'
+},
+
   },
 
   dividers: {

@@ -1,6 +1,7 @@
 .video-youtube {
+  width: 100%;
   max-width: 960px;
-  margin: 2rem auto;
+  
   padding: 1rem;
   text-align: center;
   background-color: #f9f9f9;
@@ -35,3 +36,9 @@
 .video-container iframe:hover {
   box-shadow: 0 0 0 4px rgba(255, 102, 0, 0.3);
 }
+
+@media (max-width: 768px) {
+    .detalle-proyecto h3 {
+        font-size: 1.2rem;
+    }
+  }

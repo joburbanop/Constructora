@@ -16,7 +16,7 @@ import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import '../styles/Slider.css';
+import Slider from '../components/Slider';
 import '../styles/ProyectosColombia.css';
 import { useNavigate } from 'react-router-dom';
 import { handleProyectoNavigation, navigateToSection } from '../utils/navigation';
@@ -130,57 +130,8 @@ const ProyectosColombia = () => {
       <BreadcrumbSimple />
       
       {/* Hero Slider animado */}
-      <section id="inicio" style={{ width: '100%', height: '520px', marginBottom: 0, padding: 0 }}>
-        <Swiper
-          modules={[Pagination, Autoplay, EffectFade]}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
-          effect="fade"
-          speed={1200}
-          loop
-          className="mySwiper"
-        >
-          {renders.slice(0, 3).map((r, idx) => (
-            <SwiperSlide key={idx}>
-              <div
-                className="slide-bg"
-                style={{
-                  backgroundImage: `url(${r.imagen})`,
-                  width: '100%',
-                  height: '520px',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center 35%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  position: 'relative',
-                }}
-              >
-                <div style={{
-                  position: 'absolute',
-                  left: 0, right: 0, top: 0, bottom: 0,
-                  background: 'linear-gradient(180deg,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.15) 60%,rgba(0,0,0,0.7) 100%)',
-                  zIndex: 1
-                }} />
-                <div style={{
-                  position: 'relative',
-                  zIndex: 2,
-                  color: '#fff',
-                  textAlign: 'center',
-                  width: '100%',
-                  padding: '2rem 1rem',
-                }}>
-                  <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem', textShadow: '0 4px 16px rgba(0,0,0,0.4)' }}>
-                    {t.proyectos.colombia_hero || 'EXPERTOS EN CONSTRUCCIÓN'}
-                  </h1>
-                  <h2 style={{ fontSize: '2.2rem', fontWeight: 500, textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
-                    {t.proyectos.colombia_title || 'Proyectos Colombia'}
-                  </h2>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+       <section id="inicio">
+        <Slider contenido={renders} namespace="colombia"/>
       </section>
       
       <main className="proyectos-colombia-main">

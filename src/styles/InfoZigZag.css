@@ -1,7 +1,7 @@
 .seccion-zigzag {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 1rem;
   padding: 40px 20px;
 }
 
@@ -18,6 +18,7 @@
 .fila-zigzag .texto {
   flex: 1 1 500px;
   max-width: 600px;
+  
 }
 
 .imagen img {
@@ -27,25 +28,120 @@
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+ 
+ 
 }
 .imagen {
  
- max-width: 100px;
+  max-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .texto {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
 }
+
 
 .texto h3 {
   font-size: 1.8rem;
   color: #ff6600;
   margin-bottom: 12px;
+  margin: 0;
 }
 
 .texto p {
   font-size: 1rem;
   color: #444;
   line-height: 1.6;
+   margin: 0;
+}
+@media (max-width: 768px) {
+  
+  .seccion-zigzag {
+  gap:4rem;
+}
+  .fila-zigzag {
+    flex-direction: column;
+  }
+
+  .fila-zigzag.impar {
+    flex-direction: column-reverse;
+  }
+  .texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+  
+   height: auto;
+   
+}
+.imagen {
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:auto ;
+}
+ .texto h3 {
+  font-size: 1.2rem; 
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+    }
+   
+.texto p {
+  margin: 0;
+  padding: 0;
+ 
+}
+.fila-zigzag .imagen,
+.fila-zigzag .texto {
+  flex: 1 1 50px;
+  max-width: 600px;
+}
+.imagen img{
+
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  max-width: 100%;
+}
+.texto{
+  gap:0.8rem;
+}
+}
+@media (min-width: 769px) and (max-width: 1056px) {
+  /* Estilos específicos para pantallas medianas */
+  .fila-zigzag {
+    flex-direction: column;
+  }
+
+  .fila-zigzag.impar {
+    flex-direction: column-reverse;
+  }
+  .fila-zigzag .imagen,
+.fila-zigzag .texto {
+  flex: 1 1 50px;
+  width: 100%;
+}
+.imagen img{
+
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  max-width: 100%;
+}
+
 }

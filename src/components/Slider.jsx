@@ -19,6 +19,10 @@ export default function Slider({ contenido = [], namespace = 'home' }) {
     pagination={{ clickable: true }}
     effect="fade"
     speed={1200}
+    /*
+    loop={true}
+    autoplay={{ delay: 5000, disableOnInteraction: false }}*/
+   
     className="slider-swiper-slider"
   >
     {contenido.map((slide, idx) => (

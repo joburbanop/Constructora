@@ -14,12 +14,15 @@ export default function InfoZigZag({ elementos = [], textoKey }) {
           const esPar = idx % 2 === 0;
 
           return (
-            <div className="fila-zigzag" key={idx}>
+           <div className={`fila-zigzag ${!esPar ? 'impar' : ''}`} key={idx}>
+
               {esPar ? (
                 <>
                   <div className="texto">
+                    
                     <h3>{texto?.titulo || '[Sin título]'}</h3>
                     <p>{texto?.descripcion || '[Sin descripción]'}</p>
+                  
                   </div>
                   <div className="imagen">
                     <img src={item.imagen} alt={texto?.titulo || 'imagen'} />

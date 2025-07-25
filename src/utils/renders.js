@@ -5,20 +5,19 @@ import CoralRender from '../assets/coral_render.png';
 
 const renders = [
   {
-    imagen: RenderQuintas,
-    alt: 'Render Quintas',
+    image: RenderQuintas,
+    title: 'slide1_title',
+    subtitle: 'slide1_subtitle'
   },
   {
-    imagen: RenderSanMiguel,
-    alt: 'Render San Miguel',
+    image: RenderSanMiguel,
+    title: 'slide2_title',
+    subtitle: 'slide2_subtitle'
   },
   {
-    imagen: RenderRincon,
-    alt: 'Render Rincón',
-  },
-  {
-    imagen: CoralRender,
-    alt: 'Render Coral',
+    image: RenderRincon,
+    title: 'slide3_title',
+    subtitle: 'slide3_subtitle'
   },
 ];
 

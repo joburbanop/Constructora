@@ -5,24 +5,7 @@ const es = {
     nosotros: 'Nosotros',
     contactanos: 'Contáctanos',
   },
-  renders: {
-    titulo: 'Tu nuevo comienzo\nempieza aquí',
-    desc: 'Explora nuestras casas seleccionadas para quienes buscan más que un lugar donde vivir.',
-    beneficios: [
-      {
-        titulo: 'Encuentra la casa ideal',
-        desc: 'Explora fácilmente propiedades que se ajustan a lo que buscas: ubicación, tamaño, estilo y entorno.'
-      },
-      {
-        titulo: 'Asesoría personalizada',
-        desc: 'Nuestro equipo está listo para escucharte, responder tus dudas y acompañarte en todo el proceso.'
-      },
-      {
-        titulo: 'Listas para habitar',
-        desc: 'Casas con entrega inmediata, documentación al día y todos los detalles listos para mudarte sin preocupaciones.'
-      }
-    ]
-  },
+ 
   proyectos: {
     titulo: 'Proyectos en marcha',
     subtitulo: 'Somos expertos constructores con 17 años de trayectoria en el sur occidente colombiano y ahora en Estados Unidos.',
@@ -340,8 +323,17 @@ videos: {
     slide3_title: 'Inversión en Estados Unidos',
     slide3_subtitle: 'Diversifica tu portafolio con confianza',
     boton: 'Contáctanos'
-
-  }
+  }, 
+  colombia: {
+      slide1_title: 'Tu nuevo comienzo\nempieza aquí',
+      slide1_subtitle: 'Explora nuestras casas seleccionadas para quienes buscan más que un lugar donde vivir.',
+      slide2_title: 'Encuentra la casa ideal',
+      slide2_subtitle: 'Explora fácilmente propiedades que se ajustan a lo que buscas: ubicación, tamaño, estilo y entorno.',
+      slide3_title: 'Asesoría personalizada',
+      slide3_subtitle: 'Nuestro equipo está listo para escucharte, responder tus dudas y acompañarte en todo el proceso.',
+      boton: 'Contáctanos'
+    
+  },
 },
 
   dividers: {

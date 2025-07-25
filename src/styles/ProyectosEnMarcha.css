@@ -44,13 +44,20 @@
   transition: transform 0.18s, box-shadow 0.18s;
   position: relative;
   overflow: hidden;
+  
+  
 }
 
 .proyecto-card:hover {
-  transform: translateY(-6px) scale(1.025);
+  transform: translateY(-6px) scale(1.05);
   box-shadow: 0 8px 32px rgba(0,0,0,0.13);
 }
-
+.proyecto-card:hover .proyecto-img-marcha {
+ transform: scale(1.07);
+}
+.proyecto-card:hover .proyecto-etiqueta {
+ transform: scale(1.07);
+}
 .proyecto-etiqueta {
   display: inline-flex;
   align-items: center;
@@ -71,6 +78,8 @@
   letter-spacing: 0.2px;
   border: none;
   min-width: 90px;
+   transition: transform 0.35s ease;
+  will-change: transform;
 }
 
 .icono-circular {
@@ -89,26 +98,25 @@
 }
 
 .proyecto-img-wrap {
-  width: 140px;
-  height: 140px;
-  margin-bottom: 1.1rem;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+ 
+  padding: 0;
 }
 
-.proyecto-img {
+.proyecto-img-marcha {
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: contain;
-  border-radius: 50%;
-  background: #f7f7f7;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  margin-top: 2.5em;
+  border-radius: 50px;
+  transition: transform 0.35s ease;
+  will-change: transform;
 }
 
-.proyecto-info {
+.proyecto-info-marcha {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -123,15 +131,16 @@
   font-family: Georgia, serif;
 }
 
-.proyecto-desc {
+.proyecto-desc-marcha {
   font-size: 0.98rem;
   color: #444;
-  margin-bottom: 1.1rem;
+ 
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
+  min-height: 50px;
 }
 
-.proyecto-ubicacion {
+.proyecto-ubicacion-marcha{
   display: flex;
   align-items: center;
   gap: 0.4em;
@@ -140,8 +149,12 @@
   margin-bottom: 1.2rem;
   font-weight: 500;
   text-align: center;
-  width: 100%;
+  width: 90%;
+  background-color: #f0f0f0a8;
+  border-radius:8px ;
   justify-content: center;
+  height: 40px;
+ 
 }
 
 .proyecto-ubicacion-icon {
@@ -190,7 +203,7 @@
   display: flex;
   align-items: center;
   gap: 0.7em;
-  margin-bottom: 0.2em;
+  min-height: 100px;
 }
 
 .icono-circular-titulo {
@@ -205,20 +218,18 @@
   font-size: 1.7em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .proyectos-titulo {
     font-size: 2rem;
   }
+  
   .proyectos-grid {
     gap: 1.2rem;
   }
   .proyecto-card {
     padding: 1.1rem 0.5rem 1.5rem 0.5rem;
   }
-  .proyecto-img-wrap {
-    width: 110px;
-    height: 110px;
-  }
+  
   .section-divider {
     gap: 0.5rem;
     margin: 1.2rem 0 1.2rem 0;

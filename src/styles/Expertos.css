@@ -11,6 +11,16 @@
   max-width: 1200px;
   width: 100%;
 }
+.una-columna {
+  grid-template-columns: 1fr !important;
+   max-width: 600px !important;
+  margin: auto;
+}
+
+/* Si hay dos o más: dos columnas en desktop, una en mobile */
+.multi-columna {
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+}
 
 .imagenes-grid {
   display: grid;
@@ -18,6 +28,7 @@
   grid-template-rows: 1fr 1fr;
   gap: 18px;
   width: 380px;
+
 }
 
 .imagenes-grid img:first-child {
@@ -93,7 +104,7 @@
 .expertos-tarjetas-section {
   width: 100%;
   max-width: 1200px;
-  margin: 30px auto 0 auto;
+ 
   padding: 30px 20px;
   background: #fff;
   border-radius: 24px;
@@ -102,6 +113,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+ 
 }
 
 .expertos-tarjetas-section h2 {
@@ -122,6 +134,8 @@
   justify-content: center;
   width: 100%;
   max-width: 800px;
+  margin-bottom: 5rem;
+ 
 }
 
 .experto-card {
@@ -177,8 +191,7 @@
 /* Responsive */
 @media (max-width: 900px) {
   .expertos-tarjetas-section {
-    margin: 20px auto 0 auto;
-    padding: 20px 15px;
+   
   }
   .expertos-grid {
     grid-template-columns: 1fr;
