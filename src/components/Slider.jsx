@@ -40,8 +40,11 @@ export default function Slider({ contenido = [], namespace = 'home' }) {
             <p className="slider-subtitle-slider animate-fadeIn" style={{ animationDelay: '0.3s' }}>
               {t.slider?.[namespace]?.[slide.subtitle] || slide.subtitle}
             </p>
-            <Button style={{ animationDelay: '0.6s' }}>
-              {t.slider?.[namespace]?.boton || "Ver más"}
+            <Button 
+              whatsapp={true}
+              style={{ animationDelay: '0.6s' }}
+            >
+              {t.slider?.[namespace]?.boton || "Contáctanos"}
             </Button>
           </div>
         </div>

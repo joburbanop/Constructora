@@ -1,8 +1,10 @@
 import React from "react";
 import { useIdioma } from '../context/IdiomaContext';
+import Button from './Button';
 
 const ContactoCTA = () => {
   const { t } = useIdioma();
+  
   return (
     <section id="contactanos" style={{ textAlign: 'center', padding: '64px 0 48px 0', background: '#fff' }}>
       <h2 style={{
@@ -21,9 +23,10 @@ const ContactoCTA = () => {
         {t.cta?.desc1 || 'Encuentra el lugar ideal para construir tu futuro.'}<br />
         {t.cta?.desc2 || 'Estamos listos para asesorarte en cada paso.'}
       </div>
-      <button
+      <Button
+        whatsapp={true}
         style={{
-          background: 'linear-gradient(135deg, #ff6600 0%, #ff914d 100%)',
+          background: 'linear-gradient(135deg, #25d366 0%, #128c7e 100%)',
           color: '#fff',
           fontWeight: 700,
           fontSize: '1.4rem',
@@ -31,29 +34,16 @@ const ContactoCTA = () => {
           border: 'none',
           borderRadius: 50,
           cursor: 'pointer',
-          boxShadow: '0 4px 24px rgba(255, 102, 0, 0.3)',
+          boxShadow: '0 4px 24px rgba(37, 211, 102, 0.3)',
           letterSpacing: 1,
           transition: 'all 0.3s ease',
           display: 'inline-flex',
           alignItems: 'center',
           gap: 12
         }}
-        onClick={() => {
-          const el = document.getElementById('contactanos');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }}
-        onMouseEnter={(e) => {
-          e.target.style.transform = 'translateY(-3px)';
-          e.target.style.boxShadow = '0 8px 32px rgba(255, 102, 0, 0.4)';
-        }}
-        onMouseLeave={(e) => {
-          e.target.style.transform = 'translateY(0)';
-          e.target.style.boxShadow = '0 4px 24px rgba(255, 102, 0, 0.3)';
-        }}
       >
-        {t.cta?.boton || 'Contáctanos'}
-        <span style={{ fontSize: '1.5rem', display: 'inline-block', transform: 'translateY(2px)' }}>→</span>
-      </button>
+        {t.cta?.boton || '¡Contáctanos por WhatsApp!'}
+      </Button>
     </section>
   );
 };
