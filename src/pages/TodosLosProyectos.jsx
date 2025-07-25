@@ -131,7 +131,12 @@ const TodosLosProyectos = () => {
   });
 
   const isProyectoProximamente = (titulo) => {
-    return titulo === 'sanmiguel_titulo' || titulo === 'marbella_titulo';
+    return titulo === 'sanmiguel_titulo' || 
+          titulo === 'marbella_titulo' || 
+          titulo === 'casa_usa_1_title' || 
+          titulo === 'casa_usa_2_title' ||
+           titulo === 'palmeras_title' ||
+            titulo === 'cana_title' ;
   };
 
   const handleSectionNavigation = (sectionId) => {
@@ -207,7 +212,7 @@ const TodosLosProyectos = () => {
     </ul>
   );
 
-  console.log('TodosLosProyectos component rendering');
+ 
 
   return (
     <div className="todos-proyectos-container">

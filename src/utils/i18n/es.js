@@ -20,9 +20,9 @@ const es = {
     marbella_desc: 'Para construir a su gusto. Lotes más amplios y con el mejor precio de la zona. Sur de Jamundí',
     coral_titulo: 'Locales comerciales',
     coral_desc: 'Lujosa casa unifamiliar con 3+1 amplios dormitorios, 3 baños y un garaje para 2 autos. Encimeras de granito, electrodomésticos y pisos de alta calidad le dan a la casa un aspecto elegante. Amplias puertas y ventanas a prueba de impactos inundan la casa de luz natural y ofrecen impresionantes vistas de los alrededores. Preparada para resistir huracanes gracias a su sólida estructura y techo plano.',
-    casa_usa_1_title: 'Casa USA Primera',
+    casa_usa_1_title: 'Casa USA ',
     casa_usa_1_desc: 'Hermosa casa unifamiliar con diseño moderno y acabados de lujo.',
-    casa_usa_2_title: 'Casa USA Segunda',
+    casa_usa_2_title: 'Casa USA ',
     casa_usa_2_desc: 'Casa elegante con espacios amplios y diseño contemporáneo.',
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose:'20 min de Tuluá - Vereda San José, San Pedro',
@@ -171,7 +171,7 @@ cana_dulce_detalle: {
   subtitulo_2: 'Ubicada a 20 minutos de Tuluá en la vereda San José del municipio de San Pedro',
   descripcion: 'Completamente terminada y entregada. Cuenta con sus vías en sub base y todos los servicios públicos funcionales.',
   descripcion_1: 'Últimos lotes de 12x21 mts, para disfrutar en familia de toda la tranquilidad y seguridad que ofrece este paraje natural.',
-  descripcion_2: 'Agende su cita y visitemos: 3204210000'
+  descripcion_2: 'Agende su cita y visitenos: 3204210000'
 },
 puertas_sol_detalle: {
   espacios_titulo: 'Urbanización comercial',  

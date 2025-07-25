@@ -15,9 +15,11 @@ export default function ProyectoCard({ proyecto, t, onNavigate, idiomaKey }) {
       />
       <h2 className="proyecto-card-title">{traduccion[proyecto.titulo]}</h2>
       <p className="proyecto-card-desc">{traduccion[proyecto.descripcion]}</p>
+     
       <Button
         className={`ambito-btn ${isProximamente ? 'gray lujo' : 'orange'}`}
-        onClick={() => onNavigate(proyecto)}
+        onClick={isProximamente ? undefined : () => onNavigate(proyecto)}
+        disabled={isProximamente}
       >
         {traduccion.boton || 'Ver más'}
         {isProximamente && (

@@ -24,6 +24,8 @@
 }
 
 .slide-overlay {
+  display: flex;
+  justify-content: center;
   position: absolute;
   left: 0;
   right: 0;
@@ -464,7 +466,7 @@
 
 .proyecto-img-wrap {
   position: relative;
-  height: 220px;
+  height: 300px;
   overflow: hidden;
 }
 

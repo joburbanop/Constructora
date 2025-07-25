@@ -184,7 +184,7 @@ section#inicio {
   transition: all 0.3s ease;
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   padding: 1rem;
-  border: 1px solid rgba(255, 102, 0, 0.1);
+ 
 }
 
 .proyecto-colombia-card:hover img {

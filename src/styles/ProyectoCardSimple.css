@@ -50,9 +50,11 @@
 }
 
 .ambito-btn.gray.lujo {
-  background-color: #aaa;
+  background: #aaa;
   color: #fff;
   cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow:none
 }
 
 .proximamente-label {
