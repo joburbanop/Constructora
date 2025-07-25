@@ -1,7 +1,7 @@
 /* Stats Section - Professional Design */
 .stats-section {
   position: relative;
-  padding: 80px 0;
+  padding: clamp(40px, 8vw, 80px) 0;
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
   color: white;
   overflow: hidden;
@@ -45,30 +45,31 @@
   width: 100%;
   max-width: 1200px;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 clamp(1rem, 4vw, 2rem);
 }
 
 /* Header Section */
 .stats-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: clamp(2rem, 6vw, 4rem);
 }
 
 .stats-title-container {
-  max-width: 600px;
+  max-width: min(600px, 90vw);
   margin: 0 auto;
 }
 
 .stats-main-title {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
   background: linear-gradient(135deg, #ff6600, #ff914d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-family: 'Georgia', serif;
   position: relative;
+  line-height: 1.2;
 }
 
 .stats-highlight {
@@ -77,7 +78,7 @@
 }
 
 .stats-subtitle {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   color: #cccccc;
   line-height: 1.6;
   font-weight: 300;
@@ -87,26 +88,28 @@
 /* Stats Grid */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-bottom: 80px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: clamp(3rem, 8vw, 5rem);
+  position: relative;
+  z-index: 1;
 }
 
 /* Misión y Visión Section */
 .mision-vision-section {
-  margin-bottom: 80px;
+  margin-bottom: clamp(3rem, 8vw, 5rem);
 }
 
 .mision-vision-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(2rem, 5vw, 3rem);
 }
 
 .mision-vision-item {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  padding: 40px 30px;
+  border-radius: clamp(15px, 3vw, 20px);
+  padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2rem);
   text-align: left;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -142,18 +145,18 @@
 .mision-vision-icon-wrapper {
   position: relative;
   display: inline-block;
-  margin-bottom: 25px;
+  margin-bottom: clamp(1.5rem, 4vw, 2rem);
 }
 
 .mision-vision-icon {
-  width: 60px;
-  height: 60px;
+  width: clamp(45px, 8vw, 60px);
+  height: clamp(45px, 8vw, 60px);
   border-radius: 50%;
   background: var(--item-bg-color, rgba(255, 102, 0, 0.1));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
   color: var(--item-color, #ff6600);
   position: relative;
   z-index: 2;
@@ -165,8 +168,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
+  width: clamp(60px, 12vw, 80px);
+  height: clamp(60px, 12vw, 80px);
   border-radius: 50%;
   background: var(--item-bg-color, rgba(255, 102, 0, 0.2));
   filter: blur(20px);
@@ -190,12 +193,13 @@
 }
 
 .mision-vision-title {
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 4vw, 2rem);
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
   color: var(--item-color, #ff6600);
   font-family: 'Georgia', serif;
   position: relative;
+  line-height: 1.3;
 }
 
 .mision-vision-title::after {
@@ -203,15 +207,15 @@
   position: absolute;
   bottom: -8px;
   left: 0;
-  width: 60px;
+  width: clamp(40px, 10vw, 60px);
   height: 3px;
   background: linear-gradient(90deg, var(--item-color, #ff6600), transparent);
   border-radius: 2px;
 }
 
 .mision-vision-description {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  line-height: 1.7;
   color: #cccccc;
   font-weight: 300;
   margin: 0;
@@ -223,6 +227,8 @@
   top: 20px;
   right: 20px;
   opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .mision-vision-line {
@@ -246,23 +252,29 @@
 /* Stat Item */
 .stat-item {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  padding: 40px 30px;
+  border-radius: clamp(15px, 3vw, 20px);
+  padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2rem);
   text-align: center;
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
-  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(30px);
+  overflow: hidden;
+  isolation: isolate;
 }
 
 .stat-item.animate-in {
-  animation: statSlideIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 1;
+  transform: translateY(0);
+  animation: statSlideIn 0.8s ease-out forwards;
 }
 
 @keyframes statSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
@@ -270,33 +282,28 @@
 }
 
 .stat-item:hover {
-  transform: translateY(-10px) scale(1.02);
   background: rgba(255, 255, 255, 0.08);
-  border-color: var(--stat-color);
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.3),
-    0 0 0 1px var(--stat-color),
-    0 0 20px rgba(255, 102, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Icon Wrapper */
 .stat-icon-wrapper {
   position: relative;
-  margin-bottom: 25px;
   display: inline-block;
+  margin-bottom: clamp(1.5rem, 4vw, 2rem);
 }
 
 .stat-icon {
-  width: 80px;
-  height: 80px;
-  background: var(--stat-bg-color);
+  width: clamp(50px, 10vw, 70px);
+  height: clamp(50px, 10vw, 70px);
   border-radius: 50%;
+  background: var(--stat-bg-color, rgba(255, 102, 0, 0.1));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
-  color: var(--stat-color);
-  margin: 0 auto;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  color: var(--stat-color, #ff6600);
   position: relative;
   z-index: 2;
   transition: all 0.3s ease;
@@ -307,87 +314,82 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  background: var(--stat-color);
+  width: clamp(70px, 15vw, 90px);
+  height: clamp(70px, 15vw, 90px);
   border-radius: 50%;
-  opacity: 0.2;
-  filter: blur(20px);
+  background: var(--stat-bg-color, rgba(255, 102, 0, 0.2));
+  filter: blur(25px);
   animation: iconGlow 3s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
 }
 
 @keyframes iconGlow {
-  0%, 100% { opacity: 0.2; transform: translate(-50%, -50%) scale(1); }
-  50% { opacity: 0.4; transform: translate(-50%, -50%) scale(1.1); }
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
 }
 
 .stat-item:hover .stat-icon {
   transform: scale(1.1);
-  background: var(--stat-color);
-  color: white;
+  box-shadow: 0 10px 30px rgba(255, 102, 0, 0.3);
 }
 
-/* Content */
 .stat-content {
   position: relative;
   z-index: 2;
 }
 
 .stat-number-container {
-  margin-bottom: 15px;
   display: flex;
   align-items: baseline;
   justify-content: center;
-  gap: 5px;
+  gap: 4px;
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
 }
 
 .stat-number {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 8vw, 3.5rem);
   font-weight: 700;
-  color: var(--stat-color);
+  color: white;
   line-height: 1;
-  font-family: 'Georgia', serif;
-  text-shadow: 0 2px 10px rgba(255, 102, 0, 0.3);
 }
 
 .stat-suffix {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: 600;
-  color: var(--stat-color);
-  margin-left: 5px;
+  color: var(--stat-color, #ff6600);
+  line-height: 1;
 }
 
 .stat-label {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 600;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
   font-family: 'Georgia', serif;
 }
 
 .stat-description {
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 2vw, 1rem);
   color: #cccccc;
   margin: 0;
   line-height: 1.5;
 }
 
-/* Decoration */
 .stat-decoration {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  margin-top: clamp(1rem, 3vw, 1.5rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  z-index: 1;
 }
 
 .stat-line {
-  width: 40px;
+  width: clamp(30px, 8vw, 40px);
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--stat-color), transparent);
+  background: var(--stat-color, #ff6600);
   border-radius: 1px;
 }
 
@@ -406,19 +408,19 @@
 
 /* Features Section */
 .stats-features {
-  margin-bottom: 80px;
+  margin-bottom: clamp(3rem, 8vw, 5rem);
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(1.5rem, 4vw, 2rem);
 }
 
 .feature-item {
   background: rgba(255, 255, 255, 0.03);
-  border-radius: 15px;
-  padding: 30px 25px;
+  border-radius: clamp(12px, 2.5vw, 15px);
+  padding: clamp(1.5rem, 4vw, 2rem) clamp(1.25rem, 3vw, 1.5rem);
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
@@ -441,16 +443,16 @@
 }
 
 .feature-icon {
-  width: 60px;
-  height: 60px;
+  width: clamp(45px, 8vw, 60px);
+  height: clamp(45px, 8vw, 60px);
   background: linear-gradient(135deg, #ff6600, #ff914d);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
   color: white;
-  margin: 0 auto 20px;
+  margin: 0 auto clamp(1rem, 3vw, 1.5rem);
   transition: all 0.3s ease;
 }
 
@@ -460,15 +462,15 @@
 }
 
 .feature-title {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   font-weight: 600;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
   font-family: 'Georgia', serif;
 }
 
 .feature-description {
-  font-size: 0.95rem;
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
   color: #cccccc;
   margin: 0;
   line-height: 1.5;
@@ -478,35 +480,36 @@
 .stats-cta {
   text-align: center;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 25px;
-  padding: 50px 40px;
+  border-radius: clamp(20px, 4vw, 25px);
+  padding: clamp(2.5rem, 6vw, 3.5rem) clamp(2rem, 5vw, 2.5rem);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
 }
 
 .cta-content {
-  max-width: 500px;
+  max-width: min(500px, 90vw);
   margin: 0 auto;
 }
 
 .cta-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   font-weight: 700;
   color: white;
-  margin-bottom: 15px;
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
   font-family: 'Georgia', serif;
+  line-height: 1.3;
 }
 
 .cta-description {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: #cccccc;
-  margin-bottom: 30px;
+  margin-bottom: clamp(1.5rem, 4vw, 2rem);
   line-height: 1.6;
 }
 
 .cta-buttons {
   display: flex;
-  gap: 20px;
+  gap: clamp(1rem, 3vw, 1.5rem);
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -514,27 +517,28 @@
 .cta-btn {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 15px 30px;
-  border-radius: 50px;
-  font-size: 1.1rem;
+  gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+  border-radius: clamp(25px, 5vw, 30px);
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   font-weight: 600;
+  text-decoration: none;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-decoration: none;
-  font-family: inherit;
+  min-width: clamp(140px, 25vw, 180px);
+  justify-content: center;
 }
 
 .cta-btn.primary {
   background: linear-gradient(135deg, #ff6600, #ff914d);
   color: white;
-  box-shadow: 0 8px 25px rgba(255, 102, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
 }
 
 .cta-btn.primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(255, 102, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 102, 0, 0.4);
 }
 
 .cta-btn.secondary {
@@ -552,129 +556,170 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .stats-section {
-    padding: 60px 0;
+    padding: clamp(2rem, 6vw, 3rem) 0;
   }
   
   .stats-main-title {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
   }
   
   .stats-subtitle {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   }
   
   .stats-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: clamp(1rem, 3vw, 1.5rem);
   }
   
   .stat-item {
-    padding: 30px 20px;
+    padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem);
   }
   
   .stat-number {
-    font-size: 3rem;
+    font-size: clamp(2rem, 8vw, 3rem);
   }
   
   .mision-vision-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: clamp(1.5rem, 4vw, 2rem);
   }
 
   .mision-vision-item {
-    padding: 30px 20px;
+    padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem);
   }
 
   .mision-vision-title {
-    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
   }
 
   .mision-vision-description {
-    font-size: 1rem;
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
     line-height: 1.6;
   }
 
   .mision-vision-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    width: clamp(40px, 8vw, 50px);
+    height: clamp(40px, 8vw, 50px);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
   }
   
   .features-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: clamp(1rem, 3vw, 1.5rem);
   }
-  
+
   .cta-title {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
   }
-  
+
   .cta-buttons {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .cta-btn {
     width: 100%;
-    max-width: 250px;
+    max-width: clamp(200px, 60vw, 250px);
     justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   .stats-container {
-    padding: 0 15px;
+    padding: 0 clamp(0.75rem, 3vw, 1rem);
   }
   
   .stats-main-title {
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 6vw, 2rem);
   }
   
   .stat-item {
-    padding: 25px 15px;
+    padding: clamp(1.25rem, 4vw, 1.5rem) clamp(0.75rem, 3vw, 1rem);
   }
   
   .stat-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 2rem;
+    width: clamp(40px, 10vw, 60px);
+    height: clamp(40px, 10vw, 60px);
+    font-size: clamp(1.2rem, 4vw, 2rem);
   }
   
   .stat-number {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
   }
   
   .mision-vision-item {
-    padding: 25px 15px;
+    padding: clamp(1.25rem, 4vw, 1.5rem) clamp(0.75rem, 3vw, 1rem);
   }
 
   .mision-vision-title {
-    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
   }
 
   .mision-vision-description {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
     line-height: 1.5;
   }
 
   .mision-vision-icon {
-    width: 45px;
-    height: 45px;
-    font-size: 1.3rem;
+    width: clamp(35px, 8vw, 45px);
+    height: clamp(35px, 8vw, 45px);
+    font-size: clamp(1rem, 3vw, 1.3rem);
   }
   
   .cta-cta {
-    padding: 40px 20px;
+    padding: clamp(2rem, 5vw, 2.5rem) clamp(1.5rem, 4vw, 2rem);
+  }
+}
+
+@media (max-width: 320px) {
+  .stats-container {
+    padding: 0 0.5rem;
+  }
+  
+  .stats-main-title {
+    font-size: 1.4rem;
+  }
+  
+  .stats-subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .stat-item {
+    padding: 1rem 0.5rem;
+  }
+  
+  .stat-number {
+    font-size: 1.6rem;
+  }
+  
+  .mision-vision-item {
+    padding: 1rem 0.5rem;
+  }
+
+  .mision-vision-title {
+    font-size: 1rem;
+  }
+
+  .mision-vision-description {
+    font-size: 0.75rem;
+  }
+
+  .mision-vision-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .cta-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    min-width: 120px;
   }
 }
 
 /* Animation Delays */
 .stat-item:nth-child(1) { animation-delay: 0ms; }
 .stat-item:nth-child(2) { animation-delay: 100ms; }
-.stat-item:nth-child(3) { animation-delay: 200ms; }
-.stat-item:nth-child(4) { animation-delay: 300ms; }
 
-.feature-item:nth-child(1) { animation-delay: 400ms; }
-.feature-item:nth-child(2) { animation-delay: 500ms; }
-.feature-item:nth-child(3) { animation-delay: 600ms; }
-.feature-item:nth-child(4) { animation-delay: 700ms; } 
+.feature-item:nth-child(1) { animation-delay: 400ms; } 
