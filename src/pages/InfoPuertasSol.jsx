@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import BreadcrumbSimple from "../components/BreadcrumbSimple";
 import Slider from "../components/Slider";
 import slidesPuertasSol from "../utils/slidesPuertasSol";
+import '../utils/testImages';
 import DetallesProyecto from "../components/DetallesProyecto";
 import GaleriaProyecto from "../components/GaleriaProyecto";
 import { useIdioma } from '../context/IdiomaContext';

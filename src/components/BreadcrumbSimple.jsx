@@ -46,7 +46,7 @@ const BreadcrumbSimple = () => {
                     parent: 'proyectos-colombia', // Viene de Colombia
                     icon: <MdLocationOn />
                   },
-                  'puertas-del-sol': {
+                  'puertas-sol': {
                     label: 'Puertas del Sol',
                     parent: 'proyectos-colombia', // Viene de Colombia
                     icon: <MdLocationOn />
@@ -57,19 +57,7 @@ const BreadcrumbSimple = () => {
     const determineParentRoute = (currentSegment, allSegments) => {
       // Si es un proyecto específico, determinar de dónde viene
       if (currentSegment === 'rincon-del-lago') {
-        // Si hay información de navegación previa, usarla
-        if (previousPath) {
-          if (previousPath.includes('todos-los-proyectos')) {
-            return 'todos-los-proyectos';
-          } else if (previousPath.includes('proyectos-colombia')) {
-            return 'proyectos-colombia';
-          }
-        }
-        // Si el usuario vino de todos-los-proyectos, mostrar esa ruta
-        if (allSegments.includes('todos-los-proyectos')) {
-          return 'todos-los-proyectos';
-        }
-        // Por defecto, viene de Colombia
+        // Siempre mostrar Colombia como padre para proyectos colombianos
         return 'proyectos-colombia';
       }
       
@@ -91,36 +79,12 @@ const BreadcrumbSimple = () => {
       }
       
       if (currentSegment === 'cana-dulce') {
-        // Si hay información de navegación previa, usarla
-        if (previousPath) {
-          if (previousPath.includes('todos-los-proyectos')) {
-            return 'todos-los-proyectos';
-          } else if (previousPath.includes('proyectos-colombia')) {
-            return 'proyectos-colombia';
-          }
-        }
-        // Si el usuario vino de todos-los-proyectos, mostrar esa ruta
-        if (allSegments.includes('todos-los-proyectos')) {
-          return 'todos-los-proyectos';
-        }
-        // Por defecto, viene de Colombia
+        // Siempre mostrar Colombia como padre para proyectos colombianos
         return 'proyectos-colombia';
       }
       
-      if (currentSegment === 'puertas-del-sol') {
-        // Si hay información de navegación previa, usarla
-        if (previousPath) {
-          if (previousPath.includes('todos-los-proyectos')) {
-            return 'todos-los-proyectos';
-          } else if (previousPath.includes('proyectos-colombia')) {
-            return 'proyectos-colombia';
-          }
-        }
-        // Si el usuario vino de todos-los-proyectos, mostrar esa ruta
-        if (allSegments.includes('todos-los-proyectos')) {
-          return 'todos-los-proyectos';
-        }
-        // Por defecto, viene de Colombia
+      if (currentSegment === 'puertas-sol') {
+        // Siempre mostrar Colombia como padre para proyectos colombianos
         return 'proyectos-colombia';
       }
       
@@ -175,23 +139,8 @@ const BreadcrumbSimple = () => {
 
   const breadcrumbs = generateSmartBreadcrumb();
 
-  console.log('BreadcrumbSimple - breadcrumbs:', breadcrumbs);
-  console.log('Navigation state:', navigationState);
-  console.log('Previous path:', previousPath);
-
   if (breadcrumbs.length <= 1) {
-    return (
-      <div style={{
-        background: 'blue',
-        color: 'white',
-        padding: '10px',
-        margin: '10px',
-        textAlign: 'center',
-        marginTop: '90px'
-      }}>
-        <p>🏠 Estás en la página principal - No se muestra breadcrumb</p>
-      </div>
-    );
+    return null; // No mostrar breadcrumb en la página principal
   }
 
   return (

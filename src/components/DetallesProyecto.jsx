@@ -6,12 +6,25 @@ import '../styles/DetallesProyecto.css';
 export default function ProyectoDetalle({ id, videoId = null, videoTitulo = '' }) {
   const { t } = useIdioma();
   const data = infoProyectos[id];
+  
+  // Verificar que el proyecto existe
+  if (!data) {
+    console.error(`Proyecto con id '${id}' no encontrado en infoProyectos`);
+    return <div>Proyecto no encontrado</div>;
+  }
+  
   const texto = t[`${id}_detalle`];
+  
+  // Verificar que las traducciones existen
+  if (!texto) {
+    console.error(`Traducciones para '${id}_detalle' no encontradas`);
+    return <div>Información del proyecto no disponible</div>;
+  }
 
   const url = videoId ? `https://www.youtube.com/embed/${videoId}` : null;
   
   const tieneVideo = Boolean(videoId);
-   const tienePdf = Boolean(data.pdf);
+  const tienePdf = Boolean(data && data.pdf);
   return (
     <section className="detalle-proyecto">
       <div className="detalle-proyecto-titulo">

@@ -13,11 +13,11 @@ import cana_dulce2 from '../assets/cana_dulce/cana_dulce_galeria2.JPG';
 import cana_dulce3 from '../assets/cana_dulce/cana_dulce_galeria3.JPG';
 import cana_dulce4 from '../assets/cana_dulce/cana_dulce_galeria4.JPG';
 import cana_dulce5 from '../assets/cana_dulce/cana_dulce_galeria5.JPG';
-import puertas_sol1 from '../assets/puertas_sol/puertas_sol.webp';
-import puertas_sol2 from '../assets/puertas_sol/puertas_sol.webp';
-import puertas_sol3 from '../assets/puertas_sol/puertas_sol.webp';
-import puertas_sol4 from '../assets/puertas_sol/puertas_sol.webp';
-import puertas_sol5 from '../assets/puertas_sol/puertas_sol.webp';
+import puertas_sol1 from '../assets/puertas_sol/img1.jpg.JPG';
+import puertas_sol2 from '../assets/puertas_sol/img2.jpg.JPG';
+import puertas_sol3 from '../assets/puertas_sol/img3.jpg.JPG';
+import puertas_sol4 from '../assets/puertas_sol/img4.jpg.JPG';
+import puertas_sol5 from '../assets/puertas_sol/img5.jpg.JPG';
 
 const datosRinconLago = [
   { imagen: img1, clave: 'elemento1' },

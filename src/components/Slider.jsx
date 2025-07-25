@@ -12,6 +12,8 @@ export default function Slider({ contenido = [], namespace = 'home' }) {
   const { t } = useIdioma();
   //    loop
   console.log("Renderizando con contenido:", contenido);
+  console.log("Namespace:", namespace);
+  console.log("Primer slide:", contenido[0]);
   return (
    <div className="slider-container-slider">
   <Swiper
