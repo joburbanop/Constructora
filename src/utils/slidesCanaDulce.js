@@ -1,7 +1,7 @@
 import cana_dulce_logo from '../assets/cana_dulce/cana_dulce_logo.webp';
-import cana_dulce_slide1 from '../assets/cana_dulce/cana_dulce_galeria1.JPG';
-import cana_dulce_slide2 from '../assets/cana_dulce/cana_dulce_galeria2.JPG';
-import cana_dulce_slide3 from '../assets/cana_dulce/cana_dulce_galeria3.JPG';
+import cana_dulce_slide1 from '../assets/cana_dulce/cana_dulce_galeria1.webp';
+import cana_dulce_slide2 from '../assets/cana_dulce/cana_dulce_galeria2.webp';
+import cana_dulce_slide3 from '../assets/cana_dulce/cana_dulce_galeria3.webp';
 
 const slidesCanaDulce = [
     {

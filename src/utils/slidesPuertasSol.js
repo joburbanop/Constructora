@@ -1,10 +1,10 @@
-import puertasSol1 from '../assets/puertas_sol/img1.jpg.JPG';
-import puertasSol2 from '../assets/puertas_sol/img2.jpg.JPG';
-import puertasSol3 from '../assets/puertas_sol/img3.jpg.JPG';
-import puertasSol4 from '../assets/puertas_sol/img4.jpg.JPG';
-import puertasSol5 from '../assets/puertas_sol/img5.jpg.JPG';
-import puertasSol6 from '../assets/puertas_sol/img6.jpg.JPG';
-import puertasSol7 from '../assets/puertas_sol/img7.jpg.JPG';
+import puertasSol1 from '../assets/puertas_sol/img1.webp';
+import puertasSol2 from '../assets/puertas_sol/img2.webp';
+import puertasSol3 from '../assets/puertas_sol/img3.webp';
+import puertasSol4 from '../assets/puertas_sol/img4.webp';
+import puertasSol5 from '../assets/puertas_sol/img5.webp';
+import puertasSol6 from '../assets/puertas_sol/img6.webp';
+import puertasSol7 from '../assets/puertas_sol/img7.webp';
 
 const slidesPuertasSol = [
   {

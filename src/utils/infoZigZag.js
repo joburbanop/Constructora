@@ -8,16 +8,16 @@ import local_coral3 from '../assets/coral_mall/local_coral3.webp';
 import local_coral4 from '../assets/coral_mall/local_coral4.webp';
 import local_coral5 from '../assets/coral_mall/local_coral5.webp';
 import cana_dulce_logo from '../assets/cana_dulce/cana_dulce_logo.webp';
-import cana_dulce1 from '../assets/cana_dulce/cana_dulce_galeria1.JPG';
-import cana_dulce2 from '../assets/cana_dulce/cana_dulce_galeria2.JPG';
-import cana_dulce3 from '../assets/cana_dulce/cana_dulce_galeria3.JPG';
-import cana_dulce4 from '../assets/cana_dulce/cana_dulce_galeria4.JPG';
-import cana_dulce5 from '../assets/cana_dulce/cana_dulce_galeria5.JPG';
-import puertas_sol1 from '../assets/puertas_sol/img1.jpg.JPG';
-import puertas_sol2 from '../assets/puertas_sol/img2.jpg.JPG';
-import puertas_sol3 from '../assets/puertas_sol/img3.jpg.JPG';
-import puertas_sol4 from '../assets/puertas_sol/img4.jpg.JPG';
-import puertas_sol5 from '../assets/puertas_sol/img5.jpg.JPG';
+import cana_dulce1 from '../assets/cana_dulce/cana_dulce_galeria1.webp';
+import cana_dulce2 from '../assets/cana_dulce/cana_dulce_galeria2.webp';
+import cana_dulce3 from '../assets/cana_dulce/cana_dulce_galeria3.webp';
+import cana_dulce4 from '../assets/cana_dulce/cana_dulce_galeria4.webp';
+import cana_dulce5 from '../assets/cana_dulce/cana_dulce_galeria5.webp';
+import puertas_sol1 from '../assets/puertas_sol/img1.webp';
+import puertas_sol2 from '../assets/puertas_sol/img2.webp';
+import puertas_sol3 from '../assets/puertas_sol/img3.webp';
+import puertas_sol4 from '../assets/puertas_sol/img4.webp';
+import puertas_sol5 from '../assets/puertas_sol/img5.webp';
 
 const datosRinconLago = [
   { imagen: img1, clave: 'elemento1' },
