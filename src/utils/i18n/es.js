@@ -388,14 +388,14 @@ videos: {
   },
   slider: {
     home: {
-      slide1_title: 'DESCUBRE TU ESPACIO IDEAL',
-      slide1_subtitle: 'CASAS, CONDOMINIOS Y LOTES',
-      slide2_title: 'VIVE EN EL LUGAR QUE SUEÑAS',
-      slide2_subtitle: 'PROYECTOS MODERNOS Y LUGARES DE ALTA VALORACION',
-      slide3_title: 'INVIERTE CON CONFIANZA',
-      slide3_subtitle: 'PROYECTOS SEGUROS Y DE CALIDAD',
-      slide4_title: 'CREA TU FUTURO',
-      slide4_subtitle: 'SOLUCIONES INMOBILIARIAS PARA TI',
+      slide1_title: 'lotes con facilidad de pago',
+      slide1_subtitle: 'Cuotas flexibles directamente con nuestra constructora',
+      slide2_title: 'lotes con facilidad de pago',
+      slide2_subtitle: 'Cuotas flexibles directamente con nuestra constructora',
+      slide3_title: 'lotes con facilidad de pago',
+      slide3_subtitle: 'Cuotas flexibles directamente con nuestra constructora',
+      slide4_title: 'lotes con facilidad de pago',
+      slide4_subtitle: 'Cuotas flexibles directamente con nuestra constructora',
       boton: 'Contáctanos'
   },
     rincon: {
