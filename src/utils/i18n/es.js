@@ -501,7 +501,7 @@ videos: {
   },
  proyectos_card_simple: {
     coral_titulo: 'Locales comerciales, chiquita BLVD, FL',
-    coral_desc: 'Lujosa casa unifamiliar con 3+1 amplios dormitorios, 3 baños y un garaje para 2 autos. Encimeras de granito, electrodomésticos y pisos de alta calidad le dan a la casa un aspecto elegante. Amplias puertas y ventanas a prueba de impactos inundan la casa de luz natural y ofrecen impresionantes vistas de los alrededores. Preparada para resistir huracanes gracias a su sólida estructura y techo plano.',
+    coral_desc: '',
     casa_usa_1_title: 'Casa unifamiliar en venta',
     casa_usa_1_desc: 'Nueva casa unifamiliar en venta · Lehigh Acres, FL',
     casa_usa_2_title: 'Propiedad vendida',

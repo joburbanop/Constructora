@@ -176,7 +176,7 @@ const ProyectosColombia = () => {
           {proyectosColombia.map((proy, idx) => {
             const isUrbanizacion = proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo';
             const isProximamente = proy.titulo === 'sanmiguel_titulo' || proy.titulo === 'marbella_titulo' || proy.titulo === 'cana_title';
-            const isEntregado = proy.titulo === 'puertas_sol_title' || proy.titulo === 'palmeras_title' || proy.titulo === 'cana_dulce_title' || proy.titulo === 'cana_title';
+            const isEntregado = proy.titulo === 'puertas_sol_title' || proy.titulo === 'palmeras_title' || proy.titulo === 'caña_dulce_title' || proy.titulo === 'cana_title';
             
             return (
               <article key={idx} className="proyecto-colombia-card" data-proyecto={proy.titulo}>

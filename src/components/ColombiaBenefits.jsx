@@ -14,11 +14,6 @@ const ColombiaBenefits = () => {
       icon: <FaCreditCard size={56} color="#ff6600" />,
       title: t.proyectos.beneficio2_titulo || 'Facilidades de pago',
       desc: t.proyectos.beneficio2_desc || 'Opciones flexibles para que puedas invertir sin preocupaciones.'
-    },
-    {
-      icon: <FaHome size={56} color="#ff6600" />,
-      title: t.proyectos.beneficio3_titulo || 'Elige tu próximo hogar',
-      desc: t.proyectos.beneficio3_desc || 'Encuentra la vivienda perfecta para ti y tu familia.'
     }
   ];
   return (
