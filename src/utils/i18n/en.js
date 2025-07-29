@@ -19,7 +19,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     marbella_titulo: 'Open urbanization',
     marbella_desc: 'To build to your liking. Larger lots with the best price in the area. South of Jamundí',
     coral_titulo: 'Commercial units',
-    coral_desc: 'Luxurious single-family home with 3+1 spacious bedrooms, 3 bathrooms, and a 2-car garage. Granite countertops, appliances, and high-quality floors give the house an elegant look. Large impact-resistant doors and windows flood the house with natural light and offer impressive views of the surroundings. Prepared to withstand hurricanes thanks to its solid structure and flat roof.',
+    coral_desc: '',
     casa_usa_1_title: 'USA House First',
     casa_usa_1_desc: 'Beautiful single-family home with modern design and luxury finishes.',
     casa_usa_2_title: 'USA House Second',
@@ -182,6 +182,33 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     descripcion_1: 'Equipped with gas station, service center, 21 commercial premises, supermarket, food court and 6 green areas.',
     descripcion_2: 'Schedule your visit: 3204210000'
   },
+
+ casa_usa_primera_detalle: {
+  espacios_titulo: '',
+  espacios_desc: '',
+  titulo: 'New Single-Family Home',
+  subtitulo: 'Lehigh Acres, FL',
+  subtitulo_2: '',
+  descripcion: 'Welcome to your dream home in a flood-protected area, designed to withstand even the strongest hurricanes. This elegant and luxurious single-family home features 3 spacious bedrooms, 3 bathrooms, and a 2-car garage with plenty of space for all your needs. Granite countertops, appliances, and flooring give the home a modern and stylish look, while the flexible room offers versatility as an office or additional bedroom.',
+  descripcion_1: "Wide impact-resistant doors and windows flood the house with natural light and offer stunning views of the surroundings. But what really sets this home apart is its hurricane-ready design, thanks to its solid structure and flat roof. Not only will you have peace of mind during storm season, but you’ll also save on insurance thanks to the home's durability.'",
+  descripcion_2: 'The seller is even willing to provide blueprints as proof of the home\’\s resilience. If you want to fully customize this house, upgrades are available at a minimal cost, such as installing a pool, a fence, or enclosing the flexible room.'
+},
+ casa_usa_segunda_detalle:{
+    espacios_titulo:'',
+    espacios_desc:'',
+    titulo:'New Single-Family Home',
+    subtitulo:'Lehigh Acres, FL',
+    subtitulo_2:'',
+    descripcion:'Luxurious single-family home with 3+1 spacious bedrooms, 3 bathrooms, and a 2-car garage. Granite countertops, high-quality appliances, and flooring give the home an elegant look. Wide impact-resistant doors and windows flood the house with natural light and offer stunning views of the surroundings. Hurricane-ready thanks to its solid structure and flat roof.',
+    descripcion_1:'',
+    descripcion_2:''
+  },
+   textGaleria:{
+    titulo:'Project Gallery'
+  },
+   textMapa:{
+    titulo:'Location'
+  },
   // informaciòn componente AreaPrecioUbic.jsx
   info_AreaPrecioUbic: {
     titulo_seccion: 'Project Information',
@@ -340,7 +367,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     privacidad: 'Privacy Policy',
     terminos: 'Terms of Service',
     cookies: 'Cookie Settings',
-    copy: '© 2025 Relume. All rights reserved.'
+    copy: '© 2025 Casas y Lotes. All rights reserved.'
   },
   ambito: {
     titulo: 'Our Services',
@@ -429,6 +456,26 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       slide3_subtitle: 'Our team is ready to listen, answer your questions, and support you throughout the process.',
       boton: 'Contact us'
 },
+  casa_primera_usa: {
+      slide1_title: 'Comfort and safety in one place ',
+      slide1_subtitle: 'Lehigh Acres, FL ',
+      slide2_title: 'Comfort and safety in one place ',
+      slide2_subtitle: 'Lehigh Acres, FL',
+      slide3_title: 'Comfort and safety in one place',
+      slide3_subtitle: 'Lehigh Acres, FL ',
+      boton: 'Contáctanos'
+    
+  },
+   casa_segunda_usa: {
+      slide1_title: 'Comfort and safety in one place ',
+      slide1_subtitle: 'Lehigh Acres, FL ',
+      slide2_title: 'Comfort and safety in one place ',
+      slide2_subtitle: 'Lehigh Acres, FL',
+      slide3_title: 'Comfort and safety in one place',
+      slide3_subtitle: 'Lehigh Acres, FL ',
+      boton: 'Contáctanos'
+    
+  },
 
   },
 

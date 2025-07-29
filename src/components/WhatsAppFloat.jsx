@@ -109,7 +109,7 @@ const WhatsAppFloat = () => {
             <button 
               className="action-button whatsapp-action"
               onClick={() => {
-                const phoneNumber = '+573204210000'; 
+                const phoneNumber = '+573234708860'; 
                 const message = idioma === 'es' 
                   ? 'Hola! Me interesa conocer más sobre sus proyectos inmobiliarios.'
                   : 'Hello! I am interested in learning more about your real estate projects.';
@@ -124,7 +124,7 @@ const WhatsAppFloat = () => {
             
             <button 
               className="action-button call-action"
-              onClick={() => window.open('tel:+573204210000')}
+              onClick={() => window.open('tel:+573234708860')}
             >
               <span>📞</span>
               <span>{t.whatsapp?.llamar || 'Llamar'}</span>

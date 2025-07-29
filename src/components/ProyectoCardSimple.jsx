@@ -4,7 +4,7 @@ import '../styles/ProyectoCardSimple.css';
 
 export default function ProyectoCard({ proyecto, t, onNavigate, idiomaKey }) {
   const traduccion = t[idiomaKey];
-  const isProximamente = ['casa_usa_1_title', 'casa_usa_2_title'].includes(proyecto.titulo);
+  const isProximamente = [].includes(proyecto.titulo);
 
   return (
     <div className="proyecto-card">

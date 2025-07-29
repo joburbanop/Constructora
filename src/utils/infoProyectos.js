@@ -25,7 +25,28 @@ import puertas_sol4 from '../assets/puertas_sol/img4.webp';
 import puertas_sol5 from '../assets/puertas_sol/img5.webp';
 import puertas_sol6 from '../assets/puertas_sol/img6.webp';
 import puertas_sol7 from '../assets/puertas_sol/img7.webp';
-
+import pdf_casa_primera from '../assets/pdfs/New_Residence_Sigle_Family_Architectural_Structural_Plan.pdf';
+import casa_usa_primera1 from '../assets/casaUsaPrimera/ArchitecturalStructuralPlanDistribucion.webp';
+import casa_usa_primera2 from '../assets/casaUsaPrimera/Fachada.webp';
+import pdf_casa_segunda from '../assets/pdfs/RESIDENCE_NEW_SINGLE_FAMILY.pdf';
+import casaUsaSegunda1 from '../assets/casaUsaSegunda/casa_usa_segunda_1.webp';
+import casaUsaSegunda2 from '../assets/casaUsaSegunda/casa_usa_segunda_2.webp';
+import casaUsaSegunda3 from '../assets/casaUsaSegunda/casa_usa_segunda_3.webp';
+import casaUsaSegunda4 from '../assets/casaUsaSegunda/casa_usa_segunda_4.webp';
+import casaUsaSegunda5 from '../assets/casaUsaSegunda/casa_usa_segunda_5.webp';
+import casaUsaSegunda6 from '../assets/casaUsaSegunda/casa_usa_segunda_6.webp';
+import casaUsaSegunda7 from '../assets/casaUsaSegunda/casa_usa_segunda_7.webp';
+import casaUsaSegunda8 from '../assets/casaUsaSegunda/casa_usa_segunda_8.webp';
+import casaUsaSegunda9 from '../assets/casaUsaSegunda/casa_usa_segunda_9.webp';
+import casaUsaSegunda10 from '../assets/casaUsaSegunda/casa_usa_segunda_10.webp';
+import casaUsaSegunda11 from '../assets/casaUsaSegunda/casa_usa_segunda_11.webp';
+import casaUsaSegunda12 from '../assets/casaUsaSegunda/casa_usa_segunda_12.webp';
+import casaUsaSegunda13 from '../assets/casaUsaSegunda/casa_usa_segunda_13.webp';
+import casaUsaSegunda14 from '../assets/casaUsaSegunda/casa_usa_segunda_14.webp';
+import casaUsaSegunda15 from '../assets/casaUsaSegunda/casa_usa_segunda_15.webp';
+import casaUsaSegunda16 from '../assets/casaUsaSegunda/casa_usa_segunda_16.webp';
+import casaUsaSegunda17 from '../assets/casaUsaSegunda/casa_usa_segunda_17.webp';
+import casaUsaSegunda18 from '../assets/casaUsaSegunda/casa_usa_segunda_18.webp';
 export const infoProyectos = {
   rincon: {
     id: 'rincon',
@@ -87,6 +108,41 @@ export const infoProyectos = {
         puertas_sol5,
         puertas_sol6,
         puertas_sol7
+    ]
+  },
+   casa_usa_primera:{
+    id: 'casa_usa_primera',
+    slug: 'casa-usa-primera',
+    pdf:pdf_casa_primera,
+    galeria: [
+        casa_usa_primera1,
+        casa_usa_primera2
+    ]
+  },
+  casa_usa_segunda:{
+    id: 'casa_usa_segunda',
+    slug: 'casa-usa-segunda',
+    pdf:pdf_casa_segunda,
+    galeria: [
+        casaUsaSegunda1,
+        casaUsaSegunda2,
+        casaUsaSegunda3,
+        casaUsaSegunda4,
+        casaUsaSegunda5,
+        casaUsaSegunda6,
+        casaUsaSegunda7,
+        casaUsaSegunda8,
+        casaUsaSegunda9,
+        casaUsaSegunda10,
+        casaUsaSegunda11,
+        casaUsaSegunda12,
+        casaUsaSegunda13,
+        casaUsaSegunda14,
+        casaUsaSegunda15,
+        casaUsaSegunda16,
+        casaUsaSegunda17,
+        casaUsaSegunda18
+
     ]
   }
 };

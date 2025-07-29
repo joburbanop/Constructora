@@ -23,41 +23,22 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content footer-columns">
-        <div className="footer-form-col">
-          <div className="footer-form-title">{t.footer.formTitle}</div>
-          <form className="footer-form" onSubmit={handleSubmit}>
-            <input
-              type="email"
-              name="email"
-              placeholder={t.footer.email}
-              value={form.email}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="tel"
-              name="telefono"
-              placeholder={t.footer.telefono}
-              value={form.telefono}
-              onChange={handleChange}
-              required
-            />
-            <button type="submit">{t.footer.enviar}</button>
-          </form>
-          {enviado && <div className="footer-success">{t.footer.exito}</div>}
-        </div>
+        
         <div className="footer-brand-col">
           <img src={logo} alt="Logo Constructora" className="footer-logo" />
+         {/*
           <div className="footer-links">
             <a href="#">{t.footer.privacidad}</a>
             <a href="#">{t.footer.terminos}</a>
             <a href="#">{t.footer.cookies}</a>
           </div>
+         
+         */}
           <div className="footer-social">
-            <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-            <a href="#" aria-label="Instagram"><FaInstagram /></a>
-            <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
-            <a href="#" aria-label="YouTube"><FaYoutube /></a>
+            <a href="https://www.facebook.com/profile.php?id=100069190637924" aria-label="Facebook"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/casasylotes_respaldo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><FaInstagram /></a>
+           
+            <a href="https://youtube.com/@casaslotes5992?si=dGM_NtOFDym_yUOm" aria-label="YouTube"><FaYoutube /></a>
           </div>
         </div>
       </div>

@@ -1,17 +1,12 @@
 import React from 'react';
-
+import '../styles/UbicacionMaps.css';
 // Define algunos estilos básicos para el contenedor del mapa
-const containerStyle = {
-  width: '100%',
-  height: '450px', // Altura por defecto, puedes ajustarla
-  overflow: 'hidden',
-  marginBottom: '20px' // Espacio debajo del mapa
-};
 
+import { useIdioma } from '../context/IdiomaContext';
 export default function MapaIframeReutilizable({
   mapSrc, // Esta prop recibirá la URL completa del iframe
   title = "Mapa de Ubicación", // Título por defecto para accesibilidad
-  width = "100%", // Ancho por defecto del iframe
+  width = "90%", // Ancho por defecto del iframe
   height = "100%" // Alto por defecto del iframe
 }) {
   // Verificación básica para asegurar que se pase una URL
@@ -21,14 +16,14 @@ export default function MapaIframeReutilizable({
              Error: No se ha proporcionado la URL del mapa.
            </div>;
   }
-
+ const { t } = useIdioma();
   return (
-    <div className="mapa-iframe-container" style={containerStyle}>
-      <iframe
+    <div className="mapa-iframe-container" >
+        <h2>{t.textMapa.titulo}</h2>
+      <iframe className='iframeMapa'
         src={mapSrc}
-        width={width}
-        height={height}
-        style={{ border: 0 }}
+       
+       
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"

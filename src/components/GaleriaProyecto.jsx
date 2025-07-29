@@ -4,15 +4,15 @@ import { Navigation,Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '../styles/GaleriaProyecto.css';
-
+import { useIdioma } from '../context/IdiomaContext';
 export default function GaleriaProyecto({ id }) {
   const galeria = infoProyectos[id]?.galeria;
-
+   const { t } = useIdioma();
   if (!galeria || galeria.length < 2) return null;
 
   return (
     <div className="galeria-proyecto">
-      <h3 className="galeria-titulo">Galería del proyecto</h3>
+      <h2 className="galeria-titulo">{t.textGaleria.titulo}</h2>
       <div className="swiper-container-wrapper">
         <Swiper
           modules={[Navigation, Autoplay]}

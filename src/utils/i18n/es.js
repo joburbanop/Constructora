@@ -19,7 +19,7 @@ const es = {
     marbella_titulo: 'Urbanización abierta',
     marbella_desc: 'Para construir a su gusto. Lotes más amplios y con el mejor precio de la zona. Sur de Jamundí',
     coral_titulo: 'Locales comerciales',
-    coral_desc: 'Lujosa casa unifamiliar con 3+1 amplios dormitorios, 3 baños y un garaje para 2 autos. Encimeras de granito, electrodomésticos y pisos de alta calidad le dan a la casa un aspecto elegante. Amplias puertas y ventanas a prueba de impactos inundan la casa de luz natural y ofrecen impresionantes vistas de los alrededores. Preparada para resistir huracanes gracias a su sólida estructura y techo plano.',
+    coral_desc: '',
     casa_usa_1_title: 'Casa USA ',
     casa_usa_1_desc: 'Hermosa casa unifamiliar con diseño moderno y acabados de lujo.',
     casa_usa_2_title: 'Casa USA ',
@@ -183,6 +183,32 @@ puertas_sol_detalle: {
   descripcion_1: 'Equipada con gasolinera, centro de servicios, 21 locales comerciales, supermercado, plazoleta de comidas y 6 zonas verdes.',
   descripcion_2: 'Agende su visita: 3204210000'
 },
+casa_usa_primera_detalle:{
+    espacios_titulo:'',
+    espacios_desc:'',
+    titulo:'Nueva vivienda unifamiliar ',
+    subtitulo:'Lehigh Acres, FL',
+    subtitulo_2:'',
+    descripcion:'Bienvenido a la casa de sus sueños en una zona protegida contra inundaciones, diseñada para resistir incluso los huracanes más fuertes. Esta elegante y lujosa casa unifamiliar cuenta con 3 amplios dormitorios, 3 baños y un garaje para 2 autos con amplio espacio para todas sus necesidades. Las encimeras de granito, los electrodomésticos y los pisos le dan a la casa un aspecto moderno y elegante, mientras que la sala flexible ofrece versatilidad como estudio o dormitorio adicional.',
+    descripcion_1:'Las amplias puertas y ventanas a prueba de impactos inundan la casa de luz natural y ofrecen impresionantes vistas de los alrededores. Pero lo que realmente distingue a esta casa es su diseño preparado para resistir huracanes gracias a su sólida estructura y techo plano. No solo tendrá tranquilidad durante la temporada de tormentas, sino que también ahorrará en seguros gracias a la resistencia de la casa.',
+    descripcion_2:'El vendedor incluso está dispuesto a proporcionar planos como prueba de la durabilidad de la casa. Si desea personalizar esta casa por completo, hay mejoras disponibles a un costo mínimo, como la instalación de una piscina, una cerca o el cerramiento de la sala flexible.'
+  },
+  casa_usa_segunda_detalle:{
+    espacios_titulo:'',
+    espacios_desc:'',
+    titulo:'Nueva vivienda unifamiliar ',
+    subtitulo:'Lehigh Acres, FL',
+    subtitulo_2:'',
+    descripcion:'Lujosa casa unifamiliar con 3+1 amplios dormitorios, 3 baños y un garaje para 2 autos. Encimeras de granito, electrodomésticos y pisos de alta calidad le dan a la casa un aspecto elegante Amplias puertas y ventanas a prueba de impactos inundan la casa de luz natural y ofrecen impresionantes vistas de los alrededores. Preparada para resistir huracanes gracias a su sólida estructura y techo plano.',
+    descripcion_1:'',
+    descripcion_2:''
+  },
+  textGaleria:{
+    titulo:'Galería del proyecto'
+  },
+  textMapa:{
+    titulo:'Ubicación'
+  },
  // informaciòn componente AreaPrecioUbic.jsx
  info_AreaPrecioUbic: {
   titulo_seccion: 'Información del Proyecto',
@@ -373,7 +399,8 @@ videos: {
     privacidad: 'Política de Privacidad',
     terminos: 'Términos de Servicio',
     cookies: 'Configuración de Cookies',
-    copy: '© 2025 Relume. Todos los derechos reservados.'
+    copy: '© 2025 Casas y Lotes. Todos los derechos reservados.'
+    
   },
   ambito: {
     titulo: 'Nuestros Servicios',
@@ -459,6 +486,24 @@ videos: {
       slide2_subtitle: 'Explora fácilmente propiedades que se ajustan a lo que buscas: ubicación, tamaño, estilo y entorno.',
       slide3_title: 'Asesoría personalizada',
       slide3_subtitle: 'Nuestro equipo está listo para escucharte, responder tus dudas y acompañarte en todo el proceso.',
+      boton: 'Contáctanos'
+    
+  }, casa_primera_usa: {
+      slide1_title: 'Confort y seguridad en un solo lugar ',
+      slide1_subtitle: 'Lehigh Acres, FL ',
+      slide2_title: 'Confort y seguridad en un solo lugar ',
+      slide2_subtitle: 'Lehigh Acres, FL',
+      slide3_title: 'Confort y seguridad en un solo lugar',
+      slide3_subtitle: 'Lehigh Acres, FL ',
+      boton: 'Contáctanos'
+    
+  }, casa_segunda_usa: {
+      slide1_title: 'Confort y seguridad en un solo lugar ',
+      slide1_subtitle: 'Lehigh Acres, FL ',
+      slide2_title: 'Confort y seguridad en un solo lugar ',
+      slide2_subtitle: 'Lehigh Acres, FL',
+      slide3_title: 'Confort y seguridad en un solo lugar',
+      slide3_subtitle: 'Lehigh Acres, FL ',
       boton: 'Contáctanos'
     
   },

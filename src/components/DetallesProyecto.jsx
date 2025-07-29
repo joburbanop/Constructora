@@ -25,6 +25,7 @@ export default function ProyectoDetalle({ id, videoId = null, videoTitulo = '' }
   
   const tieneVideo = Boolean(videoId);
   const tienePdf = Boolean(data && data.pdf);
+  const tienelogo = Boolean(data && data.logo);
   return (
     <section className="detalle-proyecto">
       <div className="detalle-proyecto-titulo">
@@ -49,9 +50,15 @@ export default function ProyectoDetalle({ id, videoId = null, videoTitulo = '' }
         )}
 
         <div className="proyecto-texto">
-          <div  className="logo-proyecto"> 
-             <img src={data.logo} alt={texto.titulo}/>
-             </div>
+          
+          {tienelogo && (
+
+            <div  className="logo-proyecto"> 
+              <img src={data.logo} alt={texto.titulo}/>
+            </div>
+
+          )}
+        
         
           
           <div className="proyecto-info" style={{border:'' }}>

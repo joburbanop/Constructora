@@ -4,7 +4,7 @@ export const useWhatsApp = () => {
   const { idioma } = useIdioma();
   
   const openWhatsApp = (customMessage = null) => {
-    const phoneNumber = '+573204210000';
+    const phoneNumber = '+573234708860';
     
     // Mensaje profesional según el idioma
     const defaultMessage = idioma === 'es' 
