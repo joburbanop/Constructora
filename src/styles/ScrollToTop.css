@@ -2,8 +2,8 @@
   position: fixed;
   bottom: 100px;
   right: 30px;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background: linear-gradient(135deg, #ff6600, #ff914d);
   border: none;
   border-radius: 50%;
@@ -34,9 +34,10 @@
 
 .scroll-to-top-icon {
   transition: transform 0.3s ease;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   color: white !important;
   display: block;
+  font-weight: bold;
 }
 
 .scroll-to-top-btn:hover .scroll-to-top-icon {
@@ -60,9 +61,9 @@
   .scroll-to-top-btn {
     bottom: 90px;
     right: 20px;
-    width: 45px;
-    height: 45px;
-    font-size: 1rem;
+    width: 55px;
+    height: 55px;
+    font-size: 1.2rem;
   }
 }
 
@@ -70,9 +71,9 @@
   .scroll-to-top-btn {
     bottom: 85px;
     right: 15px;
-    width: 40px;
-    height: 40px;
-    font-size: 0.9rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
   }
 }
 
