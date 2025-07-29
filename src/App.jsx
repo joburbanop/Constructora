@@ -12,7 +12,20 @@ import CasaUsaPrimera from "./pages/CasaUsaPrimera";
 import CasaUsaSegunda from './pages/CasaUsaSegunda';
 import TodosLosProyectos from "./pages/TodosLosProyectos";
 import ScrollToTop from './components/ScrollToTop';
+import AnnouncementModal from './components/AnnouncementModal';
+import useAnnouncementModal from './hooks/useAnnouncementModal';
+import renderRincon from './assets/render_rincon.png';
+import anuncioImage from './assets/anuncios/Anuncio.webp';
+
 export default function App() {
+  // Hook para manejar el modal de anuncio principal
+  const announcementModal = useAnnouncementModal('welcome', {
+    showOnFirstVisit: true,
+    showOnReload: true,
+    autoClose: false,
+    autoCloseTime: 8000
+  });
+
   return (
     <>
       <Routes>
@@ -29,6 +42,23 @@ export default function App() {
         <Route path="/casa-usa-primera" element={<CasaUsaPrimera/>} />
         <Route path="/casa-usa-segunda" element={<CasaUsaSegunda/>} />
       </Routes>
+      
+      {/* Modal de anuncio principal */}
+      <AnnouncementModal
+        isOpen={announcementModal.isOpen}
+        onClose={announcementModal.closeModal}
+        title=""
+        message=""
+        imageUrl={anuncioImage}
+        showLogo={false}
+        autoClose={true}
+        autoCloseTime={8000}
+        showCloseButton={true}
+        showOverlay={true}
+        animation="bounceIn"
+        size="large"
+      />
+      
       <ScrollToTop />
     </>
   );

@@ -1,0 +1,439 @@
+/* ========== ANNOUNCEMENT MODAL STYLES ========== */
+
+.announcement-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.announcement-modal-overlay.with-overlay {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+/* Modal principal */
+.announcement-modal {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 102, 0, 0.1);
+}
+
+/* Tamaños del modal */
+.announcement-modal.modal-small {
+  width: 400px;
+  min-height: 300px;
+}
+
+.announcement-modal.modal-medium {
+  width: 500px;
+  min-height: 400px;
+}
+
+.announcement-modal.modal-large {
+  width: 600px;
+  min-height: 500px;
+}
+
+/* Animaciones de entrada */
+.announcement-modal.modal-fadeIn {
+  animation: modalFadeIn 0.4s ease-out;
+}
+
+.announcement-modal.modal-slideIn {
+  animation: modalSlideIn 0.4s ease-out;
+}
+
+.announcement-modal.modal-scaleIn {
+  animation: modalScaleIn 0.4s ease-out;
+}
+
+.announcement-modal.modal-bounceIn {
+  animation: modalBounceIn 0.6s ease-out;
+}
+
+/* Animaciones de salida */
+.announcement-modal.closing {
+  animation: modalFadeOut 0.3s ease-in forwards;
+}
+
+.announcement-modal-overlay.closing {
+  animation: overlayFadeOut 0.3s ease-in forwards;
+}
+
+/* Header con logo */
+.modal-header {
+  padding: 1.5rem 2rem 1rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 102, 0, 0.1);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(255, 102, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.modal-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Contenido principal */
+.modal-content {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0;
+}
+
+/* Contenedor de imagen */
+.announcement-image-container {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+}
+
+.announcement-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.announcement-image:hover {
+  transform: scale(1.05);
+}
+
+/* Título */
+.announcement-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  line-height: 1.3;
+  background: linear-gradient(135deg, #ff6600 0%, #ff914d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Mensaje */
+.announcement-message {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  max-width: 400px;
+}
+
+/* Botón de cerrar */
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(255, 102, 0, 0.9);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 102, 0, 0.3);
+  z-index: 10;
+}
+
+.modal-close-btn:hover {
+  background: #e65c00;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.4);
+}
+
+.modal-close-btn:active {
+  transform: scale(0.95);
+}
+
+/* Indicador de progreso para auto-close */
+.auto-close-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 102, 0, 0.2);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6600, #ff914d, #ffb347);
+  width: 100%;
+  animation: progressShrink linear forwards;
+  transform-origin: left;
+  border-radius: 0 0 20px 20px;
+}
+
+/* ========== ANIMACIONES ========== */
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes modalScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modalBounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes overlayFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes progressShrink {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 768px) {
+  .announcement-modal-overlay {
+    padding: 0.5rem;
+  }
+
+  .announcement-modal.modal-small,
+  .announcement-modal.modal-medium,
+  .announcement-modal.modal-large {
+    width: 95vw;
+    min-height: auto;
+    max-height: 80vh;
+  }
+
+  .modal-header {
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+  }
+
+  .modal-logo {
+    height: 50px;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .announcement-title {
+    font-size: 1.5rem;
+  }
+
+  .announcement-message {
+    font-size: 1rem;
+  }
+
+  .announcement-image-container {
+    max-width: 250px;
+    height: 150px;
+  }
+
+  .modal-close-btn {
+    width: 35px;
+    height: 35px;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .announcement-modal {
+    border-radius: 15px;
+  }
+
+  .modal-header {
+    padding: 0.75rem 1rem 0.25rem 1rem;
+  }
+
+  .modal-logo {
+    height: 40px;
+  }
+
+  .modal-content {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .announcement-title {
+    font-size: 1.3rem;
+  }
+
+  .announcement-message {
+    font-size: 0.9rem;
+  }
+
+  .announcement-image-container {
+    max-width: 200px;
+    height: 120px;
+  }
+
+  .modal-close-btn {
+    width: 30px;
+    height: 30px;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
+/* ========== ACCESIBILIDAD ========== */
+
+@media (prefers-reduced-motion: reduce) {
+  .announcement-modal,
+  .announcement-modal-overlay,
+  .modal-logo,
+  .announcement-image,
+  .modal-close-btn,
+  .progress-bar {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ========== DARK MODE SUPPORT ========== */
+
+@media (prefers-color-scheme: dark) {
+  .announcement-modal {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-color: rgba(255, 102, 0, 0.2);
+  }
+
+  .modal-header {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-bottom-color: rgba(255, 102, 0, 0.2);
+  }
+
+  .announcement-title {
+    color: #ffffff;
+  }
+
+  .announcement-message {
+    color: #cccccc;
+  }
+
+  .modal-close-btn {
+    background: rgba(45, 45, 45, 0.9);
+    color: #cccccc;
+  }
+
+  .modal-close-btn:hover {
+    background: #ff6600;
+    color: white;
+  }
+
+  .auto-close-progress {
+    background: rgba(255, 102, 0, 0.2);
+  }
+} 
