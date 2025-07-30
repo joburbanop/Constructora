@@ -17,8 +17,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import '../styles/TodosLosProyectos.css';
-import renderRincon from '../assets/render_rincon.png';
-import renderSanMiguel from '../assets/render_san_miguel.png';
+import renderRincon from '../assets/colombia/rincon_colombia.webp';
+import renderSanMiguel from '../assets/colombia/dji_0014_colombia.webp';
 import renderQuintas from '../assets/render_quintas.png';
 import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
 

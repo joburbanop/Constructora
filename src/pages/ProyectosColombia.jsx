@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Breadcrumb from "../components/Breadcrumb";
 import BreadcrumbSimple from "../components/BreadcrumbSimple";
-import renders from "../utils/renders";
+
 import proyectos from "../utils/proyectos";
 import { useIdioma } from '../context/IdiomaContext';
 import Button from '../components/Button';
@@ -17,7 +17,8 @@ import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import Slider from '../components/Slider';
+import SimpleSlider from '../components/SimpleSlider';
+import slidesColombia from '../utils/slidesColombia';
 import '../styles/ProyectosColombia.css';
 import { useNavigate } from 'react-router-dom';
 import { handleProyectoNavigation, navigateToSection } from '../utils/navigation';
@@ -32,8 +33,8 @@ const ProyectosColombia = () => {
   // Filtrar proyectos de Colombia
   const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia' || p.ubicacion === 'san_jose');
   
-  // Usar el primer render como imagen de hero
-  const heroImg = renders[0]?.imagen;
+  // Usar una imagen por defecto para el hero
+  const heroImg = null;
 
   // Función para determinar si un proyecto está en "Próximamente"
   const isProyectoProximamente = (titulo) => {
@@ -155,7 +156,7 @@ const ProyectosColombia = () => {
       
       {/* Hero Slider animado */}
       <section id="inicio">
-        <Slider contenido={renders} namespace="colombia"/>
+        <SimpleSlider contenido={slidesColombia} namespace="colombia"/>
       </section>
       
       {/* Sección de experiencia */}

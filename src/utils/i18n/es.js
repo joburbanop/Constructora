@@ -513,7 +513,7 @@ videos: {
     proyectos: 'Proyectos',
     entregados: 'Proyectos Finalizados',
     nosotros: 'Nosotros',
-    renders: 'Renders destacados',
+
     espacios: 'Espacios ',
     galeria: 'Galería',
     detalles: 'Detalles',

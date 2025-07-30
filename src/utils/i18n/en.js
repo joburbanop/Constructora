@@ -483,7 +483,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     proyectos: 'Projects',
     entregados: 'Completed Projects',
     nosotros: 'About Us',
-    renders: 'Featured Renders',
+
     espacios: 'Spaces',
     galeria: 'Gallery',
     detalles: 'Details',

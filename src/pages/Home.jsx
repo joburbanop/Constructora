@@ -5,7 +5,7 @@ import Slider from '../components/Slider';
 import SearchFilters from '../components/SearchFilters';
 import AmbitoAccion from '../components/AmbitoAccion';
 import ProyectosEnMarcha from '../components/ProyectosEnMarcha';
-import RendersDestacados from '../components/RendersDestacados';
+
 import ProyectosEntregados from '../components/ProyectosEntregados';
 import Expertos from '../components/Expertos';
 import Footer from '../components/Footer';

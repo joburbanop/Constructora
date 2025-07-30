@@ -15,7 +15,7 @@ import TodosLosProyectos from "./pages/TodosLosProyectos";
 import ScrollToTop from './components/ScrollToTop';
 import AnnouncementModal from './components/AnnouncementModal';
 import useAnnouncementModal from './hooks/useAnnouncementModal';
-import renderRincon from './assets/render_rincon.png';
+
 import anuncioImage from './assets/anuncios/Anuncio.webp';
 
 export default function App() {
