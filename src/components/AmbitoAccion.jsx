@@ -1,7 +1,9 @@
 import React from "react";
-import "../styles/AmbitoAccion.css"; // Crea este archivo para los estilos
-import Button from './Button'; // Importa tu botón reutilizable
+import "../styles/AmbitoAccion.css";
+import Button from './Button';
+import OptimizedImage from './OptimizedImage';
 import ambitos from '../utils/ambitos';
+import { getLujoImageSrcSet } from '../utils/ambitos';
 import { useIdioma } from '../context/IdiomaContext';
 import { useNavigate } from "react-router-dom";
 
@@ -13,7 +15,6 @@ export default function AmbitoAccion() {
   return (
     <section className="ambito">
      
-      <h2>{t.ambito.titulo}</h2>
       <p className="ambito-sub">
         {t.ambito.sub}
       </p>
@@ -28,13 +29,19 @@ export default function AmbitoAccion() {
           }
           return (
             <div className="ambito-card" key={idx}>
-              <div
-                className="ambito-img"
-                style={{
-                  backgroundImage: `url(${card.img})`,
-                  backgroundPosition: card.bgPosition
-                }}
-              >
+              <div className="ambito-img">
+                <OptimizedImage
+                  src={card.img}
+                  alt={t.ambito[card.title]}
+                  className="ambito-card-image"
+                  style={{
+                    objectPosition: card.bgPosition
+                  }}
+                  {...(card.title === 'lujo_title' && {
+                    srcSet: getLujoImageSrcSet(),
+                    sizes: '(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, 1920px'
+                  })}
+                />
                 <span className="ambito-card-title">{t.ambito[card.title]}</span>
               </div>
               <p className="ambito-card-desc">{t.ambito[card.desc]}</p>
