@@ -544,7 +544,7 @@ videos: {
   descripcion: `Estamos en Cape Coral, Florida, a 160 millas de Miami. Esta ciudad es conocida como el "País de las Maravillas Costeras”, un verdadero paraíso con canales y ríos para quienes buscan una vida de plenitud y para la práctica de deportes náuticos.`,
   descripcion_2:' Inversión y valorización aseguradas.'
   },
- proyectos_card_simple: {
+   proyectos_card_simple: {
     coral_titulo: 'Locales comerciales, chiquita BLVD, FL',
     coral_desc: '',
     casa_usa_1_title: 'Casa unifamiliar en venta',
@@ -553,6 +553,86 @@ videos: {
     casa_usa_2_desc: 'Casa unifamiliar vendida. Lehigh Acres, FL',
     boton: 'Ver más',
     proximamente: 'Próximamente'
+  },
+
+  // Traducciones para Casas de Lujo
+  casas_lujo: {
+    // Hero Section
+    hero_title: 'Casas de Lujo',
+    hero_subtitle: 'Exclusividad y elegancia en cada detalle',
+    hero_description: 'Descubre nuestras propiedades premium diseñadas para quienes buscan lo mejor en calidad y confort',
+    
+    // Características principales
+    caracteristicas_titulo: 'Exclusividad en Cada Detalle',
+    caracteristicas_subtitulo: 'Características Destacadas',
+    caracteristicas_descripcion: 'Nuestras casas de lujo combinan diseño arquitectónico de vanguardia con materiales premium y acabados de primera calidad.',
+    
+    // Características específicas
+    caracteristica_1: 'Diseño arquitectónico exclusivo',
+    caracteristica_2: 'Materiales premium importados',
+    caracteristica_3: 'Acabados de lujo certificados',
+    caracteristica_4: 'Tecnología inteligente integrada',
+    caracteristica_5: 'Espacios amplios y funcionales',
+    caracteristica_6: 'Seguridad 24/7 con vigilancia',
+    
+    // Sección de características con cards
+    caracteristicas_cards_titulo: 'Características de Nuestras Casas de Lujo',
+    caracteristicas_cards_subtitulo: 'Cada detalle pensado para tu comodidad y elegancia',
+    
+    // Cards de características
+    card_1_titulo: 'Diseño Exclusivo',
+    card_1_desc: 'Arquitectura moderna con líneas limpias y espacios que maximizan la funcionalidad y el confort.',
+    card_2_titulo: 'Materiales Premium',
+    card_2_desc: 'Utilizamos solo los mejores materiales importados y nacionales para garantizar durabilidad y elegancia.',
+    card_3_titulo: 'Tecnología Avanzada',
+    card_3_desc: 'Sistemas inteligentes integrados para control de iluminación, seguridad y climatización.',
+    card_4_titulo: 'Acabados de Lujo',
+    card_4_desc: 'Detalles cuidadosamente seleccionados que elevan cada espacio a un nivel superior de sofisticación.',
+    
+    // Sección de interiores
+    interiores_titulo: 'Interiores de Lujo',
+    interiores_subtitulo: 'Espacios que Inspiran',
+    interiores_descripcion: 'Cada rincón de nuestras casas de lujo está diseñado para crear ambientes únicos y memorables.',
+    
+    // Características de interiores
+    interior_1: 'Cocinas gourmet con islas centrales',
+    interior_2: 'Baños principales con jacuzzi y sauna',
+    interior_3: 'Closets walk-in con sistema organizacional',
+    interior_4: 'Sala de estar con doble altura',
+    interior_5: 'Terraza privada con vista panorámica',
+    interior_6: 'Sistema de audio ambiente integrado',
+    
+    // Experiencia
+    experiencia_titulo: 'Experiencia',
+    experiencia_subtitulo: 'Construyendo Sueños de Lujo',
+    experiencia_descripcion: 'Más de 17 años de experiencia en la construcción de propiedades exclusivas y de alta gama.',
+    
+    // Expertos
+    expertos_titulo: 'Nuestro Equipo de Expertos',
+    expertos_subtitulo: 'Profesionales Especializados en Lujo',
+    expertos_descripcion: 'Contamos con un equipo de expertos dedicados a hacer realidad tu visión de casa de lujo.',
+    
+    // CTA
+    cta_titulo: '¿Listo para vivir en el lujo?',
+    cta_subtitulo: 'Descubre tu próxima casa de ensueño',
+    cta_descripcion: 'Agenda una cita exclusiva y conoce nuestras propiedades premium.',
+    cta_boton: 'Agendar Cita Exclusiva',
+    
+    // Breadcrumb
+    breadcrumb_inicio: 'Inicio',
+    breadcrumb_casas_lujo: 'Casas de Lujo',
+    
+    // Slider
+    slider_slide1_title: 'Exclusividad y Elegancia',
+    slider_slide1_subtitle: 'Diseños únicos que reflejan tu estilo de vida',
+    slider_slide2_title: 'Materiales Premium',
+    slider_slide2_subtitle: 'Calidad superior en cada detalle constructivo',
+    slider_slide3_title: 'Tecnología Integrada',
+    slider_slide3_subtitle: 'Sistemas inteligentes para máxima comodidad',
+    slider_slide4_title: 'Espacios Amplios',
+    slider_slide4_subtitle: 'Distribución optimizada para el confort familiar',
+    slider_slide5_title: 'Acabados de Lujo',
+    slider_slide5_subtitle: 'Detalles que elevan cada ambiente',
   },
 };
 

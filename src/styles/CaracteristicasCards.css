@@ -1,0 +1,211 @@
+/* Estilos para el componente CaracteristicasCards */
+.caracteristicas-cards-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.caracteristicas-cards-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.caracteristicas-cards-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.caracteristicas-cards-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6600, #ff8533);
+  border-radius: 2px;
+}
+
+.caracteristicas-cards-header p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.caracteristicas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.caracteristica-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.caracteristica-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6600, #ff8533);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.caracteristica-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #ff6600;
+}
+
+.caracteristica-card:hover::before {
+  transform: scaleX(1);
+}
+
+.caracteristica-icon {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #ff6600, #ff8533);
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(255, 102, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.caracteristica-card:hover .caracteristica-icon {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(255, 102, 0, 0.4);
+}
+
+.caracteristica-icon svg {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.caracteristica-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.caracteristica-card:hover h3 {
+  color: #ff6600;
+}
+
+.caracteristica-card p {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .caracteristicas-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+  
+  .caracteristicas-cards-header h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .caracteristicas-cards-section {
+    padding: 60px 0;
+  }
+  
+  .caracteristicas-cards-header {
+    margin-bottom: 40px;
+  }
+  
+  .caracteristicas-cards-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .caracteristicas-cards-header p {
+    font-size: 1rem;
+  }
+  
+  .caracteristicas-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .caracteristica-card {
+    padding: 25px;
+  }
+  
+  .caracteristica-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .caracteristica-icon svg {
+    font-size: 1.8rem;
+  }
+  
+  .caracteristica-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .caracteristicas-cards-section {
+    padding: 40px 0;
+  }
+  
+  .caracteristicas-cards-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .caracteristicas-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .caracteristica-card {
+    padding: 20px;
+  }
+  
+  .caracteristica-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .caracteristica-icon svg {
+    font-size: 1.5rem;
+  }
+  
+  .caracteristica-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .caracteristica-card p {
+    font-size: 0.9rem;
+  }
+} 

@@ -117,3 +117,145 @@
   }
   
 }
+
+/* ========== ESTILOS ESPECÍFICOS PARA CASAS DE LUJO ========== */
+.casas-lujo-slider {
+  height: 100vh !important;
+  min-height: 600px;
+}
+
+.casas-lujo-slider .slider-swiper-slider,
+.casas-lujo-slider .slider-bg-slider {
+  height: 100vh !important;
+  min-height: 600px;
+}
+
+/* Mejorar calidad de imágenes para Casas de Lujo */
+.casas-lujo-slider img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+.casas-lujo-slider .slider-content-slider {
+  max-width: 900px;
+  padding: 0 30px;
+}
+
+.casas-lujo-slider .slider-title-slider {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-family: 'Georgia', serif;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.casas-lujo-slider .slider-subtitle-slider {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: #ff6600 !important;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.casas-lujo-slider .slider-description {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  margin-bottom: 32px;
+  line-height: 1.6;
+  color: #f0f0f0 !important;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.casas-lujo-slider .slide-cta {
+  background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%) !important;
+  color: white !important;
+  border: none;
+  padding: 16px 32px !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  border-radius: 50px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.casas-lujo-slider .slide-cta:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4) !important;
+  color: white !important;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ff8533 0%, #ff6600 100%) !important;
+}
+
+/* Navegación específica para Casas de Lujo */
+.casas-lujo-slider .swiper-button-next,
+.casas-lujo-slider .swiper-button-prev {
+  color: #ff6600;
+  background: rgba(255, 255, 255, 0.9);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.casas-lujo-slider .swiper-button-next:hover,
+.casas-lujo-slider .swiper-button-prev:hover {
+  background: #ff6600;
+  color: white;
+  transform: scale(1.1);
+}
+
+.casas-lujo-slider .swiper-button-next::after,
+.casas-lujo-slider .swiper-button-prev::after {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Paginación específica para Casas de Lujo */
+.casas-lujo-slider .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.casas-lujo-slider .swiper-pagination-bullet-active {
+  background: #ff6600;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Responsive para Casas de Lujo */
+@media (max-width: 768px) {
+  .casas-lujo-slider {
+    height: 70vh !important;
+    min-height: 500px;
+  }
+  
+  .casas-lujo-slider .slider-swiper-slider,
+  .casas-lujo-slider .slider-bg-slider {
+    height: 70vh !important;
+    min-height: 500px;
+  }
+  
+  .casas-lujo-slider .slider-content-slider {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .casas-lujo-slider {
+    height: 60vh !important;
+    min-height: 400px;
+  }
+  
+  .casas-lujo-slider .slider-swiper-slider,
+  .casas-lujo-slider .slider-bg-slider {
+    height: 60vh !important;
+    min-height: 400px;
+  }
+}

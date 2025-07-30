@@ -524,6 +524,86 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     boton: 'View more',
     proximamente: 'Coming Soon'
   },
+
+  // Translations for Luxury Houses
+  casas_lujo: {
+    // Hero Section
+    hero_title: 'Luxury Houses',
+    hero_subtitle: 'Exclusivity and elegance in every detail',
+    hero_description: 'Discover our premium properties designed for those seeking the best in quality and comfort',
+    
+    // Main characteristics
+    caracteristicas_titulo: 'Exclusivity in Every Detail',
+    caracteristicas_subtitulo: 'Outstanding Features',
+    caracteristicas_descripcion: 'Our luxury houses combine cutting-edge architectural design with premium materials and first-class finishes.',
+    
+    // Specific characteristics
+    caracteristica_1: 'Exclusive architectural design',
+    caracteristica_2: 'Imported premium materials',
+    caracteristica_3: 'Certified luxury finishes',
+    caracteristica_4: 'Integrated smart technology',
+    caracteristica_5: 'Spacious and functional spaces',
+    caracteristica_6: '24/7 security with surveillance',
+    
+    // Characteristics section with cards
+    caracteristicas_cards_titulo: 'Features of Our Luxury Houses',
+    caracteristicas_cards_subtitulo: 'Every detail designed for your comfort and elegance',
+    
+    // Characteristic cards
+    card_1_titulo: 'Exclusive Design',
+    card_1_desc: 'Modern architecture with clean lines and spaces that maximize functionality and comfort.',
+    card_2_titulo: 'Premium Materials',
+    card_2_desc: 'We use only the best imported and domestic materials to ensure durability and elegance.',
+    card_3_titulo: 'Advanced Technology',
+    card_3_desc: 'Integrated smart systems for lighting, security, and climate control.',
+    card_4_titulo: 'Luxury Finishes',
+    card_4_desc: 'Carefully selected details that elevate each space to a superior level of sophistication.',
+    
+    // Interiors section
+    interiores_titulo: 'Luxury Interiors',
+    interiores_subtitulo: 'Spaces that Inspire',
+    interiores_descripcion: 'Every corner of our luxury houses is designed to create unique and memorable environments.',
+    
+    // Interior characteristics
+    interior_1: 'Gourmet kitchens with central islands',
+    interior_2: 'Master bathrooms with jacuzzi and sauna',
+    interior_3: 'Walk-in closets with organizational system',
+    interior_4: 'Living room with double height',
+    interior_5: 'Private terrace with panoramic view',
+    interior_6: 'Integrated ambient audio system',
+    
+    // Experience
+    experiencia_titulo: 'Experience',
+    experiencia_subtitulo: 'Building Luxury Dreams',
+    experiencia_descripcion: 'Over 17 years of experience in building exclusive and high-end properties.',
+    
+    // Experts
+    expertos_titulo: 'Our Team of Experts',
+    expertos_subtitulo: 'Luxury Specialized Professionals',
+    expertos_descripcion: 'We have a team of experts dedicated to making your luxury house vision a reality.',
+    
+    // CTA
+    cta_titulo: 'Ready to live in luxury?',
+    cta_subtitulo: 'Discover your next dream house',
+    cta_descripcion: 'Schedule an exclusive appointment and discover our premium properties.',
+    cta_boton: 'Schedule Exclusive Appointment',
+    
+    // Breadcrumb
+    breadcrumb_inicio: 'Home',
+    breadcrumb_casas_lujo: 'Luxury Houses',
+    
+    // Slider
+    slider_slide1_title: 'Exclusivity and Elegance',
+    slider_slide1_subtitle: 'Unique designs that reflect your lifestyle',
+    slider_slide2_title: 'Premium Materials',
+    slider_slide2_subtitle: 'Superior quality in every construction detail',
+    slider_slide3_title: 'Integrated Technology',
+    slider_slide3_subtitle: 'Smart systems for maximum comfort',
+    slider_slide4_title: 'Spacious Areas',
+    slider_slide4_subtitle: 'Optimized layout for family comfort',
+    slider_slide5_title: 'Luxury Finishes',
+    slider_slide5_subtitle: 'Details that elevate every environment',
+  },
 };
 
 export default es; // Again, this should remain 'es' if you don't intend to change the variable name.

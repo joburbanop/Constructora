@@ -1,8 +1,8 @@
 // Imágenes optimizadas de Casas de Lugo
-import casasLugoLarge from '../assets/casas_lugo/casas_lugo_large.jpg';
-import casasLugoMedium from '../assets/casas_lugo/casas_lugo_medium.jpg';
-import casasLugoSmall from '../assets/casas_lugo/casas_lugo_small.jpg';
-import casasLugoThumbnail from '../assets/casas_lugo/casas_lugo_thumbnail.jpg';
+import casasLugoLarge from '../assets/casas_lujo/casas_lugo_large.jpg';
+import casasLugoMedium from '../assets/casas_lujo/casas_lugo_medium.jpg';
+import casasLugoSmall from '../assets/casas_lujo/casas_lugo_small.jpg';
+import casasLugoThumbnail from '../assets/casas_lujo/casas_lugo_thumbnail.jpg';
 
 // Configuración de imágenes optimizadas para Casas de Lugo
 export const casasLugoImages = {

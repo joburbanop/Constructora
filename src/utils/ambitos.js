@@ -1,9 +1,9 @@
 import imgColombia from '../assets/Colombia.webp';
 import imgUSA from '../assets/Usa.webp';
-import imgLujoLarge from '../assets/casas_lugo/casas_lugo_large.jpg';
-import imgLujoMedium from '../assets/casas_lugo/casas_lugo_medium.jpg';
-import imgLujoSmall from '../assets/casas_lugo/casas_lugo_small.jpg';
-import imgLujoThumbnail from '../assets/casas_lugo/casas_lugo_thumbnail.jpg';
+import imgLujoLarge from '../assets/casas_lujo/casas_lugo_large.jpg';
+import imgLujoMedium from '../assets/casas_lujo/casas_lugo_medium.jpg';
+import imgLujoSmall from '../assets/casas_lujo/casas_lugo_small.jpg';
+import imgLujoThumbnail from '../assets/casas_lujo/casas_lugo_thumbnail.jpg';
 
 // Función para obtener la imagen optimizada de Casas de Lujo según el dispositivo
 const getOptimizedLujoImage = () => {
