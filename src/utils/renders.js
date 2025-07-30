@@ -1,21 +1,21 @@
-import RenderQuintas from '../assets/render_quintas.png';
-import RenderSanMiguel from '../assets/render_san_miguel.png';
-import RenderRincon from '../assets/render_rincon.png';
-import CoralRender from '../assets/coral_render.png';
+// Imágenes optimizadas para el slider de Colombia
+import CanaDulceReal from '../assets/cana_dulce/cana_dulce_galeria1.webp';
+import PuertasSolReal from '../assets/puertas_sol/img1.webp';
+import RinconLagoReal from '../assets/rincon_lago/Rincon_lago_galeria1.webp';
 
 const renders = [
   {
-    image: RenderQuintas,
+    image: CanaDulceReal,
     title: 'slide1_title',
     subtitle: 'slide1_subtitle'
   },
   {
-    image: RenderSanMiguel,
+    image: PuertasSolReal,
     title: 'slide2_title',
     subtitle: 'slide2_subtitle'
   },
   {
-    image: RenderRincon,
+    image: RinconLagoReal,
     title: 'slide3_title',
     subtitle: 'slide3_subtitle'
   },

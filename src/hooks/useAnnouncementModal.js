@@ -13,31 +13,39 @@ const useAnnouncementModal = (announcementId, options = {}) => {
   const [hasShown, setHasShown] = useState(false);
 
   useEffect(() => {
-    const storageKey = `${localStorageKey}_${announcementId}`;
-    const hasShownBefore = localStorage.getItem(storageKey);
+    try {
+      const storageKey = `${localStorageKey}_${announcementId}`;
+      const hasShownBefore = localStorage.getItem(storageKey);
 
-    // Determinar si debe mostrar el modal
-    let shouldShow = false;
+      // Determinar si debe mostrar el modal
+      let shouldShow = false;
 
-    if (showOnFirstVisit && !hasShownBefore) {
-      shouldShow = true;
-    } else if (showOnReload) {
-      shouldShow = true;
-    }
+      if (showOnFirstVisit && !hasShownBefore) {
+        shouldShow = true;
+      } else if (showOnReload) {
+        shouldShow = true;
+      }
 
-    if (shouldShow) {
-      // Pequeño delay para asegurar que la página esté completamente cargada
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-        setHasShown(true);
-        
-        // Marcar como mostrado en localStorage
-        if (showOnFirstVisit) {
-          localStorage.setItem(storageKey, 'true');
-        }
-      }, 1000);
+      if (shouldShow) {
+        // Pequeño delay para asegurar que la página esté completamente cargada
+        const timer = setTimeout(() => {
+          setIsOpen(true);
+          setHasShown(true);
+          
+          // Marcar como mostrado en localStorage
+          if (showOnFirstVisit) {
+            try {
+              localStorage.setItem(storageKey, 'true');
+            } catch (storageError) {
+              console.warn('Error saving to localStorage:', storageError);
+            }
+          }
+        }, 1000);
 
-      return () => clearTimeout(timer);
+        return () => clearTimeout(timer);
+      }
+    } catch (error) {
+      console.error('Error in useAnnouncementModal effect:', error);
     }
   }, [announcementId, showOnFirstVisit, showOnReload, localStorageKey]);
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useIdioma } from '../context/IdiomaContext';
 import { useNavigate } from 'react-router-dom';
 import { MdLocationOn, MdHomeWork, MdLocationCity, MdStoreMallDirectory, MdSearch, MdClear } from 'react-icons/md';
@@ -54,79 +55,81 @@ const SearchFilters = () => {
   return (
     <section className="search-filters-section">
       <div className="search-filters-content">
-            {/* Título */}
-            <div className="search-title">
-             
-              <p>{t.search?.subtitulo || 'Selecciona la ubicación y el tipo de proyecto que deseas'}</p>
-            </div>
+        {/* Título */}
+        <div className="search-title">
+          <p>{t.search?.subtitulo || 'Selecciona la ubicación y el tipo de proyecto que deseas'}</p>
+        </div>
 
-            {/* Filtros */}
-            <div className="filters-row">
-              {/* Filtro de ubicación */}
-              <div className="filter-group">
-                <label className="filter-label">
-                  <MdLocationOn className="filter-icon" />
-                  {t.search?.ubicacion || 'Ubicación'}
-                </label>
-                <select
-                  value={filtros.ubicacion}
-                  onChange={(e) => handleFiltroChange('ubicacion', e.target.value)}
-                  className="filter-select"
-                >
-                  <option value="">{t.search?.seleccionar_ubicacion || 'Selecciona una ubicación'}</option>
-                  {ubicaciones.map((ubicacion) => (
-                    <option key={ubicacion.value} value={ubicacion.value}>
-                      {ubicacion.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Filtro de tipo de proyecto */}
-              <div className="filter-group">
-                <label className="filter-label">
-                  <MdHomeWork className="filter-icon" />
-                  {t.search?.tipo_proyecto || 'Tipo de proyecto'}
-                </label>
-                <select
-                  value={filtros.tipoProyecto}
-                  onChange={(e) => handleFiltroChange('tipoProyecto', e.target.value)}
-                  className="filter-select"
-                >
-                  <option value="">{t.search?.seleccionar_tipo || 'Selecciona un tipo'}</option>
-                  {tiposProyecto.map((tipo) => (
-                    <option key={tipo.value} value={tipo.value}>
-                      {tipo.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Botones */}
-              <div className="filter-buttons">
-                <button 
-                  onClick={handleBuscar}
-                  className="btn-buscar"
-                  disabled={!filtros.ubicacion && !filtros.tipoProyecto}
-                >
-                  <MdSearch />
-                  <span>{t.search?.buscar || 'Buscar'}</span>
-                </button>
-                
-                <button 
-                  onClick={handleLimpiar}
-                  className="btn-limpiar"
-                >
-                  <MdClear />
-                  <span>{t.search?.limpiar || 'Limpiar filtros'}</span>
-                </button>
-              </div>
-            </div>
-
-           
+        {/* Filtros */}
+        <div className="filters-row">
+          {/* Filtro de ubicación */}
+          <div className="filter-group">
+            <label className="filter-label">
+              <MdLocationOn className="filter-icon" />
+              {t.search?.ubicacion || 'Ubicación'}
+            </label>
+            <select
+              value={filtros.ubicacion}
+              onChange={(e) => handleFiltroChange('ubicacion', e.target.value)}
+              className="filter-select"
+            >
+              <option value="">{t.search?.seleccionar_ubicacion || 'Selecciona una ubicación'}</option>
+              {ubicaciones.map((ubicacion) => (
+                <option key={ubicacion.value} value={ubicacion.value}>
+                  {ubicacion.label}
+                </option>
+              ))}
+            </select>
           </div>
+
+          {/* Filtro de tipo de proyecto */}
+          <div className="filter-group">
+            <label className="filter-label">
+              <MdHomeWork className="filter-icon" />
+              {t.search?.tipo_proyecto || 'Tipo de proyecto'}
+            </label>
+            <select
+              value={filtros.tipoProyecto}
+              onChange={(e) => handleFiltroChange('tipoProyecto', e.target.value)}
+              className="filter-select"
+            >
+              <option value="">{t.search?.seleccionar_tipo || 'Selecciona un tipo'}</option>
+              {tiposProyecto.map((tipo) => (
+                <option key={tipo.value} value={tipo.value}>
+                  {tipo.label}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Botones */}
+          <div className="filter-buttons">
+            <button 
+              onClick={handleBuscar}
+              className="btn-buscar"
+              disabled={!filtros.ubicacion && !filtros.tipoProyecto}
+            >
+              <MdSearch />
+              <span>{t.search?.buscar || 'Buscar'}</span>
+            </button>
+            
+            <button 
+              onClick={handleLimpiar}
+              className="btn-limpiar"
+            >
+              <MdClear />
+              <span>{t.search?.limpiar || 'Limpiar filtros'}</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
   );
+};
+
+// PropTypes para validación de props (aunque este componente no recibe props externas)
+SearchFilters.propTypes = {
+  // Si en el futuro recibe props, se pueden agregar aquí
 };
 
 export default SearchFilters; 

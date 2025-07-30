@@ -480,10 +480,10 @@ videos: {
       boton: 'Agendar visita'
     }, 
   colombia: {
-      slide1_title: 'Tu nuevo comienzo\nempieza aquí',
-      slide1_subtitle: 'Explora nuestras casas seleccionadas para quienes buscan más que un lugar donde vivir.',
-      slide2_title: 'Encuentra la casa ideal',
-      slide2_subtitle: 'Explora fácilmente propiedades que se ajustan a lo que buscas: ubicación, tamaño, estilo y entorno.',
+      slide1_title: 'Lotes más grandes y con mejor precio',
+      slide1_subtitle: 'Facilidad de pago hasta 6 años',
+      slide2_title: 'Conozca las ventajas de construir su casa',
+      slide2_subtitle: 'Más amplia, mejor presupuesto, mejores acabados',
       slide3_title: 'Asesoría personalizada',
       slide3_subtitle: 'Nuestro equipo está listo para escucharte, responder tus dudas y acompañarte en todo el proceso.',
       boton: 'Contáctanos'

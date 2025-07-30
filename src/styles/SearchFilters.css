@@ -7,8 +7,6 @@
   min-height: 280px;
 }
 
-
-
 .search-filters-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -16,10 +14,6 @@
   position: relative;
   z-index: 1;
 }
-
-
-
-
 
 .search-filters-content {
   padding: 35px 100px;
@@ -297,8 +291,6 @@
     min-height: 38px;
   }
 }
-
-
 
 /* Estados de focus para accesibilidad */
 .filter-select:focus-visible {
