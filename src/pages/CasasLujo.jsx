@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import BreadcrumbSimple from "../components/BreadcrumbSimple";
 import OptimizedImage from "../components/OptimizedImage";
@@ -23,6 +24,7 @@ import '../styles/CasasLujo.css';
 
 const CasasLujo = () => {
   const { t } = useIdioma();
+  const navigate = useNavigate();
   
   // Hook personalizado para navegación de secciones
   const { activeSection, handleSectionNavigation } = useSectionNavigation([
@@ -39,26 +41,14 @@ const CasasLujo = () => {
     <ul className="nav-items">
       <li className={activeSection === 'inicio' ? "active" : ""}>
         <a
-          href="#"
+          href="/"
           onClick={(e) => {
             e.preventDefault();
-            handleSectionNavigation('inicio');
+            navigate("/", { state: { scrollToTop: true } });
           }}
         >
           <FaHome />
           {t.casas_lujo.breadcrumb_inicio}
-        </a>
-      </li>
-      <li className={activeSection === 'proyectos' ? "active" : ""}>
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            handleSectionNavigation('proyectos');
-          }}
-        >
-          <FaBuilding />
-          {t.dividers.proyectos}
         </a>
       </li>
       <li className={activeSection === 'expertos' ? "active" : ""}>
