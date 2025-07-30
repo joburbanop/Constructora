@@ -7,6 +7,7 @@ import proyectos from "../utils/proyectos";
 import { useIdioma } from '../context/IdiomaContext';
 import Button from '../components/Button';
 import ColombiaBenefits from '../components/ColombiaBenefits';
+
 import Footer from '../components/Footer';
 import Expertos from '../components/Expertos';
 import ContactoCTA from '../components/ContactoCTA';
@@ -157,7 +158,7 @@ const ProyectosColombia = () => {
         <Slider contenido={renders} namespace="colombia"/>
       </section>
       
-      {/* Sección de beneficios de Colombia */}
+      {/* Sección de experiencia */}
       <ColombiaBenefits />
       
       {/* Sección principal de proyectos */}
