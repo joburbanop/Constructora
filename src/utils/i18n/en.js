@@ -26,6 +26,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     casa_usa_2_desc: 'Elegant house with spacious areas and contemporary design.',
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose: '20 min from Tuluá - San José Village, San Pedro',
+    rozo_palmira:'Rozo, Palmira',
     puertas_sol_title: 'Puertas del Sol',
     puertas_sol_desc: 'Completely finished urbanization. Last lots of 8x15 mts (120 m²) with payment facilities. Equipped with gas station, service center, 21 commercial premises and supermarket.',
     caña_dulce_title: 'Caña Dulce',

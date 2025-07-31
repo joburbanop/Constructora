@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+ 
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -54,7 +54,7 @@
 
 /* ========== Logo ========== */
 .header__logo {
-  height: 50px;
+  height: 80px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -233,7 +233,7 @@
   }
 
   .header__logo {
-    height: 40px;
+    height: 60px;
     order: 2;
   }
 
@@ -308,7 +308,7 @@
   }
 
   .nav-items li a:hover {
-    background: #ff6600;
+   
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
@@ -349,7 +349,7 @@
   }
 
   .header__logo {
-    height: 35px;
+    height: 60px;
   }
 
   .header__lang-select select {

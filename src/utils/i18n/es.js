@@ -26,6 +26,7 @@ const es = {
     casa_usa_2_desc: 'Casa elegante con espacios amplios y diseño contemporáneo.',
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose:'20 min de Tuluá - Vereda San José, San Pedro',
+    rozo_palmira:'Rozo, Palmira',
     puertas_sol_title: 'Puertas del Sol',
     puertas_sol_desc: 'Urbanización completamente terminada. Últimos lotes de 8x15 mts (120 m²) con facilidad de pago. Equipada con gasolinera, centro de servicios, 21 locales comerciales y supermercado.',
     caña_dulce_title:'Caña Dulce',

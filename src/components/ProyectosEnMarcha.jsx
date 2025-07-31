@@ -49,11 +49,18 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
   return (
     <section className="proyectos-marcha">
      
-      <div className="proyectos-grid">
+      <div className="proyectos-grid-marcha">
         {listado.map((proy, idx) => (
-          <div className="proyecto-card" key={idx} data-proyecto={proy.titulo}>
-            <span className="proyecto-etiqueta" style={{background: proy.etiquetaColor}}>{t.proyectos[proy.tipo]}</span>
-            <div className="proyecto-img-wrap">
+          <div className="proyecto-card-marcha" key={idx} data-proyecto={proy.titulo}>
+            <div className='contenedor-etiqueta'>
+                 <span className="proyecto-etiqueta" 
+              style={{background: proy.etiquetaColor}}>{t.proyectos[proy.tipo]}
+
+            </span>
+
+            </div>
+           
+            <div className="proyecto-img-wrap-marcha">
               <img src={proy.imagen} alt={proy.titulo} className="proyecto-img-marcha" />
             </div>
             <div className="proyecto-info-marcha">

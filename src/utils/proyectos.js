@@ -1,6 +1,6 @@
-import Rincon from '../assets/colombia/rincon_colombia.webp';
-import SanMiguel from '../assets/colombia/dji_0014_colombia.webp';
-import Marbella from '../assets/colombia/img_20200130_colombia.webp';
+import Rincon from '../assets/rincon_lago/Logo_rincon.webp';
+import SanMiguel from '../assets/colombia/logo_san_miguel.webp';
+import Marbella from '../assets/marbella/logo_quintas_circulo.webp';
 import Coral from '../assets/coral.png';
 import casa_1 from '../assets/casas/casa_1.webp';
 import casa_2 from '../assets/casas/casa_2.webp';
@@ -30,7 +30,7 @@ const proyectos = [
     tipo: 'urbanizacion',
     icono: 'urbanizacion',
     iconoColor: '#222',
-    ubicacion: 'jamundi_colombia',
+    ubicacion: 'rozo_palmira',
     enlace: '#',
     etiquetaColor: '#ff914d'
   },

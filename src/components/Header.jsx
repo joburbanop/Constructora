@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/LOGO.png";
+import logo from "../assets/CYL_SAS_LLC.webp";
 import "../styles/Header.css";
 import { flags, languages } from "../utils/idiomas";
 import { useIdioma } from "../context/IdiomaContext";

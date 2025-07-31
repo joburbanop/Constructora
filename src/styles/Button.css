@@ -126,6 +126,7 @@
 .ambito-btn:disabled {
   cursor: not-allowed;
   opacity: 0.7;
+   background: #bdbdbd;
 }
 .ambito-btn.gray:disabled {
   cursor: not-allowed;

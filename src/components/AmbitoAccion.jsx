@@ -45,21 +45,21 @@ export default function AmbitoAccion() {
                 <span className="ambito-card-title">{t.ambito[card.title]}</span>
               </div>
               <p className="ambito-card-desc">{t.ambito[card.desc]}</p>
-              <Button
-                className={`ambito-btn ${color}`}
-                onClick={() => {
-                  if (card.title === 'colombia_title') {
-                    navigate('/proyectos-colombia');
-                  } else if (card.title === 'usa_title' || card.title === 'locales_title') {
-                    navigate('/proyectos-usa');
-                  } else if (card.title === 'lujo_title') {
-                    navigate('/casas-lujo');
-                  }
-                }}
-                disabled={false}
-              >
-                {t.ambito.boton || 'Ver más'}
-              </Button>
+                        <Button
+              className={`ambito-btn ${card.title === 'lujo_title' ? 'btn-grey' : color}`}
+              onClick={() => {
+                if (card.title === 'lujo_title') return; // Bloqueado
+                if (card.title === 'colombia_title') {
+                  navigate('/proyectos-colombia');
+                } else if (card.title === 'usa_title' || card.title === 'locales_title') {
+                  navigate('/proyectos-usa');
+                }
+              }}
+              disabled={card.title === 'lujo_title'}
+            >
+              {card.title === 'lujo_title' ? 'Próximamente' : t.ambito.boton || 'Ver más'}
+            </Button>
+
             </div>
           );
         })}
