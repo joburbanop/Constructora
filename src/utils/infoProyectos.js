@@ -47,6 +47,15 @@ import casaUsaSegunda15 from '../assets/casaUsaSegunda/casa_usa_segunda_15.webp'
 import casaUsaSegunda16 from '../assets/casaUsaSegunda/casa_usa_segunda_16.webp';
 import casaUsaSegunda17 from '../assets/casaUsaSegunda/casa_usa_segunda_17.webp';
 import casaUsaSegunda18 from '../assets/casaUsaSegunda/casa_usa_segunda_18.webp';
+import SanMiguelLogo from '../assets/SAN MIGUEL/San miguel/LOGO SAN MIGUEL PNG-01.webp';
+import sanMiguel1 from '../assets/SAN MIGUEL/sm f888.webp';
+import sanMiguel2 from '../assets/SAN MIGUEL/sm f88.webp';
+import sanMiguel3 from '../assets/SAN MIGUEL/locales F5.webp';
+import sanMiguel4 from '../assets/SAN MIGUEL/locales F3.webp';
+import sanMiguel5 from '../assets/SAN MIGUEL/SM F1.webp';
+import sanMiguel6 from '../assets/SAN MIGUEL/SM F7.webp';
+import sanMiguel7 from '../assets/SAN MIGUEL/SM F8.webp';
+import sanMiguel8 from '../assets/SAN MIGUEL/SM Ubi san miguel.webp';
 export const infoProyectos = {
   rincon: {
     id: 'rincon',
@@ -143,6 +152,21 @@ export const infoProyectos = {
         casaUsaSegunda17,
         casaUsaSegunda18
 
+    ]
+  },
+  san_miguel: {
+    id: 'san_miguel',
+    slug: 'san-miguel',
+    logo: SanMiguelLogo,
+    galeria: [
+        sanMiguel1,
+        sanMiguel2,
+        sanMiguel3,
+        sanMiguel4,
+        sanMiguel5,
+        sanMiguel6,
+        sanMiguel7,
+        sanMiguel8
     ]
   }
 };

@@ -24,7 +24,7 @@ export const navigateToSection = (seccion, navigate) => {
  */
 export const handleProyectoNavigation = (proyecto, navigate) => {
   // Proyectos próximamente - no hacer nada
-  if (proyecto.titulo === 'sanmiguel_titulo' || proyecto.titulo === 'marbella_titulo') {
+  if (proyecto.titulo === 'marbella_titulo') {
     return;
   }
   
@@ -65,8 +65,13 @@ if (proyecto.titulo === 'casa_usa_1_title') {
   setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
   return;
 }
-if (proyecto.titulo === 'casa_usa_2_title') {
+  if (proyecto.titulo === 'casa_usa_2_title') {
   navigate('/casa-usa-segunda');
+  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+  return;
+}
+  if (proyecto.titulo === 'sanmiguel_titulo') {
+  navigate('/san-miguel');
   setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
   return;
 }

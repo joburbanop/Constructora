@@ -18,6 +18,10 @@ import puertas_sol2 from '../assets/puertas_sol/img2.webp';
 import puertas_sol3 from '../assets/puertas_sol/img3.webp';
 import puertas_sol4 from '../assets/puertas_sol/img4.webp';
 import puertas_sol5 from '../assets/puertas_sol/img5.webp';
+import sanMiguel1 from '../assets/SAN MIGUEL/sm f888.webp';
+import sanMiguel2 from '../assets/SAN MIGUEL/sm f88.webp';
+import sanMiguel3 from '../assets/SAN MIGUEL/locales F5.webp';
+import sanMiguel4 from '../assets/SAN MIGUEL/locales F3.webp';
 
 const datosRinconLago = [
   { imagen: img1, clave: 'elemento1' },
@@ -50,9 +54,17 @@ const datosPuertasSol = [
   { imagen: puertas_sol5, clave: 'puertas_sol5' },
 ];
 
+const datosSanMiguel = [
+  { imagen: sanMiguel1, clave: 'san_miguel1' },
+  { imagen: sanMiguel2, clave: 'san_miguel2' },
+  { imagen: sanMiguel3, clave: 'san_miguel3' },
+  { imagen: sanMiguel4, clave: 'san_miguel4' },
+];
+
 export default {
   datosRinconLago,
   datosCoralMall,
   datosCanaDulce,
-  datosPuertasSol
+  datosPuertasSol,
+  datosSanMiguel
 };

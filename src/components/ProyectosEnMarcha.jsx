@@ -24,7 +24,6 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
   const isProyectoProximamente = (titulo) => {
     // Proyectos próximamente (urbanizaciones de lujo + los nuevos)
     const proyectosProximamente = [
-      'sanmiguel_titulo', 
       'marbella_titulo',    // Urbanización abierta
       'palmeras_title',     // Palmeras de la Italia
       'cana_title'          // Caña Brava

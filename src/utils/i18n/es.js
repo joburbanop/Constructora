@@ -15,7 +15,7 @@ const es = {
     rincon_titulo: 'Exclusivo condominio campestre',
     rincon_desc: 'Es momento de separar su lote en Rincón del Lago. Financiación 5 años. Programe la construcción de su casa o contrate a nuestra constructora y edifique su casa con el mejor presupuesto.',
     sanmiguel_titulo: 'Urbanización abierta',
-    sanmiguel_desc: 'Ubicada en Rozo, sobre la vía que conduce a Cerrito.',
+    sanmiguel_desc: 'Ubicada en Rozo, sobre la vía que conduce a Cerrito. Una excelente alternativa para construir casa a su gusto en medio de un entorno campestre.',
     marbella_titulo: 'Urbanización abierta',
     marbella_desc: 'Para construir a su gusto. Lotes más amplios y con el mejor precio de la zona. Sur de Jamundí',
     coral_titulo: 'Locales comerciales',
@@ -26,6 +26,7 @@ const es = {
     casa_usa_2_desc: 'Casa elegante con espacios amplios y diseño contemporáneo.',
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose:'20 min de Tuluá - Vereda San José, San Pedro',
+    rozo_palmira:'Rozo, Palmira',
     puertas_sol_title: 'Puertas del Sol',
     puertas_sol_desc: 'Urbanización completamente terminada. Últimos lotes de 8x15 mts (120 m²) con facilidad de pago. Equipada con gasolinera, centro de servicios, 21 locales comerciales y supermercado.',
     caña_dulce_title:'Caña Dulce',
@@ -37,7 +38,7 @@ const es = {
 
     usa: 'Estados Unidos',
     colombia: 'Colombia',
-    cope_coral:'Cope Coral, Florida',
+    cope_coral:'Cape Coral, Florida',
     boton: 'Ver más',
     beneficio_titulo1: 'Somos',
     beneficio_titulo2: 'constructores con 17 años de trayectoria',
@@ -159,7 +160,7 @@ coral_detalle: {
   titulo: 'Locales comerciales en Cape Coral',
   subtitulo: 'La mejor oportunidad para invertir con seguridad',
   subtitulo_2: 'LOCAL COMERCIAL',
-  descripcion: 'Este complejo comercial se ubica estratégicamente en Lehigh Acres a 19 kilómetros al este de Fort Myers y cuenta con una comunidad diversa con una población de aproximadamente 200.000 habitantes.',
+  descripcion: 'Este complejo comercial se ubica estratégicamente en Cape Coral a 19 kilómetros al este de Fort Myers y cuenta con una comunidad diversa con una población de aproximadamente 200.000 habitantes.',
   descripcion_1: 'Para atender la creciente demanda de productos y servicios de la zona, se desarrolla este moderno mall con 10 locales comerciales desde hasta 959 SQ FT hasta 1277 SQ FT con una amplia bahía de estacionamiento sobre  300 Chiquita  Boulevard.',
   descripcion_2: 'Inversión y valorización aseguradas.',
 },
@@ -187,7 +188,7 @@ casa_usa_primera_detalle:{
     espacios_titulo:'',
     espacios_desc:'',
     titulo:'Nueva vivienda unifamiliar ',
-    subtitulo:'Lehigh Acres, FL',
+    subtitulo:'Cape Coral, Florida',
     subtitulo_2:'',
     descripcion:'Bienvenido a la casa de sus sueños en una zona protegida contra inundaciones, diseñada para resistir incluso los huracanes más fuertes. Esta elegante y lujosa casa unifamiliar cuenta con 3 amplios dormitorios, 3 baños y un garaje para 2 autos con amplio espacio para todas sus necesidades. Las encimeras de granito, los electrodomésticos y los pisos le dan a la casa un aspecto moderno y elegante, mientras que la sala flexible ofrece versatilidad como estudio o dormitorio adicional.',
     descripcion_1:'Las amplias puertas y ventanas a prueba de impactos inundan la casa de luz natural y ofrecen impresionantes vistas de los alrededores. Pero lo que realmente distingue a esta casa es su diseño preparado para resistir huracanes gracias a su sólida estructura y techo plano. No solo tendrá tranquilidad durante la temporada de tormentas, sino que también ahorrará en seguros gracias a la resistencia de la casa.',
@@ -197,11 +198,27 @@ casa_usa_primera_detalle:{
     espacios_titulo:'',
     espacios_desc:'',
     titulo:'Nueva vivienda unifamiliar ',
-    subtitulo:'Lehigh Acres, FL',
+    subtitulo:'Cape Coral, Florida',
     subtitulo_2:'',
     descripcion:'Lujosa casa unifamiliar con 3+1 amplios dormitorios, 3 baños y un garaje para 2 autos. Encimeras de granito, electrodomésticos y pisos de alta calidad le dan a la casa un aspecto elegante Amplias puertas y ventanas a prueba de impactos inundan la casa de luz natural y ofrecen impresionantes vistas de los alrededores. Preparada para resistir huracanes gracias a su sólida estructura y techo plano.',
     descripcion_1:'',
     descripcion_2:''
+  },
+  san_miguel_detalle: {
+    espacios_titulo: 'Urbanización abierta',
+    espacios_desc: 'Lotes desde 150 mts² en entorno campestre',
+    titulo: 'San Miguel',
+    subtitulo: 'Urbanización en Rozo - Palmira',
+    subtitulo_2: 'UBICACIÓN ESTRATÉGICA',
+    descripcion: 'San Miguel es una urbanización ubicada en Rozo - Palmira, vereda La Acequia, un excelente espacio con lotes desde 150 mts² (10 mts de frente x 15 mts de fondo), una excelente alternativa para construir casa a su gusto en medio de un entorno campestre, cerca del acua parque Tardes Caleñas. Sin pago de administración ni cuotas de manejo.',
+    descripcion_1: 'Ubicación estratégica sobre la via Rozo - Cerrito a 5 minutos del parque principal y a pocos kilómetros del aeropuerto internacional Alfonso Bonilla Aragón. La zona esta rodeada de importantes vías que permiten una rápida conexión con Cali, Palmira, Yumbo y Cerrito.',
+    descripcion_2: 'San Miguel contará con un frente comercial sobre la vía principal con locales para negocio y estación de servicios. Consulte disponibilidad de lotes comerciales.',
+    espacios: [
+      'ubicacion',
+      'lotes',
+      'comercial',
+      'servicios'
+    ]
   },
   textGaleria:{
     titulo:'Galería del proyecto'
@@ -236,6 +253,14 @@ casa_usa_primera_detalle:{
     precio_desc: 'Facilidad de pago a 12 meses. Consulte precios.',
     ubicacion: 'Ubicación',
     ubicacion_desc: 'Km 2 vía Jamundí - Potrerito, Sur de Cali – Colombia.',
+  },
+  san_miguel: {
+    area: 'Área',
+    area_desc: 'Lotes desde 150 mts² (10x15 mts)',
+    precio: 'Precio',
+    precio_desc: 'Consulte disponibilidad y precios.',
+    ubicacion: 'Ubicación',
+    ubicacion_desc: 'Rozo - Palmira, vereda La Acequia.',
   },
   proyecto2: {
     slide_area_titulo: 'Área útil',
@@ -308,28 +333,46 @@ info_ZigZag_cana_dulce:{
     descripcion: "Portería 24/7, recepción elegante, administración profesional y UTB. Agende su cita exclusiva: 3204210000"
   }
 },
-info_ZigZag_puertas_sol:{
-  puertas_sol1: {
-    titulo: "Urbanización completamente terminada",
-    descripcion: "Ubicada en el kilómetro 2 vía Jamundí - Potrerito a solo 20 minutos del sur de Cali. Proyecto entregado y listo para inversión."
+  info_ZigZag_puertas_sol:{
+    puertas_sol1: {
+      titulo: "Urbanización completamente terminada",
+      descripcion: "Ubicada en el kilómetro 2 vía Jamundí - Potrerito a solo 20 minutos del sur de Cali. Proyecto entregado y listo para inversión."
+    },
+    puertas_sol2: {
+      titulo: "Últimos lotes de 8x15 mts (120 m²)",
+      descripcion: "Facilidad de pago a 12 meses. Excelentes vías de acceso y todos los servicios públicos funcionales para su comodidad."
+    },
+    puertas_sol3: {
+      titulo: "Gasolinera y centro de servicios",
+      descripcion: "Equipada con gasolinera, centro de servicios, 21 locales comerciales, supermercado y plazoleta de comidas para su conveniencia."
+    },
+    puertas_sol4: {
+      titulo: "6 zonas verdes y espacios recreativos",
+      descripcion: "Disfrute de 6 zonas verdes distribuidas estratégicamente para crear un ambiente agradable y familiar en la urbanización."
+    },
+    puertas_sol5: {
+      titulo: "Inversión comercial y residencial",
+      descripcion: "Ideal para inversión comercial y residencial con alta rentabilidad. Agende su visita exclusiva: 3204210000"
+    }
   },
-  puertas_sol2: {
-    titulo: "Últimos lotes de 8x15 mts (120 m²)",
-    descripcion: "Facilidad de pago a 12 meses. Excelentes vías de acceso y todos los servicios públicos funcionales para su comodidad."
+  info_ZigZag_san_miguel: {
+    san_miguel1: {
+      titulo: "Ubicación Estratégica",
+      descripcion: "San Miguel está ubicado en Rozo - Palmira, vereda La Acequia, a solo 5 minutos del parque principal y a pocos kilómetros del aeropuerto internacional Alfonso Bonilla Aragón."
+    },
+    san_miguel2: {
+      titulo: "Lotes desde 150 mts²",
+      descripcion: "Lotes desde 150 mts² (10 mts de frente x 15 mts de fondo), una excelente alternativa para construir casa a su gusto en medio de un entorno campestre."
+    },
+    san_miguel3: {
+      titulo: "Frente Comercial",
+      descripcion: "San Miguel contará con un frente comercial sobre la vía principal con locales para negocio y estación de servicios. Consulte disponibilidad de lotes comerciales."
+    },
+    san_miguel4: {
+      titulo: "Conexión Rápida",
+      descripcion: "La zona está rodeada de importantes vías que permiten una rápida conexión con Cali, Palmira, Yumbo y Cerrito."
+    }
   },
-  puertas_sol3: {
-    titulo: "Gasolinera y centro de servicios",
-    descripcion: "Equipada con gasolinera, centro de servicios, 21 locales comerciales, supermercado y plazoleta de comidas para su conveniencia."
-  },
-  puertas_sol4: {
-    titulo: "6 zonas verdes y espacios recreativos",
-    descripcion: "Disfrute de 6 zonas verdes distribuidas estratégicamente para crear un ambiente agradable y familiar en la urbanización."
-  },
-  puertas_sol5: {
-    titulo: "Inversión comercial y residencial",
-    descripcion: "Ideal para inversión comercial y residencial con alta rentabilidad. Agende su visita exclusiva: 3204210000"
-  }
-},
 imagenes_add:{
   mapa_rincon:'Mapa de obra'
 
@@ -480,10 +523,10 @@ videos: {
       boton: 'Agendar visita'
     }, 
   colombia: {
-      slide1_title: 'Tu nuevo comienzo\nempieza aquí',
-      slide1_subtitle: 'Explora nuestras casas seleccionadas para quienes buscan más que un lugar donde vivir.',
-      slide2_title: 'Encuentra la casa ideal',
-      slide2_subtitle: 'Explora fácilmente propiedades que se ajustan a lo que buscas: ubicación, tamaño, estilo y entorno.',
+      slide1_title: 'Lotes más grandes y con mejor precio',
+      slide1_subtitle: 'Facilidad de pago hasta 6 años',
+      slide2_title: 'Conozca las ventajas de construir su casa',
+      slide2_subtitle: 'Más amplia, mejor presupuesto, mejores acabados',
       slide3_title: 'Asesoría personalizada',
       slide3_subtitle: 'Nuestro equipo está listo para escucharte, responder tus dudas y acompañarte en todo el proceso.',
       boton: 'Contáctanos'
@@ -548,9 +591,9 @@ videos: {
     coral_titulo: 'Locales comerciales, chiquita BLVD, FL',
     coral_desc: '',
     casa_usa_1_title: 'Casa unifamiliar en venta',
-    casa_usa_1_desc: 'Nueva casa unifamiliar en venta · Lehigh Acres, FL',
-    casa_usa_2_title: 'Propiedad vendida',
-    casa_usa_2_desc: 'Casa unifamiliar vendida. Lehigh Acres, FL',
+    casa_usa_1_desc: 'Nueva casa unifamiliar en venta Cape Coral , FL',
+    casa_usa_2_title: 'Casa unifamiliar en venta',
+    casa_usa_2_desc: 'Casa unifamiliar en venta Cape Coral, FL',
     boton: 'Ver más',
     proximamente: 'Próximamente'
   },

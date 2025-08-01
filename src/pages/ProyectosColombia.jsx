@@ -29,7 +29,7 @@ const ProyectosColombia = () => {
   const [tooltipVisible, setTooltipVisible] = useState(null);
   
   // Filtrar proyectos de Colombia
-  const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia' || p.ubicacion === 'san_jose');
+  const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia' || p.ubicacion === 'san_jose' || p.ubicacion === 'rozo_palmira');
   
   // Usar el primer render como imagen de hero
   const heroImg = renders[0]?.imagen;
@@ -38,7 +38,6 @@ const ProyectosColombia = () => {
   const isProyectoProximamente = (titulo) => {
     // Proyectos próximamente (los que no tienen enlace o tienen enlace '#')
     const proyectosProximamente = [
-      'sanmiguel_titulo',    // San Miguel Urbanización
       'marbella_titulo',     // Quintas de Marbella
       'palmeras_title',      // Palmeras de la Italia
       'cana_title'           // Caña Brava
@@ -157,9 +156,6 @@ const ProyectosColombia = () => {
         <Slider contenido={renders} namespace="colombia"/>
       </section>
       
-      {/* Sección de beneficios de Colombia */}
-      <ColombiaBenefits />
-      
       {/* Sección principal de proyectos */}
       <section id="proyectos" className="proyectos-section">
         <div className="proyectos-header">
@@ -224,6 +220,9 @@ const ProyectosColombia = () => {
           })}
         </div>
       </section>
+      
+      {/* Sección de beneficios de Colombia */}
+      <ColombiaBenefits />
     
       <div id="expertos" className="expertos-section-colombia">
         <Expertos />

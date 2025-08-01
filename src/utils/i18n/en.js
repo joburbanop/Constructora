@@ -15,7 +15,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     rincon_titulo: 'Exclusive country condominium',
     rincon_desc: 'It\'s time to secure your lot in Rincón del Lago. 5-year financing. Schedule your house construction or hire our construction company and build your house with the best budget.',
     sanmiguel_titulo: 'Open urbanization',
-    sanmiguel_desc: 'Located in Rozo, on the road leading to Cerrito.',
+    sanmiguel_desc: 'Located in Rozo, on the road leading to Cerrito. An excellent alternative to build your house to your liking in a countryside environment.',
     marbella_titulo: 'Open urbanization',
     marbella_desc: 'To build to your liking. Larger lots with the best price in the area. South of Jamundí',
     coral_titulo: 'Commercial units',
@@ -26,6 +26,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     casa_usa_2_desc: 'Elegant house with spacious areas and contemporary design.',
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose: '20 min from Tuluá - San José Village, San Pedro',
+    rozo_palmira:'Rozo, Palmira',
     puertas_sol_title: 'Puertas del Sol',
     puertas_sol_desc: 'Completely finished urbanization. Last lots of 8x15 mts (120 m²) with payment facilities. Equipped with gas station, service center, 21 commercial premises and supermarket.',
     caña_dulce_title: 'Caña Dulce',
@@ -158,7 +159,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     titulo: 'Commercial units in Cape Coral',
     subtitulo: 'The best opportunity to invest securely',
     subtitulo_2: 'COMMERCIAL UNIT',
-    descripcion: 'This commercial complex is strategically located in Lehigh Acres, 19 kilometers east of Fort Myers, and boasts a diverse community with a population of approximately 200,000 inhabitants.',
+    descripcion: 'This commercial complex is strategically located in Cape Coral, 19 kilometers east of Fort Myers, and boasts a diverse community with a population of approximately 200,000 inhabitants.',
     descripcion_1: 'To meet the growing demand for products and services in the area, this modern mall is being developed with 10 commercial units ranging from 959 SQ FT to 1277 SQ FT, with ample parking space on 300 Chiquita Boulevard.',
     descripcion_2: 'Guaranteed investment and appreciation.',
   },
@@ -187,21 +188,37 @@ const es = { // Should remain 'es' if you are keeping original variable names or
   espacios_titulo: '',
   espacios_desc: '',
   titulo: 'New Single-Family Home',
-  subtitulo: 'Lehigh Acres, FL',
+  subtitulo: 'Cape Coral, Florida',
   subtitulo_2: '',
   descripcion: 'Welcome to your dream home in a flood-protected area, designed to withstand even the strongest hurricanes. This elegant and luxurious single-family home features 3 spacious bedrooms, 3 bathrooms, and a 2-car garage with plenty of space for all your needs. Granite countertops, appliances, and flooring give the home a modern and stylish look, while the flexible room offers versatility as an office or additional bedroom.',
   descripcion_1: "Wide impact-resistant doors and windows flood the house with natural light and offer stunning views of the surroundings. But what really sets this home apart is its hurricane-ready design, thanks to its solid structure and flat roof. Not only will you have peace of mind during storm season, but you’ll also save on insurance thanks to the home's durability.'",
   descripcion_2: 'The seller is even willing to provide blueprints as proof of the home\’\s resilience. If you want to fully customize this house, upgrades are available at a minimal cost, such as installing a pool, a fence, or enclosing the flexible room.'
 },
- casa_usa_segunda_detalle:{
+   casa_usa_segunda_detalle:{
     espacios_titulo:'',
     espacios_desc:'',
     titulo:'New Single-Family Home',
-    subtitulo:'Lehigh Acres, FL',
+    subtitulo:'Cape Coral, Florida',
     subtitulo_2:'',
     descripcion:'Luxurious single-family home with 3+1 spacious bedrooms, 3 bathrooms, and a 2-car garage. Granite countertops, high-quality appliances, and flooring give the home an elegant look. Wide impact-resistant doors and windows flood the house with natural light and offer stunning views of the surroundings. Hurricane-ready thanks to its solid structure and flat roof.',
     descripcion_1:'',
     descripcion_2:''
+  },
+  san_miguel_detalle: {
+    espacios_titulo: 'Open urbanization',
+    espacios_desc: 'Lots from 150 m² in countryside environment',
+    titulo: 'San Miguel',
+    subtitulo: 'Urbanization in Rozo - Palmira',
+    subtitulo_2: 'STRATEGIC LOCATION',
+    descripcion: 'San Miguel is an urbanization located in Rozo - Palmira, La Acequia area, an excellent space with lots from 150 m² (10 m front x 15 m depth), an excellent alternative to build your house to your liking in a countryside environment, near the Tardes Caleñas water park. No administration fees or management fees.',
+    descripcion_1: 'Strategic location on the Rozo - Cerrito road, 5 minutes from the main park and a few kilometers from the Alfonso Bonilla Aragón International Airport. The area is surrounded by important roads that allow quick connection with Cali, Palmira, Yumbo and Cerrito.',
+    descripcion_2: 'San Miguel will have a commercial front on the main road with business premises and service station. Inquire about commercial lot availability.',
+    espacios: [
+      'location',
+      'lots',
+      'commercial',
+      'services'
+    ]
   },
    textGaleria:{
     titulo:'Project Gallery'
@@ -230,6 +247,14 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       ubicacion: 'Location',
       ubicacion_desc: 'San José area, San Pedro – Colombia.'
 
+    },
+    san_miguel: {
+      area: 'Area',
+      area_desc: 'Lots from 150 m² (10x15 mts)',
+      precio: 'Price',
+      precio_desc: 'Inquire about availability and prices.',
+      ubicacion: 'Location',
+      ubicacion_desc: 'Rozo - Palmira, La Acequia area.',
     },
     proyecto2: {
       slide_area_titulo: 'Usable area',
@@ -448,12 +473,12 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     boton: 'Schedule visit'
   },
     colombia: {
-      slide1_title: 'A new chapter begins here',
-      slide1_subtitle: 'Explore our handpicked homes for those seeking more than just a place to live.',
-      slide2_title: 'Find the ideal home',
-      slide2_subtitle: 'Easily browse properties that match your needs: location, size, style, and surroundings.',
+      slide1_title: 'Bigger lots at better prices',
+      slide1_subtitle: 'Flexible payment plans up to 6 years',
+      slide2_title: 'Discover the benefits of building your own home',
+      slide2_subtitle: 'More space, better budget, higher-quality finishes',
       slide3_title: 'Personalized guidance',
-      slide3_subtitle: 'Our team is ready to listen, answer your questions, and support you throughout the process.',
+      slide3_subtitle: 'Our team is ready to listen, answer your questions, and support you throughout the entire process.',
       boton: 'Contact us'
 },
   casa_primera_usa: {
@@ -477,6 +502,26 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     
   },
 
+  },
+  info_ZigZag_san_miguel: {
+    titulo: "San Miguel Features",
+    subtitulo: "Discover what makes this urbanization special",
+    san_miguel1: {
+      titulo: "Strategic Location",
+      descripcion: "San Miguel is located in Rozo - Palmira, La Acequia area, just 5 minutes from the main park and a few kilometers from the Alfonso Bonilla Aragón International Airport."
+    },
+    san_miguel2: {
+      titulo: "Lots from 150 m²",
+      descripcion: "Lots from 150 m² (10 m front x 15 m depth), an excellent alternative to build your house to your liking in a countryside environment."
+    },
+    san_miguel3: {
+      titulo: "Commercial Front",
+      descripcion: "San Miguel will have a commercial front on the main road with business premises and service station. Inquire about commercial lot availability."
+    },
+    san_miguel4: {
+      titulo: "Quick Connection",
+      descripcion: "The area is surrounded by important roads that allow quick connection with Cali, Palmira, Yumbo and Cerrito."
+    }
   },
 
   dividers: {
@@ -515,15 +560,17 @@ const es = { // Should remain 'es' if you are keeping original variable names or
 },
 
   proyectos_card_simple: {
-    coral_title: 'Commercial units, Chiquita BLVD, FL',
-    coral_desc: 'Luxurious single-family home with 3+1 spacious bedrooms, 3 bathrooms, and a 2-car garage. Granite countertops, appliances, and high-quality floors give the house an elegant look. Large impact-resistant doors and windows flood the house with natural light and offer impressive views of the surroundings. Prepared to withstand hurricanes thanks to its solid structure and flat roof.',
+    coral_titulo: 'Commercial spaces, Chiquita BLVD, FL',
+    coral_desc: '',
     casa_usa_1_title: 'Single-family home for sale',
-    casa_usa_1_desc: 'New single-family home for sale · Lehigh Acres, FL',
-    casa_usa_2_title: 'Property sold',
-    casa_usa_2_desc: 'Single-family home sold. Lehigh Acres, FL',
-    boton: 'View more',
-    proximamente: 'Coming Soon'
+    casa_usa_1_desc: 'New single-family home for sale in Cape Coral, FL',
+    casa_usa_2_title: 'Single-family home for sale',
+    casa_usa_2_desc: 'Single-family home for sale in Cape Coral, FL',
+    boton: 'See more',
+    proximamente: 'Coming soon'
+
   },
 };
 
 export default es; // Again, this should remain 'es' if you don't intend to change the variable name.
+

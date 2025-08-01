@@ -30,8 +30,8 @@ const proyectos = [
     tipo: 'urbanizacion',
     icono: 'urbanizacion',
     iconoColor: '#222',
-    ubicacion: 'jamundi_colombia',
-    enlace: '#',
+    ubicacion: 'rozo_palmira',
+    enlace: '/san-miguel',
     etiquetaColor: '#ff914d'
   },
   {
