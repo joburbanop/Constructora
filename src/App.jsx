@@ -5,8 +5,8 @@ import ProyectosUSA from './pages/ProyectosUSA';
 import InfoRinconLago from "./pages/InfoRinconLago";
 import InfoCoralMole from "./pages/InfoCoralMole";
 import InfoCanaBrava from "./pages/InfoCanaBrava";
-import InfoCanaDulce from "./pages/InfoCanaDulce";
 import InfoPalmerasItalia from "./pages/InfoPalmerasItalia";
+import InfoCanaDulce from "./pages/InfoCanaDulce";
 import InfoPuertasSol from "./pages/InfoPuertasSol";
 import InfoSanMiguel from "./pages/InfoSanMiguel";
 import CasaUsaPrimera from "./pages/CasaUsaPrimera";
@@ -37,6 +37,7 @@ export default function App() {
         <Route path="/rincon-del-lago" element={<InfoRinconLago />} />
         <Route path="/coral-mall" element={<InfoCoralMole />} />
         <Route path="/cana-brava" element={<InfoCanaBrava/>} />
+        <Route path="/palmeras-italia" element={<InfoPalmerasItalia/>} />
         <Route path="/cana-dulce" element={<InfoCanaDulce/>} />
         <Route path="/puertas-sol" element={<InfoPuertasSol/>} />
         <Route path="/san-miguel" element={<InfoSanMiguel/>} />

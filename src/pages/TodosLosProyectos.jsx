@@ -120,8 +120,7 @@ const TodosLosProyectos = () => {
   });
 
   const isProyectoProximamente = (titulo) => {
-    return titulo === 'marbella_titulo' || 
-           titulo === 'palmeras_title';
+    return titulo === 'marbella_titulo';
   };
 
   const handleSectionNavigation = (sectionId) => {

@@ -68,6 +68,10 @@ import canaBrava8 from '../assets/cana_brava/DJI_0266.webp';
 import canaBrava9 from '../assets/cana_brava/DJI_0273.webp';
 import canaBrava10 from '../assets/cana_brava/DJI_0281.webp';
 import canaBrava11 from '../assets/cana_brava/DJI_0794.webp';
+import PalmerasItaliaLogo from '../assets/palmeras_italia/palmeras_italia_logo.webp';
+import palmerasItalia1 from '../assets/palmeras_italia/Photo_1080296007_DJI_583_jpg_5421548_0_20221029161656_photo_original 3.jpg.webp';
+import palmerasItalia2 from '../assets/palmeras_italia/Photo_1080296018_DJI_594_jpg_6774280_0_2022102916282_photo_original 2.jpg.webp';
+import palmerasItalia3 from '../assets/palmeras_italia/Photo_1080296019_DJI_595_jpg_6024271_0_20221029162818_photo_original 2.jpg.webp';
 export const infoProyectos = {
   rincon: {
     id: 'rincon',
@@ -197,6 +201,16 @@ export const infoProyectos = {
         canaBrava9,
         canaBrava10,
         canaBrava11
+    ]
+  },
+  palmeras_italia: {
+    id: 'palmeras_italia',
+    slug: 'palmeras-italia',
+    logo: PalmerasItaliaLogo,
+    galeria: [
+        palmerasItalia1,
+        palmerasItalia2,
+        palmerasItalia3
     ]
   }
 };

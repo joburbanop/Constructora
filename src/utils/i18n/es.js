@@ -33,7 +33,7 @@ const es = {
     caña_dulce_title:'Caña Dulce',
     caña_dulce_desc:'Exclusiva urbanización campestre de 46 lotes. Últimos lotes disponibles de 12x21 mts. Zona social completamente equipada con piscina, jacuzzi, sauna y salón social de 300 m².',
     palmeras_title:'Palmeras de la Italia',
-    palmeras_desc:'Conjunto finalizado para descanso y bienestar.',
+    palmeras_desc:'Condominio exclusivo pensado para el descanso y la vida tranquila, rodeado de naturaleza. Lotes de 150 m² en conjunto cerrado con portería y vigilancia 24 horas, piscina, parque infantil, polideportivo y salón de eventos. Consulte disponibilidad y precios.',
     cana_title:'Caña Brava ',
     cana_desc:'Exclusiva urbanización campestre en San Pedro con lotes de 250 mts² en conjunto cerrado con portería y vigilancia 24 horas. Consulte disponibilidad y precios.',
 
@@ -239,11 +239,32 @@ casa_usa_primera_detalle:{
       'cerrado'
     ]
   },
+  palmeras_italia_detalle: {
+    espacios_titulo: 'Condominio exclusivo',
+    espacios_desc: 'Condominio pensado en el descanso y vida tranquila',
+    titulo: 'Palmeras de la Italia',
+    subtitulo: 'Condominio exclusivo en Jamundí',
+    subtitulo_2: 'PRIMERA ETAPA EJECUTADA',
+    descripcion: 'Palmeras de la Italia Primera Etapa ejecutado en asocio con Lopez Grupo Constructor es un exclusivo condominio pensado en el descanso y vida tranquila en medio de verde paisaje del Valle del Cauca.',
+    descripcion_1: 'Se ubica en la vía Paso de la Bolsa a solo 10 minutos del centro de Jamundí. Lotes de 150 mts2 en conjunto cerrado con portería y vigilancia 24 horas.',
+    descripcion_2: 'Zona social con piscina para adultos y niños, parque infantil, polideportivo y salón de eventos doble nivel. Consulte disponibilidad y precios.',
+    espacios: [
+      'porteria',
+      'vigilancia',
+      'piscina',
+      'parque',
+      'polideportivo',
+      'salon'
+    ]
+  },
   textGaleria:{
     titulo:'Galería del proyecto'
   },
   textMapa:{
     titulo:'Ubicación'
+  },
+  video: {
+    titulo: 'Video del Proyecto'
   },
  // informaciòn componente AreaPrecioUbic.jsx
  info_AreaPrecioUbic: {
@@ -288,6 +309,14 @@ casa_usa_primera_detalle:{
           precio_desc: 'Consulte disponibilidad y precios',
     ubicacion: 'Ubicación',
     ubicacion_desc: 'Vereda San José, San Pedro – Colombia.',
+  },
+  palmeras_italia: {
+    area: 'Área',
+    area_desc: 'Lotes de 150 mts²',
+    precio: 'Precio',
+    precio_desc: 'Consulte disponibilidad y precios.',
+    ubicacion: 'Ubicación',
+    ubicacion_desc: 'Vía Paso de la Bolsa, Jamundí – Colombia.',
   },
   proyecto2: {
     slide_area_titulo: 'Área útil',
@@ -469,6 +498,9 @@ imagenes_add:{
     cana_brava: {
       video_principal: { id: 'hbDuQFcnO6c', titulo: 'Conozca Caña Brava', visible: true }
     },
+    palmeras_italia: {
+      video_principal: { id: 'PUBhzK41_3A', titulo: 'Conozca Palmeras de la Italia', visible: true }
+    },
   },
   entregados: {
     titulo: 'Proyectos Finalizados',
@@ -566,6 +598,12 @@ imagenes_add:{
       slide1_title: 'Urbanización San Miguel',
       slide2_title: 'Urbanización San Miguel',
       slide3_title: 'Urbanización San Miguel',
+      boton: 'Contáctanos'
+    },
+    palmeras_italia: {
+      slide1_title: 'Palmeras de la Italia',
+      slide2_title: 'Palmeras de la Italia',
+      slide3_title: 'Palmeras de la Italia',
       boton: 'Contáctanos'
     },
     puertas_sol: {

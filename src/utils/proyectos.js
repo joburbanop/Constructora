@@ -108,7 +108,7 @@ const proyectos = [
     icono: 'condominio',
     iconoColor: '#222',
     ubicacion: 'jamundi_colombia',
-    enlace: '#',
+    enlace: '/palmeras-italia',
     etiquetaColor: '#ffb347'
   },
    {

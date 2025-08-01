@@ -239,11 +239,32 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       'gated'
     ]
   },
+  palmeras_italia_detalle: {
+    espacios_titulo: 'Exclusive condominium',
+    espacios_desc: 'Condominium designed for rest and peaceful living',
+    titulo: 'Palmeras de la Italia',
+    subtitulo: 'Exclusive condominium in Jamundí',
+    subtitulo_2: 'FIRST STAGE COMPLETED',
+    descripcion: 'Palmeras de la Italia First Stage, executed in partnership with Lopez Grupo Constructor, is an exclusive condominium designed for rest and peaceful living in the midst of the green landscape of Valle del Cauca.',
+    descripcion_1: 'Located on Paso de la Bolsa road, just 10 minutes from downtown Jamundí. 150 m² lots in a gated community with 24-hour security.',
+    descripcion_2: 'Social area with pool for adults and children, children\'s playground, sports complex and double-level events hall. 100% sold.',
+    espacios: [
+      'gatehouse',
+      'security',
+      'pool',
+      'playground',
+      'sports',
+      'events'
+    ]
+  },
    textGaleria:{
     titulo:'Project Gallery'
   },
    textMapa:{
     titulo:'Location'
+  },
+   video: {
+    titulo: 'Project Video'
   },
   // informaciòn componente AreaPrecioUbic.jsx
   info_AreaPrecioUbic: {
@@ -282,6 +303,14 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       precio_desc: 'Check availability and prices',
       ubicacion: 'Location',
       ubicacion_desc: 'San José area, San Pedro – Colombia.',
+    },
+    palmeras_italia: {
+      area: 'Area',
+      area_desc: 'Lots of 150 m²',
+      precio: 'Price',
+      precio_desc: '100% sold',
+      ubicacion: 'Location',
+      ubicacion_desc: 'Paso de la Bolsa road, Jamundí – Colombia.',
     },
     proyecto2: {
       slide_area_titulo: 'Usable area',
@@ -401,6 +430,9 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     cana_brava: {
       video_principal: { id: 'hbDuQFcnO6c', titulo: 'Discover Caña Brava', visible: true }
     },
+    palmeras_italia: {
+      video_principal: { id: 'PUBhzK41_3A', titulo: 'Discover Palmeras de la Italia', visible: true }
+    },
   },
   entregados: {
     titulo: 'Completed Projects',
@@ -498,6 +530,12 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       slide1_title: 'San Miguel Urbanization',
       slide2_title: 'San Miguel Urbanization',
       slide3_title: 'San Miguel Urbanization',
+      boton: 'Contact Us'
+    },
+    palmeras_italia: {
+      slide1_title: 'Palmeras de la Italia',
+      slide2_title: 'Palmeras de la Italia',
+      slide3_title: 'Palmeras de la Italia',
       boton: 'Contact Us'
     },
   puertas_sol: {
