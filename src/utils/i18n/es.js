@@ -491,20 +491,20 @@ videos: {
     
   }, casa_primera_usa: {
       slide1_title: 'Confort y seguridad en un solo lugar ',
-      slide1_subtitle: 'Lehigh Acres, FL ',
+      slide1_subtitle: 'Cape Coral, FL ',
       slide2_title: 'Confort y seguridad en un solo lugar ',
-      slide2_subtitle: 'Lehigh Acres, FL',
+      slide2_subtitle: 'Cape Coral, FL',
       slide3_title: 'Confort y seguridad en un solo lugar',
-      slide3_subtitle: 'Lehigh Acres, FL ',
+      slide3_subtitle: 'Cape Coral, FL ',
       boton: 'Contáctanos'
     
   }, casa_segunda_usa: {
       slide1_title: 'Confort y seguridad en un solo lugar ',
-      slide1_subtitle: 'Lehigh Acres, FL ',
+      slide1_subtitle: 'Cape Coral, FL ',
       slide2_title: 'Confort y seguridad en un solo lugar ',
-      slide2_subtitle: 'Lehigh Acres, FL',
+      slide2_subtitle: 'Cape Coral, FL',
       slide3_title: 'Confort y seguridad en un solo lugar',
-      slide3_subtitle: 'Lehigh Acres, FL ',
+      slide3_subtitle: 'Cape Coral, FL ',
       boton: 'Contáctanos'
     
   },

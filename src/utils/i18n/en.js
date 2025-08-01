@@ -459,21 +459,21 @@ const es = { // Should remain 'es' if you are keeping original variable names or
 },
   casa_primera_usa: {
       slide1_title: 'Comfort and safety in one place ',
-      slide1_subtitle: 'Lehigh Acres, FL ',
+      slide1_subtitle: 'Cape Coral, FL ',
       slide2_title: 'Comfort and safety in one place ',
-      slide2_subtitle: 'Lehigh Acres, FL',
+      slide2_subtitle: 'Cape Coral, FL',
       slide3_title: 'Comfort and safety in one place',
-      slide3_subtitle: 'Lehigh Acres, FL ',
+      slide3_subtitle: 'Cape Coral, FL',
       boton: 'Contáctanos'
     
   },
    casa_segunda_usa: {
       slide1_title: 'Comfort and safety in one place ',
-      slide1_subtitle: 'Lehigh Acres, FL ',
+      slide1_subtitle: 'Cape Coral, FL ',
       slide2_title: 'Comfort and safety in one place ',
-      slide2_subtitle: 'Lehigh Acres, FL',
+      slide2_subtitle: 'Cape Coral, FL',
       slide3_title: 'Comfort and safety in one place',
-      slide3_subtitle: 'Lehigh Acres, FL ',
+      slide3_subtitle: 'Cape Coral, FL ',
       boton: 'Contáctanos'
     
   },
