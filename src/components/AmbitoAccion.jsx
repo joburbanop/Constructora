@@ -13,7 +13,6 @@ export default function AmbitoAccion() {
   return (
     <section className="ambito">
      
-      <h2>{t.ambito.titulo}</h2>
       <p className="ambito-sub">
         {t.ambito.sub}
       </p>
