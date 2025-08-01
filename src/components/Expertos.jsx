@@ -30,10 +30,14 @@ const Expertos = ({ listaFiltrada = null }) => {
                 {t.expertos[asesor.especialidadClave] || asesor.especialidadClave}
               </div>
               <div className="experto-desc">
-                {t.expertos.atencion} {asesor.telefono}
+                {t.expertos.atencion} 
+              
               </div>
                <div className="experto-tel">
-                {expertos.telefono}
+                {asesor.telefono}
+              </div>
+               <div className="experto-tel">
+                {asesor.telefono2}
               </div>
             </div>
           </div>

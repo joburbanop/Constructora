@@ -26,6 +26,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     casa_usa_2_desc: 'Elegant house with spacious areas and contemporary design.',
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose: '20 min from Tuluá - San José Village, San Pedro',
+    rozo_palmira:'Rozo, Palmira',
     puertas_sol_title: 'Puertas del Sol',
     puertas_sol_desc: 'Completely finished urbanization. Last lots of 8x15 mts (120 m²) with payment facilities. Equipped with gas station, service center, 21 commercial premises and supermarket.',
     caña_dulce_title: 'Caña Dulce',
@@ -158,7 +159,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     titulo: 'Commercial units in Cape Coral',
     subtitulo: 'The best opportunity to invest securely',
     subtitulo_2: 'COMMERCIAL UNIT',
-    descripcion: 'This commercial complex is strategically located in Lehigh Acres, 19 kilometers east of Fort Myers, and boasts a diverse community with a population of approximately 200,000 inhabitants.',
+    descripcion: 'This commercial complex is strategically located in Cape Coral, 19 kilometers east of Fort Myers, and boasts a diverse community with a population of approximately 200,000 inhabitants.',
     descripcion_1: 'To meet the growing demand for products and services in the area, this modern mall is being developed with 10 commercial units ranging from 959 SQ FT to 1277 SQ FT, with ample parking space on 300 Chiquita Boulevard.',
     descripcion_2: 'Guaranteed investment and appreciation.',
   },
@@ -187,7 +188,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
   espacios_titulo: '',
   espacios_desc: '',
   titulo: 'New Single-Family Home',
-  subtitulo: 'Lehigh Acres, FL',
+  subtitulo: 'Cape Coral, Florida',
   subtitulo_2: '',
   descripcion: 'Welcome to your dream home in a flood-protected area, designed to withstand even the strongest hurricanes. This elegant and luxurious single-family home features 3 spacious bedrooms, 3 bathrooms, and a 2-car garage with plenty of space for all your needs. Granite countertops, appliances, and flooring give the home a modern and stylish look, while the flexible room offers versatility as an office or additional bedroom.',
   descripcion_1: "Wide impact-resistant doors and windows flood the house with natural light and offer stunning views of the surroundings. But what really sets this home apart is its hurricane-ready design, thanks to its solid structure and flat roof. Not only will you have peace of mind during storm season, but you’ll also save on insurance thanks to the home's durability.'",
@@ -197,7 +198,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     espacios_titulo:'',
     espacios_desc:'',
     titulo:'New Single-Family Home',
-    subtitulo:'Lehigh Acres, FL',
+    subtitulo:'Cape Coral, Florida',
     subtitulo_2:'',
     descripcion:'Luxurious single-family home with 3+1 spacious bedrooms, 3 bathrooms, and a 2-car garage. Granite countertops, high-quality appliances, and flooring give the home an elegant look. Wide impact-resistant doors and windows flood the house with natural light and offer stunning views of the surroundings. Hurricane-ready thanks to its solid structure and flat roof.',
     descripcion_1:'',
@@ -448,12 +449,12 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     boton: 'Schedule visit'
   },
     colombia: {
-      slide1_title: 'A new chapter begins here',
-      slide1_subtitle: 'Explore our handpicked homes for those seeking more than just a place to live.',
-      slide2_title: 'Find the ideal home',
-      slide2_subtitle: 'Easily browse properties that match your needs: location, size, style, and surroundings.',
+      slide1_title: 'Bigger lots at better prices',
+      slide1_subtitle: 'Flexible payment plans up to 6 years',
+      slide2_title: 'Discover the benefits of building your own home',
+      slide2_subtitle: 'More space, better budget, higher-quality finishes',
       slide3_title: 'Personalized guidance',
-      slide3_subtitle: 'Our team is ready to listen, answer your questions, and support you throughout the process.',
+      slide3_subtitle: 'Our team is ready to listen, answer your questions, and support you throughout the entire process.',
       boton: 'Contact us'
 },
   casa_primera_usa: {
@@ -515,14 +516,15 @@ const es = { // Should remain 'es' if you are keeping original variable names or
 },
 
   proyectos_card_simple: {
-    coral_title: 'Commercial units, Chiquita BLVD, FL',
-    coral_desc: 'Luxurious single-family home with 3+1 spacious bedrooms, 3 bathrooms, and a 2-car garage. Granite countertops, appliances, and high-quality floors give the house an elegant look. Large impact-resistant doors and windows flood the house with natural light and offer impressive views of the surroundings. Prepared to withstand hurricanes thanks to its solid structure and flat roof.',
+    coral_titulo: 'Commercial spaces, Chiquita BLVD, FL',
+    coral_desc: '',
     casa_usa_1_title: 'Single-family home for sale',
-    casa_usa_1_desc: 'New single-family home for sale · Lehigh Acres, FL',
-    casa_usa_2_title: 'Property sold',
-    casa_usa_2_desc: 'Single-family home sold. Lehigh Acres, FL',
-    boton: 'View more',
-    proximamente: 'Coming Soon'
+    casa_usa_1_desc: 'New single-family home for sale in Cape Coral, FL',
+    casa_usa_2_title: 'Single-family home for sale',
+    casa_usa_2_desc: 'Single-family home for sale in Cape Coral, FL',
+    boton: 'See more',
+    proximamente: 'Coming soon'
+
   },
 };
 

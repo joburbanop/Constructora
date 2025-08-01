@@ -30,7 +30,7 @@ const proyectos = [
     tipo: 'urbanizacion',
     icono: 'urbanizacion',
     iconoColor: '#222',
-    ubicacion: 'jamundi_colombia',
+    ubicacion: 'rozo_palmira',
     enlace: '#',
     etiquetaColor: '#ff914d'
   },

@@ -13,10 +13,7 @@ export default function AmbitoAccion() {
   return (
     <section className="ambito">
      
-      <h2>{t.ambito.titulo}</h2>
-      <p className="ambito-sub">
-        {t.ambito.sub}
-      </p>
+     
       <div className="ambito-cards">
         {ambitos.map((card, idx) => {
           // Determinar color y si es lujo
@@ -38,8 +35,9 @@ export default function AmbitoAccion() {
                 <span className="ambito-card-title">{t.ambito[card.title]}</span>
               </div>
               <p className="ambito-card-desc">{t.ambito[card.desc]}</p>
+              {!isLujo && (
               <Button
-                className={`ambito-btn ${color} ${isLujo ? 'lujo' : ''}`}
+                className={`ambito-btn ${color}`}
                 onClick={() => {
                   if (card.title === 'colombia_title') {
                     navigate('/proyectos-colombia');
@@ -47,11 +45,11 @@ export default function AmbitoAccion() {
                     navigate('/proyectos-usa');
                   }
                 }}
-                disabled={isLujo}
               >
                 {t.ambito.boton || 'Ver más'}
-                {isLujo && <span className="proximamente-label">{t.proyectos.proximamente}</span>}
               </Button>
+            )}
+
             </div>
           );
         })}

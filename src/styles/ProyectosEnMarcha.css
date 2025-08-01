@@ -33,18 +33,34 @@
   max-width: 1200px;
 }
 
-/* Estilos base del proyecto-card (mantenidos para compatibilidad) */
+.proyecto-ubicacion-marcha span{
+  font-family: 'Times New Roman', Times, serif;
+}
 
-/* Estilos base del hover (mantenidos para compatibilidad) */
-
-/* ========== Estilos Premium para todas las tarjetas ========== */
 .proyecto-card {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border: 1px solid rgba(255, 102, 0, 0.1);
+  border: 1px solid rgba(255, 102, 0, 0.1); /* se aplica primero */
+ 
+  border-top: 4px solid #ff6702;          /* sobrescribe solo left */
   box-shadow: 0 6px 30px rgba(255, 102, 0, 0.08);
-  position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.contenedor-etiqueta-marcha{
+  
+   position: relative;
+   width: 100%;
+    display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.proyecto-etiqueta-marcha{
+  
+   width: 150px;
+   border-radius: 30px;
+  padding: 0.4rem 0rem;
 }
 
 .proyecto-card::before {
@@ -54,7 +70,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #ff6600, #ff914d, #ffb347);
+ 
   z-index: 1;
 }
 
@@ -64,35 +80,25 @@
   border-color: rgba(255, 102, 0, 0.2);
 }
 
-.proyecto-card .proyecto-etiqueta {
+.proyecto-card .proyecto-etiqueta-marcha {
   background: linear-gradient(135deg, #ff6600 0%, #ff914d 100%);
   color: white;
   font-weight: 800;
   font-size: 0.85rem;
-  padding: 0.4em 1.2em;
-  border-radius: 25px;
+ 
   box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  position: absolute;
-  top: 1.5em;
-  right: 1.5em;
-  z-index: 10;
+  position: relative;
   transition: all 0.3s ease;
 }
 
-.proyecto-card:hover .proyecto-etiqueta {
+.proyecto-card:hover .proyecto-etiqueta-marcha {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(255, 102, 0, 0.4);
 }
 
-.proyecto-card .proyecto-img-wrap {
-  position: relative;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
+
 
 .proyecto-card .proyecto-img-wrap::before {
   content: '';
@@ -114,13 +120,6 @@
   opacity: 1;
 }
 
-.proyecto-card .proyecto-img-marcha {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
 
 .proyecto-card:hover .proyecto-img-marcha {
   transform: scale(1.05);
@@ -139,32 +138,12 @@
   color: #ff6600;
 }
 
-.proyecto-card .proyecto-desc-marcha {
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 1.2rem;
-  transition: color 0.3s ease;
-}
+
 
 .proyecto-card:hover .proyecto-desc-marcha {
   color: #333;
 }
 
-.proyecto-card .proyecto-ubicacion-marcha {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  color: #666;
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-  padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 25px;
-  border: 1px solid rgba(255, 102, 0, 0.1);
-  transition: all 0.3s ease;
-}
 
 .proyecto-card:hover .proyecto-ubicacion-marcha {
   background: linear-gradient(135deg, #fff5f0 0%, #ffe8d6 100%);
@@ -236,293 +215,6 @@
   }
 }
 
-/* Estilos específicos para Caña Dulce - Diseño premium */
-
-.proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-img-wrap {
-  position: relative;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-img-marcha {
-  transition: transform 0.4s ease;
-  border-radius: 12px;
-}
-
-.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-img-marcha {
-  transform: scale(1.08);
-}
-
-.proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-nombre {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 0.8rem;
-  font-family: 'Georgia', serif;
-  letter-spacing: -0.5px;
-}
-
-.proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-desc-marcha {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 1.2rem;
-  font-weight: 400;
-  text-align: center;
-  max-width: 280px;
-}
-
-.proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-ubicacion-marcha {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border: 1px solid rgba(255, 102, 0, 0.1);
-  border-radius: 25px;
-  padding: 0.6em 1.2em;
-  margin-bottom: 1.5rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  color: #333;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-ubicacion-marcha:hover {
-  background: linear-gradient(135deg, #ff6600 0%, #ff914d 100%);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
-}
-
-.proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-ubicacion-icon {
-  color: #ff6600;
-  transition: color 0.3s ease;
-}
-
-.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-ubicacion-icon {
-  color: white;
-}
-
-.proyecto-card[data-proyecto="caña_dulce_title"] .ambito-btn {
-  background: linear-gradient(135deg, #ff6600 0%, #ff914d 100%);
-  color: white;
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 0.8em 2em;
-  border-radius: 30px;
-  border: none;
-  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  position: relative;
-  overflow: hidden;
-}
-
-.proyecto-card[data-proyecto="caña_dulce_title"] .ambito-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
-}
-
-.proyecto-card[data-proyecto="caña_dulce_title"] .ambito-btn:hover::before {
-  left: 100%;
-}
-
-.proyecto-card[data-proyecto="caña_dulce_title"] .ambito-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 102, 0, 0.4);
-  background: linear-gradient(135deg, #ff914d 0%, #ff6600 100%);
-}
-
-/* Badge de estado para Caña Dulce */
-.proyecto-card[data-proyecto="caña_dulce_title"]::after {
-  display: none;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
-  }
-  50% {
-    box-shadow: 0 2px 12px rgba(40, 167, 69, 0.5);
-  }
-  100% {
-    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
-  }
-}
-
-/* Efecto de brillo en hover para Caña Dulce */
-.proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-img-wrap::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  transition: left 0.6s ease;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-img-wrap::before {
-  left: 100%;
-}
-
-/* ========== Estilos específicos para Puertas del Sol - Diseño premium ========== */
-.proyecto-card[data-proyecto="puertas_sol_title"]::after {
-  display: none;
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-img-wrap {
-  position: relative;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-img-marcha {
-  transition: transform 0.4s ease;
-  border-radius: 12px;
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-img-marcha {
-  transform: scale(1.08);
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-nombre {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 0.8rem;
-  font-family: 'Georgia', serif;
-  letter-spacing: -0.5px;
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-desc-marcha {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 1.2rem;
-  font-weight: 400;
-  text-align: center;
-  max-width: 280px;
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-ubicacion-marcha {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border: 1px solid rgba(255, 102, 0, 0.1);
-  border-radius: 25px;
-  padding: 0.6em 1.2em;
-  margin-bottom: 1.5rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  color: #333;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-ubicacion-marcha:hover {
-  background: linear-gradient(135deg, #ff6600 0%, #ff914d 100%);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-ubicacion-icon {
-  color: #ff6600;
-  transition: color 0.3s ease;
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-ubicacion-icon {
-  color: white;
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"] .ambito-btn {
-  background: linear-gradient(135deg, #ff6600 0%, #ff914d 100%);
-  color: white;
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 0.8em 2em;
-  border-radius: 30px;
-  border: none;
-  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  position: relative;
-  overflow: hidden;
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"] .ambito-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"] .ambito-btn:hover::before {
-  left: 100%;
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"] .ambito-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 102, 0, 0.4);
-  background: linear-gradient(135deg, #ff914d 0%, #ff6600 100%);
-}
-
-/* Badge de estado para Puertas del Sol */
-.proyecto-card[data-proyecto="puertas_sol_title"]::after {
-  position: absolute;
-  top: 1.5em;
-  left: 1.5em;
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-  color: white;
-  font-size: 0.7rem;
-  font-weight: 800;
-  padding: 0.3em 0.8em;
-  border-radius: 15px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
-  z-index: 10;
-  animation: pulse 2s infinite;
-}
-
-/* Efecto de brillo en hover para Puertas del Sol */
-.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-img-wrap::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  transition: left 0.6s ease;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-img-wrap::before {
-  left: 100%;
-}
-/* Estilos duplicados eliminados - usando los estilos premium */
-
 .icono-circular {
   position: absolute;
   top: 0.7em;
@@ -539,22 +231,21 @@
 }
 
 .proyecto-img-wrap {
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
- 
   padding: 0;
+  
+   height: 300px;
 }
 
 .proyecto-img-marcha {
-  width: 100%;
-  height: 90%;
-  object-fit: contain;
+  height: 100%;
   border-radius: 50px;
   transition: transform 0.35s ease;
-  will-change: transform;
+ 
 }
 
 .proyecto-info-marcha {
@@ -586,13 +277,13 @@
   align-items: center;
   gap: 0.4em;
   font-size: 0.98rem;
-  color: #ff6600;
+  color: #666;
   margin-bottom: 1.2rem;
   font-weight: 500;
   text-align: center;
-  width: 90%;
+  width: 60%;
   background-color: #f0f0f0a8;
-  border-radius:8px ;
+  border-radius:30px ;
   justify-content: center;
   height: 40px;
  
@@ -640,7 +331,7 @@
   font-size: 1.2em;
 }
 
-.proyecto-titulo-row {
+.proyecto-titulo-row-marcha {
   display: flex;
   align-items: center;
   gap: 0.7em;
@@ -680,182 +371,8 @@
     padding: 0 0.4em;
   }
 
-  /* Estilos responsivos para Caña Dulce */
-  .proyecto-card[data-proyecto="caña_dulce_title"] {
-    padding: 1.2rem 1rem 1.8rem 1rem;
-  }
-
-  .proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-nombre {
-    font-size: 1.5rem;
-  }
-
-  .proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-desc-marcha {
-    font-size: 0.9rem;
-    max-width: 100%;
-  }
-
-  .proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-etiqueta {
-    font-size: 0.75rem;
-    padding: 0.3em 1em;
-    top: 1.2em;
-    right: 1.2em;
-  }
-
-  .proyecto-card[data-proyecto="caña_dulce_title"]::after {
-    font-size: 0.6rem;
-    padding: 0.25em 0.6em;
-    top: 1.2em;
-    left: 1.2em;
-  }
-
-  .proyecto-card[data-proyecto="caña_dulce_title"] .ambito-btn {
-    font-size: 0.9rem;
-    padding: 0.7em 1.5em;
-  }
-
-  /* Estilos responsivos para Puertas del Sol */
-  .proyecto-card[data-proyecto="puertas_sol_title"] {
-    padding: 1.2rem 1rem 1.8rem 1rem;
-  }
-
-  .proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-nombre {
-    font-size: 1.5rem;
-  }
-
-  .proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-desc-marcha {
-    font-size: 0.9rem;
-    max-width: 100%;
-  }
-
-  .proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-etiqueta {
-    font-size: 0.75rem;
-    padding: 0.3em 1em;
-    top: 1.2em;
-    right: 1.2em;
-  }
-
-  .proyecto-card[data-proyecto="puertas_sol_title"]::after {
-    font-size: 0.6rem;
-    padding: 0.25em 0.6em;
-    top: 1.2em;
-    left: 1.2em;
-  }
-
-  .proyecto-card[data-proyecto="puertas_sol_title"] .ambito-btn {
-    font-size: 0.9rem;
-    padding: 0.7em 1.5em;
-  }
 }
 
-/* ========== Estilos específicos para proyectos EN MARCHA ========== */
-/* Ocultar el badge "EN MARCHA" para proyectos entregados */
-.proyecto-card[data-proyecto="caña_dulce_title"]::after,
-.proyecto-card[data-proyecto="puertas_sol_title"]::after,
-.proyecto-card[data-proyecto="palmeras_title"]::after,
-.proyecto-card[data-proyecto="cana_title"]::after {
-  display: none !important;
-}
-
-/* Mostrar "EN MARCHA" solo para proyectos en desarrollo */
-.proyecto-card:not([data-proyecto="caña_dulce_title"]):not([data-proyecto="puertas_sol_title"]):not([data-proyecto="palmeras_title"]):not([data-proyecto="cana_title"])::after {
-  display: none;
-}
-
-/* ========== Estilos específicos para Palmeras de la Italia ========== */
-.proyecto-card[data-proyecto="palmeras_title"]::after {
-  display: none;
-}
-
-/* ========== Estilos específicos para Caña Brava ========== */
-.proyecto-card[data-proyecto="cana_title"]::after {
-  display: none;
-}
-
-/* ========== Estilos específicos para Caña Dulce - Sobrescribir display: none ========== */
-.proyecto-card[data-proyecto="caña_dulce_title"]::after {
-  display: none;
-}
-
-/* ========== Estilos específicos para Puertas del Sol - Sobrescribir display: none ========== */
-.proyecto-card[data-proyecto="puertas_sol_title"]::after {
-  display: none;
-}
-
-/* ========== CORRECCIÓN ESPECÍFICA PARA IMÁGENES PROBLEMÁTICAS ========== */
-
-/* Puertas del Sol - Ajuste para evitar que se corte el texto */
-.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-img-marcha {
-  object-fit: contain;
-  padding: 0.8rem;
-  background: white;
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 8px;
-}
-
-/* Caña Dulce - Reducir espacio blanco */
-.proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-img-marcha {
-  object-fit: contain;
-  padding: 0.5rem;
-  background: white;
-  max-width: 95%;
-  max-height: 95%;
-  border-radius: 8px;
-}
-
-/* Palmeras de la Italia - Reducir espacio blanco */
-.proyecto-card[data-proyecto="palmeras_title"] .proyecto-img-marcha {
-  object-fit: contain;
-  padding: 0.5rem;
-  background: white;
-  max-width: 95%;
-  max-height: 95%;
-  border-radius: 8px;
-}
-
-/* Quintas de Marbella (Urbanización abierta) - Optimización específica */
-.proyecto-card[data-proyecto="marbella_titulo"] .proyecto-img-marcha {
-  object-fit: contain;
-  padding: 0.6rem;
-  background: white;
-  max-width: 92%;
-  max-height: 92%;
-  border-radius: 8px;
-}
-
-.proyecto-card[data-proyecto="marbella_titulo"] .proyecto-img-wrap {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border: 1px solid rgba(255, 102, 0, 0.1);
-  height: 220px;
-}
-
-/* Contenedores específicos para estos proyectos */
-.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-img-wrap,
-.proyecto-card[data-proyecto="caña_dulce_title"] .proyecto-img-wrap,
-.proyecto-card[data-proyecto="palmeras_title"] .proyecto-img-wrap,
-.proyecto-card[data-proyecto="marbella_titulo"] .proyecto-img-wrap {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border: 1px solid rgba(255, 102, 0, 0.1);
-  height: 220px; /* Aumentar altura para Puertas del Sol */
-}
-
-/* Altura específica para Puertas del Sol */
-.proyecto-card[data-proyecto="puertas_sol_title"] .proyecto-img-wrap {
-  height: 240px; /* Más altura para evitar cortes */
-}
-
-/* Efectos hover específicos para estos proyectos */
-.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-img-marcha,
-.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-img-marcha,
-.proyecto-card[data-proyecto="palmeras_title"]:hover .proyecto-img-marcha,
-.proyecto-card[data-proyecto="marbella_titulo"]:hover .proyecto-img-marcha {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos de debug removidos - tarjetas con diseño original */ 
-
-/* ========== TOOLTIP Y BOTÓN PRÓXIMAMENTE ========== */
 
 .button-container {
   position: relative;
@@ -957,60 +474,6 @@
   }
 } 
 
-/* ========== HOVER UNIFICADO PARA PUERTAS DEL SOL Y CAÑA DULCE ========== */
 
-/* Hover general de la tarjeta - igual que las otras */
-.proyecto-card[data-proyecto="puertas_sol_title"]:hover,
-.proyecto-card[data-proyecto="caña_dulce_title"]:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(255, 102, 0, 0.15);
-  border-color: rgba(255, 102, 0, 0.2);
-}
-
-/* Hover de la imagen - igual que las otras */
-.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-img-marcha,
-.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-img-marcha {
-  transform: scale(1.05);
-}
-
-/* Hover del nombre - igual que las otras */
-.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-nombre,
-.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-nombre {
-  color: #ff6600;
-}
-
-/* Hover de la descripción - igual que las otras */
-.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-desc-marcha,
-.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-desc-marcha {
-  color: #333;
-}
-
-/* Hover de la ubicación - igual que las otras */
-.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-ubicacion-marcha,
-.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-ubicacion-marcha {
-  background: linear-gradient(135deg, #fff5f0 0%, #ffe8d6 100%);
-  border-color: rgba(255, 102, 0, 0.2);
-  color: #ff6600;
-  transform: translateY(-2px);
-}
-
-/* Hover del icono de ubicación - igual que las otras */
-.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-ubicacion-icon,
-.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-ubicacion-icon {
-  transform: scale(1.1);
-}
-
-/* Hover de la etiqueta - igual que las otras */
-.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-etiqueta,
-.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-etiqueta {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(255, 102, 0, 0.4);
-}
-
-/* Efecto de brillo en hover - igual que las otras */
-.proyecto-card[data-proyecto="puertas_sol_title"]:hover .proyecto-img-wrap::before,
-.proyecto-card[data-proyecto="caña_dulce_title"]:hover .proyecto-img-wrap::before {
-  opacity: 1;
-}
 
  

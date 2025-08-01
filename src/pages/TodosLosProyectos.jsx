@@ -21,7 +21,8 @@ import renderRincon from '../assets/render_rincon.png';
 import renderSanMiguel from '../assets/render_san_miguel.png';
 import renderQuintas from '../assets/render_quintas.png';
 import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
-
+import agentes from '../utils/expertos';
+import Slider from '../components/Slider';
 const TodosLosProyectos = () => {
   const { t } = useIdioma();
   const navigate = useNavigate();
@@ -29,10 +30,14 @@ const TodosLosProyectos = () => {
   const [filtroActivo, setFiltroActivo] = useState('todos');
   const [ubicacionFiltro, setUbicacionFiltro] = useState('todas');
   const [isLoading, setIsLoading] = useState(false);
-  const [showFilters, setShowFilters] = useState(true);
+  const [showFilters, setShowFilters] = useState(false);
   const [lastFilterChange, setLastFilterChange] = useState(null);
   const [activeSection, setActiveSection] = useState('inicio');
-
+  const nombresDeseados = ['yulei','sofia','ludivia','lina'];
+   
+  const asesores = agentes.filter(({ clave }) =>
+  nombresDeseados.includes(clave)
+  );
   // Efecto para hacer scroll al inicio cuando se carga la página
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -262,6 +267,7 @@ const TodosLosProyectos = () => {
           ))}
         </Swiper>
       </section>
+      
 
       <main className="todos-proyectos-main">
         {/* Header de la sección con toggle de filtros */}
@@ -493,7 +499,7 @@ const TodosLosProyectos = () => {
       </main>
 
       <div id="expertos" className="expertos-section-todos">
-        <Expertos />
+        <Expertos listaFiltrada={asesores} />
       </div>
       <ContactoCTA />
       <section id="contactanos" className="footer-section">
