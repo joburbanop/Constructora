@@ -6,23 +6,17 @@ const slidesSanMiguel = [
   {
     id: 1,
     image: sanMiguel1,
-    title: "slide1_title",
-    subtitle: "slide1_subtitle",
-    description: "slide1_description"
+    title: "slide1_title"
   },
   {
     id: 2,
     image: sanMiguel2,
-    title: "slide2_title",
-    subtitle: "slide2_subtitle", 
-    description: "slide2_description"
+    title: "slide2_title"
   },
   {
     id: 3,
     image: sanMiguel3,
-    title: "slide3_title",
-    subtitle: "slide3_subtitle",
-    description: "slide3_description"
+    title: "slide3_title"
   }
 ];
 

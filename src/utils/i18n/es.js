@@ -557,24 +557,15 @@ imagenes_add:{
       boton: 'Agendar cita exclusiva'
     },
     cana_brava: {
-      slide1_title: 'Exclusiva urbanización campestre',
-      slide1_subtitle: 'Caña Brava - San Pedro, Colombia. Lotes de 250 mts² en conjunto cerrado con portería y vigilancia 24 horas',
-      slide2_title: 'Zona social premium',
-      slide2_subtitle: 'Piscina para adultos y niños, salón de eventos equipado. Consulte disponibilidad y precios',
-      slide3_title: 'Ubicación estratégica',
-      slide3_subtitle: 'Vereda San José, San Pedro - Entorno natural privilegiado con máxima privacidad y tranquilidad',
+      slide1_title: 'Urbanización Campestre',
+      slide2_title: 'Urbanización Campestre',
+      slide3_title: 'Urbanización Campestre',
       boton: 'Contáctanos'
     },
     san_miguel: {
       slide1_title: 'Urbanización San Miguel',
-      slide1_subtitle: 'Urbanización San Miguel',
-      slide1_description: 'Urbanización San Miguel',
       slide2_title: 'Urbanización San Miguel',
-      slide2_subtitle: 'Urbanización San Miguel',
-      slide2_description: 'Urbanización San Miguel',
       slide3_title: 'Urbanización San Miguel',
-      slide3_subtitle: 'Urbanización San Miguel',
-      slide3_description: 'Urbanización San Miguel',
       boton: 'Contáctanos'
     },
     puertas_sol: {

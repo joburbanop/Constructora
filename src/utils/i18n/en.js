@@ -489,24 +489,15 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     boton: 'Schedule exclusive appointment'
   },
     cana_brava: {
-      slide1_title: 'Exclusive countryside urbanization',
-      slide1_subtitle: 'Caña Brava - San Pedro, Colombia. 250 m² lots in gated community with 24-hour security',
-      slide2_title: 'Premium social area',
-      slide2_subtitle: 'Pool for adults and children, equipped events hall. Check availability and prices',
-      slide3_title: 'Strategic location',
-      slide3_subtitle: 'San José area, San Pedro - Privileged natural environment with maximum privacy and tranquility',
+      slide1_title: 'Countryside Urbanization',
+      slide2_title: 'Countryside Urbanization',
+      slide3_title: 'Countryside Urbanization',
       boton: 'Contact Us'
     },
     san_miguel: {
       slide1_title: 'San Miguel Urbanization',
-      slide1_subtitle: 'San Miguel Urbanization',
-      slide1_description: 'San Miguel Urbanization',
       slide2_title: 'San Miguel Urbanization',
-      slide2_subtitle: 'San Miguel Urbanization',
-      slide2_description: 'San Miguel Urbanization',
       slide3_title: 'San Miguel Urbanization',
-      slide3_subtitle: 'San Miguel Urbanization',
-      slide3_description: 'San Miguel Urbanization',
       boton: 'Contact Us'
     },
   puertas_sol: {

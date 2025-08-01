@@ -7,23 +7,17 @@ const slidesCanaBrava = [
   {
     id: 'cana-brava-1',
     image: canaBrava1,
-    title: 'slide1_title',
-    subtitle: 'slide1_subtitle',
-    description: 'slide1_description'
+    title: 'slide1_title'
   },
   {
     id: 'cana-brava-2',
     image: canaBrava2,
-    title: 'slide2_title',
-    subtitle: 'slide2_subtitle',
-    description: 'slide2_description'
+    title: 'slide2_title'
   },
   {
     id: 'cana-brava-3',
     image: canaBrava3,
-    title: 'slide3_title',
-    subtitle: 'slide3_subtitle',
-    description: 'slide3_description'
+    title: 'slide3_title'
   }
 ];
 
