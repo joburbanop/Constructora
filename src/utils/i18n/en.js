@@ -26,6 +26,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     casa_usa_2_desc: 'Elegant house with spacious areas and contemporary design.',
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose: '20 min from Tuluá - San José Village, San Pedro',
+    san_pedro: 'San Pedro, Colombia',
     rozo_palmira:'Rozo, Palmira',
     puertas_sol_title: 'Puertas del Sol',
     puertas_sol_desc: 'Completely finished urbanization. Last lots of 8x15 mts (120 m²) with payment facilities. Equipped with gas station, service center, 21 commercial premises and supermarket.',
@@ -34,7 +35,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     palmeras_title: 'Palmeras de la Italia',
     palmeras_desc: 'Completed residential complex for rest and well-being.',
     cana_title: 'Caña Brava',
-    cana_desc: '100% sold in the San José area.',
+    cana_desc: 'Exclusive countryside urbanization in San Pedro with 250 mts² lots in a gated community with 24-hour security. Check availability and prices.',
     usa: 'U.S.A',
     colombia: 'Colombia',
     cope_coral:'Cope Coral, Florida',
@@ -220,6 +221,24 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       'services'
     ]
   },
+  cana_brava_detalle: {
+    espacios_titulo: 'Countryside urbanization',
+    espacios_desc: 'Exclusive countryside urbanization with 250 m² lots',
+    titulo: 'Caña Brava',
+    subtitulo: 'Exclusive countryside urbanization',
+    subtitulo_2: 'GATED COMMUNITY WITH 24-HOUR SECURITY',
+    descripcion: 'Caña Brava is an exclusive countryside urbanization located in the peaceful San Jose area of San Pedro municipality. 250 m² lots in a gated community with 24-hour security, social area with pool for adults and children and equipped events hall.',
+          descripcion_1: 'Check availability and prices. Strategic location in a privileged natural environment, ideal for those seeking tranquility and security in an exclusive countryside setting.',
+    descripcion_2: 'Enjoy the exclusivity and comfort that Caña Brava offers, a unique place to live in harmony with nature.',
+    espacios: [
+      'gatehouse',
+      'security',
+      'pool',
+      'social',
+      'events',
+      'gated'
+    ]
+  },
    textGaleria:{
     titulo:'Project Gallery'
   },
@@ -255,6 +274,14 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       precio_desc: 'Inquire about availability and prices.',
       ubicacion: 'Location',
       ubicacion_desc: 'Rozo - Palmira, La Acequia area.',
+    },
+    cana_brava: {
+      area: 'Area',
+      area_desc: 'Lots of 250 m²',
+      precio: 'Price',
+      precio_desc: 'Check availability and prices',
+      ubicacion: 'Location',
+      ubicacion_desc: 'San José area, San Pedro – Colombia.',
     },
     proyecto2: {
       slide_area_titulo: 'Usable area',
@@ -350,7 +377,10 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     jacuzzi: 'Jacuzzi',
     sauna: 'Sauna',
     parqueadero: 'Parking',
-    porteria: 'Gatehouse'
+    porteria: 'Gatehouse',
+    vigilancia: '24-hour Security',
+    eventos: 'Events Hall',
+    cerrado: 'Gated Community'
   },
 
   // información videos de youtube
@@ -367,6 +397,9 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     },
     cana_dulce: {
       video_principal: { id: 'A7EXkNPyiF8', titulo: 'Discover Caña Dulce', visible: true }
+    },
+    cana_brava: {
+      video_principal: { id: 'hbDuQFcnO6c', titulo: 'Discover Caña Brava', visible: true }
     },
   },
   entregados: {
@@ -455,6 +488,15 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     slide3_subtitle: 'Luxury amenities: pool, jacuzzi, sauna, 300 m² social hall and more',
     boton: 'Schedule exclusive appointment'
   },
+    cana_brava: {
+      slide1_title: 'Exclusive countryside urbanization',
+      slide1_subtitle: 'Caña Brava - San Pedro, Colombia. 250 m² lots in gated community with 24-hour security',
+      slide2_title: 'Premium social area',
+      slide2_subtitle: 'Pool for adults and children, equipped events hall. Check availability and prices',
+      slide3_title: 'Strategic location',
+      slide3_subtitle: 'San José area, San Pedro - Privileged natural environment with maximum privacy and tranquility',
+      boton: 'Contact Us'
+    },
   puertas_sol: {
     slide1_title: 'Completely finished urbanization',
     slide1_subtitle: 'Located at kilometer 2 via Jamundí - Potrerito just 20 minutes from southern Cali',
@@ -521,6 +563,26 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     san_miguel4: {
       titulo: "Quick Connection",
       descripcion: "The area is surrounded by important roads that allow quick connection with Cali, Palmira, Yumbo and Cerrito."
+    }
+  },
+  info_ZigZag_cana_brava: {
+    titulo: "Caña Brava Features",
+    subtitulo: "Discover what makes this urbanization special",
+    cana_brava1: {
+      titulo: "Exclusive Countryside Urbanization",
+      descripcion: "Caña Brava is an exclusive countryside urbanization located in the peaceful San Jose area of San Pedro municipality, ideal for those seeking tranquility and exclusivity."
+    },
+    cana_brava2: {
+      titulo: "250 m² Lots",
+      descripcion: "250 m² lots in a gated community with 24-hour security, offering maximum security and privacy."
+    },
+    cana_brava3: {
+      titulo: "Premium Social Area",
+      descripcion: "Social area with pool for adults and children and equipped events hall to enjoy with family and friends."
+    },
+    cana_brava4: {
+      titulo: "Check Availability",
+      descripcion: "Project completely sold, demonstrating our clients' trust and preference for the quality and exclusivity of Caña Brava."
     }
   },
 

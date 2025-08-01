@@ -56,6 +56,18 @@ import sanMiguel5 from '../assets/SAN MIGUEL/SM F1.webp';
 import sanMiguel6 from '../assets/SAN MIGUEL/SM F7.webp';
 import sanMiguel7 from '../assets/SAN MIGUEL/SM F8.webp';
 import sanMiguel8 from '../assets/SAN MIGUEL/SM Ubi san miguel.webp';
+import CanaBravaLogo from '../assets/cana_brava/cana_brava_logo.webp';
+import canaBrava1 from '../assets/cana_brava/DJI_0117.webp';
+import canaBrava2 from '../assets/cana_brava/DJI_0137.webp';
+import canaBrava3 from '../assets/cana_brava/DJI_0244.webp';
+import canaBrava4 from '../assets/cana_brava/DJI_0246.webp';
+import canaBrava5 from '../assets/cana_brava/DJI_0252.webp';
+import canaBrava6 from '../assets/cana_brava/DJI_0258.webp';
+import canaBrava7 from '../assets/cana_brava/DJI_0263.webp';
+import canaBrava8 from '../assets/cana_brava/DJI_0266.webp';
+import canaBrava9 from '../assets/cana_brava/DJI_0273.webp';
+import canaBrava10 from '../assets/cana_brava/DJI_0281.webp';
+import canaBrava11 from '../assets/cana_brava/DJI_0794.webp';
 export const infoProyectos = {
   rincon: {
     id: 'rincon',
@@ -167,6 +179,24 @@ export const infoProyectos = {
         sanMiguel6,
         sanMiguel7,
         sanMiguel8
+    ]
+  },
+  cana_brava: {
+    id: 'cana_brava',
+    slug: 'cana-brava',
+    logo: CanaBravaLogo,
+    galeria: [
+        canaBrava1,
+        canaBrava2,
+        canaBrava3,
+        canaBrava4,
+        canaBrava5,
+        canaBrava6,
+        canaBrava7,
+        canaBrava8,
+        canaBrava9,
+        canaBrava10,
+        canaBrava11
     ]
   }
 };

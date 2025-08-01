@@ -22,6 +22,10 @@ import sanMiguel1 from '../assets/SAN MIGUEL/sm f888.webp';
 import sanMiguel2 from '../assets/SAN MIGUEL/sm f88.webp';
 import sanMiguel3 from '../assets/SAN MIGUEL/locales F5.webp';
 import sanMiguel4 from '../assets/SAN MIGUEL/locales F3.webp';
+import canaBrava1 from '../assets/cana_brava/DJI_0117.webp';
+import canaBrava2 from '../assets/cana_brava/DJI_0137.webp';
+import canaBrava3 from '../assets/cana_brava/DJI_0244.webp';
+import canaBrava4 from '../assets/cana_brava/DJI_0246.webp';
 
 const datosRinconLago = [
   { imagen: img1, clave: 'elemento1' },
@@ -61,10 +65,18 @@ const datosSanMiguel = [
   { imagen: sanMiguel4, clave: 'san_miguel4' },
 ];
 
+const datosCanaBrava = [
+  { imagen: canaBrava1, clave: 'cana_brava1' },
+  { imagen: canaBrava2, clave: 'cana_brava2' },
+  { imagen: canaBrava3, clave: 'cana_brava3' },
+  { imagen: canaBrava4, clave: 'cana_brava4' },
+];
+
 export default {
   datosRinconLago,
   datosCoralMall,
   datosCanaDulce,
   datosPuertasSol,
-  datosSanMiguel
+  datosSanMiguel,
+  datosCanaBrava
 };

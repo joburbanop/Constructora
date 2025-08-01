@@ -26,6 +26,7 @@ const es = {
     casa_usa_2_desc: 'Casa elegante con espacios amplios y diseño contemporáneo.',
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose:'20 min de Tuluá - Vereda San José, San Pedro',
+    san_pedro: 'San Pedro, Colombia',
     rozo_palmira:'Rozo, Palmira',
     puertas_sol_title: 'Puertas del Sol',
     puertas_sol_desc: 'Urbanización completamente terminada. Últimos lotes de 8x15 mts (120 m²) con facilidad de pago. Equipada con gasolinera, centro de servicios, 21 locales comerciales y supermercado.',
@@ -34,7 +35,7 @@ const es = {
     palmeras_title:'Palmeras de la Italia',
     palmeras_desc:'Conjunto finalizado para descanso y bienestar.',
     cana_title:'Caña Brava ',
-    cana_desc:'100% vendida en la vereda San José.',
+    cana_desc:'Exclusiva urbanización campestre en San Pedro con lotes de 250 mts² en conjunto cerrado con portería y vigilancia 24 horas. Consulte disponibilidad y precios.',
 
     usa: 'Estados Unidos',
     colombia: 'Colombia',
@@ -220,6 +221,24 @@ casa_usa_primera_detalle:{
       'servicios'
     ]
   },
+  cana_brava_detalle: {
+    espacios_titulo: 'Urbanización campestre',
+    espacios_desc: 'Exclusiva urbanización campestre con lotes de 250 mts²',
+    titulo: 'Caña Brava',
+    subtitulo: 'Exclusiva urbanización campestre',
+    subtitulo_2: 'CONJUNTO CERRADO CON VIGILANCIA 24 HORAS',
+    descripcion: 'Caña Brava es una exclusiva urbanización campestre ubicada en la apacible vereda San Jose del municipio de San Pedro. Lotes de 250 mts² en conjunto cerrado con portería y vigilancia 24 horas, zona social con piscina para adultos y niños y salón de eventos equipado.',
+          descripcion_1: 'Consulte disponibilidad y precios. Ubicación estratégica en un entorno natural privilegiado, ideal para quienes buscan tranquilidad y seguridad en un ambiente campestre exclusivo.',
+    descripcion_2: 'Disfrute de la exclusividad y comodidad que ofrece Caña Brava, un lugar único para vivir en armonía con la naturaleza.',
+    espacios: [
+      'porteria',
+      'vigilancia',
+      'piscina',
+      'social',
+      'eventos',
+      'cerrado'
+    ]
+  },
   textGaleria:{
     titulo:'Galería del proyecto'
   },
@@ -261,6 +280,14 @@ casa_usa_primera_detalle:{
     precio_desc: 'Consulte disponibilidad y precios.',
     ubicacion: 'Ubicación',
     ubicacion_desc: 'Rozo - Palmira, vereda La Acequia.',
+  },
+  cana_brava: {
+    area: 'Área',
+    area_desc: 'Lotes de 250 mts²',
+    precio: 'Precio',
+          precio_desc: 'Consulte disponibilidad y precios',
+    ubicacion: 'Ubicación',
+    ubicacion_desc: 'Vereda San José, San Pedro – Colombia.',
   },
   proyecto2: {
     slide_area_titulo: 'Área útil',
@@ -373,6 +400,24 @@ info_ZigZag_cana_dulce:{
       descripcion: "La zona está rodeada de importantes vías que permiten una rápida conexión con Cali, Palmira, Yumbo y Cerrito."
     }
   },
+  info_ZigZag_cana_brava: {
+    cana_brava1: {
+      titulo: "Exclusiva Urbanización Campestre",
+      descripcion: "Caña Brava es una exclusiva urbanización campestre ubicada en la apacible vereda San Jose del municipio de San Pedro, ideal para quienes buscan tranquilidad y exclusividad."
+    },
+    cana_brava2: {
+      titulo: "Lotes de 250 mts²",
+      descripcion: "Lotes de 250 mts² en conjunto cerrado con portería y vigilancia 24 horas, ofreciendo máxima seguridad y privacidad."
+    },
+    cana_brava3: {
+      titulo: "Zona Social Premium",
+      descripcion: "Zona social con piscina para adultos y niños y salón de eventos equipado para disfrutar en familia y con amigos."
+    },
+    cana_brava4: {
+      titulo: "Consulte Disponibilidad",
+      descripcion: "Proyecto completamente vendido, demostrando la confianza y preferencia de nuestros clientes por la calidad y exclusividad de Caña Brava."
+    }
+  },
 imagenes_add:{
   mapa_rincon:'Mapa de obra'
 
@@ -401,24 +446,30 @@ imagenes_add:{
     comerciales: '21 Locales Comerciales',
     supermercado: 'Supermercado',
     comidas: 'Plazoleta de Comidas',
-    verdes: '6 Zonas Verdes'
+    verdes: '6 Zonas Verdes',
+    vigilancia: 'Vigilancia 24 horas',
+    eventos: 'Salón de eventos',
+    cerrado: 'Conjunto cerrado'
   },
 
 // información videos de youtube 
-videos: {
-  rincon: {
-    video1: { id: 'BRmd52pMUW4', titulo: 'Avances de obra', visible: true },
-    render: { id: 'oSlfSdN70jQ', titulo: 'Avances de obra', visible: false },
-    Avance_en_Zona_comercial: { id: 'LS0EhS0oSbM', titulo: 'Avances de obra', visible: true },
-    rincon_lago_nuevo_sur:{id:'BRmd52pMUW4', titulo: 'Conozca Rincón del Lago', visible: true}
+  videos: {
+    rincon: {
+      video1: { id: 'BRmd52pMUW4', titulo: 'Avances de obra', visible: true },
+      render: { id: 'oSlfSdN70jQ', titulo: 'Avances de obra', visible: false },
+      Avance_en_Zona_comercial: { id: 'LS0EhS0oSbM', titulo: 'Avances de obra', visible: true },
+      rincon_lago_nuevo_sur:{id:'BRmd52pMUW4', titulo: 'Conozca Rincón del Lago', visible: true}
+    },
+    puertas_sol: {
+      video_principal: { id: 'dWO2LGUfFdY', titulo: 'Conozca Puertas del Sol', visible: true }
+    },
+    cana_dulce: {
+      video_principal: { id: 'A7EXkNPyiF8', titulo: 'Conozca Caña Dulce', visible: true }
+    },
+    cana_brava: {
+      video_principal: { id: 'hbDuQFcnO6c', titulo: 'Conozca Caña Brava', visible: true }
+    },
   },
-  puertas_sol: {
-    video_principal: { id: 'dWO2LGUfFdY', titulo: 'Conozca Puertas del Sol', visible: true }
-  },
-  cana_dulce: {
-    video_principal: { id: 'A7EXkNPyiF8', titulo: 'Conozca Caña Dulce', visible: true }
-  },
-},
   entregados: {
     titulo: 'Proyectos Finalizados',
     subtitulo: 'Proyectos completados con éxito y finalizados para nuestros clientes',
@@ -504,6 +555,15 @@ videos: {
       slide3_title: 'Zona social de primera categoría',
       slide3_subtitle: 'Amenidades de lujo: piscina, jacuzzi, sauna, salón social de 300 m² y más',
       boton: 'Agendar cita exclusiva'
+    },
+    cana_brava: {
+      slide1_title: 'Exclusiva urbanización campestre',
+      slide1_subtitle: 'Caña Brava - San Pedro, Colombia. Lotes de 250 mts² en conjunto cerrado con portería y vigilancia 24 horas',
+      slide2_title: 'Zona social premium',
+      slide2_subtitle: 'Piscina para adultos y niños, salón de eventos equipado. Consulte disponibilidad y precios',
+      slide3_title: 'Ubicación estratégica',
+      slide3_subtitle: 'Vereda San José, San Pedro - Entorno natural privilegiado con máxima privacidad y tranquilidad',
+      boton: 'Contáctanos'
     },
     puertas_sol: {
       slide1_title: 'Urbanización completamente terminada',

@@ -29,7 +29,7 @@ const ProyectosColombia = () => {
   const [tooltipVisible, setTooltipVisible] = useState(null);
   
   // Filtrar proyectos de Colombia
-  const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia' || p.ubicacion === 'san_jose' || p.ubicacion === 'rozo_palmira');
+  const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia' || p.ubicacion === 'san_pedro' || p.ubicacion === 'rozo_palmira');
   
   // Usar el primer render como imagen de hero
   const heroImg = renders[0]?.imagen;
@@ -39,8 +39,7 @@ const ProyectosColombia = () => {
     // Proyectos próximamente (los que no tienen enlace o tienen enlace '#')
     const proyectosProximamente = [
       'marbella_titulo',     // Quintas de Marbella
-      'palmeras_title',      // Palmeras de la Italia
-      'cana_title'           // Caña Brava
+      'palmeras_title'       // Palmeras de la Italia
     ];
     
     return proyectosProximamente.includes(titulo);

@@ -25,8 +25,7 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
     // Proyectos próximamente (urbanizaciones de lujo + los nuevos)
     const proyectosProximamente = [
       'marbella_titulo',    // Urbanización abierta
-      'palmeras_title',     // Palmeras de la Italia
-      'cana_title'          // Caña Brava
+      'palmeras_title'      // Palmeras de la Italia
     ];
     
     // Proyectos finalizados (ninguno está deshabilitado - todos tienen botón "Ver más")

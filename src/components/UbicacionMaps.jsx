@@ -12,7 +12,7 @@ export default function MapaIframeReutilizable({
   // Verificación básica para asegurar que se pase una URL
   if (!mapSrc) {
     console.error("MapaIframeReutilizable: Se requiere la prop 'mapSrc'.");
-    return <div style={{...containerStyle, display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'red'}}>
+    return <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'red', padding: '2rem'}}>
              Error: No se ha proporcionado la URL del mapa.
            </div>;
   }

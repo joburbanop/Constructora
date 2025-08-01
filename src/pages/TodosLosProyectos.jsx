@@ -28,9 +28,7 @@ const TodosLosProyectos = () => {
   const location = useLocation();
   const [filtroActivo, setFiltroActivo] = useState('todos');
   const [ubicacionFiltro, setUbicacionFiltro] = useState('todas');
-  const [isLoading, setIsLoading] = useState(false);
   const [showFilters, setShowFilters] = useState(true);
-  const [lastFilterChange, setLastFilterChange] = useState(null);
   const [activeSection, setActiveSection] = useState('inicio');
 
   // Efecto para hacer scroll al inicio cuando se carga la página
@@ -48,16 +46,12 @@ const TodosLosProyectos = () => {
     // Aplicar filtros si vienen desde SearchFilters
     const filtrosDesdeSearch = location.state?.filtros;
     if (filtrosDesdeSearch) {
-      setIsLoading(true);
-      setTimeout(() => {
-        if (filtrosDesdeSearch.ubicacion) {
-          setUbicacionFiltro(filtrosDesdeSearch.ubicacion);
-        }
-        if (filtrosDesdeSearch.tipoProyecto) {
-          setFiltroActivo(filtrosDesdeSearch.tipoProyecto);
-        }
-        setIsLoading(false);
-      }, 300);
+      if (filtrosDesdeSearch.ubicacion) {
+        setUbicacionFiltro(filtrosDesdeSearch.ubicacion);
+      }
+      if (filtrosDesdeSearch.tipoProyecto) {
+        setFiltroActivo(filtrosDesdeSearch.tipoProyecto);
+      }
     }
   }, [location.state]);
 
@@ -80,19 +74,13 @@ const TodosLosProyectos = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Simular carga al cambiar filtros
+  // Cambiar filtros sin efectos de carga
   const handleFilterChange = (type, value) => {
-    setIsLoading(true);
-    setLastFilterChange(Date.now());
-    
-    setTimeout(() => {
-      if (type === 'tipo') {
-        setFiltroActivo(value);
-      } else {
-        setUbicacionFiltro(value);
-      }
-      setIsLoading(false);
-    }, 200);
+    if (type === 'tipo') {
+      setFiltroActivo(value);
+    } else {
+      setUbicacionFiltro(value);
+    }
   };
 
   // Obtener renders para el hero slider
@@ -119,8 +107,9 @@ const TodosLosProyectos = () => {
   const ubicaciones = [
     { id: 'todas', label: t.todos_proyectos?.todas_ubicaciones || 'Todas las ubicaciones', count: proyectos.length },
     { id: 'jamundi_colombia', label: t.proyectos.jamundi_colombia, count: proyectos.filter(p => p.ubicacion === 'jamundi_colombia').length },
-    { id: 'cope_coral', label: t.proyectos.cope_coral, count: proyectos.filter(p => p.ubicacion === 'cope_coral').length },
-    { id: 'san_jose', label: t.proyectos.san_jose, count: proyectos.filter(p => p.ubicacion === 'san_jose').length }
+    { id: 'rozo_palmira', label: t.proyectos.rozo_palmira, count: proyectos.filter(p => p.ubicacion === 'rozo_palmira').length },
+    { id: 'san_pedro', label: t.proyectos.san_pedro, count: proyectos.filter(p => p.ubicacion === 'san_pedro').length },
+    { id: 'cope_coral', label: t.proyectos.cope_coral, count: proyectos.filter(p => p.ubicacion === 'cope_coral').length }
   ];
 
   // Filtrar proyectos
@@ -132,8 +121,7 @@ const TodosLosProyectos = () => {
 
   const isProyectoProximamente = (titulo) => {
     return titulo === 'marbella_titulo' || 
-           titulo === 'palmeras_title' ||
-           titulo === 'cana_title' ;
+           titulo === 'palmeras_title';
   };
 
   const handleSectionNavigation = (sectionId) => {
@@ -305,12 +293,8 @@ const TodosLosProyectos = () => {
               <button 
                 className="limpiar-filtros-btn"
                 onClick={() => {
-                  setIsLoading(true);
-                  setTimeout(() => {
-                    setFiltroActivo('todos');
-                    setUbicacionFiltro('todas');
-                    setIsLoading(false);
-                  }, 200);
+                  setFiltroActivo('todos');
+                  setUbicacionFiltro('todas');
                 }}
                 aria-label="Limpiar todos los filtros"
               >
@@ -376,96 +360,80 @@ const TodosLosProyectos = () => {
           </div>
         </div>
 
-        {/* Grid de proyectos con estado de carga */}
+        {/* Grid de proyectos */}
         <section className="proyectos-grid-section">
-          {isLoading ? (
-            <div className="loading-grid">
-              {[1, 2, 3, 4, 5, 6].map(i => (
-                <div key={i} className="proyecto-card-skeleton">
-                  <div className="skeleton-img"></div>
-                  <div className="skeleton-content">
-                    <div className="skeleton-title"></div>
-                    <div className="skeleton-text"></div>
-                    <div className="skeleton-text short"></div>
-                    <div className="skeleton-button"></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="proyectos-grid">
-              {proyectosFiltrados.map((proy, idx) => (
-                <div 
-                  className="proyecto-card" 
-                  key={idx}
-                  style={{ animationDelay: `${idx * 0.1}s` }}
+          <div className="proyectos-grid">
+            {proyectosFiltrados.map((proy, idx) => (
+              <div 
+                className="proyecto-card" 
+                key={idx}
+                style={{ animationDelay: `${idx * 0.1}s` }}
+              >
+                <span 
+                  className="proyecto-etiqueta" 
+                  style={{background: proy.etiquetaColor}}
                 >
-                  <span 
-                    className="proyecto-etiqueta" 
-                    style={{background: proy.etiquetaColor}}
-                  >
-                    {t.proyectos[proy.tipo]}
-                  </span>
-                  
-                  <div className="proyecto-img-wrap">
-                    <img 
-                      src={proy.imagen} 
-                      alt={t.proyectos[proy.titulo]} 
-                      className="proyecto-img"
-                      loading="lazy"
-                    />
-                    <div className="proyecto-overlay">
-                      <div className="proyecto-overlay-content">
-                        <span className="overlay-text">Ver detalles</span>
-                      </div>
+                  {t.proyectos[proy.tipo]}
+                </span>
+                
+                <div className="proyecto-img-wrap">
+                  <img 
+                    src={proy.imagen} 
+                    alt={t.proyectos[proy.titulo]} 
+                    className="proyecto-img"
+                    loading="lazy"
+                  />
+                  <div className="proyecto-overlay">
+                    <div className="proyecto-overlay-content">
+                      <span className="overlay-text">Ver detalles</span>
                     </div>
-                  </div>
-                  
-                  <div className="proyecto-info">
-                    <div className="proyecto-titulo-row">
-                      <span className="icono-circular-titulo">
-                        {iconosTipo[proy.icono] && React.createElement(iconosTipo[proy.icono], { 
-                          size: 32, 
-                          color: proy.iconoColor || '#222' 
-                        })}
-                      </span>
-                      <h3 className="proyecto-nombre">{t.proyectos[proy.titulo]}</h3>
-                    </div>
-                    
-                    <p className="proyecto-desc">{t.proyectos[proy.descripcion]}</p>
-                    
-                    <div className="proyecto-ubicacion">
-                      <span className="proyecto-ubicacion-icon">
-                        <MdLocationOn style={{ 
-                          color: '#ff6600', 
-                          fontSize: '1.2em', 
-                          marginRight: '0.2em', 
-                          verticalAlign: 'middle' 
-                        }} />
-                      </span>
-                      <span>{t.proyectos[proy.ubicacion]}</span>
-                    </div>
-                    
-                    <button
-                      className={`proyecto-btn ${isProyectoProximamente(proy.titulo) ? 'proximamente' : 'ver-mas'}`}
-                      onClick={() => handleProyectoNavigation(proy, navigate)}
-                      disabled={isProyectoProximamente(proy.titulo)}
-                      aria-label={isProyectoProximamente(proy.titulo) ? 'Proyecto próximamente disponible' : `Ver detalles de ${t.proyectos[proy.titulo]}`}
-                    >
-                      {isProyectoProximamente(proy.titulo) 
-                        ? t.proyectos.proximamente 
-                        : t.proyectos.boton || 'Ver más'
-                      }
-                    </button>
                   </div>
                 </div>
-              ))}
-            </div>
-          )}
+                
+                <div className="proyecto-info">
+                  <div className="proyecto-titulo-row">
+                    <span className="icono-circular-titulo">
+                      {iconosTipo[proy.icono] && React.createElement(iconosTipo[proy.icono], { 
+                        size: 32, 
+                        color: proy.iconoColor || '#222' 
+                      })}
+                    </span>
+                    <h3 className="proyecto-nombre">{t.proyectos[proy.titulo]}</h3>
+                  </div>
+                  
+                  <p className="proyecto-desc">{t.proyectos[proy.descripcion]}</p>
+                  
+                  <div className="proyecto-ubicacion">
+                    <span className="proyecto-ubicacion-icon">
+                      <MdLocationOn style={{ 
+                        color: '#ff6600', 
+                        fontSize: '1.2em', 
+                        marginRight: '0.2em', 
+                        verticalAlign: 'middle' 
+                      }} />
+                    </span>
+                    <span>{t.proyectos[proy.ubicacion]}</span>
+                  </div>
+                  
+                  <button
+                    className={`proyecto-btn ${isProyectoProximamente(proy.titulo) ? 'proximamente' : 'ver-mas'}`}
+                    onClick={() => handleProyectoNavigation(proy, navigate)}
+                    disabled={isProyectoProximamente(proy.titulo)}
+                    aria-label={isProyectoProximamente(proy.titulo) ? 'Proyecto próximamente disponible' : `Ver detalles de ${t.proyectos[proy.titulo]}`}
+                  >
+                    {isProyectoProximamente(proy.titulo) 
+                      ? t.proyectos.proximamente 
+                      : t.proyectos.boton || 'Ver más'
+                    }
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* Mensaje cuando no hay resultados */}
-        {!isLoading && proyectosFiltrados.length === 0 && (
+        {proyectosFiltrados.length === 0 && (
           <div className="sin-resultados">
             <div className="sin-resultados-icon">
               <MdSearch />
@@ -475,12 +443,8 @@ const TodosLosProyectos = () => {
             <button 
               className="limpiar-filtros-btn"
               onClick={() => {
-                setIsLoading(true);
-                setTimeout(() => {
-                  setFiltroActivo('todos');
-                  setUbicacionFiltro('todas');
-                  setIsLoading(false);
-                }, 200);
+                setFiltroActivo('todos');
+                setUbicacionFiltro('todas');
               }}
             >
               <MdClear />
