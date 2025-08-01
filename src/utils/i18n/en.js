@@ -497,6 +497,18 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       slide3_subtitle: 'San José area, San Pedro - Privileged natural environment with maximum privacy and tranquility',
       boton: 'Contact Us'
     },
+    san_miguel: {
+      slide1_title: 'San Miguel Urbanization',
+      slide1_subtitle: 'San Miguel Urbanization',
+      slide1_description: 'San Miguel Urbanization',
+      slide2_title: 'San Miguel Urbanization',
+      slide2_subtitle: 'San Miguel Urbanization',
+      slide2_description: 'San Miguel Urbanization',
+      slide3_title: 'San Miguel Urbanization',
+      slide3_subtitle: 'San Miguel Urbanization',
+      slide3_description: 'San Miguel Urbanization',
+      boton: 'Contact Us'
+    },
   puertas_sol: {
     slide1_title: 'Completely finished urbanization',
     slide1_subtitle: 'Located at kilometer 2 via Jamundí - Potrerito just 20 minutes from southern Cali',

@@ -94,7 +94,7 @@ const InfoSanMiguel = () => {
       <BreadcrumbSimple />
 
       <section id="inicio">
-        <Slider contenido={slidesSanMiguel} namespace="san-miguel"/>
+        <Slider contenido={slidesSanMiguel} namespace="san_miguel"/>
       </section>
 
       <DetallesProyecto id="san_miguel" />

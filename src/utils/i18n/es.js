@@ -565,6 +565,18 @@ imagenes_add:{
       slide3_subtitle: 'Vereda San José, San Pedro - Entorno natural privilegiado con máxima privacidad y tranquilidad',
       boton: 'Contáctanos'
     },
+    san_miguel: {
+      slide1_title: 'Urbanización San Miguel',
+      slide1_subtitle: 'Urbanización San Miguel',
+      slide1_description: 'Urbanización San Miguel',
+      slide2_title: 'Urbanización San Miguel',
+      slide2_subtitle: 'Urbanización San Miguel',
+      slide2_description: 'Urbanización San Miguel',
+      slide3_title: 'Urbanización San Miguel',
+      slide3_subtitle: 'Urbanización San Miguel',
+      slide3_description: 'Urbanización San Miguel',
+      boton: 'Contáctanos'
+    },
     puertas_sol: {
       slide1_title: 'Urbanización completamente terminada',
       slide1_subtitle: 'Ubicada en el kilómetro 2 vía Jamundí - Potrerito a solo 20 minutos del sur de Cali',
