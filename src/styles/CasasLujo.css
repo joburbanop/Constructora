@@ -353,6 +353,21 @@
   padding: clamp(3rem, 8vw, 6rem) 0;
 }
 
+/* ========== FOOTER SECTION ========== */
+.footer-section {
+  width: 100%;
+  background: var(--casas-lujo-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section .footer {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 3rem 0 1.5rem 0;
+}
+
 /* ========== RESPONSIVE DESIGN ========== */
 
 /* Tablet y dispositivos medianos */

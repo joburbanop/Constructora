@@ -14,15 +14,15 @@ export const slidesCasasLujo = [
   {
     id: 2,
     image: casaLujo2,
-    title: 'slide2_title',
-    subtitle: 'slide2_subtitle',
+    title: 'slide1_title',
+    subtitle: 'slide1_subtitle',
     button: 'boton'
   },
   {
     id: 3,
     image: casaLujo3,
-    title: 'slide3_title',
-    subtitle: 'slide3_subtitle',
+    title: 'slide1_title',
+    subtitle: 'slide1_subtitle',
     button: 'boton'
   }
 ];

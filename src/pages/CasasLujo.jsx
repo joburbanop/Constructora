@@ -31,10 +31,30 @@ const CasasLujo = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
-  // Filtrar asesores para la sección de expertos
-  const asesores = agentes.filter(agente =>
-    ['lina', 'sofia', 'ludivia'].includes(agente.id)
-  );
+  // Expertos específicos para Casas de Lujo con información personalizada
+  const asesores = [
+    {
+      id: 'sofia',
+      nombre: 'Sofía Saavedra',
+      cargo: 'Directora comercial Casas & Lotes SAS',
+      telefono: '+57 3234708860',
+      imagen: '/src/assets/expertos/SOFIA.webp'
+    },
+    {
+      id: 'ludivia',
+      nombre: 'Ludivia Guapacha',
+      cargo: 'Ejecutiva comercial Quintas de Marbella',
+      telefono: '+57 3332488488',
+      imagen: '/src/assets/expertos/LUDI.webp'
+    },
+    {
+      id: 'lina',
+      nombre: 'Lina Encizo',
+      cargo: 'Ejecutiva comercial San Miguel',
+      telefono: '+57 3244414141',
+      imagen: '/src/assets/expertos/LINA.webp'
+    }
+  ];
 
   // Definir los elementos de navegación para la página de Casas de Lujo
   const casasLujoNavItems = [
@@ -168,7 +188,9 @@ const CasasLujo = () => {
         </div>
       </section>
 
-      <Footer />
+      <section className="footer-section">
+        <Footer />
+      </section>
       <WhatsAppFloat />
     </div>
   );

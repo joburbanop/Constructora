@@ -10,7 +10,6 @@ import { useIdioma } from '../context/IdiomaContext';
 
 export default function Slider({ contenido = [], namespace = 'home' }) {
   const { t } = useIdioma();
-  //    loop
  
   return (
    <div className="slider-container-slider">
@@ -26,23 +25,23 @@ export default function Slider({ contenido = [], namespace = 'home' }) {
     className="slider-swiper-slider"
   >
     {contenido.map((slide, idx) => (
-      <SwiperSlide key={slide.title}>
+      <SwiperSlide key={`${slide.id || idx}-${slide.title}`}>
         <div
           className="slider-bg-slider"
           style={{ backgroundImage: `url(${slide.image})` }}
         >
           <div className="slider-content-slider animate-fadeInUp">
             <h1 className="slider-title-slider animate-fadeIn">
-              {t.slider?.[namespace]?.[slide.title] || slide.title}
+              {namespace === 'casas_lujo' ? 'Casas de Lujo' : (t.slider?.[namespace]?.[slide.title] || slide.title)}
             </h1>
             <p className="slider-subtitle-slider animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-              {t.slider?.[namespace]?.[slide.subtitle] }
+              {namespace === 'casas_lujo' ? 'Ambientes únicos en exclusivos sectores del Valle del Cauca' : (t.slider?.[namespace]?.[slide.subtitle] || slide.subtitle)}
             </p>
             <Button 
               whatsapp={true}
               style={{ animationDelay: '0.6s' }}
             >
-              {t.slider?.[namespace]?.boton || "Contáctanos"}
+              {namespace === 'casas_lujo' ? 'Contáctanos' : (t.slider?.[namespace]?.boton || "Contáctanos")}
             </Button>
           </div>
         </div>
