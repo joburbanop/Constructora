@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../assets/LOGO.png';
+import logo from '../assets/logo_CYL_SAS_LLC.webp';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import '../styles/Footer.css';
 import { useIdioma } from '../context/IdiomaContext';

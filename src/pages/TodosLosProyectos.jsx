@@ -137,8 +137,6 @@ const TodosLosProyectos = () => {
 
   const isProyectoProximamente = (titulo) => {
     return titulo === 'sanmiguel_titulo' || 
-          titulo === 'marbella_titulo' || 
-        
            titulo === 'palmeras_title' ||
             titulo === 'cana_title' ;
   };

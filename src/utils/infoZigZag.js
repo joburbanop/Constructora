@@ -18,6 +18,9 @@ import puertas_sol2 from '../assets/puertas_sol/img2.webp';
 import puertas_sol3 from '../assets/puertas_sol/img3.webp';
 import puertas_sol4 from '../assets/puertas_sol/img4.webp';
 import puertas_sol5 from '../assets/puertas_sol/img5.webp';
+import quintas_marbella1 from '../assets/marbella/quintas_marbella1.webp';
+import quintas_marbella9 from '../assets/marbella/quintas_marbella9.webp';
+import quintas_marbella8 from '../assets/marbella/quintas_marbella8.webp';
 
 const datosRinconLago = [
   { imagen: img1, clave: 'elemento1' },
@@ -50,7 +53,15 @@ const datosPuertasSol = [
   { imagen: puertas_sol5, clave: 'puertas_sol5' },
 ];
 
+const datosQuintasMarbella = [
+  { imagen: quintas_marbella1, clave: 'quintas1' },
+  { imagen: quintas_marbella9, clave: 'quintas2' },
+  { imagen: quintas_marbella8, clave: 'quintas3' },
+ 
+];
+
 export default {
+  datosQuintasMarbella,
   datosRinconLago,
   datosCoralMall,
   datosCanaDulce,

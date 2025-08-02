@@ -170,7 +170,7 @@ cana_dulce_detalle: {
   titulo: 'Caña Dulce',
   subtitulo: 'Exclusiva urbanización campestre de 46 lotes',
   subtitulo_2: 'Ubicada a 20 minutos de Tuluá en la vereda San José del municipio de San Pedro',
-  descripcion: 'Completamente terminada y entregada. Cuenta con sus vías en sub base y todos los servicios públicos funcionales.',
+  descripcion: 'Caña dulce es una exclusiva urbanización campestre ubicada en la apacible vereda San Jose del municipio de San Pedro. Lotes de 250 mts2 en conjunto cerrado con portería y vigilancia 24 horas, zona social con piscina para adultos y niños, jaccuzy, sauna, salón social doble nivel, salón de eventos equipado. ',
   descripcion_1: 'Últimos lotes de 12x21 mts, para disfrutar en familia de toda la tranquilidad y seguridad que ofrece este paraje natural.',
   descripcion_2: 'Agende su cita y visitenos: 3204210000'
 },
@@ -181,7 +181,7 @@ puertas_sol_detalle: {
   subtitulo: 'Urbanización completamente terminada',
   subtitulo_2: 'Ubicada en el kilómetro 2 vía Jamundí - Potrerito a solo 20 minutos del sur de Cali',
   descripcion: 'Últimos lotes disponibles de 8x15 mts (120 m²) con facilidad de pago a 12 meses.',
-  descripcion_1: 'Equipada con gasolinera, centro de servicios, 21 locales comerciales, supermercado, plazoleta de comidas y 6 zonas verdes.',
+  descripcion_1: 'PUERTAS DEL SOL es una urbanización ubicada en Jamundí con lotes de 120 mts2 (8 mts de frente x 15 mts de fondo) ) en una nueva zona de expansión a solo 8 minutos del centro de Jamundí. Cuenta con una zona comercial con estación de servicios, área para super mercado, locales comerciales y amplias bahías de estacionamiento. Sin pago de administración ni cuotas de manejo.',
   descripcion_2: 'Agende su visita: 3204210000'
 },
 casa_usa_primera_detalle:{
@@ -203,6 +203,16 @@ casa_usa_primera_detalle:{
     descripcion:'Lujosa casa unifamiliar con 3+1 amplios dormitorios, 3 baños y un garaje para 2 autos. Encimeras de granito, electrodomésticos y pisos de alta calidad le dan a la casa un aspecto elegante Amplias puertas y ventanas a prueba de impactos inundan la casa de luz natural y ofrecen impresionantes vistas de los alrededores. Preparada para resistir huracanes gracias a su sólida estructura y techo plano.',
     descripcion_1:'',
     descripcion_2:''
+  },
+   quintas_marbella_detalle:{
+    espacios_titulo:'',
+    espacios_desc:'',
+    titulo:'Quintas de Marbella',
+    subtitulo:'Lotes residenciales y comerciales con ubicación estratégica',
+    subtitulo_2:'Construye a tu medida sin endeudarte',
+    descripcion:'Quintas de Marbella es una urbanización con lotes desde 90,3 m² (7 mts de frente x 12,90 mts de fondo) ), la mejor alternativa para construir a su gusto y tener una casa grande sin endeudamiento con entidades bancarias.',
+    descripcion_1:'Quintas de Marbella se ubica estratégicamente entre la urbanización Marbella y Bonanza, próximamente contará con amplias vías asfaltadas que acortarán la distancia entre la av. Panamericana a través de Barú .',
+    descripcion_2:' Facilidades de pago directas con nuestra constructora hasta por 5 años.'
   },
   textGaleria:{
     titulo:'Galería del proyecto'
@@ -238,9 +248,13 @@ casa_usa_primera_detalle:{
     ubicacion: 'Ubicación',
     ubicacion_desc: 'Km 2 vía Jamundí - Potrerito, Sur de Cali – Colombia.',
   },
-  proyecto2: {
-    slide_area_titulo: 'Área útil',
-    slide_area_subtitulo: '160 m² de construcción',
+  quintas_marbella: {
+    area: 'Área',
+    area_desc: 'Lotes desde 90,3 m²',
+    precio: 'Precio',
+    precio_desc: 'Facilidad de pago a 5 años. Consulte precios.',
+    ubicacion: 'Ubicación',
+    ubicacion_desc: 'Jamundi, Colombia.',
    
   }
 },
@@ -329,7 +343,23 @@ info_ZigZag_puertas_sol:{
   puertas_sol5: {
     titulo: "Inversión comercial y residencial",
     descripcion: "Ideal para inversión comercial y residencial con alta rentabilidad. Agende su visita exclusiva: 3204210000"
+  },
+  
+},
+info_ZigZag_quintas_marbella:{
+  quintas1: {
+    titulo: "Construye sin endeudarte",
+    descripcion: "Quintas de Marbella te ofrece la libertad de construir a tu medida, con lotes desde 90,3 m² sin necesidad de créditos bancarios. Aprovecha nuestras facilidades de pago directo hasta por 5 años con la constructora y dale vida a la casa que siempre soñaste."
+  },
+  quintas2: {
+    titulo: "Ubicación estratégica y proyección de desarrollo",
+    descripcion: "Ubicada entre las urbanizaciones Marbella y Bonanza, esta zona está en plena expansión. Muy pronto contará con nuevas vías asfaltadas que mejorarán la conexión hacia la Avenida Panamericana a través de Barú, aumentando su valorización y accesibilidad."
+  },
+  quintas3: {
+    titulo: "Últimos lotes mixtos disponibles",
+    descripcion: "Haz parte de esta exclusiva urbanización accediendo a los últimos lotes de uso mixto (102 m²), ideales para vivienda y comercio. Disfruta de un diseño con doble frente sobre la vía principal, zonas de parqueo y excelente visibilidad."
   }
+ 
 },
 imagenes_add:{
   mapa_rincon:'Mapa de obra'
@@ -375,6 +405,9 @@ videos: {
   },
   cana_dulce: {
     video_principal: { id: 'A7EXkNPyiF8', titulo: 'Conozca Caña Dulce', visible: true }
+  },
+  marbella: {
+    video_principal: { id: 'nLCuCT-fFnA', titulo: 'Quintas de Marbella', visible: true }
   },
 },
   entregados: {
@@ -506,6 +539,16 @@ videos: {
       slide3_title: 'Confort y seguridad en un solo lugar',
       slide3_subtitle: 'Cape Coral, FL ',
       boton: 'Contáctanos'
+    
+  },
+    quintas_marbella: {
+        slide1_title: 'Quintas de Marbella',
+        slide1_subtitle: 'Lotes más grandes con el mejor precio de la zona',
+        slide2_title: 'Quintas de Marbella ',
+        slide2_subtitle: 'Lotes más grandes con el mejor precio de la zona',
+        slide3_title: 'Quintas de Marbella',
+        slide3_subtitle: 'Lotes más grandes con el mejor precio de la zona',
+        boton: 'Contáctanos'
     
   },
 },

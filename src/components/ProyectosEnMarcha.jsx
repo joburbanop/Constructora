@@ -25,7 +25,6 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
     // Proyectos próximamente (urbanizaciones de lujo + los nuevos)
     const proyectosProximamente = [
       'sanmiguel_titulo', 
-      'marbella_titulo',    // Urbanización abierta
       'palmeras_title',     // Palmeras de la Italia
       'cana_title'          // Caña Brava
     ];
@@ -81,7 +80,10 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
               <div className="button-container" style={{ position: 'relative' }}>
                 <Button
                   className={`ambito-btn ${isProyectoProximamente(proy.titulo) ? 'gray lujo proximamente' : 'orange'}`}
-                  onClick={isProyectoProximamente(proy.titulo) ? undefined : () => handleProyectoNavigation(proy, navigate)}
+                  onClick={isProyectoProximamente(proy.titulo) ? undefined : () => {
+        console.log('Clic en:', proy.titulo); // Confirma que entra
+        handleProyectoNavigation(proy, navigate); // Redirección
+      }}
                   disabled={isProyectoProximamente(proy.titulo)}
                   onMouseEnter={() => handleMouseEnter(proy.titulo)}
                   onMouseLeave={handleMouseLeave}

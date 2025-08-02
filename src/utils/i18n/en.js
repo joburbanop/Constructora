@@ -169,7 +169,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     titulo: 'Caña Dulce',
     subtitulo: 'Exclusive countryside urbanization of 46 lots',
     subtitulo_2: 'Located 20 minutes from Tuluá in the San José area of San Pedro municipality',
-    descripcion: 'Completely finished and delivered. Features sub-base roads and all functional public services.',
+    descripcion: 'Caña Dulce is an exclusive countryside residential development located in the peaceful San Jose rural area of the San Pedro municipality. 250 m² plots in a gated community with 24-hour security, social area with adult and children’s pools, jacuzzi, sauna, two-level clubhouse, and a fully equipped event hall.',
     descripcion_1: 'Last lots of 12x21 mts, to enjoy with family all the tranquility and security that this natural setting offers.',
     descripcion_2: 'Schedule your appointment and visit us: 3204210000'
   },
@@ -180,7 +180,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     subtitulo: 'Completely finished urbanization',
     subtitulo_2: 'Located at kilometer 2 via Jamundí - Potrerito, just 20 minutes south of Cali',
     descripcion: 'Last available lots of 8x15 mts (120 m²) with payment facility up to 12 months.',
-    descripcion_1: 'Equipped with gas station, service center, 21 commercial premises, supermarket, food court and 6 green areas.',
+   descripcion_1: 'PUERTAS DEL SOL is a residential development located in Jamundí, offering 120 m² plots (8 meters wide by 15 meters deep) in a new expansion area just 8 minutes from downtown Jamundí. It features a commercial zone with a service station, supermarket area, retail spaces, and spacious parking bays. No administration or maintenance fees.',
     descripcion_2: 'Schedule your visit: 3204210000'
   },
 
@@ -203,6 +203,17 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     descripcion:'Luxurious single-family home with 3+1 spacious bedrooms, 3 bathrooms, and a 2-car garage. Granite countertops, high-quality appliances, and flooring give the home an elegant look. Wide impact-resistant doors and windows flood the house with natural light and offer stunning views of the surroundings. Hurricane-ready thanks to its solid structure and flat roof.',
     descripcion_1:'',
     descripcion_2:''
+  },
+  quintas_marbella_detalle:{
+   espacios_titulo: '',
+    espacios_desc: '',
+    titulo: 'Quintas de Marbella',
+    subtitulo: 'Residential and commercial lots with strategic location',
+    subtitulo_2: 'Build your way without going into debt',
+    descripcion: 'Quintas de Marbella is a residential development offering lots starting at 90.3 m² (7 meters wide by 12.90 meters deep), the best alternative to build your dream home without relying on bank loans.',
+    descripcion_1: 'Quintas de Marbella is strategically located between the Marbella and Bonanza developments. It will soon feature wide paved roads that will shorten the distance to the Pan-American Highway via Barú.',
+    descripcion_2: 'Direct payment plans with our construction company for up to 5 years.'
+
   },
    textGaleria:{
     titulo:'Project Gallery'
@@ -232,11 +243,15 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       ubicacion_desc: 'San José area, San Pedro – Colombia.'
 
     },
-    proyecto2: {
-      slide_area_titulo: 'Usable area',
-      slide_area_subtitulo: '160 m² of construction',
+   quintas_marbella: {
+  area: 'Area',
+  area_desc: 'Lots starting at 90.3 m²',
+  precio: 'Price',
+  precio_desc: 'Flexible payment plans up to 5 years. Ask for pricing.',
+  ubicacion: 'Location',
+  ubicacion_desc: 'Jamundí, Colombia.',
+}
 
-    }
   },
 
   // informacionn componente infoZigZag.jsx
@@ -303,6 +318,21 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       descripcion: "24/7 gatehouse, elegant reception, professional administration and UTB. Schedule your exclusive appointment: 3204210000"
     }
   },
+  info_ZigZag_quintas_marbella: {
+  quintas1: {
+    titulo: "Build Without Debt",
+    descripcion: "Quintas de Marbella offers you the freedom to build your way, with lots starting at 90.3 m² and no need for bank loans. Take advantage of our direct payment plans of up to 5 years with the developer and bring your dream home to life."
+  },
+  quintas2: {
+    titulo: "Strategic Location and Development Potential",
+    descripcion: "Located between the Marbella and Bonanza developments, this area is rapidly expanding. It will soon feature new paved roads that will improve access to Panamericana Avenue via Barú, increasing both its value and accessibility."
+  },
+  quintas3: {
+    titulo: "Last Mixed-Use Lots Available",
+    descripcion: "Become part of this exclusive development by acquiring one of the last mixed-use lots (102 m²), ideal for both residential and commercial purposes. Enjoy a double-front design along the main road, parking areas, and great visibility."
+  }
+},
+
   imagenes_add: {
   mapa_rincon: 'Site map'
  
@@ -344,6 +374,9 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     cana_dulce: {
       video_principal: { id: 'A7EXkNPyiF8', titulo: 'Discover Caña Dulce', visible: true }
     },
+     marbella: {
+    video_principal: { id: 'JcVHrn_XfQoZQsin', titulo: 'Quintas de Marbella', visible: true }
+  },
   },
   entregados: {
     titulo: 'Completed Projects',
@@ -475,6 +508,17 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       slide3_title: 'Comfort and safety in one place',
       slide3_subtitle: 'Cape Coral, FL ',
       boton: 'Contáctanos'
+    
+  },
+  quintas_marbella: {
+     slide1_title: 'Quintas de Marbella',
+      slide1_subtitle: 'Larger lots at the best price in the area',
+      slide2_title: 'Quintas de Marbella',
+      slide2_subtitle: 'Larger lots at the best price in the area',
+      slide3_title: 'Quintas de Marbella',
+      slide3_subtitle: 'Larger lots at the best price in the area',
+      boton: 'Contact us'
+
     
   },
 

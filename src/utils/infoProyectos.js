@@ -47,6 +47,15 @@ import casaUsaSegunda15 from '../assets/casaUsaSegunda/casa_usa_segunda_15.webp'
 import casaUsaSegunda16 from '../assets/casaUsaSegunda/casa_usa_segunda_16.webp';
 import casaUsaSegunda17 from '../assets/casaUsaSegunda/casa_usa_segunda_17.webp';
 import casaUsaSegunda18 from '../assets/casaUsaSegunda/casa_usa_segunda_18.webp';
+import quintas_marbella1 from '../assets/marbella/quintas_marbella1.webp';
+import quintas_marbella2 from '../assets/marbella/quintas_marbella2.webp';
+import quintas_marbella3 from '../assets/marbella/quintas_marbella3.webp';
+import quintas_marbella4 from '../assets/marbella/quintas_marbella4.webp';
+import quintas_marbella5 from '../assets/marbella/quintas_marbella5.webp';
+import quintas_marbella6 from '../assets/marbella/quintas_marbella6.webp';
+import quintas_marbella7 from '../assets/marbella/quintas_marbella7.webp';
+import quintas_marbella8 from '../assets/marbella/quintas_marbella8.webp';
+import quintas_marbella9 from '../assets/marbella/quintas_marbella9.webp';
 export const infoProyectos = {
   rincon: {
     id: 'rincon',
@@ -142,6 +151,22 @@ export const infoProyectos = {
         casaUsaSegunda16,
         casaUsaSegunda17,
         casaUsaSegunda18
+
+    ]
+  },
+   quintas_marbella:{
+    id: 'quintas_marbella',
+    slug: 'quintas-marbella',
+    galeria: [
+      quintas_marbella1,
+      quintas_marbella2,
+      quintas_marbella3,
+      quintas_marbella4,
+      quintas_marbella5,
+      quintas_marbella6,
+      quintas_marbella7,
+      quintas_marbella8,
+      quintas_marbella9
 
     ]
   }
