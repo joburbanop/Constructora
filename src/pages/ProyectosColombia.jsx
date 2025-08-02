@@ -29,7 +29,7 @@ const ProyectosColombia = () => {
   const [tooltipVisible, setTooltipVisible] = useState(null);
   
   // Filtrar proyectos de Colombia
-  const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia' || p.ubicacion === 'san_jose'|| p.ubicacion === 'rozo_palmira' || p.ubicacion === 'puertas_sol' || p.ubicacion === 'cana_brava' || p.ubicacion === 'cana_dulce' || p.ubicacion === 'palmeras_italia');
+  const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia' || p.ubicacion === 'san_jose'|| p.ubicacion === 'rozo_palmira' || p.ubicacion === 'san_pedro' || p.ubicacion === 'puertas_sol' || p.ubicacion === 'cana_brava' || p.ubicacion === 'cana_dulce' || p.ubicacion === 'palmeras_italia');
   
     const nombresDeseados = ['lina','ludivia','sofia'];
    const asesores = agentes.filter(({ clave }) =>
