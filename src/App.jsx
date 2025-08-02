@@ -11,6 +11,7 @@ import InfoPuertasSol from "./pages/InfoPuertasSol";
 import InfoSanMiguel from "./pages/InfoSanMiguel";
 import CasaUsaPrimera from "./pages/CasaUsaPrimera";
 import CasaUsaSegunda from './pages/CasaUsaSegunda';
+import CasasLujo from './pages/CasasLujo';
 import TodosLosProyectos from "./pages/TodosLosProyectos";
 import ScrollToTop from './components/ScrollToTop';
 import AnnouncementModal from './components/AnnouncementModal';
@@ -45,6 +46,7 @@ export default function App() {
         <Route path="/palmeras-italia" element={<InfoPalmerasItalia/>} />
         <Route path="/casa-usa-primera" element={<CasaUsaPrimera/>} />
         <Route path="/casa-usa-segunda" element={<CasaUsaSegunda/>} />
+        <Route path="/casas-lujo" element={<CasasLujo/>} />
         <Route path="/quintas-marbella" element={<InfoMarbella/>} />
       </Routes>
       

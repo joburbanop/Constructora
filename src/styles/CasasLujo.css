@@ -1,0 +1,497 @@
+/* ========== CASAS DE LUJO - CSS ESPECÍFICO ========== */
+
+/* Variables específicas para Casas de Lujo */
+:root {
+  --casas-lujo-primary: #ff6600;
+  --casas-lujo-primary-light: #ff914d;
+  --casas-lujo-secondary: #222;
+  --casas-lujo-text-muted: #666;
+  --casas-lujo-bg-light: #ffffff;
+  --casas-lujo-bg-gray: #f8f9fa;
+  --casas-lujo-border-light: #e0e0e0;
+  --casas-lujo-shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --casas-lujo-shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --casas-lujo-border-radius: 12px;
+  --casas-lujo-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========== CONTENEDOR PRINCIPAL ========== */
+.casas-lujo-container {
+  min-height: 100vh;
+  background: var(--casas-lujo-bg-light);
+  overflow-x: hidden;
+}
+
+.casas-lujo-container-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+/* ========== HERO SECTION ========== */
+.casas-lujo-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(255, 145, 77, 0.05) 100%);
+}
+
+.casas-lujo-hero-section .slider-container {
+  height: 100%;
+  min-height: 80vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.casas-lujo-hero-section .slider-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ========== INFO SECTION ========== */
+.casas-lujo-info-section {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+  background: var(--casas-lujo-bg-light);
+}
+
+.casas-lujo-info-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.casas-lujo-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.casas-lujo-info-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--casas-lujo-secondary);
+  font-family: 'Georgia', serif;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.casas-lujo-info-description {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--casas-lujo-text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.casas-lujo-info-image {
+  position: relative;
+  border-radius: var(--casas-lujo-border-radius);
+  overflow: hidden;
+  box-shadow: var(--casas-lujo-shadow-medium);
+  aspect-ratio: 4/3;
+  width: 100%;
+  max-width: 100%;
+}
+
+.casas-lujo-info-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: var(--casas-lujo-transition);
+  display: block;
+}
+
+.casas-lujo-info-image:hover img {
+  transform: scale(1.05);
+}
+
+/* ========== FEATURES ========== */
+.casas-lujo-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.casas-lujo-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--casas-lujo-border-light);
+  transition: var(--casas-lujo-transition);
+  box-shadow: var(--casas-lujo-shadow-soft);
+}
+
+.casas-lujo-feature-item:hover {
+  background: var(--casas-lujo-bg-gray);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--casas-lujo-primary);
+}
+
+.casas-lujo-feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--casas-lujo-primary), var(--casas-lujo-primary-light));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+  transition: var(--casas-lujo-transition);
+  flex-shrink: 0;
+}
+
+.casas-lujo-feature-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.casas-lujo-feature-item:hover .casas-lujo-feature-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 25px rgba(255, 102, 0, 0.4);
+}
+
+.casas-lujo-feature-content h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 0.75rem 0;
+  font-family: 'Georgia', serif;
+}
+
+.casas-lujo-feature-content p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ========== SECTION HEADERS ========== */
+.casas-lujo-section-header {
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.casas-lujo-section-title {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--casas-lujo-secondary);
+  margin: 0 auto 1rem auto;
+  font-family: 'Georgia', serif;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.casas-lujo-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--casas-lujo-primary);
+  border-radius: 2px;
+}
+
+.casas-lujo-section-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--casas-lujo-text-muted);
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+}
+
+/* ========== SERVICIOS SECTION ========== */
+.casas-lujo-servicios-section {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+  background: var(--casas-lujo-bg-light);
+  text-align: center;
+}
+
+.casas-lujo-servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  width: 100%;
+  margin-top: 3rem;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.casas-lujo-servicio-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: var(--casas-lujo-transition);
+  border: 1px solid var(--casas-lujo-border-light);
+  text-align: center;
+  width: 90%;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.casas-lujo-servicio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--casas-lujo-primary);
+}
+
+.casas-lujo-servicio-icon {
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(135deg, var(--casas-lujo-primary), var(--casas-lujo-primary-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 1.8rem;
+  transition: var(--casas-lujo-transition);
+  flex-shrink: 0;
+}
+
+.casas-lujo-servicio-card:hover .casas-lujo-servicio-icon {
+  transform: scale(1.1);
+}
+
+.casas-lujo-servicio-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 1rem 0;
+  font-family: 'Georgia', serif;
+  flex-shrink: 0;
+}
+
+.casas-lujo-servicio-card p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* ========== GALERÍA SECTION ========== */
+.casas-lujo-galeria-section {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+  background: var(--casas-lujo-bg-gray);
+}
+
+.casas-lujo-galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.casas-lujo-galeria-item {
+  position: relative;
+  border-radius: var(--casas-lujo-border-radius);
+  overflow: hidden;
+  box-shadow: var(--casas-lujo-shadow-soft);
+  transition: var(--casas-lujo-transition);
+  aspect-ratio: 4/3;
+  width: 100%;
+  max-width: 100%;
+}
+
+.casas-lujo-galeria-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--casas-lujo-shadow-medium);
+}
+
+.casas-lujo-galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: var(--casas-lujo-transition);
+  display: block;
+}
+
+.casas-lujo-galeria-item:hover img {
+  transform: scale(1.1);
+}
+
+/* ========== EXPERTOS SECTION ========== */
+.casas-lujo-expertos-section {
+  background: var(--casas-lujo-bg-gray);
+  padding: clamp(3rem, 8vw, 6rem) 0;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet y dispositivos medianos */
+@media (max-width: 768px) {
+  .casas-lujo-info-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .casas-lujo-info-image {
+    order: -1;
+  }
+  
+  .casas-lujo-feature-item {
+    text-align: left;
+  }
+  
+  .casas-lujo-servicios-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    gap: 2rem;
+  }
+  
+  .casas-lujo-galeria-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Móviles grandes */
+@media (max-width: 480px) {
+  .casas-lujo-container-inner {
+    padding: 0 1rem;
+  }
+  
+  .casas-lujo-info-content {
+    gap: 1.5rem;
+  }
+  
+  .casas-lujo-info-title {
+    font-size: clamp(1.5rem, 6vw, 1.8rem);
+  }
+  
+  .casas-lujo-info-description {
+    font-size: 0.9rem;
+  }
+  
+  .casas-lujo-feature-item {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .casas-lujo-feature-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .casas-lujo-feature-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .casas-lujo-feature-content h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .casas-lujo-feature-content p {
+    font-size: 0.85rem;
+  }
+  
+  .casas-lujo-servicios-grid {
+    max-width: 350px;
+    gap: 1.5rem;
+  }
+  
+  .casas-lujo-servicio-card {
+    padding: 1.5rem 1rem;
+    width: 100%;
+  }
+  
+  .casas-lujo-servicio-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.4rem;
+  }
+  
+  .casas-lujo-servicio-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .casas-lujo-servicio-card p {
+    font-size: 0.85rem;
+  }
+  
+  .casas-lujo-galeria-grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .casas-lujo-galeria-item {
+    aspect-ratio: 4/3;
+  }
+  
+  .casas-lujo-galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes casasLujoFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.casas-lujo-servicio-card,
+.casas-lujo-galeria-item {
+  animation: casasLujoFadeInUp 0.6s ease-out;
+}
+
+/* ========== ACCESSIBILITY ========== */
+@media (prefers-reduced-motion: reduce) {
+  .casas-lujo-info-image img,
+  .casas-lujo-galeria-item img,
+  .casas-lujo-servicio-icon {
+    transition: none;
+  }
+  
+  .casas-lujo-servicio-card:hover,
+  .casas-lujo-galeria-item:hover {
+    transform: none;
+  }
+} 
