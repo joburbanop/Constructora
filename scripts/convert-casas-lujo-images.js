@@ -29,7 +29,7 @@ async function convertAllImages() {
   try {
     // Leer todos los archivos JPG del directorio
     const files = fs.readdirSync(inputDir);
-    const jpgFiles = files.filter(file => 
+    const jpgFiles = files.filter(file =>
       file.toLowerCase().endsWith('.jpg') || file.toLowerCase().endsWith('.jpeg')
     );
 
@@ -39,7 +39,7 @@ async function convertAllImages() {
     for (const file of jpgFiles) {
       const inputPath = path.join(inputDir, file);
       const outputPath = path.join(outputDir, file.replace(/\.(jpg|jpeg)$/i, '.webp'));
-      
+
       await convertToWebP(inputPath, outputPath);
     }
 

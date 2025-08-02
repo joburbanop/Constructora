@@ -21,6 +21,7 @@ import casaLujo8 from '../assets/Casas_de_Lujo/IMG_20200130_161526.webp';
 import casaLujo9 from '../assets/Casas_de_Lujo/IMG_20200130_162746.webp';
 import casaLujo10 from '../assets/Casas_de_Lujo/IMG_20200130_165328.webp';
 import casaLujo11 from '../assets/Casas_de_Lujo/IMG_20200130_180430.webp';
+import casaLujo12 from '../assets/Casas_de_Lujo/IMG_20200130_115403.webp';
 
 const CasasLujo = () => {
   const { t } = useIdioma();
@@ -54,6 +55,7 @@ const CasasLujo = () => {
     casaLujo9,
     casaLujo10,
     casaLujo11,
+    casaLujo12,
   ];
 
   return (
@@ -109,7 +111,7 @@ const CasasLujo = () => {
               </div>
             </div>
             <div className="casas-lujo-info-image">
-              <img src={casaLujo4} alt="Casa de Lujo" />
+              <img src={casaLujo12} alt="Casa de Lujo" />
             </div>
           </div>
         </div>
