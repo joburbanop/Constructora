@@ -18,6 +18,14 @@ import puertas_sol2 from '../assets/puertas_sol/img2.webp';
 import puertas_sol3 from '../assets/puertas_sol/img3.webp';
 import puertas_sol4 from '../assets/puertas_sol/img4.webp';
 import puertas_sol5 from '../assets/puertas_sol/img5.webp';
+import sanMiguel1 from '../assets/SAN MIGUEL/sm f888.webp';
+import sanMiguel2 from '../assets/SAN MIGUEL/sm f88.webp';
+import sanMiguel3 from '../assets/SAN MIGUEL/locales F5.webp';
+import sanMiguel4 from '../assets/SAN MIGUEL/locales F3.webp';
+import canaBrava1 from '../assets/cana_brava/DJI_0117.webp';
+import canaBrava2 from '../assets/cana_brava/DJI_0137.webp';
+import canaBrava3 from '../assets/cana_brava/DJI_0244.webp';
+import canaBrava4 from '../assets/cana_brava/DJI_0246.webp';
 import quintas_marbella1 from '../assets/marbella/quintas_marbella1.webp';
 import quintas_marbella9 from '../assets/marbella/quintas_marbella9.webp';
 import quintas_marbella8 from '../assets/marbella/quintas_marbella8.webp';
@@ -53,6 +61,20 @@ const datosPuertasSol = [
   { imagen: puertas_sol5, clave: 'puertas_sol5' },
 ];
 
+const datosSanMiguel = [
+  { imagen: sanMiguel1, clave: 'san_miguel1' },
+  { imagen: sanMiguel2, clave: 'san_miguel2' },
+  { imagen: sanMiguel3, clave: 'san_miguel3' },
+  { imagen: sanMiguel4, clave: 'san_miguel4' },
+];
+
+const datosCanaBrava = [
+  { imagen: canaBrava1, clave: 'cana_brava1' },
+  { imagen: canaBrava2, clave: 'cana_brava2' },
+  { imagen: canaBrava3, clave: 'cana_brava3' },
+  { imagen: canaBrava4, clave: 'cana_brava4' },
+];
+
 const datosQuintasMarbella = [
   { imagen: quintas_marbella1, clave: 'quintas1' },
   { imagen: quintas_marbella9, clave: 'quintas2' },
@@ -65,5 +87,7 @@ export default {
   datosRinconLago,
   datosCoralMall,
   datosCanaDulce,
-  datosPuertasSol
+  datosPuertasSol,
+  datosSanMiguel,
+  datosCanaBrava
 };

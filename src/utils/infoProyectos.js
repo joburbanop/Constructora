@@ -47,6 +47,31 @@ import casaUsaSegunda15 from '../assets/casaUsaSegunda/casa_usa_segunda_15.webp'
 import casaUsaSegunda16 from '../assets/casaUsaSegunda/casa_usa_segunda_16.webp';
 import casaUsaSegunda17 from '../assets/casaUsaSegunda/casa_usa_segunda_17.webp';
 import casaUsaSegunda18 from '../assets/casaUsaSegunda/casa_usa_segunda_18.webp';
+import SanMiguelLogo from '../assets/SAN MIGUEL/San miguel/LOGO SAN MIGUEL PNG-01.webp';
+import sanMiguel1 from '../assets/SAN MIGUEL/sm f888.webp';
+import sanMiguel2 from '../assets/SAN MIGUEL/sm f88.webp';
+import sanMiguel3 from '../assets/SAN MIGUEL/locales F5.webp';
+import sanMiguel4 from '../assets/SAN MIGUEL/locales F3.webp';
+import sanMiguel5 from '../assets/SAN MIGUEL/SM F1.webp';
+import sanMiguel6 from '../assets/SAN MIGUEL/SM F7.webp';
+import sanMiguel7 from '../assets/SAN MIGUEL/SM F8.webp';
+import sanMiguel8 from '../assets/SAN MIGUEL/SM Ubi san miguel.webp';
+import CanaBravaLogo from '../assets/cana_brava/cana_brava_logo.webp';
+import canaBrava1 from '../assets/cana_brava/DJI_0117.webp';
+import canaBrava2 from '../assets/cana_brava/DJI_0137.webp';
+import canaBrava3 from '../assets/cana_brava/DJI_0244.webp';
+import canaBrava4 from '../assets/cana_brava/DJI_0246.webp';
+import canaBrava5 from '../assets/cana_brava/DJI_0252.webp';
+import canaBrava6 from '../assets/cana_brava/DJI_0258.webp';
+import canaBrava7 from '../assets/cana_brava/DJI_0263.webp';
+import canaBrava8 from '../assets/cana_brava/DJI_0266.webp';
+import canaBrava9 from '../assets/cana_brava/DJI_0273.webp';
+import canaBrava10 from '../assets/cana_brava/DJI_0281.webp';
+import canaBrava11 from '../assets/cana_brava/DJI_0794.webp';
+import PalmerasItaliaLogo from '../assets/palmeras_italia/palmeras_italia_logo.webp';
+import palmerasItalia1 from '../assets/palmeras_italia/Photo_1080296007_DJI_583_jpg_5421548_0_20221029161656_photo_original 3.jpg.webp';
+import palmerasItalia2 from '../assets/palmeras_italia/Photo_1080296018_DJI_594_jpg_6774280_0_2022102916282_photo_original 2.jpg.webp';
+import palmerasItalia3 from '../assets/palmeras_italia/Photo_1080296019_DJI_595_jpg_6024271_0_20221029162818_photo_original 2.jpg.webp';
 import quintas_marbella1 from '../assets/marbella/quintas_marbella1.webp';
 import quintas_marbella2 from '../assets/marbella/quintas_marbella2.webp';
 import quintas_marbella3 from '../assets/marbella/quintas_marbella3.webp';
@@ -168,6 +193,49 @@ export const infoProyectos = {
       quintas_marbella8,
       quintas_marbella9
 
+    ]
+  },
+  san_miguel: {
+    id: 'san_miguel',
+    slug: 'san-miguel',
+    logo: SanMiguelLogo,
+    galeria: [
+        sanMiguel1,
+        sanMiguel2,
+        sanMiguel3,
+        sanMiguel4,
+        sanMiguel5,
+        sanMiguel6,
+        sanMiguel7,
+        sanMiguel8
+    ]
+  },
+  cana_brava: {
+    id: 'cana_brava',
+    slug: 'cana-brava',
+    logo: CanaBravaLogo,
+    galeria: [
+        canaBrava1,
+        canaBrava2,
+        canaBrava3,
+        canaBrava4,
+        canaBrava5,
+        canaBrava6,
+        canaBrava7,
+        canaBrava8,
+        canaBrava9,
+        canaBrava10,
+        canaBrava11
+    ]
+  },
+  palmeras_italia: {
+    id: 'palmeras_italia',
+    slug: 'palmeras-italia',
+    logo: PalmerasItaliaLogo,
+    galeria: [
+        palmerasItalia1,
+        palmerasItalia2,
+        palmerasItalia3
     ]
   }
 };

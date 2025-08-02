@@ -11,11 +11,12 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     subtitulo: 'We are expert builders with 17 years of experience in southwestern Colombia and now in the United States.',
     condominio: 'Condominium',
     urbanizacion: 'Urbanization',
+    casas: 'House',
     locales: 'Commercial Units',
     rincon_titulo: 'Exclusive country condominium',
     rincon_desc: 'It\'s time to secure your lot in Rincón del Lago. 5-year financing. Schedule your house construction or hire our construction company and build your house with the best budget.',
     sanmiguel_titulo: 'Open urbanization',
-    sanmiguel_desc: 'Located in Rozo, on the road leading to Cerrito.',
+    sanmiguel_desc: 'Located in Rozo, on the road leading to Cerrito. An excellent alternative to build your house to your liking in a countryside environment.',
     marbella_titulo: 'Open urbanization',
     marbella_desc: 'To build to your liking. Larger lots with the best price in the area. South of Jamundí',
     coral_titulo: 'Commercial units',
@@ -26,6 +27,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     casa_usa_2_desc: 'Elegant house with spacious areas and contemporary design.',
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose: '20 min from Tuluá - San José Village, San Pedro',
+    san_pedro: 'San Pedro, Colombia',
     rozo_palmira:'Rozo, Palmira',
     puertas_sol_title: 'Puertas del Sol',
     puertas_sol_desc: 'Completely finished urbanization. Last lots of 8x15 mts (120 m²) with payment facilities. Equipped with gas station, service center, 21 commercial premises and supermarket.',
@@ -34,7 +36,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     palmeras_title: 'Palmeras de la Italia',
     palmeras_desc: 'Completed residential complex for rest and well-being.',
     cana_title: 'Caña Brava',
-    cana_desc: '100% sold in the San José area.',
+    cana_desc: 'Exclusive countryside urbanization in San Pedro with 250 mts² lots in a gated community with 24-hour security. Check availability and prices.',
     usa: 'U.S.A',
     colombia: 'Colombia',
     cope_coral:'Cope Coral, Florida',
@@ -194,7 +196,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
   descripcion_1: "Wide impact-resistant doors and windows flood the house with natural light and offer stunning views of the surroundings. But what really sets this home apart is its hurricane-ready design, thanks to its solid structure and flat roof. Not only will you have peace of mind during storm season, but you’ll also save on insurance thanks to the home's durability.'",
   descripcion_2: 'The seller is even willing to provide blueprints as proof of the home\’\s resilience. If you want to fully customize this house, upgrades are available at a minimal cost, such as installing a pool, a fence, or enclosing the flexible room.'
 },
- casa_usa_segunda_detalle:{
+   casa_usa_segunda_detalle:{
     espacios_titulo:'',
     espacios_desc:'',
     titulo:'New Single-Family Home',
@@ -215,11 +217,77 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     descripcion_2: 'Direct payment plans with our construction company for up to 5 years.'
 
   },
+  quintas_marbella_detalle:{
+   espacios_titulo: '',
+    espacios_desc: '',
+    titulo: 'Quintas de Marbella',
+    subtitulo: 'Residential and commercial lots with strategic location',
+    subtitulo_2: 'Build your way without going into debt',
+    descripcion: 'Quintas de Marbella is a residential development offering lots starting at 90.3 m² (7 meters wide by 12.90 meters deep), the best alternative to build your dream home without relying on bank loans.',
+    descripcion_1: 'Quintas de Marbella is strategically located between the Marbella and Bonanza developments. It will soon feature wide paved roads that will shorten the distance to the Pan-American Highway via Barú.',
+    descripcion_2: 'Direct payment plans with our construction company for up to 5 years.'
+
+  },
+  san_miguel_detalle: {
+    espacios_titulo: 'Open urbanization',
+    espacios_desc: 'Lots from 150 m² in countryside environment',
+    titulo: 'San Miguel',
+    subtitulo: 'Urbanization in Rozo - Palmira',
+    subtitulo_2: 'STRATEGIC LOCATION',
+    descripcion: 'San Miguel is an urbanization located in Rozo - Palmira, La Acequia area, an excellent space with lots from 150 m² (10 m front x 15 m depth), an excellent alternative to build your house to your liking in a countryside environment, near the Tardes Caleñas water park. No administration fees or management fees.',
+    descripcion_1: 'Strategic location on the Rozo - Cerrito road, 5 minutes from the main park and a few kilometers from the Alfonso Bonilla Aragón International Airport. The area is surrounded by important roads that allow quick connection with Cali, Palmira, Yumbo and Cerrito.',
+    descripcion_2: 'San Miguel will have a commercial front on the main road with business premises and service station. Inquire about commercial lot availability.',
+    espacios: [
+      'location',
+      'lots',
+      'commercial',
+      'services'
+    ]
+  },
+  cana_brava_detalle: {
+    espacios_titulo: 'Countryside urbanization',
+    espacios_desc: 'Exclusive countryside urbanization with 250 m² lots',
+    titulo: 'Caña Brava',
+    subtitulo: 'Exclusive countryside urbanization',
+    subtitulo_2: 'GATED COMMUNITY WITH 24-HOUR SECURITY',
+    descripcion: 'Caña Brava is an exclusive countryside urbanization located in the peaceful San Jose area of San Pedro municipality. 250 m² lots in a gated community with 24-hour security, social area with pool for adults and children and equipped events hall.',
+          descripcion_1: 'Check availability and prices. Strategic location in a privileged natural environment, ideal for those seeking tranquility and security in an exclusive countryside setting.',
+    descripcion_2: 'Enjoy the exclusivity and comfort that Caña Brava offers, a unique place to live in harmony with nature.',
+    espacios: [
+      'gatehouse',
+      'security',
+      'pool',
+      'social',
+      'events',
+      'gated'
+    ]
+  },
+  palmeras_italia_detalle: {
+    espacios_titulo: 'Exclusive condominium',
+    espacios_desc: 'Condominium designed for rest and peaceful living',
+    titulo: 'Palmeras de la Italia',
+    subtitulo: 'Exclusive condominium in Jamundí',
+    subtitulo_2: 'FIRST STAGE COMPLETED',
+    descripcion: 'Palmeras de la Italia First Stage, executed in partnership with Lopez Grupo Constructor, is an exclusive condominium designed for rest and peaceful living in the midst of the green landscape of Valle del Cauca.',
+    descripcion_1: 'Located on Paso de la Bolsa road, just 10 minutes from downtown Jamundí. 150 m² lots in a gated community with 24-hour security.',
+    descripcion_2: 'Social area with pool for adults and children, children\'s playground, sports complex and double-level events hall. 100% sold.',
+    espacios: [
+      'gatehouse',
+      'security',
+      'pool',
+      'playground',
+      'sports',
+      'events'
+    ]
+  },
    textGaleria:{
     titulo:'Project Gallery'
   },
    textMapa:{
     titulo:'Location'
+  },
+   video: {
+    titulo: 'Project Video'
   },
   // informaciòn componente AreaPrecioUbic.jsx
   info_AreaPrecioUbic: {
@@ -242,6 +310,54 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       ubicacion: 'Location',
       ubicacion_desc: 'San José area, San Pedro – Colombia.'
 
+    },
+    san_miguel: {
+      area: 'Area',
+      area_desc: 'Lots from 150 m² (10x15 mts)',
+      precio: 'Price',
+      precio_desc: 'Inquire about availability and prices.',
+      ubicacion: 'Location',
+      ubicacion_desc: 'Rozo - Palmira, La Acequia area.',
+    },
+    cana_brava: {
+      area: 'Area',
+      area_desc: 'Lots of 250 m²',
+      precio: 'Price',
+      precio_desc: 'Check availability and prices',
+      ubicacion: 'Location',
+      ubicacion_desc: 'San José area, San Pedro – Colombia.',
+    },
+    palmeras_italia: {
+      area: 'Area',
+      area_desc: 'Lots of 150 m²',
+      precio: 'Price',
+      precio_desc: '100% sold',
+      ubicacion: 'Location',
+      ubicacion_desc: 'Paso de la Bolsa road, Jamundí – Colombia.',
+    },
+    san_miguel: {
+      area: 'Area',
+      area_desc: 'Lots from 150 m² (10x15 mts)',
+      precio: 'Price',
+      precio_desc: 'Inquire about availability and prices.',
+      ubicacion: 'Location',
+      ubicacion_desc: 'Rozo - Palmira, La Acequia area.',
+    },
+    cana_brava: {
+      area: 'Area',
+      area_desc: 'Lots of 250 m²',
+      precio: 'Price',
+      precio_desc: 'Check availability and prices',
+      ubicacion: 'Location',
+      ubicacion_desc: 'San José area, San Pedro – Colombia.',
+    },
+    palmeras_italia: {
+      area: 'Area',
+      area_desc: 'Lots of 150 m²',
+      precio: 'Price',
+      precio_desc: '100% sold',
+      ubicacion: 'Location',
+      ubicacion_desc: 'Paso de la Bolsa road, Jamundí – Colombia.',
     },
    quintas_marbella: {
   area: 'Area',
@@ -280,7 +396,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     },
     local_coral2: {
       titulo: "Strategic location",
-      descripcion: "Located in Lehigh Acres, 19 kilometers east of Fort Myers, in a diverse community with approximately 200,000 inhabitants."
+      descripcion: "Located in Cape Coral, 19 kilometers east of Fort Myers, in a diverse community with approximately 200,000 inhabitants."
     },
     local_coral3: {
       titulo: "Guaranteed investment and appreciation",
@@ -356,7 +472,10 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     jacuzzi: 'Jacuzzi',
     sauna: 'Sauna',
     parqueadero: 'Parking',
-    porteria: 'Gatehouse'
+    porteria: 'Gatehouse',
+    vigilancia: '24-hour Security',
+    eventos: 'Events Hall',
+    cerrado: 'Gated Community'
   },
 
   // información videos de youtube
@@ -377,6 +496,12 @@ const es = { // Should remain 'es' if you are keeping original variable names or
      marbella: {
     video_principal: { id: 'JcVHrn_XfQoZQsin', titulo: 'Quintas de Marbella', visible: true }
   },
+    cana_brava: {
+      video_principal: { id: 'hbDuQFcnO6c', titulo: 'Discover Caña Brava', visible: true }
+    },
+    palmeras_italia: {
+      video_principal: { id: 'PUBhzK41_3A', titulo: 'Discover Palmeras de la Italia', visible: true }
+    },
   },
   entregados: {
     titulo: 'Completed Projects',
@@ -464,6 +589,24 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     slide3_subtitle: 'Luxury amenities: pool, jacuzzi, sauna, 300 m² social hall and more',
     boton: 'Schedule exclusive appointment'
   },
+    cana_brava: {
+      slide1_title: 'Countryside Urbanization',
+      slide2_title: 'Countryside Urbanization',
+      slide3_title: 'Countryside Urbanization',
+      boton: 'Contact Us'
+    },
+    san_miguel: {
+      slide1_title: 'San Miguel Urbanization',
+      slide2_title: 'San Miguel Urbanization',
+      slide3_title: 'San Miguel Urbanization',
+      boton: 'Contact Us'
+    },
+    palmeras_italia: {
+      slide1_title: 'Palmeras de la Italia',
+      slide2_title: 'Palmeras de la Italia',
+      slide3_title: 'Palmeras de la Italia',
+      boton: 'Contact Us'
+    },
   puertas_sol: {
     slide1_title: 'Completely finished urbanization',
     slide1_subtitle: 'Located at kilometer 2 via Jamundí - Potrerito just 20 minutes from southern Cali',
@@ -487,7 +630,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       slide2_title: 'Discover the benefits of building your own home',
       slide2_subtitle: 'More space, better budget, higher-quality finishes',
       slide3_title: 'Personalized guidance',
-      slide3_subtitle: 'Our team is ready to listen, answer your questions, and support you throughout the entire process.',
+      slide3_subtitle: 'Our team is ready to listen, answer your questions, and support you throughout the entire entire process.',
       boton: 'Contact us'
 },
   casa_primera_usa: {
@@ -522,6 +665,86 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     
   },
 
+  },
+  info_ZigZag_san_miguel: {
+    titulo: "San Miguel Features",
+    subtitulo: "Discover what makes this urbanization special",
+    san_miguel1: {
+      titulo: "Strategic Location",
+      descripcion: "San Miguel is located in Rozo - Palmira, La Acequia area, just 5 minutes from the main park and a few kilometers from the Alfonso Bonilla Aragón International Airport."
+    },
+    san_miguel2: {
+      titulo: "Lots from 150 m²",
+      descripcion: "Lots from 150 m² (10 m front x 15 m depth), an excellent alternative to build your house to your liking in a countryside environment."
+    },
+    san_miguel3: {
+      titulo: "Commercial Front",
+      descripcion: "San Miguel will have a commercial front on the main road with business premises and service station. Inquire about commercial lot availability."
+    },
+    san_miguel4: {
+      titulo: "Quick Connection",
+      descripcion: "The area is surrounded by important roads that allow quick connection with Cali, Palmira, Yumbo and Cerrito."
+    }
+  },
+  info_ZigZag_cana_brava: {
+    titulo: "Caña Brava Features",
+    subtitulo: "Discover what makes this urbanization special",
+    cana_brava1: {
+      titulo: "Exclusive Countryside Urbanization",
+      descripcion: "Caña Brava is an exclusive countryside urbanization located in the peaceful San Jose area of San Pedro municipality, ideal for those seeking tranquility and exclusivity."
+    },
+    cana_brava2: {
+      titulo: "250 m² Lots",
+      descripcion: "250 m² lots in a gated community with 24-hour security, offering maximum security and privacy."
+    },
+    cana_brava3: {
+      titulo: "Premium Social Area",
+      descripcion: "Social area with pool for adults and children and equipped events hall to enjoy with family and friends."
+    },
+    cana_brava4: {
+      titulo: "Check Availability",
+      descripcion: "Project completely sold, demonstrating our clients' trust and preference for the quality and exclusivity of Caña Brava."
+    }
+  },
+  info_ZigZag_san_miguel: {
+    titulo: "San Miguel Features",
+    subtitulo: "Discover what makes this urbanization special",
+    san_miguel1: {
+      titulo: "Strategic Location",
+      descripcion: "San Miguel is located in Rozo - Palmira, La Acequia area, just 5 minutes from the main park and a few kilometers from the Alfonso Bonilla Aragón International Airport."
+    },
+    san_miguel2: {
+      titulo: "Lots from 150 m²",
+      descripcion: "Lots from 150 m² (10 m front x 15 m depth), an excellent alternative to build your house to your liking in a countryside environment."
+    },
+    san_miguel3: {
+      titulo: "Commercial Front",
+      descripcion: "San Miguel will have a commercial front on the main road with business premises and service station. Inquire about commercial lot availability."
+    },
+    san_miguel4: {
+      titulo: "Quick Connection",
+      descripcion: "The area is surrounded by important roads that allow quick connection with Cali, Palmira, Yumbo and Cerrito."
+    }
+  },
+  info_ZigZag_cana_brava: {
+    titulo: "Caña Brava Features",
+    subtitulo: "Discover what makes this urbanization special",
+    cana_brava1: {
+      titulo: "Exclusive Countryside Urbanization",
+      descripcion: "Caña Brava is an exclusive countryside urbanization located in the peaceful San Jose area of San Pedro municipality, ideal for those seeking tranquility and exclusivity."
+    },
+    cana_brava2: {
+      titulo: "250 m² Lots",
+      descripcion: "250 m² lots in a gated community with 24-hour security, offering maximum security and privacy."
+    },
+    cana_brava3: {
+      titulo: "Premium Social Area",
+      descripcion: "Social area with pool for adults and children and equipped events hall to enjoy with family and friends."
+    },
+    cana_brava4: {
+      titulo: "Check Availability",
+      descripcion: "Project completely sold, demonstrating our clients' trust and preference for the quality and exclusivity of Caña Brava."
+    }
   },
 
   dividers: {
@@ -573,3 +796,4 @@ const es = { // Should remain 'es' if you are keeping original variable names or
 };
 
 export default es; // Again, this should remain 'es' if you don't intend to change the variable name.
+

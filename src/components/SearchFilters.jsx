@@ -16,8 +16,9 @@ const SearchFilters = () => {
   // Opciones de ubicación
   const ubicaciones = [
     { value: 'jamundi_colombia', label: t.proyectos?.jamundi_colombia || 'Jamundí, Colombia' },
-    { value: 'cope_coral', label: t.proyectos?.cope_coral || 'Cope Coral, Florida' },
-    { value: 'san_jose', label: t.proyectos?.san_jose || 'San Jose, San Pedro' }
+    { value: 'rozo_palmira', label: t.proyectos?.rozo_palmira || 'Rozo, Palmira' },
+    { value: 'san_pedro', label: t.proyectos?.san_pedro || 'San Pedro, Colombia' },
+    { value: 'cope_coral', label: t.proyectos?.cope_coral || 'Cape Coral, Florida' }
   ];
 
   // Opciones de tipo de proyecto

@@ -1,0 +1,294 @@
+/* Estilos específicos para la página de San Miguel */
+.info-san-miguel-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Sección de expertos específica para San Miguel */
+.expertos-section-san-miguel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f8f9fa;
+}
+
+.expertos-section-san-miguel .expertos-tarjetas-section {
+  margin: 0 auto;
+}
+
+/* Estilos para el slider de San Miguel */
+.info-san-miguel-container .slider-container {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.info-san-miguel-container .slider-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-san-miguel-container .slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.info-san-miguel-container .slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.8) 0%,
+    rgba(118, 75, 162, 0.8) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.info-san-miguel-container .slider-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.info-san-miguel-container .slider-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.info-san-miguel-container .slider-description {
+  font-size: 1.1rem;
+  max-width: 600px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Estilos para los controles del slider */
+.info-san-miguel-container .slider-controls {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.info-san-miguel-container .slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.info-san-miguel-container .slider-dot.active {
+  background: white;
+}
+
+/* Estilos para la sección de detalles */
+.info-san-miguel-container .detalle-proyecto {
+  padding: 4rem 2rem;
+  background: white;
+  margin: 2rem 0;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.info-san-miguel-container .detalle-proyecto-titulo {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.info-san-miguel-container .detalle-proyecto-titulo h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.info-san-miguel-container .detalle-proyecto-titulo h2 {
+  font-size: 1.5rem;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Estilos para la galería */
+.info-san-miguel-container .galeria-proyecto {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.info-san-miguel-container .galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.info-san-miguel-container .galeria-item {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-san-miguel-container .galeria-item:hover {
+  transform: translateY(-5px);
+}
+
+.info-san-miguel-container .galeria-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Estilos para InfoZigZag */
+.info-san-miguel-container .info-zigzag {
+  width: 100%;
+  padding: 4rem 2rem;
+  background: white;
+  margin: 2rem 0;
+}
+
+/* Estilos para la sección de ubicación */
+.info-san-miguel-container .ubicacion-maps {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.info-san-miguel-container .mapa-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el footer */
+.info-san-miguel-container .footer-section {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.info-san-miguel-container .footer-section .footer {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.info-san-miguel-container .footer-section .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.info-san-miguel-container .footer-section .footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info-san-miguel-container .footer-section .footer-social {
+  margin-top: 1.5rem;
+  gap: 1.5rem;
+}
+
+.info-san-miguel-container .footer-section .footer-copy {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Ajustar el espaciado del ContactoCTA */
+.info-san-miguel-container section[id="contactanos"] {
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .expertos-section-san-miguel {
+    padding: 30px 15px;
+  }
+  
+  .info-san-miguel-container .slider-title {
+    font-size: 2.5rem;
+  }
+  
+  .info-san-miguel-container .slider-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .info-san-miguel-container .detalle-proyecto-titulo h1 {
+    font-size: 2.5rem;
+  }
+  
+  .info-san-miguel-container .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .expertos-section-san-miguel {
+    padding: 20px 10px;
+  }
+  
+  .info-san-miguel-container .slider-title {
+    font-size: 2rem;
+  }
+  
+  .info-san-miguel-container .slider-subtitle {
+    font-size: 1rem;
+  }
+  
+  .info-san-miguel-container .detalle-proyecto-titulo h1 {
+    font-size: 2rem;
+  }
+  
+  .info-san-miguel-container .detalle-proyecto,
+  .info-san-miguel-container .galeria-proyecto,
+  .info-san-miguel-container .ubicacion-maps {
+    padding: 2rem 1rem;
+  }
+  
+  .info-san-miguel-container .footer-section .footer {
+    padding: 1.5rem 1rem 0.5rem 1rem;
+  }
+  
+  .info-san-miguel-container section[id="contactanos"] {
+    padding-bottom: 1.5rem;
+  }
+  
+  .info-san-miguel-container .footer-section .footer-social {
+    gap: 1rem;
+  }
+} 

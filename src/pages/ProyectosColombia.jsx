@@ -43,10 +43,8 @@ const ProyectosColombia = () => {
   const isProyectoProximamente = (titulo) => {
     // Proyectos próximamente (los que no tienen enlace o tienen enlace '#')
     const proyectosProximamente = [
-      'sanmiguel_titulo',    // San Miguel Urbanización
-      'marbella_titulo',     // Quintas de Marbella
-      'palmeras_title',      // Palmeras de la Italia
-      'cana_title'           // Caña Brava
+         // Quintas de Marbella
+      // 'palmeras_title' - Ya activado
     ];
     
     return proyectosProximamente.includes(titulo);

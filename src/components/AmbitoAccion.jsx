@@ -13,7 +13,9 @@ export default function AmbitoAccion() {
   return (
     <section className="ambito">
      
-     
+      <p className="ambito-sub">
+        {t.ambito.sub}
+      </p>
       <div className="ambito-cards">
         {ambitos.map((card, idx) => {
           // Determinar color y si es lujo

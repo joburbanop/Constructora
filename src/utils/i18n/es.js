@@ -12,10 +12,11 @@ const es = {
     condominio: 'Condominio',
     urbanizacion: 'Urbanización',
     locales: 'Locales',
+    casas: 'Casa',
     rincon_titulo: 'Exclusivo condominio campestre',
     rincon_desc: 'Es momento de separar su lote en Rincón del Lago. Financiación 5 años. Programe la construcción de su casa o contrate a nuestra constructora y edifique su casa con el mejor presupuesto.',
     sanmiguel_titulo: 'Urbanización abierta',
-    sanmiguel_desc: 'Ubicada en Rozo, sobre la vía que conduce a Cerrito.',
+    sanmiguel_desc: 'Ubicada en Rozo, sobre la vía que conduce a Cerrito. Una excelente alternativa para construir casa a su gusto en medio de un entorno campestre.',
     marbella_titulo: 'Urbanización abierta',
     marbella_desc: 'Para construir a su gusto. Lotes más amplios y con el mejor precio de la zona. Sur de Jamundí',
     coral_titulo: 'Locales comerciales',
@@ -26,15 +27,16 @@ const es = {
     casa_usa_2_desc: 'Casa elegante con espacios amplios y diseño contemporáneo.',
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose:'20 min de Tuluá - Vereda San José, San Pedro',
+    san_pedro: 'San Pedro, Colombia',
     rozo_palmira:'Rozo, Palmira',
     puertas_sol_title: 'Puertas del Sol',
     puertas_sol_desc: 'Urbanización completamente terminada. Últimos lotes de 8x15 mts (120 m²) con facilidad de pago. Equipada con gasolinera, centro de servicios, 21 locales comerciales y supermercado.',
     caña_dulce_title:'Caña Dulce',
     caña_dulce_desc:'Exclusiva urbanización campestre de 46 lotes. Últimos lotes disponibles de 12x21 mts. Zona social completamente equipada con piscina, jacuzzi, sauna y salón social de 300 m².',
     palmeras_title:'Palmeras de la Italia',
-    palmeras_desc:'Conjunto finalizado para descanso y bienestar.',
+    palmeras_desc:'Condominio exclusivo pensado para el descanso y la vida tranquila, rodeado de naturaleza. Lotes de 150 m² en conjunto cerrado con portería y vigilancia 24 horas, piscina, parque infantil, polideportivo y salón de eventos. Consulte disponibilidad y precios.',
     cana_title:'Caña Brava ',
-    cana_desc:'100% vendida en la vereda San José.',
+    cana_desc:'Exclusiva urbanización campestre en San Pedro con lotes de 250 mts² en conjunto cerrado con portería y vigilancia 24 horas. Consulte disponibilidad y precios.',
 
     usa: 'Estados Unidos',
     colombia: 'Colombia',
@@ -204,6 +206,58 @@ casa_usa_primera_detalle:{
     descripcion_1:'',
     descripcion_2:''
   },
+  san_miguel_detalle: {
+    espacios_titulo: 'Urbanización abierta',
+    espacios_desc: 'Lotes desde 150 mts² en entorno campestre',
+    titulo: 'San Miguel',
+    subtitulo: 'Urbanización en Rozo - Palmira',
+    subtitulo_2: 'UBICACIÓN ESTRATÉGICA',
+    descripcion: 'San Miguel es una urbanización ubicada en Rozo - Palmira, vereda La Acequia, un excelente espacio con lotes desde 150 mts² (10 mts de frente x 15 mts de fondo), una excelente alternativa para construir casa a su gusto en medio de un entorno campestre, cerca del acua parque Tardes Caleñas. Sin pago de administración ni cuotas de manejo.',
+    descripcion_1: 'Ubicación estratégica sobre la via Rozo - Cerrito a 5 minutos del parque principal y a pocos kilómetros del aeropuerto internacional Alfonso Bonilla Aragón. La zona esta rodeada de importantes vías que permiten una rápida conexión con Cali, Palmira, Yumbo y Cerrito.',
+    descripcion_2: 'San Miguel contará con un frente comercial sobre la vía principal con locales para negocio y estación de servicios. Consulte disponibilidad de lotes comerciales.',
+    espacios: [
+      'ubicacion',
+      'lotes',
+      'comercial',
+      'servicios'
+    ]
+  },
+  cana_brava_detalle: {
+    espacios_titulo: 'Urbanización campestre',
+    espacios_desc: 'Exclusiva urbanización campestre con lotes de 250 mts²',
+    titulo: 'Caña Brava',
+    subtitulo: 'Exclusiva urbanización campestre',
+    subtitulo_2: 'CONJUNTO CERRADO CON VIGILANCIA 24 HORAS',
+    descripcion: 'Caña Brava es una exclusiva urbanización campestre ubicada en la apacible vereda San Jose del municipio de San Pedro. Lotes de 250 mts² en conjunto cerrado con portería y vigilancia 24 horas, zona social con piscina para adultos y niños y salón de eventos equipado.',
+          descripcion_1: 'Consulte disponibilidad y precios. Ubicación estratégica en un entorno natural privilegiado, ideal para quienes buscan tranquilidad y seguridad en un ambiente campestre exclusivo.',
+    descripcion_2: 'Disfrute de la exclusividad y comodidad que ofrece Caña Brava, un lugar único para vivir en armonía con la naturaleza.',
+    espacios: [
+      'porteria',
+      'vigilancia',
+      'piscina',
+      'social',
+      'eventos',
+      'cerrado'
+    ]
+  },
+  palmeras_italia_detalle: {
+    espacios_titulo: 'Condominio exclusivo',
+    espacios_desc: 'Condominio pensado en el descanso y vida tranquila',
+    titulo: 'Palmeras de la Italia',
+    subtitulo: 'Condominio exclusivo en Jamundí',
+    subtitulo_2: 'PRIMERA ETAPA EJECUTADA',
+    descripcion: 'Palmeras de la Italia Primera Etapa ejecutado en asocio con Lopez Grupo Constructor es un exclusivo condominio pensado en el descanso y vida tranquila en medio de verde paisaje del Valle del Cauca.',
+    descripcion_1: 'Se ubica en la vía Paso de la Bolsa a solo 10 minutos del centro de Jamundí. Lotes de 150 mts2 en conjunto cerrado con portería y vigilancia 24 horas.',
+    descripcion_2: 'Zona social con piscina para adultos y niños, parque infantil, polideportivo y salón de eventos doble nivel. Consulte disponibilidad y precios.',
+    espacios: [
+      'porteria',
+      'vigilancia',
+      'piscina',
+      'parque',
+      'polideportivo',
+      'salon'
+    ]
+  },
    quintas_marbella_detalle:{
     espacios_titulo:'',
     espacios_desc:'',
@@ -219,6 +273,9 @@ casa_usa_primera_detalle:{
   },
   textMapa:{
     titulo:'Ubicación'
+  },
+  video: {
+    titulo: 'Video del Proyecto'
   },
  // informaciòn componente AreaPrecioUbic.jsx
  info_AreaPrecioUbic: {
@@ -247,6 +304,30 @@ casa_usa_primera_detalle:{
     precio_desc: 'Facilidad de pago a 12 meses. Consulte precios.',
     ubicacion: 'Ubicación',
     ubicacion_desc: 'Km 2 vía Jamundí - Potrerito, Sur de Cali – Colombia.',
+  },
+  san_miguel: {
+    area: 'Área',
+    area_desc: 'Lotes desde 150 mts² (10x15 mts)',
+    precio: 'Precio',
+    precio_desc: 'Consulte disponibilidad y precios.',
+    ubicacion: 'Ubicación',
+    ubicacion_desc: 'Rozo - Palmira, vereda La Acequia.',
+  },
+  cana_brava: {
+    area: 'Área',
+    area_desc: 'Lotes de 250 mts²',
+    precio: 'Precio',
+          precio_desc: 'Consulte disponibilidad y precios',
+    ubicacion: 'Ubicación',
+    ubicacion_desc: 'Vereda San José, San Pedro – Colombia.',
+  },
+  palmeras_italia: {
+    area: 'Área',
+    area_desc: 'Lotes de 150 mts²',
+    precio: 'Precio',
+    precio_desc: 'Consulte disponibilidad y precios.',
+    ubicacion: 'Ubicación',
+    ubicacion_desc: 'Vía Paso de la Bolsa, Jamundí – Colombia.',
   },
   quintas_marbella: {
     area: 'Área',
@@ -285,7 +366,7 @@ info_ZigZag_coral:{
   },
   local_coral2: {
     titulo: "Ubicación estratégica",
-    descripcion: "Ubicado en Lehigh Acres, a 19 kilómetros al este de Fort Myers, en una comunidad diversa con aproximadamente 200.000 habitantes."
+    descripcion: "Ubicado en Cape Coral, a 19 kilómetros al este de Fort Myers, en una comunidad diversa con aproximadamente 200.000 habitantes."
   },
   local_coral3: {
     titulo: "Inversión y valorización aseguradas",
@@ -323,27 +404,27 @@ info_ZigZag_cana_dulce:{
     descripcion: "Portería 24/7, recepción elegante, administración profesional y UTB. Agende su cita exclusiva: 3204210000"
   }
 },
-info_ZigZag_puertas_sol:{
-  puertas_sol1: {
-    titulo: "Urbanización completamente terminada",
-    descripcion: "Ubicada en el kilómetro 2 vía Jamundí - Potrerito a solo 20 minutos del sur de Cali. Proyecto entregado y listo para inversión."
-  },
-  puertas_sol2: {
-    titulo: "Últimos lotes de 8x15 mts (120 m²)",
-    descripcion: "Facilidad de pago a 12 meses. Excelentes vías de acceso y todos los servicios públicos funcionales para su comodidad."
-  },
-  puertas_sol3: {
-    titulo: "Gasolinera y centro de servicios",
-    descripcion: "Equipada con gasolinera, centro de servicios, 21 locales comerciales, supermercado y plazoleta de comidas para su conveniencia."
-  },
-  puertas_sol4: {
-    titulo: "6 zonas verdes y espacios recreativos",
-    descripcion: "Disfrute de 6 zonas verdes distribuidas estratégicamente para crear un ambiente agradable y familiar en la urbanización."
-  },
-  puertas_sol5: {
-    titulo: "Inversión comercial y residencial",
-    descripcion: "Ideal para inversión comercial y residencial con alta rentabilidad. Agende su visita exclusiva: 3204210000"
-  },
+  info_ZigZag_puertas_sol:{
+    puertas_sol1: {
+      titulo: "Urbanización completamente terminada",
+      descripcion: "Ubicada en el kilómetro 2 vía Jamundí - Potrerito a solo 20 minutos del sur de Cali. Proyecto entregado y listo para inversión."
+    },
+    puertas_sol2: {
+      titulo: "Últimos lotes de 8x15 mts (120 m²)",
+      descripcion: "Facilidad de pago a 12 meses. Excelentes vías de acceso y todos los servicios públicos funcionales para su comodidad."
+    },
+    puertas_sol3: {
+      titulo: "Gasolinera y centro de servicios",
+      descripcion: "Equipada con gasolinera, centro de servicios, 21 locales comerciales, supermercado y plazoleta de comidas para su conveniencia."
+    },
+    puertas_sol4: {
+      titulo: "6 zonas verdes y espacios recreativos",
+      descripcion: "Disfrute de 6 zonas verdes distribuidas estratégicamente para crear un ambiente agradable y familiar en la urbanización."
+    },
+    puertas_sol5: {
+      titulo: "Inversión comercial y residencial",
+      descripcion: "Ideal para inversión comercial y residencial con alta rentabilidad. Agende su visita exclusiva: 3204210000"
+    },
   
 },
 info_ZigZag_quintas_marbella:{
@@ -360,7 +441,43 @@ info_ZigZag_quintas_marbella:{
     descripcion: "Haz parte de esta exclusiva urbanización accediendo a los últimos lotes de uso mixto (102 m²), ideales para vivienda y comercio. Disfruta de un diseño con doble frente sobre la vía principal, zonas de parqueo y excelente visibilidad."
   }
  
-},
+  },
+  info_ZigZag_san_miguel: {
+    san_miguel1: {
+      titulo: "Ubicación Estratégica",
+      descripcion: "San Miguel está ubicado en Rozo - Palmira, vereda La Acequia, a solo 5 minutos del parque principal y a pocos kilómetros del aeropuerto internacional Alfonso Bonilla Aragón."
+    },
+    san_miguel2: {
+      titulo: "Lotes desde 150 mts²",
+      descripcion: "Lotes desde 150 mts² (10 mts de frente x 15 mts de fondo), una excelente alternativa para construir casa a su gusto en medio de un entorno campestre."
+    },
+    san_miguel3: {
+      titulo: "Frente Comercial",
+      descripcion: "San Miguel contará con un frente comercial sobre la vía principal con locales para negocio y estación de servicios. Consulte disponibilidad de lotes comerciales."
+    },
+    san_miguel4: {
+      titulo: "Conexión Rápida",
+      descripcion: "La zona está rodeada de importantes vías que permiten una rápida conexión con Cali, Palmira, Yumbo y Cerrito."
+    }
+  },
+  info_ZigZag_cana_brava: {
+    cana_brava1: {
+      titulo: "Exclusiva Urbanización Campestre",
+      descripcion: "Caña Brava es una exclusiva urbanización campestre ubicada en la apacible vereda San Jose del municipio de San Pedro, ideal para quienes buscan tranquilidad y exclusividad."
+    },
+    cana_brava2: {
+      titulo: "Lotes de 250 mts²",
+      descripcion: "Lotes de 250 mts² en conjunto cerrado con portería y vigilancia 24 horas, ofreciendo máxima seguridad y privacidad."
+    },
+    cana_brava3: {
+      titulo: "Zona Social Premium",
+      descripcion: "Zona social con piscina para adultos y niños y salón de eventos equipado para disfrutar en familia y con amigos."
+    },
+    cana_brava4: {
+      titulo: "Consulte Disponibilidad",
+      descripcion: "Proyecto completamente vendido, demostrando la confianza y preferencia de nuestros clientes por la calidad y exclusividad de Caña Brava."
+    }
+  },
 imagenes_add:{
   mapa_rincon:'Mapa de obra'
 
@@ -389,24 +506,33 @@ imagenes_add:{
     comerciales: '21 Locales Comerciales',
     supermercado: 'Supermercado',
     comidas: 'Plazoleta de Comidas',
-    verdes: '6 Zonas Verdes'
+    verdes: '6 Zonas Verdes',
+    vigilancia: 'Vigilancia 24 horas',
+    eventos: 'Salón de eventos',
+    cerrado: 'Conjunto cerrado'
   },
 
 // información videos de youtube 
-videos: {
-  rincon: {
-    video1: { id: 'BRmd52pMUW4', titulo: 'Avances de obra', visible: true },
-    render: { id: 'oSlfSdN70jQ', titulo: 'Avances de obra', visible: false },
-    Avance_en_Zona_comercial: { id: 'LS0EhS0oSbM', titulo: 'Avances de obra', visible: true },
-    rincon_lago_nuevo_sur:{id:'BRmd52pMUW4', titulo: 'Conozca Rincón del Lago', visible: true}
-  },
-  puertas_sol: {
-    video_principal: { id: 'dWO2LGUfFdY', titulo: 'Conozca Puertas del Sol', visible: true }
-  },
-  cana_dulce: {
-    video_principal: { id: 'A7EXkNPyiF8', titulo: 'Conozca Caña Dulce', visible: true }
-  },
-  marbella: {
+  videos: {
+    rincon: {
+      video1: { id: 'BRmd52pMUW4', titulo: 'Avances de obra', visible: true },
+      render: { id: 'oSlfSdN70jQ', titulo: 'Avances de obra', visible: false },
+      Avance_en_Zona_comercial: { id: 'LS0EhS0oSbM', titulo: 'Avances de obra', visible: true },
+      rincon_lago_nuevo_sur:{id:'BRmd52pMUW4', titulo: 'Conozca Rincón del Lago', visible: true}
+    },
+    puertas_sol: {
+      video_principal: { id: 'dWO2LGUfFdY', titulo: 'Conozca Puertas del Sol', visible: true }
+    },
+    cana_dulce: {
+      video_principal: { id: 'A7EXkNPyiF8', titulo: 'Conozca Caña Dulce', visible: true }
+    },
+    cana_brava: {
+      video_principal: { id: 'hbDuQFcnO6c', titulo: 'Conozca Caña Brava', visible: true }
+    },
+    palmeras_italia: {
+      video_principal: { id: 'PUBhzK41_3A', titulo: 'Conozca Palmeras de la Italia', visible: true }
+    },
+    marbella: {
     video_principal: { id: 'nLCuCT-fFnA', titulo: 'Quintas de Marbella', visible: true }
   },
 },
@@ -495,6 +621,24 @@ videos: {
       slide3_title: 'Zona social de primera categoría',
       slide3_subtitle: 'Amenidades de lujo: piscina, jacuzzi, sauna, salón social de 300 m² y más',
       boton: 'Agendar cita exclusiva'
+    },
+    cana_brava: {
+      slide1_title: 'Urbanización Campestre',
+      slide2_title: 'Urbanización Campestre',
+      slide3_title: 'Urbanización Campestre',
+      boton: 'Contáctanos'
+    },
+    san_miguel: {
+      slide1_title: 'Urbanización San Miguel',
+      slide2_title: 'Urbanización San Miguel',
+      slide3_title: 'Urbanización San Miguel',
+      boton: 'Contáctanos'
+    },
+    palmeras_italia: {
+      slide1_title: 'Palmeras de la Italia',
+      slide2_title: 'Palmeras de la Italia',
+      slide3_title: 'Palmeras de la Italia',
+      boton: 'Contáctanos'
     },
     puertas_sol: {
       slide1_title: 'Urbanización completamente terminada',

@@ -31,7 +31,7 @@ const proyectos = [
     icono: 'urbanizacion',
     iconoColor: '#222',
     ubicacion: 'rozo_palmira',
-    enlace: '#',
+    enlace: '/san-miguel',
     etiquetaColor: '#ff914d'
   },
   {
@@ -60,7 +60,7 @@ const proyectos = [
     imagen: casa_1,
     titulo: 'casa_usa_1_title',
     descripcion: 'casa_usa_1_desc',
-    tipo: 'locales',
+    tipo: 'casas',
     icono: 'locales',
     iconoColor: '#222',
     ubicacion: 'cope_coral',
@@ -71,7 +71,7 @@ const proyectos = [
     imagen: casa_2,
     titulo: 'casa_usa_2_title',
     descripcion: 'casa_usa_2_desc',
-    tipo: 'locales',
+    tipo: 'casas',
     icono: 'locales',
     iconoColor: '#222',
     ubicacion: 'cope_coral',
@@ -96,7 +96,7 @@ const proyectos = [
     tipo: 'urbanizacion',
     icono: 'urbanizacion',
     iconoColor: '#222',
-    ubicacion: 'san_jose',
+    ubicacion: 'san_pedro',
     enlace: '/cana-dulce',
     etiquetaColor: '#ffb347'
   },
@@ -108,7 +108,7 @@ const proyectos = [
     icono: 'condominio',
     iconoColor: '#222',
     ubicacion: 'jamundi_colombia',
-    enlace: '#',
+    enlace: '/palmeras-italia',
     etiquetaColor: '#ffb347'
   },
    {
@@ -118,8 +118,8 @@ const proyectos = [
     tipo: 'urbanizacion',
     icono: 'urbanizacion',
     iconoColor: '#222',
-    ubicacion: 'jamundi_colombia',
-    enlace: '#',
+    ubicacion: 'san_pedro',
+    enlace: '/cana-brava',
     etiquetaColor: '#ffb347'
   }
   
