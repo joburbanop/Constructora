@@ -27,18 +27,19 @@ const Expertos = ({ listaFiltrada = null }) => {
                 {asesor.nombre}
               </div>
               <div className="experto-cargo">
-                {t.expertos[asesor.especialidadClave] || asesor.especialidadClave}
+                {asesor.cargo || t.expertos[asesor.especialidadClave] || asesor.especialidadClave}
               </div>
               <div className="experto-desc">
-                {t.expertos.atencion} 
-              
+                {t.expertos?.atencion || 'Atención directa:'} 
               </div>
-               <div className="experto-tel">
+              <div className="experto-tel">
                 {asesor.telefono}
               </div>
-               <div className="experto-tel">
-                {asesor.telefono2}
-              </div>
+              {asesor.telefono2 && (
+                <div className="experto-tel">
+                  {asesor.telefono2}
+                </div>
+              )}
             </div>
           </div>
         ))}
