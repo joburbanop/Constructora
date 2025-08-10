@@ -1,7 +1,7 @@
-import Brava from '../assets/brava.png';
-import Dulce from '../assets/dulce.png';
-import Palmeras from '../assets/palmeras.png';
-import PuertasDelSol from '../assets/puertas_del_sol.png';
+import Brava from '../assets/brava.webp';
+import Dulce from '../assets/dulce.webp';
+import Palmeras from '../assets/palmeras.webp';
+import PuertasDelSol from '../assets/puertas_del_sol.webp';
 
 const entregados = [
   {

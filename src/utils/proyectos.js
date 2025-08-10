@@ -1,7 +1,7 @@
-import Rincon from '../assets/Rincon.png';
-import SanMiguel from '../assets/San_Miguel.png';
-import Marbella from '../assets/Marbella.png';
-import Coral from '../assets/coral.png';
+import Rincon from '../assets/Rincon.webp';
+import SanMiguel from '../assets/San_Miguel.webp';
+import Marbella from '../assets/Marbella.webp';
+import Coral from '../assets/coral.webp';
 import casa_1 from '../assets/casas/casa_1.webp';
 import casa_2 from '../assets/casas/casa_2.webp';
 import { HiOfficeBuilding } from 'react-icons/hi';

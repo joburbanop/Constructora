@@ -10,6 +10,8 @@ import { useIdioma } from '../context/IdiomaContext';
 export default function Slider({ contenido = [], namespace = 'home' }) {
   const { t } = useIdioma();
  
+  // Debug logs removed in production; rely on build drop_console
+ 
   return (
    <div className="slider-container-slider unified-slider">
   <Swiper
@@ -34,16 +36,33 @@ export default function Slider({ contenido = [], namespace = 'home' }) {
     observer={true}
     observeParents={true}
   >
-    {contenido.map((slide, idx) => (
-      <SwiperSlide key={`${slide.id || idx}-${slide.title}`}>
-        <div className="slider-bg-slider">
-          {(() => {
-            const imgSrc = slide.src || slide.image;
-            const imgSrcSet = slide.srcset || undefined;
-            return (
+    {contenido.map((slide, idx) => {
+      // Support responsive picture data from imagetools (slide.picture)
+      const hasPicture = Boolean(slide.picture && Array.isArray(slide.picture.sources));
+      const imgSrc = slide.src || slide.image || (slide.picture && slide.picture.img && slide.picture.img.src);
+
+      return (
+        <SwiperSlide key={`${slide.id || idx}-${slide.title}`}>
+          <div className="slider-bg-slider">
+            {hasPicture ? (
+              <picture>
+                {Array.isArray(slide.picture.sources) && slide.picture.sources.map((source, i) => (
+                  <source key={`${source.type || 'img'}-${i}`} type={source.type} srcSet={source.srcset} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw" />
+                ))}
+                <img
+                  src={slide.picture.img.src}
+                  width={slide.picture.img.w}
+                  height={slide.picture.img.h}
+                  alt={t.slider?.[namespace]?.[slide.title] || slide.title || 'Slider image'}
+                  className="slider-bg-img"
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  fetchPriority={idx === 0 ? "high" : "auto"}
+                  decoding="async"
+                />
+              </picture>
+            ) : (
               <img
                 src={imgSrc}
-                {...(imgSrcSet ? { srcSet: imgSrcSet } : {})}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
                 alt={t.slider?.[namespace]?.[slide.title] || slide.title || 'Slider image'}
                 className="slider-bg-img"
@@ -51,25 +70,25 @@ export default function Slider({ contenido = [], namespace = 'home' }) {
                 fetchPriority={idx === 0 ? "high" : "auto"}
                 decoding="async"
               />
-            );
-          })()}
-          <div className="slider-content-slider">
-            <h1 className="slider-title-slider">
-              {namespace === 'casas_lujo' ? 'Casas de Lujo' : (t.slider?.[namespace]?.[slide.title] || slide.title)}
-            </h1>
-            <p className="slider-subtitle-slider">
-              {namespace === 'casas_lujo' ? 'Ambientes únicos en exclusivos sectores del Valle del Cauca' : (t.slider?.[namespace]?.[slide.subtitle] || slide.subtitle)}
-            </p>
-            <Button 
-              whatsapp={true}
-              className="slider-cta-button"
-            >
-              {namespace === 'casas_lujo' ? 'Contáctanos' : (t.slider?.[namespace]?.boton || "Contáctanos")}
-            </Button>
+            )}
+            <div className="slider-content-slider">
+              <h1 className="slider-title-slider">
+                {namespace === 'casas_lujo' ? 'Casas de Lujo' : (t.slider?.[namespace]?.[slide.title] || slide.title)}
+              </h1>
+              <p className="slider-subtitle-slider">
+                {namespace === 'casas_lujo' ? 'Ambientes únicos en exclusivos sectores del Valle del Cauca' : (t.slider?.[namespace]?.[slide.subtitle] || slide.subtitle)}
+              </p>
+              <Button 
+                whatsapp={true}
+                className="slider-cta-button"
+              >
+                {namespace === 'casas_lujo' ? 'Contáctanos' : (t.slider?.[namespace]?.boton || "Contáctanos")}
+              </Button>
+            </div>
           </div>
-        </div>
-      </SwiperSlide>
-    ))}
+        </SwiperSlide>
+      );
+    })}
   </Swiper>
 </div>
 

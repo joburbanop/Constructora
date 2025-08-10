@@ -5,15 +5,15 @@ import { useEffect } from 'react';
  */
 const ResourcePreloader = ({ resources = [] }) => {
   useEffect(() => {
-    // Preload critical images
+    // Preload only critical images; avoid heavy non-critical assets
     resources.forEach(resource => {
       if (resource.type === 'image') {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
         link.href = resource.href;
-        if (resource.type) {
-          link.type = resource.type;
+        if (resource.mime) {
+          link.type = resource.mime;
         }
         document.head.appendChild(link);
       } else if (resource.type === 'font') {

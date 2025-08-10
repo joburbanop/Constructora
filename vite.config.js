@@ -16,8 +16,6 @@ export default defineConfig({
           // UI libraries
           'swiper': ['swiper'],
           'icons': ['react-icons'],
-          // Utils and helpers
-          'utils': ['sharp'],
           // Pages - lazy loaded
           'pages-home': ['./src/pages/Home'],
           'pages-projects': ['./src/pages/ProyectosColombia', './src/pages/ProyectosUSA', './src/pages/TodosLosProyectos'],

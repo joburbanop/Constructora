@@ -1,6 +1,11 @@
-const sharp = require('sharp');
-const fs = require('fs').promises;
-const path = require('path');
+import sharp from 'sharp';
+import { promises as fs } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 /**
  * Script para optimizar todas las imágenes del proyecto
@@ -74,8 +79,4 @@ async function main() {
   }
 }
 
-if (require.main === module) {
-  main();
-}
-
-module.exports = { optimizeImage, processDirectory };
+main();

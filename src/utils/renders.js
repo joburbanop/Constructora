@@ -1,7 +1,7 @@
-import RenderQuintas from '../assets/render_quintas.png';
-import RenderSanMiguel from '../assets/render_san_miguel.png';
-import RenderRincon from '../assets/render_rincon.png';
-import CoralRender from '../assets/coral_render.png';
+import RenderQuintas from '../assets/render_quintas.webp';
+import RenderSanMiguel from '../assets/render_san_miguel.webp';
+import RenderRincon from '../assets/render_rincon.webp';
+import CoralRender from '../assets/coral_render.webp';
 
 const renders = [
   {

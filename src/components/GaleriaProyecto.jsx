@@ -34,7 +34,7 @@ export default function GaleriaProyecto({ id }) {
             <SwiperSlide key={idx}>
               <img
                 src={img}
-                srcSet={`${img}?w=320&format=webp 320w, ${img}?w=640&format=webp 640w, ${img}?w=960&format=webp 960w, ${img}?w=1280&format=webp 1280w`}
+                srcSet={`${img}?as=metadata&w=320;640;960;1280&format=webp 320w, ${img}?as=metadata&w=640&format=webp 640w`}
                 sizes="(max-width: 768px) 90vw, 50vw"
                 alt={`Imagen ${idx + 1}`}
                 className="galeria-img"

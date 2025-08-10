@@ -63,15 +63,11 @@ const Breadcrumb = ({ customPath = null }) => {
 
   const breadcrumbs = generateBreadcrumbPath();
 
-  console.log('Breadcrumb component rendering:', {
-    pathname: location.pathname,
-    breadcrumbsLength: breadcrumbs.length,
-    breadcrumbs: breadcrumbs
-  });
+  // Debug removed
 
   // No mostrar breadcrumb en la página principal
   if (breadcrumbs.length <= 1) {
-    console.log('Breadcrumb not showing - only home page');
+    /* Dev debug removed: Breadcrumb not showing - only home page */
     return null;
   }
 

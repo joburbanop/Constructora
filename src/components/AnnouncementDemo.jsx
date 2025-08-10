@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import AnnouncementModal from './AnnouncementModal';
 import useAnnouncementModal from '../hooks/useAnnouncementModal';
-import renderRincon from '../assets/render_rincon.png';
-import coralRender from '../assets/coral_render.png';
-import marbella from '../assets/Marbella.png';
+import renderRincon from '../assets/render_rincon.webp';
+import coralRender from '../assets/coral_render.webp';
+import marbella from '../assets/Marbella.webp';
 
 const AnnouncementDemo = () => {
   const [activeModal, setActiveModal] = useState(null);

@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect, useState } from 'react';
 import LoadingSpinner from './components/LoadingSpinner';
 import ScrollToTop from './components/ScrollToTop';
 import AnnouncementModal from './components/AnnouncementModal';
 import ResourcePreloader from './components/ResourcePreloader';
 import useAnnouncementModal from './hooks/useAnnouncementModal';
-import renderRincon from './assets/render_rincon.png';
+import renderRincon from './assets/render_rincon.webp';
 import anuncioImage from './assets/anuncios/Anuncio.webp';
 
 // Lazy load all pages for better performance
@@ -35,16 +35,13 @@ export default function App() {
     autoCloseTime: 8000
   });
 
+  // Defer initial announcement modal until idle to protect LCP
+  const shouldShowModal = typeof window !== 'undefined';
+
   return (
     <>
       {/* Preload critical resources */}
-      <ResourcePreloader 
-        resources={[
-          { type: 'image', href: '/favicon.webp' },
-          { type: 'image', href: anuncioImage },
-          { type: 'image', href: renderRincon }
-        ]} 
-      />
+      {/* Resource preloads disabled to avoid unused warnings; re-enable with real critical assets */}
       
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
@@ -67,23 +64,50 @@ export default function App() {
         </Routes>
       </Suspense>
       
-      {/* Modal de anuncio principal */}
-      <AnnouncementModal
-        isOpen={announcementModal.isOpen}
-        onClose={announcementModal.closeModal}
-        title=""
-        message=""
-        imageUrl={anuncioImage}
-        showLogo={false}
-        autoClose={true}
-        autoCloseTime={8000}
-        showCloseButton={true}
-        showOverlay={true}
-        animation="bounceIn"
-        size="large"
-      />
+      {/* Modal de anuncio principal (diferido) */}
+      {shouldShowModal && (
+        <DeferredAnnouncement
+          announcementModal={announcementModal}
+          imageUrl={anuncioImage}
+        />
+      )}
       
       <ScrollToTop />
     </>
+  );
+}
+
+// Small deferred wrapper to avoid mounting the modal before idle
+function DeferredAnnouncement({ announcementModal, imageUrl }) {
+  if (typeof window === 'undefined') return null;
+
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    const show = () => setReady(true);
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(() => setTimeout(show, 300));
+    } else {
+      setTimeout(show, 1200);
+    }
+  }, []);
+
+  if (!ready) return null;
+
+  return (
+    <AnnouncementModal
+      isOpen={announcementModal.isOpen}
+      onClose={announcementModal.closeModal}
+      title=""
+      message=""
+      imageUrl={imageUrl}
+      showLogo={false}
+      autoClose={true}
+      autoCloseTime={8000}
+      showCloseButton={true}
+      showOverlay={true}
+      animation="bounceIn"
+      size="large"
+    />
   );
 }

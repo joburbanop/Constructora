@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/AnnouncementModal.css';
-import logo from '../assets/LOGO.png';
+import logo from '../assets/LOGO.webp';
 
 const AnnouncementModal = ({ 
   isOpen, 

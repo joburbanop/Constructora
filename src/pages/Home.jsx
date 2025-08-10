@@ -79,6 +79,8 @@ export default function Home() {
     }
   }, [handleScrollToTop, location.state]);
 
+  // Debug logs removed in production; rely on build drop_console
+
   return (
     <div className="home-container" role="main">
       {/* Header */}
