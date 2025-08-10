@@ -741,4 +741,277 @@
   .casas-lujo-galeria-item:hover {
     transform: none;
   }
+}
+
+/* ========== ZIGZAG LAYOUT ========== */
+.casas-lujo-zigzag-container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 10vw, 8rem);
+  margin-top: clamp(3rem, 8vw, 5rem);
+}
+
+.casas-lujo-zigzag-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 5rem);
+  align-items: center;
+  min-height: 500px;
+  position: relative;
+}
+
+.casas-lujo-zigzag-item.reverse {
+  grid-template-areas: "image content";
+}
+
+.casas-lujo-zigzag-item:not(.reverse) {
+  grid-template-areas: "content image";
+}
+
+/* Asegurar que las áreas funcionen correctamente */
+
+
+.casas-lujo-zigzag-content {
+  grid-area: content;
+  padding: clamp(2rem, 5vw, 4rem);
+  position: relative;
+}
+
+.casas-lujo-zigzag-image {
+  grid-area: image;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--casas-lujo-border-radius);
+  box-shadow: var(--casas-lujo-shadow-medium);
+  height: 100%;
+  min-height: 400px;
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: var(--casas-lujo-transition);
+}
+
+.casas-lujo-zigzag-content {
+  grid-area: content;
+  padding: clamp(2rem, 5vw, 4rem);
+  position: relative;
+}
+
+.casas-lujo-zigzag-number {
+  display: none;
+}
+
+.casas-lujo-zigzag-content h3 {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 700;
+  color: var(--casas-lujo-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.casas-lujo-zigzag-content p {
+  font-size: clamp(1.1rem, 2.8vw, 1.3rem);
+  line-height: 1.7;
+  color: var(--casas-lujo-text-muted);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.casas-lujo-zigzag-features {
+  display: none;
+}
+
+.casas-lujo-zigzag-feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+}
+
+.casas-lujo-zigzag-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: var(--casas-lujo-primary);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.casas-lujo-zigzag-feature span:last-child {
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+  color: var(--casas-lujo-secondary);
+  font-weight: 500;
+}
+
+.casas-lujo-zigzag-image {
+  grid-area: image;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--casas-lujo-border-radius);
+  box-shadow: var(--casas-lujo-shadow-medium);
+  height: 100%;
+  min-height: 400px;
+  transition: var(--casas-lujo-transition);
+}
+
+/* Solo aplicar transformación 3D en pantallas grandes */
+@media (min-width: 1025px) {
+  .casas-lujo-zigzag-image {
+    transform: perspective(1000px) rotateY(-5deg);
+  }
+  
+  .casas-lujo-zigzag-image:hover {
+    transform: perspective(1000px) rotateY(0deg) scale(1.02);
+  }
+}
+
+/* En pantallas más pequeñas, usar transformación simple */
+@media (max-width: 1024px) {
+  .casas-lujo-zigzag-image:hover {
+    transform: scale(1.02);
+  }
+}
+
+.casas-lujo-zigzag-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: var(--casas-lujo-transition);
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.casas-lujo-zigzag-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, transparent 50%);
+  z-index: 1;
+  opacity: 0;
+  transition: var(--casas-lujo-transition);
+}
+
+.casas-lujo-zigzag-image:hover::before {
+  opacity: 1;
+}
+
+/* Responsive para zigzag */
+@media (max-width: 1024px) {
+  .casas-lujo-zigzag-container {
+    gap: clamp(3rem, 8vw, 6rem);
+  }
+  
+  .casas-lujo-zigzag-item {
+    grid-template-columns: 1fr;
+    grid-template-areas: "image" "content";
+    gap: clamp(2rem, 5vw, 3rem);
+    min-height: auto;
+  }
+  
+  /* Forzar que todas las imágenes aparezcan arriba en responsive */
+  .casas-lujo-zigzag-item.reverse,
+  .casas-lujo-zigzag-item:not(.reverse) {
+    grid-template-areas: "image" "content";
+  }
+  
+  .casas-lujo-zigzag-image {
+    min-height: 300px;
+    aspect-ratio: 4/3;
+  }
+  
+  .casas-lujo-zigzag-image:hover {
+    transform: scale(1.02);
+  }
+  
+  .casas-lujo-zigzag-image img {
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .casas-lujo-zigzag-number {
+    top: -0.5rem;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .casas-lujo-zigzag-container {
+    gap: clamp(2.5rem, 7vw, 5rem);
+  }
+  
+  .casas-lujo-zigzag-content {
+    padding: clamp(1.5rem, 4vw, 3rem);
+  }
+  
+  .casas-lujo-zigzag-content h3 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  .casas-lujo-zigzag-content p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  }
+  
+  .casas-lujo-zigzag-feature span:last-child {
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+  }
+  
+  .casas-lujo-zigzag-image {
+    min-height: 250px;
+    aspect-ratio: 16/9;
+  }
+  
+  .casas-lujo-zigzag-image img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .casas-lujo-zigzag-container {
+    gap: clamp(2rem, 6vw, 4rem);
+  }
+  
+  .casas-lujo-zigzag-content {
+    padding: clamp(1rem, 3vw, 2rem);
+  }
+  
+  .casas-lujo-zigzag-content h3 {
+    font-size: clamp(1.3rem, 3.5vw, 2rem);
+  }
+  
+  .casas-lujo-zigzag-content p {
+    font-size: clamp(0.95rem, 2.3vw, 1.1rem);
+  }
+  
+  .casas-lujo-zigzag-feature span:last-child {
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+  }
+  
+  .casas-lujo-zigzag-image {
+    min-height: 200px;
+    aspect-ratio: 3/2;
+  }
+  
+  .casas-lujo-zigzag-image img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .casas-lujo-zigzag-number {
+    top: -0.25rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
 } 

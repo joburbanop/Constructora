@@ -22,6 +22,7 @@ import casaLujo9 from '../assets/Casas_de_Lujo/IMG_20200130_162746.webp';
 import casaLujo10 from '../assets/Casas_de_Lujo/IMG_20200130_165328.webp';
 import casaLujo11 from '../assets/Casas_de_Lujo/IMG_20200130_180430.webp';
 import casaLujo12 from '../assets/Casas_de_Lujo/IMG_20200130_115403.webp';
+import casaLujo13 from '../assets/Casas_de_Lujo/IMG_20200130_182939.webp';
 
 const CasasLujo = () => {
   const { t } = useIdioma();
@@ -92,73 +93,93 @@ const CasasLujo = () => {
         />
       </section>
 
-      {/* Info Principal Section */}
-      <section id="info-principal" className="casas-lujo-info-section">
-        <div className="casas-lujo-container-inner">
-          <div className="casas-lujo-info-content">
-            <div className="casas-lujo-info-text">
-              <h2 className="casas-lujo-info-title">{t.casas_lujo?.info_principal_title || 'Casas de Lujo Exclusivas'}</h2>
-              <p className="casas-lujo-info-description">{t.casas_lujo?.info_principal_description || 'Diseñamos y construimos casas de lujo a la altura de sus sueños con máxima calidad.'}</p>
-              <div className="casas-lujo-features">
-                <div className="casas-lujo-feature-item">
-                  <div className="casas-lujo-feature-icon"><FaDraftingCompass /></div>
-                  <div className="casas-lujo-feature-content">
-                    <h4>{t.casas_lujo?.feature1_title || 'Diseño Personalizado'}</h4>
-                    <p>{t.casas_lujo?.feature1_desc || 'Creamos diseños únicos que reflejen su estilo de vida y personalidad.'}</p>
-                  </div>
-                </div>
-                <div className="casas-lujo-feature-item">
-                  <div className="casas-lujo-feature-icon"><FaStar /></div>
-                  <div className="casas-lujo-feature-content">
-                    <h4>{t.casas_lujo?.feature2_title || 'Materiales Premium'}</h4>
-                    <p>{t.casas_lujo?.feature2_desc || 'Utilizamos los mejores materiales para garantizar durabilidad y elegancia.'}</p>
-                  </div>
-                </div>
-                <div className="casas-lujo-feature-item">
-                  <div className="casas-lujo-feature-icon"><FaMapMarkerAlt /></div>
-                  <div className="casas-lujo-feature-content">
-                    <h4>{t.casas_lujo?.feature3_title || 'Ubicaciones Estratégicas'}</h4>
-                    <p>{t.casas_lujo?.feature3_desc || 'Construimos en los sectores más exclusivos de Jamundí, Pance y Cali.'}</p>
-                  </div>
-                </div>
-                <div className="casas-lujo-feature-item">
-                  <div className="casas-lujo-feature-icon"><FaShieldAlt /></div>
-                  <div className="casas-lujo-feature-content">
-                    <h4>{t.casas_lujo?.feature4_title || 'Construcción de Calidad'}</h4>
-                    <p>{t.casas_lujo?.feature4_desc || 'Garantizamos la máxima calidad en cada etapa del proceso constructivo.'}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="casas-lujo-info-image">
-              <img src={casaLujo12} alt="Casa de Lujo" />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Servicios Section */}
       <section id="servicios" className="casas-lujo-servicios-section">
         <div className="casas-lujo-container-inner">
           <div className="casas-lujo-section-header">
-            <h2 className="casas-lujo-section-title">{t.casas_lujo?.servicios_title || 'Diseñamos y Construimos'}</h2>
-            <p className="casas-lujo-section-subtitle">{t.casas_lujo?.servicios_subtitle || 'Casas de lujo a la altura de sus sueños con máxima calidad'}</p>
+            <h2 className="casas-lujo-section-title">{t.casas_lujo?.servicios_title || 'Nuestro Proceso de Construcción'}</h2>
+            <p className="casas-lujo-section-subtitle">{t.casas_lujo?.servicios_subtitle || 'Descubra cómo transformamos sus sueños en realidad'}</p>
           </div>
-          <div className="casas-lujo-servicios-grid">
-            <div className="casas-lujo-servicio-card">
-              <div className="casas-lujo-servicio-icon"><FaDraftingCompass /></div>
-              <h3>{t.casas_lujo?.servicio_diseno_titulo || 'Diseño Personalizado'}</h3>
-              <p>{t.casas_lujo?.servicio_diseno_desc || 'Creamos diseños únicos que reflejen su estilo de vida y personalidad, adaptados a sus necesidades específicas.'}</p>
+          
+          {/* Zigzag Layout */}
+          <div className="casas-lujo-zigzag-container">
+            {/* Primera fila: Imagen a la izquierda, texto a la derecha */}
+            <div className="casas-lujo-zigzag-item reverse">
+              <div className="casas-lujo-zigzag-image">
+                <img src={casaLujo4} alt="Diseño Arquitectónico Exclusivo" />
+              </div>
+              <div className="casas-lujo-zigzag-content">
+                <div className="casas-lujo-zigzag-number">01</div>
+                <h3>Diseño Arquitectónico Exclusivo</h3>
+                <p>Transformamos su visión en realidad con diseños únicos que combinan elegancia y funcionalidad. Nuestros arquitectos crean espacios que reflejan su personalidad y estilo de vida, desde el concepto inicial hasta el último detalle.</p>
+                <div className="casas-lujo-zigzag-features">
+                  <div className="casas-lujo-zigzag-feature">
+                    <span className="casas-lujo-zigzag-icon">✓</span>
+                    <span>Diseño personalizado 100%</span>
+                  </div>
+                  <div className="casas-lujo-zigzag-feature">
+                    <span className="casas-lujo-zigzag-icon">✓</span>
+                    <span>Renders 3D fotorrealistas</span>
+                  </div>
+                  <div className="casas-lujo-zigzag-feature">
+                    <span className="casas-lujo-zigzag-icon">✓</span>
+                    <span>Planos técnicos detallados</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="casas-lujo-servicio-card">
-              <div className="casas-lujo-servicio-icon"><FaBuilding /></div>
-              <h3>{t.casas_lujo?.servicio_construccion_titulo || 'Construcción Premium'}</h3>
-              <p>{t.casas_lujo?.servicio_construccion_desc || 'Utilizamos los mejores materiales y técnicas constructivas para garantizar durabilidad y elegancia.'}</p>
+
+            {/* Segunda fila: Texto a la izquierda, imagen a la derecha */}
+            <div className="casas-lujo-zigzag-item">
+              <div className="casas-lujo-zigzag-content">
+                <div className="casas-lujo-zigzag-number">02</div>
+                <h3>Construcción Premium</h3>
+                <p>Utilizamos los mejores materiales y técnicas constructivas del mercado para garantizar que su casa no solo sea visualmente impresionante, sino también estructuralmente sólida y duradera para las próximas generaciones.</p>
+                <div className="casas-lujo-zigzag-features">
+                  <div className="casas-lujo-zigzag-feature">
+                    <span className="casas-lujo-zigzag-icon">✓</span>
+                    <span>Materiales premium certificados</span>
+                  </div>
+                  <div className="casas-lujo-zigzag-feature">
+                    <span className="casas-lujo-zigzag-icon">✓</span>
+                    <span>Supervisión técnica 24/7</span>
+                  </div>
+                  <div className="casas-lujo-zigzag-feature">
+                    <span className="casas-lujo-zigzag-icon">✓</span>
+                    <span>Garantía extendida</span>
+                  </div>
+                </div>
+              </div>
+              <div className="casas-lujo-zigzag-image">
+                <img src={casaLujo12} alt="Construcción Premium" />
+              </div>
             </div>
-            <div className="casas-lujo-servicio-card">
-              <div className="casas-lujo-servicio-icon"><FaMapMarkerAlt /></div>
-              <h3>{t.casas_lujo?.servicio_ubicacion_titulo || 'Ubicaciones Exclusivas'}</h3>
-              <p>{t.casas_lujo?.servicio_ubicacion_desc || 'Construimos en los sectores más exclusivos de Jamundí, Pance y Cali, ofreciendo el mejor entorno.'}</p>
+
+            {/* Tercera fila: Imagen a la izquierda, texto a la derecha */}
+            <div className="casas-lujo-zigzag-item reverse">
+              <div className="casas-lujo-zigzag-image">
+                <img src={casaLujo9} alt="Acabados de Lujo" />
+              </div>
+              <div className="casas-lujo-zigzag-content">
+                <div className="casas-lujo-zigzag-number">03</div>
+                <h3>Acabados de Lujo</h3>
+                <p>Los acabados son el alma de su hogar. Seleccionamos cuidadosamente cada material, textura y color para crear ambientes que transmitan sofisticación y confort, transformando su casa en un verdadero santuario de lujo.</p>
+                <div className="casas-lujo-zigzag-features">
+                  <div className="casas-lujo-zigzag-feature">
+                    <span className="casas-lujo-zigzag-icon">✓</span>
+                    <span>Acabados premium importados</span>
+                  </div>
+                  <div className="casas-lujo-zigzag-feature">
+                    <span className="casas-lujo-zigzag-icon">✓</span>
+                    <span>Sistemas de iluminación inteligente</span>
+                  </div>
+                  <div className="casas-lujo-zigzag-feature">
+                    <span className="casas-lujo-zigzag-icon">✓</span>
+                    <span>Detalles artesanales únicos</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
