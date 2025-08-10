@@ -123,7 +123,7 @@ const WhatsAppFloat = () => {
             </button>
             
             <button 
-              className="action-button call-action"
+              className="action-button call-action mobile-only"
               onClick={() => window.open('tel:+573234708860')}
             >
               <span>📞</span>

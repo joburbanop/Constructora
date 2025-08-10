@@ -286,6 +286,18 @@
   transform: translateY(-1px);
 }
 
+/* Ocultar botón de llamar en desktop */
+.mobile-only {
+  display: none;
+}
+
+/* Mostrar botón de llamar solo en móviles */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: flex;
+  }
+}
+
 /* Animaciones */
 @keyframes pulse {
   0% {

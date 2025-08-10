@@ -39,21 +39,21 @@ const CasasLujo = () => {
       nombre: 'Sofía Saavedra',
       cargo: 'Directora comercial Casas & Lotes SAS',
       telefono: '+57 3234708860',
-      imagen: '/src/assets/expertos/SOFIA.webp'
+      imagen: '/src/assets/expertos/_DSC5686.webp'
     },
     {
       id: 'ludivia',
       nombre: 'Ludivia Guapacha',
       cargo: 'Ejecutiva comercial Quintas de Marbella',
       telefono: '+57 3332488488',
-      imagen: '/src/assets/expertos/LUDI.webp'
+      imagen: '/src/assets/expertos/_DSC5636.webp'
     },
     {
       id: 'lina',
       nombre: 'Lina Encizo',
       cargo: 'Ejecutiva comercial San Miguel',
       telefono: '+57 3244414141',
-      imagen: '/src/assets/expertos/LINA.webp'
+      imagen: '/src/assets/expertos/_DSC5656.webp'
     }
   ];
 

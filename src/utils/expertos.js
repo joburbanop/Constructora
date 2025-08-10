@@ -3,6 +3,10 @@ import ludi from '../assets/expertos/LUDI.webp';
 import sofia from '../assets/expertos/SOFIA.webp';
 import yulei from '../assets/expertos/yuleiV.webp';
 import wiliam from '../assets/expertos/wiliam.webp';
+// Imágenes reales convertidas a WebP
+import ludiReal from '../assets/expertos/_DSC5636.webp';
+import linaReal from '../assets/expertos/_DSC5656.webp';
+import sofiaReal from '../assets/expertos/_DSC5686.webp';
 const expertos = [
   {
     clave: 'sofia',
@@ -10,7 +14,7 @@ const expertos = [
     especialidadClave: 'dirComercialCYL',
     atencion:'atencion',
     telefono:'+57 3234708860',
-    imagen: sofia
+    imagen: sofiaReal
   },
   {
     clave: 'ludivia',
@@ -18,7 +22,7 @@ const expertos = [
     especialidadClave: 'ejecComQuintas',
     atencion:'atencion',
     telefono:'+57 3332488488',
-    imagen: ludi
+    imagen: ludiReal
   },
   {
     clave: 'lina',
@@ -26,7 +30,7 @@ const expertos = [
     especialidadClave: 'ejecComSanMiguel',
     atencion:'atencion',
     telefono:'+57 3244414141',
-    imagen: lina
+    imagen: linaReal
   },
    {
     clave: 'yulei',
