@@ -1,0 +1,297 @@
+/* ========== TERRENOS CONSTRUCCIÓN - CSS ========== */
+
+/* Variables específicas */
+:root {
+  --terrenos-primary: #ff6600;
+  --terrenos-primary-light: #ff914d;
+  --terrenos-secondary: #222;
+  --terrenos-text-muted: #666;
+  --terrenos-bg-light: #ffffff;
+  --terrenos-bg-gray: #f8f9fa;
+  --terrenos-border-light: #e0e0e0;
+  --terrenos-shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --terrenos-shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --terrenos-border-radius: 12px;
+  --terrenos-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========== CONTENEDOR PRINCIPAL ========== */
+.terrenos-construccion-container {
+  min-height: 100vh;
+  background: var(--terrenos-bg-light);
+  overflow-x: hidden;
+}
+
+/* ========== HERO SECTION ========== */
+.terrenos-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(255, 145, 77, 0.05) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.terrenos-hero-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23f8f9fa"/><circle cx="200" cy="150" r="50" fill="%23ff6600" opacity="0.1"/><circle cx="1000" cy="450" r="80" fill="%23ff6600" opacity="0.1"/><circle cx="800" cy="100" r="30" fill="%23ff6600" opacity="0.1"/></svg>');
+  background-size: cover;
+  background-position: center;
+}
+
+.terrenos-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.terrenos-hero-text {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.terrenos-hero-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: var(--terrenos-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.terrenos-hero-subtitle {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--terrenos-text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.terrenos-contact-btn {
+  background: var(--terrenos-primary);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--terrenos-border-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--terrenos-transition);
+  box-shadow: var(--terrenos-shadow-soft);
+}
+
+.terrenos-contact-btn:hover {
+  background: var(--terrenos-primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--terrenos-shadow-medium);
+}
+
+/* ========== TERRENOS SECTION ========== */
+.terrenos-section {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+  background: var(--terrenos-bg-gray);
+}
+
+.terrenos-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+.terrenos-section-title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--terrenos-secondary);
+  margin-bottom: clamp(2rem, 6vw, 4rem);
+  position: relative;
+}
+
+.terrenos-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--terrenos-primary);
+  border-radius: 2px;
+}
+
+/* ========== GRID DE TERRENOS ========== */
+.terrenos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  margin-top: 2rem;
+}
+
+.terreno-card {
+  background: var(--terrenos-bg-light);
+  border-radius: var(--terrenos-border-radius);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: var(--terrenos-shadow-soft);
+  transition: var(--terrenos-transition);
+  border: 1px solid var(--terrenos-border-light);
+}
+
+.terreno-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--terrenos-shadow-medium);
+}
+
+.terreno-direccion {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-weight: 600;
+  color: var(--terrenos-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.terreno-maps-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--terrenos-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--terrenos-border-radius);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--terrenos-transition);
+  width: 100%;
+}
+
+.terreno-maps-btn:hover {
+  background: var(--terrenos-primary-light);
+  transform: translateY(-2px);
+}
+
+.maps-icon {
+  font-size: 1rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .terrenos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .terrenos-hero-section {
+    min-height: 50vh;
+  }
+  
+  .terrenos-hero-text {
+    padding: 0 1rem;
+  }
+  
+  .terrenos-section {
+    padding: clamp(2rem, 6vw, 4rem) 0;
+  }
+  
+  .terrenos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .terreno-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terrenos-hero-section {
+    min-height: 40vh;
+  }
+  
+  .terrenos-hero-title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+  }
+  
+  .terrenos-hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  }
+  
+  .terrenos-contact-btn {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+  
+  .terrenos-section {
+    padding: clamp(1.5rem, 5vw, 3rem) 0;
+  }
+  
+  .terrenos-container {
+    padding: 0 1rem;
+  }
+  
+  .terreno-card {
+    padding: 1.25rem;
+  }
+  
+  .terreno-direccion {
+    font-size: clamp(1rem, 2.2vw, 1.1rem);
+  }
+  
+  .terreno-maps-btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ========== ANIMACIONES ========== */
+@keyframes terrenosFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.terreno-card {
+  animation: terrenosFadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.terreno-card:nth-child(1) { animation-delay: 0.1s; }
+.terreno-card:nth-child(2) { animation-delay: 0.2s; }
+.terreno-card:nth-child(3) { animation-delay: 0.3s; }
+.terreno-card:nth-child(4) { animation-delay: 0.4s; }
+.terreno-card:nth-child(5) { animation-delay: 0.5s; }
+.terreno-card:nth-child(6) { animation-delay: 0.6s; }
+.terreno-card:nth-child(7) { animation-delay: 0.7s; }
+.terreno-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* ========== ACCESSIBILITY ========== */
+@media (prefers-reduced-motion: reduce) {
+  .terreno-card,
+  .terrenos-contact-btn,
+  .terreno-maps-btn {
+    animation: none;
+    transition: none;
+  }
+  
+  .terreno-card:hover,
+  .terrenos-contact-btn:hover,
+  .terreno-maps-btn:hover {
+    transform: none;
+  }
+}

@@ -25,6 +25,8 @@ const es = {
     casa_usa_1_desc: 'Hermosa casa unifamiliar con diseño moderno y acabados de lujo.',
     casa_usa_2_title: 'Casa USA ',
     casa_usa_2_desc: 'Casa elegante con espacios amplios y diseño contemporáneo.',
+    terrenos_usa_title: 'Terrenos para futuro desarrollo',
+    terrenos_usa_desc: 'Terrenos para futuro desarrollo Cape Coral, FL',
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose:'20 min de Tuluá - Vereda San José, San Pedro',
     san_pedro: 'San Pedro, Colombia',
@@ -648,6 +650,13 @@ imagenes_add:{
     slide3_subtitle: 'Diversifica tu portafolio con confianza',
     boton: 'Contáctanos'
   },
+  terrenos: {
+    slide1_title: 'Terrenos para futuro desarrollo',
+    slide1_subtitle: 'Invierte en el futuro de Cape Coral y Lehigh Acres',
+    slide2_title: 'Terrenos para futuro desarrollo',
+    slide2_subtitle: 'Oportunidades únicas de inversión en Florida',
+    boton: 'Contáctanos'
+  },
       cana_dulce: {
       slide1_title: 'Exclusiva urbanización campestre de lujo',
       slide1_subtitle: '46 lotes premium ubicados a solo 20 minutos de Tuluá en la vereda San José',
@@ -774,6 +783,8 @@ imagenes_add:{
     casa_usa_1_desc: 'Nueva casa unifamiliar en venta Cape Coral , FL',
     casa_usa_2_title: 'Casa unifamiliar en venta',
     casa_usa_2_desc: 'Casa unifamiliar en venta Cape Coral, FL',
+    terrenos_usa_title: 'Terrenos para futuro desarrollo',
+    terrenos_usa_desc: 'Terrenos para futuro desarrollo Cape Coral, FL',
     boton: 'Ver más',
     proximamente: 'Próximamente'
   },

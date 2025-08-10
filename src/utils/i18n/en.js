@@ -25,6 +25,8 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     casa_usa_1_desc: 'Beautiful single-family home with modern design and luxury finishes.',
     casa_usa_2_title: 'USA House Second',
     casa_usa_2_desc: 'Elegant house with spacious areas and contemporary design.',
+    terrenos_usa_title: 'Land for future development',
+    terrenos_usa_desc: 'Land for future development Cape Coral, FL',
     jamundi_colombia: 'Jamundí, Colombia',
     san_jose: '20 min from Tuluá - San José Village, San Pedro',
     san_pedro: 'San Pedro, Colombia',
@@ -615,6 +617,13 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       boton: 'Contact Us'
 
     },
+    terrenos: {
+      slide1_title: 'Land for future development',
+      slide1_subtitle: 'Invest in the future of Cape Coral and Lehigh Acres',
+      slide2_title: 'Land for future development',
+      slide2_subtitle: 'Unique investment opportunities in Florida',
+      boton: 'Contact Us'
+    },
       cana_dulce: {
     slide1_title: 'Exclusive luxury countryside urbanization',
     slide1_subtitle: '46 premium lots located just 20 minutes from Tuluá in the San José area',
@@ -824,6 +833,8 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     casa_usa_1_desc: 'New single-family home for sale in Cape Coral, FL',
     casa_usa_2_title: 'Single-family home for sale',
     casa_usa_2_desc: 'Single-family home for sale in Cape Coral, FL',
+    terrenos_usa_title: 'Land for future development',
+    terrenos_usa_desc: 'Land for future development Cape Coral, FL',
     boton: 'See more',
     proximamente: 'Coming soon'
 

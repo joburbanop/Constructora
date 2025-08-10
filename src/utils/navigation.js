@@ -68,6 +68,11 @@ if (proyecto.titulo === 'casa_usa_1_title') {
   setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
   return;
 }
+if (proyecto.titulo === 'terrenos_usa_title') {
+  navigate('/terrenos-construccion');
+  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+  return;
+}
   if (proyecto.titulo === 'sanmiguel_titulo') {
   navigate('/san-miguel');
   setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
