@@ -20,13 +20,18 @@ import Expertos from '../components/Expertos';
 import ContactoCTA from '../components/ContactoCTA';
 import UbicacionMaps from '../components/UbicacionMaps';
 import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
+import agentes from '../utils/expertos';
 const InfoRinconLago = () => {
    const { t } = useIdioma();
    const video = t.videos?.rincon?.render;
    const navigate = useNavigate();
    const zigzagcoral=infoZigZag.datosCoralMall;
    const [activeSection, setActiveSection] = useState('inicio');
+    const nombresDeseados = ['yulei'];
    
+       const asesores = agentes.filter(({ clave }) =>
+       nombresDeseados.includes(clave)
+       );
    const jamundiCoord = {
       mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.855319345066!2d-82.00755649185662!3d26.646388419501477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88db46662259419b%3A0xca7775557e291078!2s300%20Chiquita%20Blvd%20S%2C%20Cape%20Coral%2C%20FL%2033991%2C%20EE.%20UU.!5e1!3m2!1ses-419!2sco!4v1753512612201!5m2!1ses-419!2sco"
    };
@@ -98,7 +103,7 @@ const InfoRinconLago = () => {
       
          <UbicacionMaps mapSrc={jamundiCoord.mapSrc}/>
        <div id="expertos" className="expertos-section-coral">
-         <Expertos />
+         <Expertos  listaFiltrada={asesores}  />
        </div>
       <ContactoCTA />
       <section id="contactanos" className="footer-section">

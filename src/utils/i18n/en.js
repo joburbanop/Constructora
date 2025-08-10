@@ -11,6 +11,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     subtitulo: 'We are expert builders with 17 years of experience in southwestern Colombia and now in the United States.',
     condominio: 'Condominium',
     urbanizacion: 'Urbanization',
+    casas: 'House',
     locales: 'Commercial Units',
     rincon_titulo: 'Exclusive country condominium',
     rincon_desc: 'It\'s time to secure your lot in Rincón del Lago. 5-year financing. Schedule your house construction or hire our construction company and build your house with the best budget.',
@@ -97,6 +98,41 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     seguridad: 'Security',
     seguridad_desc: 'Certified security protocols',
     cobertura: 'Coverage',
+  },
+
+  casas_lujo: {
+    info_principal_title: 'Exclusive Luxury Homes',
+    info_principal_description: 'We design and build luxury homes to the height of your dreams with maximum quality. Each project is unique and reflects the personality and lifestyle of our clients.',
+    feature1_title: 'Custom Design',
+    feature1_desc: 'We create unique designs that reflect your lifestyle and personality, adapted to your specific needs.',
+    feature2_title: 'Premium Materials',
+    feature2_desc: 'We use the best materials and construction techniques to ensure durability and elegance.',
+    feature3_title: 'Strategic Locations',
+    feature3_desc: 'We build in the most exclusive sectors of Jamundí, Pance and Cali.',
+    feature4_title: 'Quality Construction',
+    feature4_desc: 'We guarantee the highest quality in every stage of the construction process.',
+    servicios_title: 'We Design and Build',
+    servicios_subtitle: 'Luxury homes to the height of your dreams with maximum quality',
+    servicio_diseno_titulo: 'Custom Design',
+    servicio_diseno_desc: 'We create unique designs that reflect your lifestyle and personality, adapted to your specific needs.',
+    servicio_construccion_titulo: 'Premium Construction',
+    servicio_construccion_desc: 'We use the best materials and construction techniques to ensure durability and elegance.',
+    servicio_ubicacion_titulo: 'Exclusive Locations',
+    servicio_ubicacion_desc: 'We build in the most exclusive sectors of Jamundí, Pance and Cali, offering the best environment.',
+    galeria_title: 'Our Luxury Gallery',
+    galeria_subtitle: 'Explore our most outstanding projects and find inspiration for your dream home',
+  },
+
+  slider: {
+    casas_lujo: {
+      slide1_title: 'Luxury Homes',
+      slide1_subtitle: 'Unique environments in exclusive sectors of Valle del Cauca',
+      slide2_title: 'Luxury Homes',
+      slide2_subtitle: 'Unique environments in exclusive sectors of Valle del Cauca',
+      slide3_title: 'Luxury Homes',
+      slide3_subtitle: 'Unique environments in exclusive sectors of Valle del Cauca',
+      boton: 'Contact Us'
+    },
     cobertura_desc: 'Colombia and United States',
     confianza: 'Trust',
     confianza_desc: 'Total commitment to our clients',
@@ -170,7 +206,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     titulo: 'Caña Dulce',
     subtitulo: 'Exclusive countryside urbanization of 46 lots',
     subtitulo_2: 'Located 20 minutes from Tuluá in the San José area of San Pedro municipality',
-    descripcion: 'Completely finished and delivered. Features sub-base roads and all functional public services.',
+    descripcion: 'Caña Dulce is an exclusive countryside residential development located in the peaceful San Jose rural area of the San Pedro municipality. 250 m² plots in a gated community with 24-hour security, social area with adult and children’s pools, jacuzzi, sauna, two-level clubhouse, and a fully equipped event hall.',
     descripcion_1: 'Last lots of 12x21 mts, to enjoy with family all the tranquility and security that this natural setting offers.',
     descripcion_2: 'Schedule your appointment and visit us: 3204210000'
   },
@@ -181,7 +217,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     subtitulo: 'Completely finished urbanization',
     subtitulo_2: 'Located at kilometer 2 via Jamundí - Potrerito, just 20 minutes south of Cali',
     descripcion: 'Last available lots of 8x15 mts (120 m²) with payment facility up to 12 months.',
-    descripcion_1: 'Equipped with gas station, service center, 21 commercial premises, supermarket, food court and 6 green areas.',
+   descripcion_1: 'PUERTAS DEL SOL is a residential development located in Jamundí, offering 120 m² plots (8 meters wide by 15 meters deep) in a new expansion area just 8 minutes from downtown Jamundí. It features a commercial zone with a service station, supermarket area, retail spaces, and spacious parking bays. No administration or maintenance fees.',
     descripcion_2: 'Schedule your visit: 3204210000'
   },
 
@@ -204,6 +240,28 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     descripcion:'Luxurious single-family home with 3+1 spacious bedrooms, 3 bathrooms, and a 2-car garage. Granite countertops, high-quality appliances, and flooring give the home an elegant look. Wide impact-resistant doors and windows flood the house with natural light and offer stunning views of the surroundings. Hurricane-ready thanks to its solid structure and flat roof.',
     descripcion_1:'',
     descripcion_2:''
+  },
+  quintas_marbella_detalle:{
+   espacios_titulo: '',
+    espacios_desc: '',
+    titulo: 'Quintas de Marbella',
+    subtitulo: 'Residential and commercial lots with strategic location',
+    subtitulo_2: 'Build your way without going into debt',
+    descripcion: 'Quintas de Marbella is a residential development offering lots starting at 90.3 m² (7 meters wide by 12.90 meters deep), the best alternative to build your dream home without relying on bank loans.',
+    descripcion_1: 'Quintas de Marbella is strategically located between the Marbella and Bonanza developments. It will soon feature wide paved roads that will shorten the distance to the Pan-American Highway via Barú.',
+    descripcion_2: 'Direct payment plans with our construction company for up to 5 years.'
+
+  },
+  quintas_marbella_detalle:{
+   espacios_titulo: '',
+    espacios_desc: '',
+    titulo: 'Quintas de Marbella',
+    subtitulo: 'Residential and commercial lots with strategic location',
+    subtitulo_2: 'Build your way without going into debt',
+    descripcion: 'Quintas de Marbella is a residential development offering lots starting at 90.3 m² (7 meters wide by 12.90 meters deep), the best alternative to build your dream home without relying on bank loans.',
+    descripcion_1: 'Quintas de Marbella is strategically located between the Marbella and Bonanza developments. It will soon feature wide paved roads that will shorten the distance to the Pan-American Highway via Barú.',
+    descripcion_2: 'Direct payment plans with our construction company for up to 5 years.'
+
   },
   san_miguel_detalle: {
     espacios_titulo: 'Open urbanization',
@@ -312,11 +370,39 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       ubicacion: 'Location',
       ubicacion_desc: 'Paso de la Bolsa road, Jamundí – Colombia.',
     },
-    proyecto2: {
-      slide_area_titulo: 'Usable area',
-      slide_area_subtitulo: '160 m² of construction',
+    san_miguel: {
+      area: 'Area',
+      area_desc: 'Lots from 150 m² (10x15 mts)',
+      precio: 'Price',
+      precio_desc: 'Inquire about availability and prices.',
+      ubicacion: 'Location',
+      ubicacion_desc: 'Rozo - Palmira, La Acequia area.',
+    },
+    cana_brava: {
+      area: 'Area',
+      area_desc: 'Lots of 250 m²',
+      precio: 'Price',
+      precio_desc: 'Check availability and prices',
+      ubicacion: 'Location',
+      ubicacion_desc: 'San José area, San Pedro – Colombia.',
+    },
+    palmeras_italia: {
+      area: 'Area',
+      area_desc: 'Lots of 150 m²',
+      precio: 'Price',
+      precio_desc: '100% sold',
+      ubicacion: 'Location',
+      ubicacion_desc: 'Paso de la Bolsa road, Jamundí – Colombia.',
+    },
+   quintas_marbella: {
+  area: 'Area',
+  area_desc: 'Lots starting at 90.3 m²',
+  precio: 'Price',
+  precio_desc: 'Flexible payment plans up to 5 years. Ask for pricing.',
+  ubicacion: 'Location',
+  ubicacion_desc: 'Jamundí, Colombia.',
+}
 
-    }
   },
 
   // informacionn componente infoZigZag.jsx
@@ -345,7 +431,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     },
     local_coral2: {
       titulo: "Strategic location",
-      descripcion: "Located in Lehigh Acres, 19 kilometers east of Fort Myers, in a diverse community with approximately 200,000 inhabitants."
+      descripcion: "Located in Cape Coral, 19 kilometers east of Fort Myers, in a diverse community with approximately 200,000 inhabitants."
     },
     local_coral3: {
       titulo: "Guaranteed investment and appreciation",
@@ -383,6 +469,21 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       descripcion: "24/7 gatehouse, elegant reception, professional administration and UTB. Schedule your exclusive appointment: 3204210000"
     }
   },
+  info_ZigZag_quintas_marbella: {
+  quintas1: {
+    titulo: "Build Without Debt",
+    descripcion: "Quintas de Marbella offers you the freedom to build your way, with lots starting at 90.3 m² and no need for bank loans. Take advantage of our direct payment plans of up to 5 years with the developer and bring your dream home to life."
+  },
+  quintas2: {
+    titulo: "Strategic Location and Development Potential",
+    descripcion: "Located between the Marbella and Bonanza developments, this area is rapidly expanding. It will soon feature new paved roads that will improve access to Panamericana Avenue via Barú, increasing both its value and accessibility."
+  },
+  quintas3: {
+    titulo: "Last Mixed-Use Lots Available",
+    descripcion: "Become part of this exclusive development by acquiring one of the last mixed-use lots (102 m²), ideal for both residential and commercial purposes. Enjoy a double-front design along the main road, parking areas, and great visibility."
+  }
+},
+
   imagenes_add: {
   mapa_rincon: 'Site map'
  
@@ -427,6 +528,9 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     cana_dulce: {
       video_principal: { id: 'A7EXkNPyiF8', titulo: 'Discover Caña Dulce', visible: true }
     },
+     marbella: {
+    video_principal: { id: 'JcVHrn_XfQoZQsin', titulo: 'Quintas de Marbella', visible: true }
+  },
     cana_brava: {
       video_principal: { id: 'hbDuQFcnO6c', titulo: 'Discover Caña Brava', visible: true }
     },
@@ -561,30 +665,81 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       slide2_title: 'Discover the benefits of building your own home',
       slide2_subtitle: 'More space, better budget, higher-quality finishes',
       slide3_title: 'Personalized guidance',
-      slide3_subtitle: 'Our team is ready to listen, answer your questions, and support you throughout the entire process.',
+      slide3_subtitle: 'Our team is ready to listen, answer your questions, and support you throughout the entire entire process.',
       boton: 'Contact us'
 },
   casa_primera_usa: {
       slide1_title: 'Comfort and safety in one place ',
-      slide1_subtitle: 'Lehigh Acres, FL ',
+      slide1_subtitle: 'Cape Coral, FL ',
       slide2_title: 'Comfort and safety in one place ',
-      slide2_subtitle: 'Lehigh Acres, FL',
+      slide2_subtitle: 'Cape Coral, FL',
       slide3_title: 'Comfort and safety in one place',
-      slide3_subtitle: 'Lehigh Acres, FL ',
+      slide3_subtitle: 'Cape Coral, FL',
       boton: 'Contáctanos'
     
   },
    casa_segunda_usa: {
       slide1_title: 'Comfort and safety in one place ',
-      slide1_subtitle: 'Lehigh Acres, FL ',
+      slide1_subtitle: 'Cape Coral, FL ',
       slide2_title: 'Comfort and safety in one place ',
-      slide2_subtitle: 'Lehigh Acres, FL',
+      slide2_subtitle: 'Cape Coral, FL',
       slide3_title: 'Comfort and safety in one place',
-      slide3_subtitle: 'Lehigh Acres, FL ',
+      slide3_subtitle: 'Cape Coral, FL ',
       boton: 'Contáctanos'
     
   },
+  quintas_marbella: {
+     slide1_title: 'Quintas de Marbella',
+      slide1_subtitle: 'Larger lots at the best price in the area',
+      slide2_title: 'Quintas de Marbella',
+      slide2_subtitle: 'Larger lots at the best price in the area',
+      slide3_title: 'Quintas de Marbella',
+      slide3_subtitle: 'Larger lots at the best price in the area',
+      boton: 'Contact us'
 
+    
+  },
+
+  },
+  info_ZigZag_san_miguel: {
+    titulo: "San Miguel Features",
+    subtitulo: "Discover what makes this urbanization special",
+    san_miguel1: {
+      titulo: "Strategic Location",
+      descripcion: "San Miguel is located in Rozo - Palmira, La Acequia area, just 5 minutes from the main park and a few kilometers from the Alfonso Bonilla Aragón International Airport."
+    },
+    san_miguel2: {
+      titulo: "Lots from 150 m²",
+      descripcion: "Lots from 150 m² (10 m front x 15 m depth), an excellent alternative to build your house to your liking in a countryside environment."
+    },
+    san_miguel3: {
+      titulo: "Commercial Front",
+      descripcion: "San Miguel will have a commercial front on the main road with business premises and service station. Inquire about commercial lot availability."
+    },
+    san_miguel4: {
+      titulo: "Quick Connection",
+      descripcion: "The area is surrounded by important roads that allow quick connection with Cali, Palmira, Yumbo and Cerrito."
+    }
+  },
+  info_ZigZag_cana_brava: {
+    titulo: "Caña Brava Features",
+    subtitulo: "Discover what makes this urbanization special",
+    cana_brava1: {
+      titulo: "Exclusive Countryside Urbanization",
+      descripcion: "Caña Brava is an exclusive countryside urbanization located in the peaceful San Jose area of San Pedro municipality, ideal for those seeking tranquility and exclusivity."
+    },
+    cana_brava2: {
+      titulo: "250 m² Lots",
+      descripcion: "250 m² lots in a gated community with 24-hour security, offering maximum security and privacy."
+    },
+    cana_brava3: {
+      titulo: "Premium Social Area",
+      descripcion: "Social area with pool for adults and children and equipped events hall to enjoy with family and friends."
+    },
+    cana_brava4: {
+      titulo: "Check Availability",
+      descripcion: "Project completely sold, demonstrating our clients' trust and preference for the quality and exclusivity of Caña Brava."
+    }
   },
   info_ZigZag_san_miguel: {
     titulo: "San Miguel Features",

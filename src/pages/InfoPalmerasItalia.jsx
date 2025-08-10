@@ -20,7 +20,7 @@ import UbicacionMaps from '../components/UbicacionMaps';
 import AreaPrecioUbic from '../components/AreaPrecioUbic';
 import VideoYoutube from '../components/VideoYoutube';
 import { FaHome, FaUsers, FaEnvelope } from 'react-icons/fa';
-import expertos from '../utils/expertos';
+import agentes from '../utils/expertos';
 
 const InfoPalmerasItalia = () => {
   const { t } = useIdioma();
@@ -29,7 +29,11 @@ const InfoPalmerasItalia = () => {
   const [activeSection, setActiveSection] = useState('inicio');
   
   // Elimina cualquier filtro de expertos
-  const listaFiltrada = expertos;
+   const nombresDeseados = ['lina','sofia','ludivia'];
+
+  const expertos = agentes.filter(({ clave }) =>
+  nombresDeseados.includes(clave)
+  );
 
   // Coordenadas de Palmeras de la Italia en Jamundí
   const palmerasItaliaCoord = {
@@ -125,7 +129,7 @@ const InfoPalmerasItalia = () => {
       <GaleriaProyecto id="palmeras_italia" />
 
       <section id="expertos" className="expertos-section-palmeras-italia">
-        <Expertos asesores={listaFiltrada} />
+        <Expertos listaFiltrada={expertos} />
       </section>
 
       <section id="contactanos">

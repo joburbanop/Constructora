@@ -1,9 +1,19 @@
-.proyecto-card {
+.proyecto-card-simple {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   padding: 24px;
   transition: transform 0.3s ease;
+  max-width: 350px;
+  border: 1px solid rgba(255, 102, 0, 0.1);
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: #ff6600 4px solid;
+  box-sizing: border-box;
+  transition: transform 0.3s ease; /* suavidad al hacer hover */
+  transform: scale(1); /* estado base */
 }
 
 .proyecto-card:hover {
@@ -11,45 +21,92 @@
 }
 
 .proyecto-card-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 250px;
   border-radius: 12px;
-  margin-bottom: 16px;
+}
+.proyecto-card-simple h2{
+  display: flex;
+  justify-content: left;
+}
+
+.proyecto-card-simple p{
+  display: flex;
+  justify-content: left;
+  margin: 0;
 }
 
 .proyecto-card-title {
-  font-size: 1.3rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #222;
-  margin-bottom: 8px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
+  min-height: 4rem;
+  
+   margin: 0;
+}
+.contenedor-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+ 
 }
 
 .proyecto-card-desc {
+  display: flex;
+  justify-content: left;
   font-size: 1rem;
   color: #444;
-  margin-bottom: 16px;
+  margin: 0;
   text-align: justify;
   white-space: pre-line;
+  font-family: 'Times New Roman', Times, serif;
+  min-height: 2rem;
+ 
+}
+.proyecto-ubicacion-simple{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  color: #666;
+}
+.texto-ubicacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+    width: 70%;
+    padding: 0.4rem 0.8rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 102, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.ambito-btn {
+.ambito-btn-simple {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 2rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 25px;
   font-size: 0.95rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  min-width: 140px;
+  background: linear-gradient(135deg, #ff6600 0%, #ff914d 100%);
 }
 
-.ambito-btn.orange {
+.ambito-btn-simple.orange {
   background-color: #ff6600;
   color: #fff;
 }
 
-.ambito-btn.gray.lujo {
+.ambito-btn-simple.gray.lujo {
   background: #aaa;
   color: #fff;
   cursor: not-allowed;
@@ -63,4 +120,26 @@
   font-size: 0.85rem;
   color: #555;
   text-align: center;
+}
+
+@media (max-width: 769px) {
+ .proyecto-card-simple h2 {
+    font-size: 1.2rem;
+}
+.proyecto-card-simple p {
+   font-size: 0.95rem;
+}
+}
+
+.proyecto-card-simple:hover {
+  transform: scale(1.05); /* ligero aumento al hacer hover */
+}
+
+.proyecto-card-simple:hover h2{
+  color: #ff6600;
+}
+
+.proyecto-card-simple:hover .texto-ubicacion{
+ background: linear-gradient(135deg, #fff5f0 0%, #ffe8d6 100%);
+  color: #ff6600;
 }

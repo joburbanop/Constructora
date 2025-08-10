@@ -24,8 +24,7 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
   const isProyectoProximamente = (titulo) => {
     // Proyectos próximamente (urbanizaciones de lujo + los nuevos)
     const proyectosProximamente = [
-      'marbella_titulo'     // Urbanización abierta
-      // 'palmeras_title' - Ya activado
+
     ];
     
     // Proyectos finalizados (ninguno está deshabilitado - todos tienen botón "Ver más")
@@ -50,12 +49,20 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
       <div className="proyectos-grid">
         {listado.map((proy, idx) => (
           <div className="proyecto-card" key={idx} data-proyecto={proy.titulo}>
-            <span className="proyecto-etiqueta" style={{background: proy.etiquetaColor}}>{t.proyectos[proy.tipo]}</span>
+           
+           <div className='contenedor-etiqueta-marcha'>
+            <div className="proyecto-etiqueta-marcha">
+              {t.proyectos[proy.tipo]}
+            </div>
+
+           </div>
+            
+
             <div className="proyecto-img-wrap">
               <img src={proy.imagen} alt={proy.titulo} className="proyecto-img-marcha" />
             </div>
             <div className="proyecto-info-marcha">
-              <div className="proyecto-titulo-row">
+              <div className="proyecto-titulo-row-marcha">
                 <span className="icono-circular-titulo">
                   {iconosTipo[proy.icono] && React.createElement(iconosTipo[proy.icono], { size: 32, color: proy.iconoColor || '#222' })}
                 </span>
@@ -71,7 +78,10 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
               <div className="button-container" style={{ position: 'relative' }}>
                 <Button
                   className={`ambito-btn ${isProyectoProximamente(proy.titulo) ? 'gray lujo proximamente' : 'orange'}`}
-                  onClick={isProyectoProximamente(proy.titulo) ? undefined : () => handleProyectoNavigation(proy, navigate)}
+                  onClick={isProyectoProximamente(proy.titulo) ? undefined : () => {
+        console.log('Clic en:', proy.titulo); // Confirma que entra
+        handleProyectoNavigation(proy, navigate); // Redirección
+      }}
                   disabled={isProyectoProximamente(proy.titulo)}
                   onMouseEnter={() => handleMouseEnter(proy.titulo)}
                   onMouseLeave={handleMouseLeave}

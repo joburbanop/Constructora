@@ -1,6 +1,6 @@
 import imgColombia from '../assets/Colombia.webp';
 import imgUSA from '../assets/Usa.webp';
-import imgLujo from '../assets/casas.jpeg';
+import imgLujo from '../assets/ambito/casa-lujo.webp';
 
 const ambitos = [
   {

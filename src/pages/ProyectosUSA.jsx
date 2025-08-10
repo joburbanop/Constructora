@@ -14,12 +14,18 @@ import { useIdioma } from '../context/IdiomaContext';
 import '../styles/ProyectosUSA.css';
 import Slider from '../components/Slider';
 import slidesUSA from '../utils/slidesUSA';
+import agentes from '../utils/expertos';
 import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
 
 export default function ProyectosUSA() {
   const { t } = useIdioma();
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState('inicio');
+  const nombresDeseados = ['yulei','wiliam'];
+
+  const asesores = agentes.filter(({ clave }) =>
+  nombresDeseados.includes(clave)
+  );
 
   // Efecto para hacer scroll hacia arriba cuando se carga la página
   useEffect(() => {
@@ -141,7 +147,7 @@ export default function ProyectosUSA() {
       </main>
 
       <div id="expertos" className="expertos-section-usa">
-        <Expertos />
+        <Expertos listaFiltrada={asesores} />
       </div>
       <ContactoCTA />
       <section id="contactanos" className="footer-section">

@@ -16,19 +16,26 @@ import slides from '../utils/slides';
 import proyectos from '../utils/proyectos';
 import { useIdioma } from '../context/IdiomaContext';
 import '../styles/Home.css';
+import agentes from '../utils/expertos';
 
 export default function Home() {
   const { t } = useIdioma();
   const location = useLocation();
-  
+   const nombresDeseados = ['ludivia','lina','sofia'];
+
+    const asesores = agentes.filter(({ clave }) =>
+    nombresDeseados.includes(clave)
+    );
   // Memoized filtered projects for better performance
   const { proyectosEnMarcha, proyectosEntregados } = useMemo(() => {
     const titulosEnMarcha = ['rincon_titulo', 'coral_titulo', 'marbella_titulo', 'sanmiguel_titulo'];
     const titulosEntregados = ['cana_title', 'palmeras_title', 'caña_dulce_title', 'puertas_sol_title'];
     
+   
     return {
       proyectosEnMarcha: proyectos.filter(p => titulosEnMarcha.includes(p.titulo)),
-      proyectosEntregados: proyectos.filter(p => titulosEntregados.includes(p.titulo))
+      proyectosEntregados: proyectos.filter(p => titulosEntregados.includes(p.titulo)),
+     
     };
   }, [proyectos]);
 
@@ -86,13 +93,7 @@ export default function Home() {
         <Slider contenido={slides} namespace="home" />
       </section>
 
-      {/* Search Filters Section */}
-      <section 
-        className="search-filters-section"
-        aria-label="Filtros de búsqueda"
-      >
-        <SearchFilters />
-      </section>
+     
 
       {/* Services Section */}
       <section 
@@ -166,7 +167,7 @@ export default function Home() {
         aria-label="Nuestro equipo de expertos"
       >
         <div className="section-container">
-          <Expertos />
+          <Expertos  listaFiltrada={asesores} />
         </div>
       </section>
 

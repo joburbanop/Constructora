@@ -12,6 +12,7 @@ const es = {
     condominio: 'Condominio',
     urbanizacion: 'Urbanización',
     locales: 'Locales',
+    casas: 'Casa',
     rincon_titulo: 'Exclusivo condominio campestre',
     rincon_desc: 'Es momento de separar su lote en Rincón del Lago. Financiación 5 años. Programe la construcción de su casa o contrate a nuestra constructora y edifique su casa con el mejor presupuesto.',
     sanmiguel_titulo: 'Urbanización abierta',
@@ -97,6 +98,41 @@ const es = {
     certificaciones_desc: 'ISO 9001, ISO 14001, OHSAS 18001',
     seguridad: 'Seguridad',
     seguridad_desc: 'Protocolos de seguridad certificados',
+  },
+
+  casas_lujo: {
+    info_principal_title: 'Casas de Lujo Exclusivas',
+    info_principal_description: 'Diseñamos y construimos casas de lujo a la altura de sus sueños con máxima calidad. Cada proyecto es único y refleja la personalidad y estilo de vida de nuestros clientes.',
+    feature1_title: 'Diseño Personalizado',
+    feature1_desc: 'Creamos diseños únicos que reflejen su estilo de vida y personalidad, adaptados a sus necesidades específicas.',
+    feature2_title: 'Materiales Premium',
+    feature2_desc: 'Utilizamos los mejores materiales y técnicas constructivas para garantizar durabilidad y elegancia.',
+    feature3_title: 'Ubicaciones Estratégicas',
+    feature3_desc: 'Construimos en los sectores más exclusivos de Jamundí, Pance y Cali.',
+    feature4_title: 'Construcción de Calidad',
+    feature4_desc: 'Garantizamos la máxima calidad en cada etapa del proceso constructivo.',
+    servicios_title: 'Diseñamos y Construimos',
+    servicios_subtitle: 'Casas de lujo a la altura de sus sueños con máxima calidad',
+    servicio_diseno_titulo: 'Diseño Personalizado',
+    servicio_diseno_desc: 'Creamos diseños únicos que reflejen su estilo de vida y personalidad, adaptados a sus necesidades específicas.',
+    servicio_construccion_titulo: 'Construcción Premium',
+    servicio_construccion_desc: 'Utilizamos los mejores materiales y técnicas constructivas para garantizar durabilidad y elegancia.',
+    servicio_ubicacion_titulo: 'Ubicaciones Exclusivas',
+    servicio_ubicacion_desc: 'Construimos en los sectores más exclusivos de Jamundí, Pance y Cali, ofreciendo el mejor entorno.',
+    galeria_title: 'Nuestra Galería de Lujo',
+    galeria_subtitle: 'Explore nuestros proyectos más destacados y encuentre inspiración para su hogar soñado',
+  },
+
+  slider: {
+    casas_lujo: {
+      slide1_title: 'Casas de Lujo',
+      slide1_subtitle: 'Ambientes únicos en exclusivos sectores del Valle del Cauca',
+      slide2_title: 'Casas de Lujo',
+      slide2_subtitle: 'Ambientes únicos en exclusivos sectores del Valle del Cauca',
+      slide3_title: 'Casas de Lujo',
+      slide3_subtitle: 'Ambientes únicos en exclusivos sectores del Valle del Cauca',
+      boton: 'Contáctanos'
+    },
     cobertura: 'Cobertura',
     cobertura_desc: 'Colombia y Estados Unidos',
     confianza: 'Confianza',
@@ -171,7 +207,7 @@ cana_dulce_detalle: {
   titulo: 'Caña Dulce',
   subtitulo: 'Exclusiva urbanización campestre de 46 lotes',
   subtitulo_2: 'Ubicada a 20 minutos de Tuluá en la vereda San José del municipio de San Pedro',
-  descripcion: 'Completamente terminada y entregada. Cuenta con sus vías en sub base y todos los servicios públicos funcionales.',
+  descripcion: 'Caña dulce es una exclusiva urbanización campestre ubicada en la apacible vereda San Jose del municipio de San Pedro. Lotes de 250 mts2 en conjunto cerrado con portería y vigilancia 24 horas, zona social con piscina para adultos y niños, jaccuzy, sauna, salón social doble nivel, salón de eventos equipado. ',
   descripcion_1: 'Últimos lotes de 12x21 mts, para disfrutar en familia de toda la tranquilidad y seguridad que ofrece este paraje natural.',
   descripcion_2: 'Agende su cita y visitenos: 3204210000'
 },
@@ -182,7 +218,7 @@ puertas_sol_detalle: {
   subtitulo: 'Urbanización completamente terminada',
   subtitulo_2: 'Ubicada en el kilómetro 2 vía Jamundí - Potrerito a solo 20 minutos del sur de Cali',
   descripcion: 'Últimos lotes disponibles de 8x15 mts (120 m²) con facilidad de pago a 12 meses.',
-  descripcion_1: 'Equipada con gasolinera, centro de servicios, 21 locales comerciales, supermercado, plazoleta de comidas y 6 zonas verdes.',
+  descripcion_1: 'PUERTAS DEL SOL es una urbanización ubicada en Jamundí con lotes de 120 mts2 (8 mts de frente x 15 mts de fondo) ) en una nueva zona de expansión a solo 8 minutos del centro de Jamundí. Cuenta con una zona comercial con estación de servicios, área para super mercado, locales comerciales y amplias bahías de estacionamiento. Sin pago de administración ni cuotas de manejo.',
   descripcion_2: 'Agende su visita: 3204210000'
 },
 casa_usa_primera_detalle:{
@@ -257,6 +293,16 @@ casa_usa_primera_detalle:{
       'salon'
     ]
   },
+   quintas_marbella_detalle:{
+    espacios_titulo:'',
+    espacios_desc:'',
+    titulo:'Quintas de Marbella',
+    subtitulo:'Lotes residenciales y comerciales con ubicación estratégica',
+    subtitulo_2:'Construye a tu medida sin endeudarte',
+    descripcion:'Quintas de Marbella es una urbanización con lotes desde 90,3 m² (7 mts de frente x 12,90 mts de fondo) ), la mejor alternativa para construir a su gusto y tener una casa grande sin endeudamiento con entidades bancarias.',
+    descripcion_1:'Quintas de Marbella se ubica estratégicamente entre la urbanización Marbella y Bonanza, próximamente contará con amplias vías asfaltadas que acortarán la distancia entre la av. Panamericana a través de Barú .',
+    descripcion_2:' Facilidades de pago directas con nuestra constructora hasta por 5 años.'
+  },
   textGaleria:{
     titulo:'Galería del proyecto'
   },
@@ -318,9 +364,13 @@ casa_usa_primera_detalle:{
     ubicacion: 'Ubicación',
     ubicacion_desc: 'Vía Paso de la Bolsa, Jamundí – Colombia.',
   },
-  proyecto2: {
-    slide_area_titulo: 'Área útil',
-    slide_area_subtitulo: '160 m² de construcción',
+  quintas_marbella: {
+    area: 'Área',
+    area_desc: 'Lotes desde 90,3 m²',
+    precio: 'Precio',
+    precio_desc: 'Facilidad de pago a 5 años. Consulte precios.',
+    ubicacion: 'Ubicación',
+    ubicacion_desc: 'Jamundi, Colombia.',
    
   }
 },
@@ -351,7 +401,7 @@ info_ZigZag_coral:{
   },
   local_coral2: {
     titulo: "Ubicación estratégica",
-    descripcion: "Ubicado en Lehigh Acres, a 19 kilómetros al este de Fort Myers, en una comunidad diversa con aproximadamente 200.000 habitantes."
+    descripcion: "Ubicado en Cape Coral, a 19 kilómetros al este de Fort Myers, en una comunidad diversa con aproximadamente 200.000 habitantes."
   },
   local_coral3: {
     titulo: "Inversión y valorización aseguradas",
@@ -409,7 +459,23 @@ info_ZigZag_cana_dulce:{
     puertas_sol5: {
       titulo: "Inversión comercial y residencial",
       descripcion: "Ideal para inversión comercial y residencial con alta rentabilidad. Agende su visita exclusiva: 3204210000"
-    }
+    },
+  
+},
+info_ZigZag_quintas_marbella:{
+  quintas1: {
+    titulo: "Construye sin endeudarte",
+    descripcion: "Quintas de Marbella te ofrece la libertad de construir a tu medida, con lotes desde 90,3 m² sin necesidad de créditos bancarios. Aprovecha nuestras facilidades de pago directo hasta por 5 años con la constructora y dale vida a la casa que siempre soñaste."
+  },
+  quintas2: {
+    titulo: "Ubicación estratégica y proyección de desarrollo",
+    descripcion: "Ubicada entre las urbanizaciones Marbella y Bonanza, esta zona está en plena expansión. Muy pronto contará con nuevas vías asfaltadas que mejorarán la conexión hacia la Avenida Panamericana a través de Barú, aumentando su valorización y accesibilidad."
+  },
+  quintas3: {
+    titulo: "Últimos lotes mixtos disponibles",
+    descripcion: "Haz parte de esta exclusiva urbanización accediendo a los últimos lotes de uso mixto (102 m²), ideales para vivienda y comercio. Disfruta de un diseño con doble frente sobre la vía principal, zonas de parqueo y excelente visibilidad."
+  }
+ 
   },
   info_ZigZag_san_miguel: {
     san_miguel1: {
@@ -501,7 +567,10 @@ imagenes_add:{
     palmeras_italia: {
       video_principal: { id: 'PUBhzK41_3A', titulo: 'Conozca Palmeras de la Italia', visible: true }
     },
+    marbella: {
+    video_principal: { id: 'nLCuCT-fFnA', titulo: 'Quintas de Marbella', visible: true }
   },
+},
   entregados: {
     titulo: 'Proyectos Finalizados',
     subtitulo: 'Proyectos completados con éxito y finalizados para nuestros clientes',
@@ -634,21 +703,31 @@ imagenes_add:{
     
   }, casa_primera_usa: {
       slide1_title: 'Confort y seguridad en un solo lugar ',
-      slide1_subtitle: 'Lehigh Acres, FL ',
+      slide1_subtitle: 'Cape Coral, FL ',
       slide2_title: 'Confort y seguridad en un solo lugar ',
-      slide2_subtitle: 'Lehigh Acres, FL',
+      slide2_subtitle: 'Cape Coral, FL',
       slide3_title: 'Confort y seguridad en un solo lugar',
-      slide3_subtitle: 'Lehigh Acres, FL ',
+      slide3_subtitle: 'Cape Coral, FL ',
       boton: 'Contáctanos'
     
   }, casa_segunda_usa: {
       slide1_title: 'Confort y seguridad en un solo lugar ',
-      slide1_subtitle: 'Lehigh Acres, FL ',
+      slide1_subtitle: 'Cape Coral, FL ',
       slide2_title: 'Confort y seguridad en un solo lugar ',
-      slide2_subtitle: 'Lehigh Acres, FL',
+      slide2_subtitle: 'Cape Coral, FL',
       slide3_title: 'Confort y seguridad en un solo lugar',
-      slide3_subtitle: 'Lehigh Acres, FL ',
+      slide3_subtitle: 'Cape Coral, FL ',
       boton: 'Contáctanos'
+    
+  },
+    quintas_marbella: {
+        slide1_title: 'Quintas de Marbella',
+        slide1_subtitle: 'Lotes más grandes con el mejor precio de la zona',
+        slide2_title: 'Quintas de Marbella ',
+        slide2_subtitle: 'Lotes más grandes con el mejor precio de la zona',
+        slide3_title: 'Quintas de Marbella',
+        slide3_subtitle: 'Lotes más grandes con el mejor precio de la zona',
+        boton: 'Contáctanos'
     
   },
 },

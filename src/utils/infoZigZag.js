@@ -26,6 +26,9 @@ import canaBrava1 from '../assets/cana_brava/DJI_0117.webp';
 import canaBrava2 from '../assets/cana_brava/DJI_0137.webp';
 import canaBrava3 from '../assets/cana_brava/DJI_0244.webp';
 import canaBrava4 from '../assets/cana_brava/DJI_0246.webp';
+import quintas_marbella1 from '../assets/marbella/quintas_marbella1.webp';
+import quintas_marbella9 from '../assets/marbella/quintas_marbella9.webp';
+import quintas_marbella8 from '../assets/marbella/quintas_marbella8.webp';
 
 const datosRinconLago = [
   { imagen: img1, clave: 'elemento1' },
@@ -72,7 +75,15 @@ const datosCanaBrava = [
   { imagen: canaBrava4, clave: 'cana_brava4' },
 ];
 
+const datosQuintasMarbella = [
+  { imagen: quintas_marbella1, clave: 'quintas1' },
+  { imagen: quintas_marbella9, clave: 'quintas2' },
+  { imagen: quintas_marbella8, clave: 'quintas3' },
+ 
+];
+
 export default {
+  datosQuintasMarbella,
   datosRinconLago,
   datosCoralMall,
   datosCanaDulce,

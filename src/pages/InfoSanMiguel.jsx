@@ -18,7 +18,7 @@ import ContactoCTA from '../components/ContactoCTA';
 import UbicacionMaps from '../components/UbicacionMaps';
 import AreaPrecioUbic from '../components/AreaPrecioUbic';
 import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
-import expertos from '../utils/expertos';
+import agentes from '../utils/expertos';
 
 const InfoSanMiguel = () => {
   const { t } = useIdioma();
@@ -27,8 +27,11 @@ const InfoSanMiguel = () => {
   const [activeSection, setActiveSection] = useState('inicio');
   
   // Elimina cualquier filtro de expertos
-  const listaFiltrada = expertos;
+  const nombresDeseados = ['lina','sofia','ludivia'];
 
+  const expertos = agentes.filter(({ clave }) =>
+  nombresDeseados.includes(clave)
+  );
   // Coordenadas de San Miguel en Rozo - Palmira (3°37'59.0"N 76°23'14.3"W)
   const sanMiguelCoord = {
     mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.1234567890123!2d-76.387315!3d3.633049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a1234567890%3A0x1234567890abcdef!2sSan%20Miguel%2C%20Rozo%20-%20Palmira%2C%20Valle%20del%20Cauca%2C%20Colombia!5e0!3m2!1ses-419!2sco!4v1234567890123!5m2!1ses-419!2sco"

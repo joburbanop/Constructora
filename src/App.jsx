@@ -11,12 +11,14 @@ import InfoPuertasSol from "./pages/InfoPuertasSol";
 import InfoSanMiguel from "./pages/InfoSanMiguel";
 import CasaUsaPrimera from "./pages/CasaUsaPrimera";
 import CasaUsaSegunda from './pages/CasaUsaSegunda';
+import CasasLujo from './pages/CasasLujo';
 import TodosLosProyectos from "./pages/TodosLosProyectos";
 import ScrollToTop from './components/ScrollToTop';
 import AnnouncementModal from './components/AnnouncementModal';
 import useAnnouncementModal from './hooks/useAnnouncementModal';
 import renderRincon from './assets/render_rincon.png';
 import anuncioImage from './assets/anuncios/Anuncio.webp';
+import InfoMarbella from "./pages/InfoMarbella";
 
 export default function App() {
   // Hook para manejar el modal de anuncio principal
@@ -44,6 +46,8 @@ export default function App() {
         <Route path="/palmeras-italia" element={<InfoPalmerasItalia/>} />
         <Route path="/casa-usa-primera" element={<CasaUsaPrimera/>} />
         <Route path="/casa-usa-segunda" element={<CasaUsaSegunda/>} />
+        <Route path="/casas-lujo" element={<CasasLujo/>} />
+        <Route path="/quintas-marbella" element={<InfoMarbella/>} />
       </Routes>
       
       {/* Modal de anuncio principal */}

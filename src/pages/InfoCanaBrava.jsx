@@ -19,7 +19,7 @@ import UbicacionMaps from '../components/UbicacionMaps';
 import AreaPrecioUbic from '../components/AreaPrecioUbic';
 import VideoYoutube from '../components/VideoYoutube';
 import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
-import expertos from '../utils/expertos';
+import agentes from '../utils/expertos';
 
 const InfoCanaBrava = () => {
   const { t } = useIdioma();
@@ -28,7 +28,11 @@ const InfoCanaBrava = () => {
   const [activeSection, setActiveSection] = useState('inicio');
   
   // Elimina cualquier filtro de expertos
-  const listaFiltrada = expertos;
+    const nombresDeseados = ['lina','sofia','ludivia'];
+
+  const expertos = agentes.filter(({ clave }) =>
+  nombresDeseados.includes(clave)
+  );
 
   // Coordenadas para el mapa de Caña Brava
   const canaBravaCoord = {
@@ -121,7 +125,7 @@ const InfoCanaBrava = () => {
       <GaleriaProyecto id="cana_brava" />
 
       <section id="expertos" className="expertos-section-cana-brava">
-        <Expertos />
+        <Expertos listaFiltrada={expertos} />
       </section>
 
       <section id="contactanos">

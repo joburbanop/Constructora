@@ -21,7 +21,7 @@ import '../styles/ProyectosColombia.css';
 import { useNavigate } from 'react-router-dom';
 import { handleProyectoNavigation, navigateToSection } from '../utils/navigation';
 import { FaHome, FaBuilding, FaUsers, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-
+import agentes from '../utils/expertos';
 const ProyectosColombia = () => {
   const { t } = useIdioma();
   const navigate = useNavigate();
@@ -29,8 +29,13 @@ const ProyectosColombia = () => {
   const [tooltipVisible, setTooltipVisible] = useState(null);
   
   // Filtrar proyectos de Colombia
-  const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia' || p.ubicacion === 'san_pedro' || p.ubicacion === 'rozo_palmira');
+  const proyectosColombia = proyectos.filter(p => p.ubicacion === 'jamundi_colombia' || p.ubicacion === 'san_jose'|| p.ubicacion === 'rozo_palmira' || p.ubicacion === 'san_pedro' || p.ubicacion === 'puertas_sol' || p.ubicacion === 'cana_brava' || p.ubicacion === 'cana_dulce' || p.ubicacion === 'palmeras_italia');
   
+    const nombresDeseados = ['lina','ludivia','sofia'];
+   const asesores = agentes.filter(({ clave }) =>
+    nombresDeseados.includes(clave)
+    );
+
   // Usar el primer render como imagen de hero
   const heroImg = renders[0]?.imagen;
 
@@ -38,7 +43,7 @@ const ProyectosColombia = () => {
   const isProyectoProximamente = (titulo) => {
     // Proyectos próximamente (los que no tienen enlace o tienen enlace '#')
     const proyectosProximamente = [
-      'marbella_titulo'      // Quintas de Marbella
+         // Quintas de Marbella
       // 'palmeras_title' - Ya activado
     ];
     
@@ -155,15 +160,15 @@ const ProyectosColombia = () => {
         <Slider contenido={renders} namespace="colombia"/>
       </section>
       
+    
+      
       {/* Sección principal de proyectos */}
       <section id="proyectos" className="proyectos-section">
         <div className="proyectos-header">
           <h1 className="proyectos-title">
             {t.proyectos.colombia_title || 'Proyectos Colombia'}
           </h1>
-          <p className="proyectos-subtitle">
-            Descubre nuestra cartera de proyectos inmobiliarios en Jamundí, Colombia
-          </p>
+         
         </div>
         
         {/* Grid de proyectos */}
@@ -220,11 +225,11 @@ const ProyectosColombia = () => {
         </div>
       </section>
       
-      {/* Sección de beneficios de Colombia */}
+        {/* Sección de beneficios de Colombia */}
       <ColombiaBenefits />
-    
+
       <div id="expertos" className="expertos-section-colombia">
-        <Expertos />
+        <Expertos listaFiltrada={asesores} />
       </div>
       <ContactoCTA />
       <section id="contactanos" className="footer-section">

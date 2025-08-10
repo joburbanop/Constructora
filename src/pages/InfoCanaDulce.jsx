@@ -20,6 +20,8 @@ import expertos from '../utils/expertos';
 import Expertos from "../components/Expertos";
 import ContactoCTA from '../components/ContactoCTA';
 import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
+import agentes from '../utils/expertos';
+  
 
 const InfoCanaDulce = () => {
    const { t } = useIdioma();
@@ -27,9 +29,14 @@ const InfoCanaDulce = () => {
    const navigate = useNavigate();
    const zigzagCanaDulce = infoZigZag.datosCanaDulce;
    const [activeSection, setActiveSection] = useState('inicio');
-   
+  const nombresDeseados = ['sofia','ludivia','lina'];
+
+  const asesores = agentes.filter(({ clave }) =>
+  nombresDeseados.includes(clave)
+  );
+
    const sanPedroCoord = {
-      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.1234567890123!2d-76.12345678901234!3d3.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3099e34939565f%3A0x7c4a30a48d886678!2sCa%C3%B1a%20Dulce%20San%20Pedro!5e1!3m2!1ses-419!2sco!4v1753214846388!5m2!1ses-419!2sco"
+      mapSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3762.4209077290598!2d-76.2761726!3d4.032145!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e39dde3400ee8f7%3A0xaafd9c9c0f404f93!2sCa%C3%B1a%20Dulce!5e1!3m2!1ses-419!2sco!4v1754075037763!5m2!1ses-419!2sco"
    };
    const clavesDeseadas = ['sofia'];
    const listaFiltrada = expertos.filter(e => clavesDeseadas.includes(e.clave));
@@ -109,12 +116,6 @@ const InfoCanaDulce = () => {
           <GaleriaProyecto id="cana_dulce" />
         </section>
         
-        <section className="espacios-sociales">
-          <EspaciosSociales 
-            id="cana_dulce" 
-            claves={['piscina', 'social', 'infantiles', 'verdes', 'jacuzzi', 'sauna', 'parqueadero', 'porteria']} 
-          />
-        </section>
         
         <section className="info-zigzag">
           <InfoZigZag elementos={zigzagCanaDulce} textoKey="info_ZigZag_cana_dulce"/>
@@ -125,7 +126,7 @@ const InfoCanaDulce = () => {
         </section>
         
         <div id="expertos" className="expertos-section-cana-dulce">
-          <Expertos />
+          <Expertos listaFiltrada={asesores} />
         </div>
         
         <section className="contacto-cta">

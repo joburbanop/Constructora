@@ -21,6 +21,7 @@ import expertos from '../utils/expertos';
 import Expertos from "../components/Expertos";
 import ContactoCTA from '../components/ContactoCTA';
 import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
+import agentes from '../utils/expertos';
 
 const InfoPuertasSol = () => {
    const { t } = useIdioma();
@@ -28,9 +29,14 @@ const InfoPuertasSol = () => {
    const navigate = useNavigate();
    const zigzagPuertasSol = infoZigZag.datosPuertasSol;
    const [activeSection, setActiveSection] = useState('inicio');
-   
+   const nombresDeseados = ['sofia','ludivia','lina'];
+  
+  const asesores = agentes.filter(({ clave }) =>
+  nombresDeseados.includes(clave)
+  );
+
    const jamundiCoord = {
-      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.1234567890123!2d-76.54321098765432!3d3.234567890123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3099e34939565f%3A0x7c4a30a48d886678!2sPuertas%20del%20Sol%20Jamund%C3%AD!5e1!3m2!1ses-419!2sco!4v1753214846388!5m2!1ses-419!2sco"
+      mapSrc:  "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4756.276195077414!2d-76.558599!3d3.23861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zM8KwMTQnMTkuMCJOIDc2wrAzMyczMS4wIlc!5e1!3m2!1ses-419!2sco!4v1754073391725!5m2!1ses-419!2sco"
    };
    const clavesDeseadas = ['sofia'];
    const listaFiltrada = expertos.filter(e => clavesDeseadas.includes(e.clave));
@@ -110,12 +116,7 @@ const InfoPuertasSol = () => {
           <GaleriaProyecto id="puertas_sol" />
         </section>
         
-        <section className="espacios-sociales">
-          <EspaciosSociales 
-            id="puertas_sol" 
-            claves={['gasolinera', 'servicios', 'comerciales', 'supermercado', 'comidas', 'verdes']} 
-          />
-        </section>
+       
         
         <section className="info-zigzag">
           <InfoZigZag elementos={zigzagPuertasSol} textoKey="info_ZigZag_puertas_sol"/>
@@ -126,7 +127,7 @@ const InfoPuertasSol = () => {
         </section>
         
         <div id="expertos" className="expertos-section-puertas-sol">
-          <Expertos />
+          <Expertos listaFiltrada={asesores}/>
         </div>
         
         <section className="contacto-cta">

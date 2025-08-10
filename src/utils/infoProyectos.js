@@ -72,6 +72,15 @@ import PalmerasItaliaLogo from '../assets/palmeras_italia/palmeras_italia_logo.w
 import palmerasItalia1 from '../assets/palmeras_italia/Photo_1080296007_DJI_583_jpg_5421548_0_20221029161656_photo_original 3.jpg.webp';
 import palmerasItalia2 from '../assets/palmeras_italia/Photo_1080296018_DJI_594_jpg_6774280_0_2022102916282_photo_original 2.jpg.webp';
 import palmerasItalia3 from '../assets/palmeras_italia/Photo_1080296019_DJI_595_jpg_6024271_0_20221029162818_photo_original 2.jpg.webp';
+import quintas_marbella1 from '../assets/marbella/quintas_marbella1.webp';
+import quintas_marbella2 from '../assets/marbella/quintas_marbella2.webp';
+import quintas_marbella3 from '../assets/marbella/quintas_marbella3.webp';
+import quintas_marbella4 from '../assets/marbella/quintas_marbella4.webp';
+import quintas_marbella5 from '../assets/marbella/quintas_marbella5.webp';
+import quintas_marbella6 from '../assets/marbella/quintas_marbella6.webp';
+import quintas_marbella7 from '../assets/marbella/quintas_marbella7.webp';
+import quintas_marbella8 from '../assets/marbella/quintas_marbella8.webp';
+import quintas_marbella9 from '../assets/marbella/quintas_marbella9.webp';
 export const infoProyectos = {
   rincon: {
     id: 'rincon',
@@ -167,6 +176,22 @@ export const infoProyectos = {
         casaUsaSegunda16,
         casaUsaSegunda17,
         casaUsaSegunda18
+
+    ]
+  },
+   quintas_marbella:{
+    id: 'quintas_marbella',
+    slug: 'quintas-marbella',
+    galeria: [
+      quintas_marbella1,
+      quintas_marbella2,
+      quintas_marbella3,
+      quintas_marbella4,
+      quintas_marbella5,
+      quintas_marbella6,
+      quintas_marbella7,
+      quintas_marbella8,
+      quintas_marbella9
 
     ]
   },

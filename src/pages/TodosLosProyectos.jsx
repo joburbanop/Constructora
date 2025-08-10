@@ -21,16 +21,23 @@ import renderRincon from '../assets/render_rincon.png';
 import renderSanMiguel from '../assets/render_san_miguel.png';
 import renderQuintas from '../assets/render_quintas.png';
 import { FaHome, FaBuilding, FaUsers, FaEnvelope } from 'react-icons/fa';
-
+import agentes from '../utils/expertos';
+import Slider from '../components/Slider';
 const TodosLosProyectos = () => {
   const { t } = useIdioma();
   const navigate = useNavigate();
   const location = useLocation();
   const [filtroActivo, setFiltroActivo] = useState('todos');
   const [ubicacionFiltro, setUbicacionFiltro] = useState('todas');
-  const [showFilters, setShowFilters] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [showFilters, setShowFilters] = useState(false);
+  const [lastFilterChange, setLastFilterChange] = useState(null);
   const [activeSection, setActiveSection] = useState('inicio');
-
+  const nombresDeseados = ['yulei','sofia','ludivia','lina'];
+   
+  const asesores = agentes.filter(({ clave }) =>
+  nombresDeseados.includes(clave)
+  );
   // Efecto para hacer scroll al inicio cuando se carga la página
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -101,7 +108,8 @@ const TodosLosProyectos = () => {
     { id: 'todos', label: t.todos_proyectos?.todos || 'Todos', count: proyectos.length },
     { id: 'condominio', label: t.proyectos.condominio, count: proyectos.filter(p => p.tipo === 'condominio').length },
     { id: 'urbanizacion', label: t.proyectos.urbanizacion, count: proyectos.filter(p => p.tipo === 'urbanizacion').length },
-    { id: 'locales', label: t.proyectos.locales, count: proyectos.filter(p => p.tipo === 'locales').length }
+    { id: 'locales', label: t.proyectos.locales, count: proyectos.filter(p => p.tipo === 'locales').length },
+    { id: 'casas', label: t.proyectos.casas, count: proyectos.filter(p => p.tipo === 'casas').length }
   ];
 
   const ubicaciones = [
@@ -120,7 +128,7 @@ const TodosLosProyectos = () => {
   });
 
   const isProyectoProximamente = (titulo) => {
-    return titulo === 'marbella_titulo';
+    return ;
   };
 
   const handleSectionNavigation = (sectionId) => {
@@ -247,6 +255,7 @@ const TodosLosProyectos = () => {
           ))}
         </Swiper>
       </section>
+      
 
       <main className="todos-proyectos-main">
         {/* Header de la sección con toggle de filtros */}
@@ -454,7 +463,7 @@ const TodosLosProyectos = () => {
       </main>
 
       <div id="expertos" className="expertos-section-todos">
-        <Expertos />
+        <Expertos listaFiltrada={asesores} />
       </div>
       <ContactoCTA />
       <section id="contactanos" className="footer-section">
