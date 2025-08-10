@@ -11,51 +11,50 @@ export default function Slider({ contenido = [], namespace = 'home' }) {
   const { t } = useIdioma();
  
   return (
-   <div className="slider-container-slider">
+   <div className="slider-container-slider unified-slider">
   <Swiper
     modules={[Pagination, Autoplay, EffectFade]}
-    pagination={{ clickable: true }}
+    pagination={{ 
+      clickable: true,
+      dynamicBullets: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '"></span>';
+      }
+    }}
     effect="fade"
-    speed={1200}
-    
+    speed={800}
     loop={true}
-    autoplay={{ delay: 5000, disableOnInteraction: false }}
-   
-    className="slider-swiper-slider"
+    autoplay={{ 
+      delay: 5000, 
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    }}
+    className="slider-swiper-slider unified-swiper"
+    watchSlidesProgress={true}
+    observer={true}
+    observeParents={true}
   >
     {contenido.map((slide, idx) => (
       <SwiperSlide key={`${slide.id || idx}-${slide.title}`}>
         <div className="slider-bg-slider">
-          {idx === 0 ? (
-            <img
-              src={slide.image}
-              alt=""
-              className="slider-bg-img"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-            />
-          ) : (
-            <img
-              src={slide.image}
-              alt=""
-              className="slider-bg-img"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              loading="lazy"
-              decoding="async"
-            />
-          )}
-          <div className="slider-content-slider animate-fadeInUp">
-            <h1 className="slider-title-slider animate-fadeIn">
+          <img
+            src={slide.image}
+            alt={t.slider?.[namespace]?.[slide.title] || slide.title || 'Slider image'}
+            className="slider-bg-img"
+            loading={idx === 0 ? "eager" : "lazy"}
+            fetchPriority={idx === 0 ? "high" : "auto"}
+            decoding="async"
+          />
+          <div className="slider-content-slider">
+            <h1 className="slider-title-slider">
               {namespace === 'casas_lujo' ? 'Casas de Lujo' : (t.slider?.[namespace]?.[slide.title] || slide.title)}
             </h1>
-            <p className="slider-subtitle-slider animate-fadeIn" style={{ animationDelay: '0.3s' }}>
+            <p className="slider-subtitle-slider">
               {namespace === 'casas_lujo' ? 'Ambientes únicos en exclusivos sectores del Valle del Cauca' : (t.slider?.[namespace]?.[slide.subtitle] || slide.subtitle)}
             </p>
             <Button 
               whatsapp={true}
-              style={{ animationDelay: '0.6s' }}
+              className="slider-cta-button"
             >
               {namespace === 'casas_lujo' ? 'Contáctanos' : (t.slider?.[namespace]?.boton || "Contáctanos")}
             </Button>

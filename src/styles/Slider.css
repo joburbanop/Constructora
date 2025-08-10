@@ -1,119 +1,525 @@
+/* Estilos unificados para todos los sliders - Mayor especificidad */
+.unified-slider,
 .slider-container-slider {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
-  background: #fff;
-  position: relative;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important;
+  background: #fff !important;
+  position: relative !important;
+}
+
+.unified-swiper,
+.slider-swiper-slider {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .slider-swiper-slider,
 .slider-bg-slider {
   width: 100%;
-  height: 520px;
+  height: clamp(400px, 60vh, 600px);
+  min-height: 400px;
 }
 
+/* Fondo del slider unificado */
+.unified-slider .slider-bg-slider,
 .slider-bg-slider {
-  background-size: cover;
-  background-position: center 35%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
+.unified-slider .slider-bg-img,
+.slider-bg-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transition: transform 0.6s ease !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.unified-slider .swiper-slide-active .slider-bg-img,
+.swiper-slide-active .slider-bg-img {
+  transform: scale(1.05) !important;
+}
+
+.unified-slider .slider-bg-slider::before,
 .slider-bg-slider::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important; right: 0 !important; top: 0 !important; bottom: 0 !important;
+  background: linear-gradient(
+    135deg,
+    rgba(0,0,0,0.7) 0%,
+    rgba(0,0,0,0.4) 30%,
+    rgba(0,0,0,0.2) 60%,
+    rgba(0,0,0,0.6) 100%
+  ) !important;
+  z-index: 1 !important;
+  transition: opacity 0.4s ease !important;
+  pointer-events: none !important;
+}
+
+/* Contenido del slider unificado */
+.unified-slider .slider-content-slider,
+.slider-content-slider {
+  position: relative !important;
+  z-index: 2 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem) !important;
+  transition: all 0.5s ease !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+
+/* Títulos del slider unificado */
+.unified-slider .slider-title-slider,
+.slider-title-slider {
+  font-size: clamp(2rem, 5vw, 3.5rem) !important;
+  font-weight: 700 !important;
+  margin-bottom: clamp(0.5rem, 2vw, 1.5rem) !important;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.7) !important;
+  color: #ffffff !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+.unified-slider .slider-subtitle-slider,
+.slider-subtitle-slider {
+  font-size: clamp(1rem, 2.5vw, 1.4rem) !important;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem) !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6) !important;
+  color: #ffffff !important;
+  line-height: 1.5 !important;
+  opacity: 0.95 !important;
+  max-width: 600px !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Botón del slider unificado */
+.unified-slider .slider-cta-button,
+.slider-cta-button {
+  background: linear-gradient(135deg, #ff6600 0%, #ff914d 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  padding: clamp(0.8rem, 2vw, 1.2rem) clamp(2rem, 4vw, 3rem) !important;
+  border-radius: 50px !important;
+  font-size: clamp(1rem, 2vw, 1.2rem) !important;
+  cursor: pointer !important;
+  box-shadow: 0 8px 24px rgba(255, 102, 0, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  visibility: visible !important;
+  display: inline-block !important;
+}
+
+.slider-cta-button::before {
   content: '';
   position: absolute;
-  left: 0; right: 0; top: 0; bottom: 0;
-  background: linear-gradient(180deg,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.3) 60%,rgba(0,0,0,0.7) 100%);
-  z-index: 1;
-  transition: opacity 0.4s ease;
-}
-
-.slider-content-slider {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  top: 0;
+  left: -100%;
   width: 100%;
   height: 100%;
-  color: #ffffff !important;
-  text-align: center;
-  padding: 2rem 1rem;
-  transition: opacity 0.5s ease;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
 }
 
-.slider-title-slider {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  text-shadow: 0 4px 16px rgba(0,0,0,0.6);
-  color: #ffffff !important;
+.slider-cta-button:hover::before {
+  left: 100%;
 }
 
-.slider-subtitle-slider {
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-  color: #ffffff !important;
+.slider-cta-button:hover {
+  background: linear-gradient(135deg, #e55a00 0%, #ff6600 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(255, 102, 0, 0.4);
 }
 
-.slider-content-slider button {
-  background: #ff6600;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 2rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-  transition: background 0.2s, transform 0.2s;
-  font-weight: 500;
-}
-
-.slider-content-slider button:hover {
-  background: #e65c00;
-  transform: scale(1.05);
-}
-
+/* Paginación del slider unificado */
+.unified-slider .swiper-pagination-bullets,
 .swiper-pagination-bullets {
-  bottom: 20px !important;
+  bottom: 30px !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 8px !important;
 }
 
+.unified-slider .swiper-pagination-bullet,
 .swiper-pagination-bullet {
-  background: #fff;
-  opacity: 0.7;
+  width: 12px !important;
+  height: 12px !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  opacity: 1 !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  border: 2px solid transparent !important;
 }
 
+.unified-slider .swiper-pagination-bullet:hover,
+.swiper-pagination-bullet:hover {
+  background: rgba(255, 255, 255, 0.8) !important;
+  transform: scale(1.2) !important;
+}
+
+.unified-slider .swiper-pagination-bullet-active,
 .swiper-pagination-bullet-active {
-  background: #ff6600;
-  opacity: 1;
+  background: #ff6600 !important;
+  opacity: 1 !important;
+  transform: scale(1.3) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 0 0 4px rgba(255, 102, 0, 0.2) !important;
 }
 
+/* Animaciones de entrada unificadas */
+.unified-slider .slider-content-slider,
+.slider-content-slider {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  animation: none !important;
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.unified-slider .swiper-slide:not(.swiper-slide-active) .slider-content-slider,
 .swiper-slide:not(.swiper-slide-active) .slider-content-slider {
-  opacity: 0;
-  pointer-events: none;
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+  pointer-events: none !important;
+}
+
+.unified-slider .swiper-slide-active .slider-content-slider,
+.swiper-slide-active .slider-content-slider {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  animation: slideInUp 0.8s ease forwards !important;
 }
 
 .swiper-slide:not(.swiper-slide-active) .slider-bg-slider::before {
   opacity: 0;
 }
+/* Responsividad unificada */
 @media (max-width: 768px) {
-  .slider-title-slider {
-    font-size: 1.6rem;
-  }
-
-  .slider-subtitle-slider {
-    font-size: 1rem;
-  }
-
-  .slider-content-slider button {
-    font-size: 0.8rem;
-    padding: 0.4rem 1.2rem;
+  .unified-slider .slider-swiper-slider,
+  .unified-slider .slider-bg-slider,
+  .slider-swiper-slider,
+  .slider-bg-slider {
+    height: clamp(350px, 50vh, 450px) !important;
   }
   
+  .unified-slider .slider-title-slider,
+  .slider-title-slider {
+    font-size: clamp(1.5rem, 4vw, 2.2rem) !important;
+    margin-bottom: 0.8rem !important;
+  }
+  
+  .unified-slider .slider-subtitle-slider,
+  .slider-subtitle-slider {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem) !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .unified-slider .slider-cta-button,
+  .slider-cta-button {
+    padding: 0.7rem 1.8rem !important;
+    font-size: 0.95rem !important;
+  }
+  
+  .unified-slider .swiper-pagination-bullets,
+  .swiper-pagination-bullets {
+    bottom: 20px !important;
+  }
+  
+  .unified-slider .swiper-pagination-bullet,
+  .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .unified-slider .slider-swiper-slider,
+  .unified-slider .slider-bg-slider,
+  .slider-swiper-slider,
+  .slider-bg-slider {
+    height: clamp(300px, 45vh, 400px) !important;
+  }
+  
+  .unified-slider .slider-content-slider,
+  .slider-content-slider {
+    padding: 1.5rem 1rem !important;
+  }
+  
+  .unified-slider .slider-title-slider,
+  .slider-title-slider {
+    font-size: clamp(1.3rem, 3.5vw, 1.8rem) !important;
+  }
+  
+  .unified-slider .slider-subtitle-slider,
+  .slider-subtitle-slider {
+    font-size: clamp(0.8rem, 2vw, 1rem) !important;
+  }
+  
+  .unified-slider .slider-cta-button,
+  .slider-cta-button {
+    padding: 0.6rem 1.5rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .unified-slider .swiper-pagination-bullets,
+  .swiper-pagination-bullets {
+    bottom: 15px !important;
+    gap: 6px !important;
+  }
+  
+  .unified-slider .swiper-pagination-bullet,
+  .swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+  }
+}
+
+/* ========== SOBRESCRITURA DE ESTILOS ESPECÍFICOS DE PÁGINAS ========== */
+/* Asegurar que todos los sliders tengan el mismo comportamiento - TEXTO SUPERPUESTO */
+
+/* Eliminar cualquier layout de lado a lado */
+.unified-slider,
+.slider-container-slider {
+  display: block !important;
+  flex-direction: unset !important;
+  grid-template-columns: unset !important;
+  grid-template-areas: unset !important;
+}
+
+.unified-slider .slider-bg-slider,
+.slider-bg-slider {
+  display: block !important;
+  flex-direction: unset !important;
+  grid-template-columns: unset !important;
+  grid-template-areas: unset !important;
+}
+
+/* Asegurar que las imágenes ocupen todo el espacio */
+.unified-slider .slider-bg-img,
+.slider-bg-img {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* Asegurar que el contenido esté superpuesto */
+.unified-slider .slider-content-slider,
+.slider-content-slider {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 2 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem) !important;
+}
+
+/* Home page */
+.hero-section .unified-slider,
+.hero-section .slider-container-slider {
+  height: clamp(400px, 60vh, 600px) !important;
+  min-height: 400px !important;
+  display: block !important;
+}
+
+.hero-section .unified-slider .slider-bg-slider,
+.hero-section .slider-container-slider .slider-bg-slider {
+  display: block !important;
+  position: relative !important;
+}
+
+.hero-section .unified-slider .slider-content-slider,
+.hero-section .slider-container-slider .slider-content-slider {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 2 !important;
+}
+
+/* Casas de Lujo */
+.casas-lujo-hero-section .unified-slider,
+.casas-lujo-hero-section .slider-container-slider {
+  height: clamp(400px, 60vh, 600px) !important;
+  min-height: 400px !important;
+  display: block !important;
+}
+
+.casas-lujo-hero-section .unified-slider .slider-bg-slider,
+.casas-lujo-hero-section .slider-container-slider .slider-bg-slider {
+  display: block !important;
+  position: relative !important;
+}
+
+.casas-lujo-hero-section .unified-slider .slider-content-slider,
+.casas-lujo-hero-section .slider-container-slider .slider-content-slider {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 2 !important;
+}
+
+/* Info pages */
+.info-cana-brava-container .unified-slider,
+.info-cana-brava-container .slider-container-slider,
+.info-cana-dulce-container .unified-slider,
+.info-cana-dulce-container .slider-container-slider,
+.info-palmeras-italia-container .unified-slider,
+.info-palmeras-italia-container .slider-container-slider,
+.info-puertas-sol-container .unified-slider,
+.info-puertas-sol-container .slider-container-slider,
+.info-rincon-container .unified-slider,
+.info-rincon-container .slider-container-slider,
+.info-san-miguel-container .unified-slider,
+.info-san-miguel-container .slider-container-slider {
+  height: clamp(400px, 60vh, 600px) !important;
+  min-height: 400px !important;
+  display: block !important;
+}
+
+/* Asegurar que todas las páginas de info tengan el contenido superpuesto */
+.info-cana-brava-container .unified-slider .slider-bg-slider,
+.info-cana-brava-container .slider-container-slider .slider-bg-slider,
+.info-cana-dulce-container .unified-slider .slider-bg-slider,
+.info-cana-dulce-container .slider-container-slider .slider-bg-slider,
+.info-palmeras-italia-container .unified-slider .slider-bg-slider,
+.info-palmeras-italia-container .slider-container-slider .slider-bg-slider,
+.info-puertas-sol-container .unified-slider .slider-bg-slider,
+.info-puertas-sol-container .slider-container-slider .slider-bg-slider,
+.info-rincon-container .unified-slider .slider-bg-slider,
+.info-rincon-container .slider-container-slider .slider-bg-slider,
+.info-san-miguel-container .unified-slider .slider-bg-slider,
+.info-san-miguel-container .slider-container-slider .slider-bg-slider {
+  display: block !important;
+  position: relative !important;
+}
+
+.info-cana-brava-container .unified-slider .slider-content-slider,
+.info-cana-brava-container .slider-container-slider .slider-content-slider,
+.info-cana-dulce-container .unified-slider .slider-content-slider,
+.info-cana-dulce-container .slider-container-slider .slider-content-slider,
+.info-palmeras-italia-container .unified-slider .slider-content-slider,
+.info-palmeras-italia-container .slider-container-slider .slider-content-slider,
+.info-puertas-sol-container .unified-slider .slider-content-slider,
+.info-puertas-sol-container .slider-container-slider .slider-content-slider,
+.info-rincon-container .unified-slider .slider-content-slider,
+.info-rincon-container .slider-container-slider .slider-content-slider,
+.info-san-miguel-container .unified-slider .slider-content-slider,
+.info-san-miguel-container .slider-container-slider .slider-content-slider {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 2 !important;
+}
+
+/* Proyectos Colombia */
+.proyectos-colombia-container .unified-slider,
+.proyectos-colombia-container .slider-container-slider {
+  height: clamp(400px, 60vh, 600px) !important;
+  min-height: 400px !important;
+  display: block !important;
+}
+
+.proyectos-colombia-container .unified-slider .slider-bg-slider,
+.proyectos-colombia-container .slider-container-slider .slider-bg-slider {
+  display: block !important;
+  position: relative !important;
+}
+
+.proyectos-colombia-container .unified-slider .slider-content-slider,
+.proyectos-colombia-container .slider-container-slider .slider-content-slider {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 2 !important;
+}
+
+/* Casa USA */
+.unified-slider,
+.slider-container-slider {
+  height: clamp(400px, 60vh, 600px) !important;
+  min-height: 400px !important;
+  display: block !important;
+}
+
+/* Asegurar que las imágenes ocupen todo el espacio Y el contenido se superponga */
+.unified-slider .slider-bg-slider,
+.slider-bg-slider {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  display: block !important;
+  overflow: hidden !important;
+  min-height: 400px !important;
+}
+
+/* Asegurar que el contenido esté centrado Y SUPERPUESTO sobre la imagen */
+.unified-slider .slider-content-slider,
+.slider-content-slider {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  max-width: none !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem) !important;
 }

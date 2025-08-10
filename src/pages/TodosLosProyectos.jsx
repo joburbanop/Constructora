@@ -229,17 +229,37 @@ const TodosLosProyectos = () => {
       <section id="inicio" className="hero-slider">
         <Swiper
           modules={[Pagination, Autoplay, EffectFade]}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          pagination={{ 
+            clickable: true,
+            dynamicBullets: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '"></span>';
+            }
+          }}
+          autoplay={{ 
+            delay: 5000, 
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          }}
           effect="fade"
-          speed={1200}
+          speed={800}
           loop
           className="hero-swiper"
+          watchSlidesProgress={true}
+          observer={true}
+          observeParents={true}
         >
           {renders.map((render, idx) => (
             <SwiperSlide key={idx}>
               <div className="slide-bg">
-                <img src={render} alt="" loading="eager" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img 
+                  src={render} 
+                  alt="Proyecto inmobiliario" 
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  fetchPriority={idx === 0 ? "high" : "auto"}
+                  decoding="async" 
+                  className="slide-bg-img"
+                />
                 <div className="slide-overlay">
                   <div className="slide-content">
                     <h1 className="hero-title">
