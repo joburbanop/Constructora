@@ -10,6 +10,8 @@ export default function ProyectoCard({ proyecto, t, onNavigate, idiomaKey }) {
     <div className="proyecto-card-simple">
       <img
         src={proyecto.imagen}
+        srcSet={`${proyecto.imagen}?w=320&format=webp 320w, ${proyecto.imagen}?w=640&format=webp 640w, ${proyecto.imagen}?w=960&format=webp 960w, ${proyecto.imagen}?w=1280&format=webp 1280w`}
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         alt={traduccion[proyecto.titulo]}
         className="proyecto-card-img"
         loading="lazy"

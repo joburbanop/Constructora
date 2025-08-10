@@ -37,14 +37,22 @@ export default function Slider({ contenido = [], namespace = 'home' }) {
     {contenido.map((slide, idx) => (
       <SwiperSlide key={`${slide.id || idx}-${slide.title}`}>
         <div className="slider-bg-slider">
-          <img
-            src={slide.image}
-            alt={t.slider?.[namespace]?.[slide.title] || slide.title || 'Slider image'}
-            className="slider-bg-img"
-            loading={idx === 0 ? "eager" : "lazy"}
-            fetchPriority={idx === 0 ? "high" : "auto"}
-            decoding="async"
-          />
+          {(() => {
+            const imgSrc = slide.src || slide.image;
+            const imgSrcSet = slide.srcset || undefined;
+            return (
+              <img
+                src={imgSrc}
+                {...(imgSrcSet ? { srcSet: imgSrcSet } : {})}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                alt={t.slider?.[namespace]?.[slide.title] || slide.title || 'Slider image'}
+                className="slider-bg-img"
+                loading={idx === 0 ? "eager" : "lazy"}
+                fetchPriority={idx === 0 ? "high" : "auto"}
+                decoding="async"
+              />
+            );
+          })()}
           <div className="slider-content-slider">
             <h1 className="slider-title-slider">
               {namespace === 'casas_lujo' ? 'Casas de Lujo' : (t.slider?.[namespace]?.[slide.title] || slide.title)}

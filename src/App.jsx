@@ -1,5 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from 'react';
+import LoadingSpinner from './components/LoadingSpinner';
+import ScrollToTop from './components/ScrollToTop';
+import AnnouncementModal from './components/AnnouncementModal';
+import ResourcePreloader from './components/ResourcePreloader';
+import useAnnouncementModal from './hooks/useAnnouncementModal';
+import renderRincon from './assets/render_rincon.png';
+import anuncioImage from './assets/anuncios/Anuncio.webp';
+
+// Lazy load all pages for better performance
 const Home = lazy(() => import('./pages/Home'));
 const ProyectosColombia = lazy(() => import('./pages/ProyectosColombia'));
 const ProyectosUSA = lazy(() => import('./pages/ProyectosUSA'));
@@ -15,12 +24,7 @@ const CasaUsaSegunda = lazy(() => import('./pages/CasaUsaSegunda'));
 const CasasLujo = lazy(() => import('./pages/CasasLujo'));
 const TerrenosConstruccion = lazy(() => import('./pages/TerrenosConstruccion'));
 const TodosLosProyectos = lazy(() => import('./pages/TodosLosProyectos'));
-import ScrollToTop from './components/ScrollToTop';
-import AnnouncementModal from './components/AnnouncementModal';
-import useAnnouncementModal from './hooks/useAnnouncementModal';
-import renderRincon from './assets/render_rincon.png';
-import anuncioImage from './assets/anuncios/Anuncio.webp';
-import InfoMarbella from "./pages/InfoMarbella";
+const InfoMarbella = lazy(() => import('./pages/InfoMarbella'));
 
 export default function App() {
   // Hook para manejar el modal de anuncio principal
@@ -33,7 +37,16 @@ export default function App() {
 
   return (
     <>
-      <Suspense fallback={<div /> }>
+      {/* Preload critical resources */}
+      <ResourcePreloader 
+        resources={[
+          { type: 'image', href: '/favicon.webp' },
+          { type: 'image', href: anuncioImage },
+          { type: 'image', href: renderRincon }
+        ]} 
+      />
+      
+      <Suspense fallback={<LoadingSpinner />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/todos-los-proyectos" element={<TodosLosProyectos />} />

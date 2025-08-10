@@ -32,7 +32,15 @@ export default function GaleriaProyecto({ id }) {
         >
           {galeria.map((img, idx) => (
             <SwiperSlide key={idx}>
-              <img src={img} alt={`Imagen ${idx + 1}`} className="galeria-img" loading="lazy" decoding="async" />
+              <img
+                src={img}
+                srcSet={`${img}?w=320&format=webp 320w, ${img}?w=640&format=webp 640w, ${img}?w=960&format=webp 960w, ${img}?w=1280&format=webp 1280w`}
+                sizes="(max-width: 768px) 90vw, 50vw"
+                alt={`Imagen ${idx + 1}`}
+                className="galeria-img"
+                loading="lazy"
+                decoding="async"
+              />
             </SwiperSlide>
           ))}
         </Swiper>

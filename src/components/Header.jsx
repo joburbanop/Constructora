@@ -4,6 +4,7 @@ import "../styles/Header.css";
 import { flags, languages } from "../utils/idiomas";
 import { useIdioma } from "../context/IdiomaContext";
 import { useNavigate, useLocation, Link } from "react-router-dom";
+import useActiveSection from '../hooks/useActiveSection';
 import { 
   FaBars, 
   FaTimes, 
@@ -26,44 +27,16 @@ const Header = ({
   const [menuAbierto, setMenuAbierto] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('inicio');
-
-  // Efecto para detectar scroll y sección activa
+  const observedActive = useActiveSection(['inicio', 'ambito', 'proyectos', 'stats', 'proyectos-entregados', 'expertos', 'contactanos']);
   useEffect(() => {
-    const updateOnScroll = () => {
-      const isScrolled = window.scrollY > 50;
-      setScrolled(isScrolled);
+    if (observedActive) setActiveSection(observedActive);
+  }, [observedActive]);
 
-      const sections = ['inicio', 'ambito', 'proyectos', 'stats', 'proyectos-entregados', 'expertos', 'contactanos'];
-      const scrollPosition = window.scrollY + 100;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i]);
-        if (section && section.offsetTop <= scrollPosition) {
-          if (sections[i] === 'stats') {
-            setActiveSection('nosotros');
-          } else if (sections[i] === 'expertos') {
-            setActiveSection('contactanos');
-          } else {
-            setActiveSection(sections[i]);
-          }
-          break;
-        }
-      }
-    };
-
-    let ticking = false;
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          updateOnScroll();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
+  // Efecto para barra scrolleada + activeSection con IntersectionObserver
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', onScroll, { passive: true });
-    updateOnScroll();
+    onScroll();
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 

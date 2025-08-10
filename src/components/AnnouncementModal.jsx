@@ -60,7 +60,7 @@ const AnnouncementModal = ({
         {showLogo && (
           <div className="modal-header">
             <div className="logo-container">
-              <img src={logo} alt="Construct Logo" className="modal-logo" />
+              <img src={logo} alt="Construct Logo" className="modal-logo" loading="lazy" decoding="async" />
             </div>
           </div>
         )}

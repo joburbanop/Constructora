@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
+import { useRAFThrottledCallback } from '../hooks/useThrottledCallback';
 import '../styles/ScrollToTop.css';
 
 const ScrollToTop = () => {
@@ -22,23 +23,16 @@ const ScrollToTop = () => {
     });
   };
 
+  // Usar throttling con requestAnimationFrame
+  const throttledToggleVisibility = useRAFThrottledCallback(toggleVisibility);
+
   useEffect(() => {
-    let ticking = false;
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          toggleVisibility();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    toggleVisibility();
+    window.addEventListener('scroll', throttledToggleVisibility, { passive: true });
+    toggleVisibility(); // Verificar estado inicial
     return () => {
-      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('scroll', throttledToggleVisibility);
     };
-  }, []);
+  }, [throttledToggleVisibility]);
 
   return (
     <>

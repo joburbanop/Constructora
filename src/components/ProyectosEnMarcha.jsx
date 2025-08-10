@@ -59,7 +59,15 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
             
 
             <div className="proyecto-img-wrap">
-              <img src={proy.imagen} alt={proy.titulo} className="proyecto-img-marcha" loading="lazy" decoding="async" />
+              <img 
+                src={proy.imagen}
+                srcSet={`${proy.imagen}?w=320&format=webp 320w, ${proy.imagen}?w=640&format=webp 640w, ${proy.imagen}?w=960&format=webp 960w`}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                alt={proy.titulo}
+                className="proyecto-img-marcha"
+                loading="lazy"
+                decoding="async" 
+              />
             </div>
             <div className="proyecto-info-marcha">
               <div className="proyecto-titulo-row-marcha">
