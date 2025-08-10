@@ -1,19 +1,20 @@
 import { Routes, Route } from "react-router-dom";
-import Home from './pages/Home';
-import ProyectosColombia from './pages/ProyectosColombia';
-import ProyectosUSA from './pages/ProyectosUSA';
-import InfoRinconLago from "./pages/InfoRinconLago";
-import InfoCoralMole from "./pages/InfoCoralMole";
-import InfoCanaBrava from "./pages/InfoCanaBrava";
-import InfoPalmerasItalia from "./pages/InfoPalmerasItalia";
-import InfoCanaDulce from "./pages/InfoCanaDulce";
-import InfoPuertasSol from "./pages/InfoPuertasSol";
-import InfoSanMiguel from "./pages/InfoSanMiguel";
-import CasaUsaPrimera from "./pages/CasaUsaPrimera";
-import CasaUsaSegunda from './pages/CasaUsaSegunda';
-import CasasLujo from './pages/CasasLujo';
-import TerrenosConstruccion from './pages/TerrenosConstruccion';
-import TodosLosProyectos from "./pages/TodosLosProyectos";
+import { lazy, Suspense } from 'react';
+const Home = lazy(() => import('./pages/Home'));
+const ProyectosColombia = lazy(() => import('./pages/ProyectosColombia'));
+const ProyectosUSA = lazy(() => import('./pages/ProyectosUSA'));
+const InfoRinconLago = lazy(() => import('./pages/InfoRinconLago'));
+const InfoCoralMole = lazy(() => import('./pages/InfoCoralMole'));
+const InfoCanaBrava = lazy(() => import('./pages/InfoCanaBrava'));
+const InfoPalmerasItalia = lazy(() => import('./pages/InfoPalmerasItalia'));
+const InfoCanaDulce = lazy(() => import('./pages/InfoCanaDulce'));
+const InfoPuertasSol = lazy(() => import('./pages/InfoPuertasSol'));
+const InfoSanMiguel = lazy(() => import('./pages/InfoSanMiguel'));
+const CasaUsaPrimera = lazy(() => import('./pages/CasaUsaPrimera'));
+const CasaUsaSegunda = lazy(() => import('./pages/CasaUsaSegunda'));
+const CasasLujo = lazy(() => import('./pages/CasasLujo'));
+const TerrenosConstruccion = lazy(() => import('./pages/TerrenosConstruccion'));
+const TodosLosProyectos = lazy(() => import('./pages/TodosLosProyectos'));
 import ScrollToTop from './components/ScrollToTop';
 import AnnouncementModal from './components/AnnouncementModal';
 import useAnnouncementModal from './hooks/useAnnouncementModal';
@@ -32,25 +33,26 @@ export default function App() {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/todos-los-proyectos" element={<TodosLosProyectos />} />
-        <Route path="/proyectos-colombia" element={<ProyectosColombia />} />
-        <Route path="/proyectos-usa" element={<ProyectosUSA />} />
-        <Route path="/rincon-del-lago" element={<InfoRinconLago />} />
-        <Route path="/coral-mall" element={<InfoCoralMole />} />
-        <Route path="/cana-brava" element={<InfoCanaBrava/>} />
-        <Route path="/palmeras-italia" element={<InfoPalmerasItalia/>} />
-        <Route path="/cana-dulce" element={<InfoCanaDulce/>} />
-        <Route path="/puertas-sol" element={<InfoPuertasSol/>} />
-        <Route path="/san-miguel" element={<InfoSanMiguel/>} />
-        <Route path="/palmeras-italia" element={<InfoPalmerasItalia/>} />
-        <Route path="/casa-usa-primera" element={<CasaUsaPrimera/>} />
-        <Route path="/casa-usa-segunda" element={<CasaUsaSegunda/>} />
-        <Route path="/casas-lujo" element={<CasasLujo/>} />
-        <Route path="/terrenos-construccion" element={<TerrenosConstruccion/>} />
-        <Route path="/quintas-marbella" element={<InfoMarbella/>} />
-      </Routes>
+      <Suspense fallback={<div /> }>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/todos-los-proyectos" element={<TodosLosProyectos />} />
+          <Route path="/proyectos-colombia" element={<ProyectosColombia />} />
+          <Route path="/proyectos-usa" element={<ProyectosUSA />} />
+          <Route path="/rincon-del-lago" element={<InfoRinconLago />} />
+          <Route path="/coral-mall" element={<InfoCoralMole />} />
+          <Route path="/cana-brava" element={<InfoCanaBrava/>} />
+          <Route path="/palmeras-italia" element={<InfoPalmerasItalia/>} />
+          <Route path="/cana-dulce" element={<InfoCanaDulce/>} />
+          <Route path="/puertas-sol" element={<InfoPuertasSol/>} />
+          <Route path="/san-miguel" element={<InfoSanMiguel/>} />
+          <Route path="/casa-usa-primera" element={<CasaUsaPrimera/>} />
+          <Route path="/casa-usa-segunda" element={<CasaUsaSegunda/>} />
+          <Route path="/casas-lujo" element={<CasasLujo/>} />
+          <Route path="/terrenos-construccion" element={<TerrenosConstruccion/>} />
+          <Route path="/quintas-marbella" element={<InfoMarbella/>} />
+        </Routes>
+      </Suspense>
       
       {/* Modal de anuncio principal */}
       <AnnouncementModal

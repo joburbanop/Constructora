@@ -67,10 +67,9 @@ const ProyectosColombia = () => {
 
   // Efecto para detectar sección activa
   useEffect(() => {
-    const handleScroll = () => {
+    const updateOnScroll = () => {
       const sections = ['inicio', 'proyectos', 'expertos', 'contactanos'];
       const scrollPosition = window.scrollY + 100;
-
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
         if (section && section.offsetTop <= scrollPosition) {
@@ -79,9 +78,19 @@ const ProyectosColombia = () => {
         }
       }
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateOnScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateOnScroll();
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const handleSectionNavigation = (sectionId) => {
@@ -186,7 +195,7 @@ const ProyectosColombia = () => {
                 </div>
                 
                 <div className="proyecto-img-wrap">
-                  <img src={proy.imagen} alt={t.proyectos[proy.titulo]} />
+                  <img src={proy.imagen} alt={t.proyectos[proy.titulo]} loading="lazy" decoding="async" />
                 </div>
                 
                 <div className="proyecto-content">

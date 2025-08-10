@@ -23,39 +23,37 @@ const WhatsAppFloat = () => {
   useEffect(() => {
     const checkBackgroundColor = () => {
       if (!buttonRef.current) return;
-
       const rect = buttonRef.current.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
       const centerY = rect.top + rect.height / 2;
-
-      // Obtener el elemento en esa posición
       const elementAtPoint = document.elementFromPoint(centerX, centerY);
       if (!elementAtPoint) return;
-
-      // Obtener el color de fondo del elemento
       const computedStyle = window.getComputedStyle(elementAtPoint);
       const backgroundColor = computedStyle.backgroundColor;
-      
-      // Detectar específicamente el mismo color anaranjado del botón (#ff6600)
       const isSameOrange = backgroundColor.includes('255, 102, 0') || 
                           backgroundColor.includes('rgb(255, 102, 0)') ||
                           backgroundColor.includes('rgba(255, 102, 0') ||
                           backgroundColor.includes('#ff6600');
-
       setIsOverOrange(isSameOrange);
     };
 
-    // Verificar cada 300ms para mayor responsividad
-    const interval = setInterval(checkBackgroundColor, 300);
-    
-    // También verificar al hacer scroll
-    window.addEventListener('scroll', checkBackgroundColor);
-    window.addEventListener('resize', checkBackgroundColor);
+    let ticking = false;
+    const onEvent = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          checkBackgroundColor();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
 
+    window.addEventListener('scroll', onEvent, { passive: true });
+    window.addEventListener('resize', onEvent);
+    checkBackgroundColor();
     return () => {
-      clearInterval(interval);
-      window.removeEventListener('scroll', checkBackgroundColor);
-      window.removeEventListener('resize', checkBackgroundColor);
+      window.removeEventListener('scroll', onEvent);
+      window.removeEventListener('resize', onEvent);
     };
   }, []);
 

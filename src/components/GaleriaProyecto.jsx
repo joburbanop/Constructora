@@ -1,6 +1,6 @@
 import { infoProyectos } from '../utils/infoProyectos';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation,Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '../styles/GaleriaProyecto.css';
@@ -21,6 +21,7 @@ export default function GaleriaProyecto({ id }) {
               delay: 3000,       // Tiempo entre transiciones en milisegundos
               disableOnInteraction: false // Permite que el autoplay continúe al interactuar
             }}
+          
           slidesPerView={2}
           spaceBetween={20}
           loop={true}
@@ -31,7 +32,7 @@ export default function GaleriaProyecto({ id }) {
         >
           {galeria.map((img, idx) => (
             <SwiperSlide key={idx}>
-              <img src={img} alt={`Imagen ${idx + 1}`} className="galeria-img" />
+              <img src={img} alt={`Imagen ${idx + 1}`} className="galeria-img" loading="lazy" decoding="async" />
             </SwiperSlide>
           ))}
         </Swiper>

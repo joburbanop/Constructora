@@ -34,10 +34,9 @@ export default function ProyectosUSA() {
 
   // Efecto para detectar sección activa
   useEffect(() => {
-    const handleScroll = () => {
+    const updateOnScroll = () => {
       const sections = ['inicio', 'expertos', 'contactanos'];
       const scrollPosition = window.scrollY + 100;
-
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
         if (section && section.offsetTop <= scrollPosition) {
@@ -46,9 +45,19 @@ export default function ProyectosUSA() {
         }
       }
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateOnScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateOnScroll();
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
 

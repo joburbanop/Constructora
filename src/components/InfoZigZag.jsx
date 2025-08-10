@@ -25,13 +25,13 @@ export default function InfoZigZag({ elementos = [], textoKey }) {
                   
                   </div>
                   <div className="imagen">
-                    <img src={item.imagen} alt={texto?.titulo || 'imagen'} />
+                    <img src={item.imagen} alt={texto?.titulo || 'imagen'} loading="lazy" decoding="async" />
                   </div>
                 </>
               ) : (
                 <>
                   <div className="imagen">
-                    <img src={item.imagen} alt={texto?.titulo || 'imagen'} />
+                    <img src={item.imagen} alt={texto?.titulo || 'imagen'} loading="lazy" decoding="async" />
                   </div>
                   <div className="texto">
                     <h3>{texto?.titulo || '[Sin título]'}</h3>

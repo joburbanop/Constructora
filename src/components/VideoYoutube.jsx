@@ -1,22 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/VideoYoutube.css';
 
 export default function VideoYoutube({ videoId, titulo }) {
   if (!videoId) return null;
-
+  const [showPlayer, setShowPlayer] = useState(false);
   const url = `https://www.youtube.com/embed/${videoId}`;
+  const thumb = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 
   return (
     <div className="video-youtube">
       {titulo && <h3 className="video-titulo">{titulo}</h3>}
-      <div className="video-container">
-        <iframe
-          src={url}
-          title={titulo || 'Video YouTube'}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          style={{ border: 'none' }}
-        ></iframe>
+      <div className="video-container" onClick={() => setShowPlayer(true)} style={{ cursor: 'pointer' }}>
+        {showPlayer ? (
+          <iframe
+            src={url}
+            title={titulo || 'Video YouTube'}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            loading="lazy"
+            style={{ border: 'none' }}
+          ></iframe>
+        ) : (
+          <div className="video-placeholder" style={{ position: 'relative', width: '100%', height: '100%' }}>
+            <img src={thumb} alt={titulo || 'Video YouTube'} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <div className="video-play-button" aria-label="Reproducir video" style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center' }}>
+              <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" fill="rgba(0,0,0,0.6)" />
+                <polygon points="40,30 75,50 40,70" fill="#fff" />
+              </svg>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

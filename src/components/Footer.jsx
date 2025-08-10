@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="footer-content footer-columns">
         
         <div className="footer-brand-col">
-          <img src={logo} alt="Logo Constructora" className="footer-logo" />
+          <img src={logo} alt="Logo Constructora" className="footer-logo" loading="lazy" decoding="async" />
          {/*
           <div className="footer-links">
             <a href="#">{t.footer.privacidad}</a>

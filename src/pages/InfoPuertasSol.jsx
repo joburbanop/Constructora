@@ -42,23 +42,32 @@ const InfoPuertasSol = () => {
    const listaFiltrada = expertos.filter(e => clavesDeseadas.includes(e.clave));
 
    // Efecto para detectar sección activa
-   useEffect(() => {
-     const handleScroll = () => {
-       const sections = ['inicio', 'expertos', 'contactanos'];
-       const scrollPosition = window.scrollY + 100;
-
-       for (let i = sections.length - 1; i >= 0; i--) {
-         const section = document.getElementById(sections[i]);
-         if (section && section.offsetTop <= scrollPosition) {
-           setActiveSection(sections[i]);
-           break;
-         }
-       }
-     };
-
-     window.addEventListener('scroll', handleScroll);
-     return () => window.removeEventListener('scroll', handleScroll);
-   }, []);
+  useEffect(() => {
+    const updateOnScroll = () => {
+      const sections = ['inicio', 'expertos', 'contactanos'];
+      const scrollPosition = window.scrollY + 100;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateOnScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateOnScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
    const handleSectionNavigation = (sectionId) => {
      const section = document.getElementById(sectionId);

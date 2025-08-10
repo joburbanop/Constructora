@@ -8,7 +8,7 @@ const ProjectInfo = ({ nombre, subtitulo, descripcion, logo }) => (
       <div style={{ maxWidth: 400 }}>
         <p>{descripcion}</p>
       </div>
-      {logo && <img src={logo} alt={nombre} style={{ maxWidth: 180 }} />}
+      {logo && <img src={logo} alt={nombre} style={{ maxWidth: 180 }} loading="lazy" decoding="async" />}
     </div>
   </section>
 );

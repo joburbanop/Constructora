@@ -54,7 +54,7 @@ export default function ProyectoDetalle({ id, videoId = null, videoTitulo = '' }
           {tienelogo && (
 
             <div  className="logo-proyecto"> 
-              <img src={data.logo} alt={texto.titulo}/>
+              <img src={data.logo} alt={texto.titulo} loading="lazy" decoding="async"/>
             </div>
 
           )}

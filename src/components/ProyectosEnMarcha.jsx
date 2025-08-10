@@ -59,7 +59,7 @@ export default function ProyectosEnMarcha({ proyectosFiltrados = null }) {
             
 
             <div className="proyecto-img-wrap">
-              <img src={proy.imagen} alt={proy.titulo} className="proyecto-img-marcha" />
+              <img src={proy.imagen} alt={proy.titulo} className="proyecto-img-marcha" loading="lazy" decoding="async" />
             </div>
             <div className="proyecto-info-marcha">
               <div className="proyecto-titulo-row-marcha">

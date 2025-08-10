@@ -17,7 +17,7 @@ export default function RendersDestacados() {
         <div className="renders-imgs">
           {renders.slice(0,3).map((r, idx) => (
             <div className={`renders-img-item renders-img-item-${idx}`} key={idx}>
-              <img src={r.imagen} alt={r.alt} className="renders-img" />
+              <img src={r.imagen} alt={r.alt} className="renders-img" loading="lazy" decoding="async" />
             </div>
           ))}
         </div>

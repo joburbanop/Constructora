@@ -107,7 +107,7 @@ const CasasLujo = () => {
             {/* Primera fila: Imagen a la izquierda, texto a la derecha */}
             <div className="casas-lujo-zigzag-item reverse">
               <div className="casas-lujo-zigzag-image">
-                <img src={casaLujo4} alt="Diseño Arquitectónico Exclusivo" />
+                <img src={casaLujo4} alt="Diseño Arquitectónico Exclusivo" loading="lazy" decoding="async" />
               </div>
               <div className="casas-lujo-zigzag-content">
                 <div className="casas-lujo-zigzag-number">01</div>
@@ -152,14 +152,14 @@ const CasasLujo = () => {
                 </div>
               </div>
               <div className="casas-lujo-zigzag-image">
-                <img src={casaLujo12} alt="Construcción Premium" />
+                <img src={casaLujo12} alt="Construcción Premium" loading="lazy" decoding="async" />
               </div>
             </div>
 
             {/* Tercera fila: Imagen a la izquierda, texto a la derecha */}
             <div className="casas-lujo-zigzag-item reverse">
               <div className="casas-lujo-zigzag-image">
-                <img src={casaLujo9} alt="Acabados de Lujo" />
+                <img src={casaLujo9} alt="Acabados de Lujo" loading="lazy" decoding="async" />
               </div>
               <div className="casas-lujo-zigzag-content">
                 <div className="casas-lujo-zigzag-number">03</div>
@@ -193,9 +193,9 @@ const CasasLujo = () => {
             <p className="casas-lujo-section-subtitle">{t.casas_lujo?.galeria_subtitle || 'Explore nuestros proyectos más destacados y encuentre inspiración para su hogar soñado.'}</p>
           </div>
           <div className="casas-lujo-galeria-grid">
-            {galleryImages.map((image, index) => (
+                {galleryImages.map((image, index) => (
               <div key={index} className="casas-lujo-galeria-item">
-                <img src={image} alt={`Casa de Lujo ${index + 1}`} />
+                <img src={image} alt={`Casa de Lujo ${index + 1}`} loading="lazy" decoding="async" />
               </div>
             ))}
           </div>

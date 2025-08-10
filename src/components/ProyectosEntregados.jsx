@@ -18,7 +18,7 @@ export default function ProyectosEntregados() {
               {/* Frente */}
               <div className="flip-card-front">
                 <div className="entregados-img-wrap">
-                  <img src={proy.imagen} alt={t.entregados[proy.nombre]} className="entregados-img" />
+                  <img src={proy.imagen} alt={t.entregados[proy.nombre]} className="entregados-img" loading="lazy" decoding="async" />
                 </div>
                 <div className="entregados-nombre">{t.entregados[proy.ubicacion]}</div>
                 <div className="entregados-desc">{t.entregados[proy.descripcion]}</div>

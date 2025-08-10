@@ -29,23 +29,19 @@ const Header = ({
 
   // Efecto para detectar scroll y sección activa
   useEffect(() => {
-    const handleScroll = () => {
+    const updateOnScroll = () => {
       const isScrolled = window.scrollY > 50;
       setScrolled(isScrolled);
 
-      // Detectar sección activa
       const sections = ['inicio', 'ambito', 'proyectos', 'stats', 'proyectos-entregados', 'expertos', 'contactanos'];
       const scrollPosition = window.scrollY + 100;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
         if (section && section.offsetTop <= scrollPosition) {
-          // Si estamos en la sección de stats, marcar como 'nosotros'
           if (sections[i] === 'stats') {
             setActiveSection('nosotros');
-          } 
-          // Si estamos en la sección de expertos, marcar como 'contactanos'
-          else if (sections[i] === 'expertos') {
+          } else if (sections[i] === 'expertos') {
             setActiveSection('contactanos');
           } else {
             setActiveSection(sections[i]);
@@ -55,8 +51,20 @@ const Header = ({
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateOnScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateOnScroll();
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const handleIdiomaChange = (e) => setIdioma(e.target.value);
@@ -199,6 +207,9 @@ const Header = ({
           alt="Logo Constructora"
           className={`header__logo ${menuAbierto ? "hidden" : ""}`}
           onClick={handleLogoClick}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
 
         <nav className={`header__nav ${menuAbierto ? "active" : ""}`}>

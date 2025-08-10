@@ -64,10 +64,9 @@ const TodosLosProyectos = () => {
 
   // Efecto para detectar sección activa
   useEffect(() => {
-    const handleScroll = () => {
+    const updateOnScroll = () => {
       const sections = ['inicio', 'expertos', 'contactanos'];
       const scrollPosition = window.scrollY + 100;
-
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
         if (section && section.offsetTop <= scrollPosition) {
@@ -76,9 +75,19 @@ const TodosLosProyectos = () => {
         }
       }
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateOnScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateOnScroll();
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   // Cambiar filtros sin efectos de carga
@@ -229,14 +238,8 @@ const TodosLosProyectos = () => {
         >
           {renders.map((render, idx) => (
             <SwiperSlide key={idx}>
-              <div
-                className="slide-bg"
-                style={{
-                  backgroundImage: `url(${render})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center 35%',
-                }}
-              >
+              <div className="slide-bg">
+                <img src={render} alt="" loading="eager" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 <div className="slide-overlay">
                   <div className="slide-content">
                     <h1 className="hero-title">

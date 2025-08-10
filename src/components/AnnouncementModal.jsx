@@ -74,6 +74,8 @@ const AnnouncementModal = ({
                 src={imageUrl} 
                 alt="Anuncio" 
                 className="announcement-image"
+                loading="lazy"
+                decoding="async"
                 onError={(e) => {
                   e.target.style.display = 'none';
                 }}

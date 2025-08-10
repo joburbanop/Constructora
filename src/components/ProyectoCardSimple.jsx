@@ -12,6 +12,8 @@ export default function ProyectoCard({ proyecto, t, onNavigate, idiomaKey }) {
         src={proyecto.imagen}
         alt={traduccion[proyecto.titulo]}
         className="proyecto-card-img"
+        loading="lazy"
+        decoding="async"
       />
       <div className='contenedor-texto'>
         <h2 className="proyecto-card-title">{traduccion[proyecto.titulo]}</h2>

@@ -5,7 +5,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import '../styles/Slider.css'; // Crea este archivo para tus estilos personalizados
 import Button from './Button';
-import slides from '../utils/slides';
 import { useIdioma } from '../context/IdiomaContext';
 
 export default function Slider({ contenido = [], namespace = 'home' }) {
@@ -26,10 +25,27 @@ export default function Slider({ contenido = [], namespace = 'home' }) {
   >
     {contenido.map((slide, idx) => (
       <SwiperSlide key={`${slide.id || idx}-${slide.title}`}>
-        <div
-          className="slider-bg-slider"
-          style={{ backgroundImage: `url(${slide.image})` }}
-        >
+        <div className="slider-bg-slider">
+          {idx === 0 ? (
+            <img
+              src={slide.image}
+              alt=""
+              className="slider-bg-img"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
+          ) : (
+            <img
+              src={slide.image}
+              alt=""
+              className="slider-bg-img"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              loading="lazy"
+              decoding="async"
+            />
+          )}
           <div className="slider-content-slider animate-fadeInUp">
             <h1 className="slider-title-slider animate-fadeIn">
               {namespace === 'casas_lujo' ? 'Casas de Lujo' : (t.slider?.[namespace]?.[slide.title] || slide.title)}

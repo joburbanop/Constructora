@@ -37,7 +37,7 @@ export default function EspaciosCompartidos({ id, claves }) {
           return (
             <SwiperSlide key={idx} style={{ width: '140px' }}>
               <div className="espacio-item">
-                <img src={icono} alt={titulo} className="espacio-icono" />
+                <img src={icono} alt={titulo} className="espacio-icono" loading="lazy" decoding="async" />
                 <p className="espacio-titulo">{titulo}</p>
               </div>
             </SwiperSlide>
