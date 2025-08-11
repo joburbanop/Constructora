@@ -699,6 +699,16 @@ const es = { // Should remain 'es' if you are keeping original variable names or
 
     
   },
+  terrenos: {
+  slide1_title: 'Land for Future Development',
+  slide1_subtitle: 'Explore investment opportunities in a growing area.',
+  slide2_title: 'Land for Future Development',
+  slide2_subtitle: 'Explore investment opportunities in a growing area.',
+  slide3_title: 'Land for Future Development',
+  slide3_subtitle: 'Explore investment opportunities in a growing area.',
+  boton: 'Contact Us'
+},
+
 
   },
   info_ZigZag_san_miguel: {
@@ -809,6 +819,12 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     boton: 'Contact Us'
   },
   //Pagina de Proyectos USA
+  terrenos: {
+  titulo: 'Land for Future Development',
+  descripcion: 'Land for future development in Cape Coral, FL',
+  ver_maps: 'View on Google Maps'
+},
+
   proyectos_usa: {
   titulo: 'U.S.A Projects',
   titulo_2: 'Investment Opportunities in ',
@@ -824,6 +840,8 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     casa_usa_1_desc: 'New single-family home for sale in Cape Coral, FL',
     casa_usa_2_title: 'Single-family home for sale',
     casa_usa_2_desc: 'Single-family home for sale in Cape Coral, FL',
+    casa_terrenos_title: 'Land for Future Development',
+    casa_terrenos_desc: 'Land for future development in Cape Coral, FL',
     boton: 'See more',
     proximamente: 'Coming soon'
 

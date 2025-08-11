@@ -21,6 +21,8 @@ const es = {
     marbella_desc: 'Para construir a su gusto. Lotes más amplios y con el mejor precio de la zona. Sur de Jamundí',
     coral_titulo: 'Locales comerciales',
     coral_desc: '',
+    terrenos_titulo: 'Terrenos para futuro desarrollo',
+    terrenos_desc:'Terrenos disponibles en zonas estratégicas para desarrollo futuro.',
     casa_usa_1_title: 'Casa USA ',
     casa_usa_1_desc: 'Hermosa casa unifamiliar con diseño moderno y acabados de lujo.',
     casa_usa_2_title: 'Casa USA ',
@@ -729,6 +731,15 @@ imagenes_add:{
         slide3_subtitle: 'Lotes más grandes con el mejor precio de la zona',
         boton: 'Contáctanos'
     
+  }, terrenos: {
+        slide1_title: 'Terrenos para Futuro Desarrollo',
+        slide1_subtitle: 'Explora oportunidades de inversión en una zona en crecimiento.',
+        slide2_title: 'Terrenos para Futuro Desarrollo ',
+        slide2_subtitle: 'Explora oportunidades de inversión en una zona en crecimiento.',
+        slide3_title: 'Terrenos para Futuro Desarrollo ',
+        slide3_subtitle: 'Explora oportunidades de inversión en una zona en crecimiento.',
+        boton: 'Contáctanos'
+    
   },
 },
 
@@ -760,6 +771,12 @@ imagenes_add:{
     boton: 'Contáctanos'
   },
 //Pagina de Proyectos USA
+  terrenos:{
+  titulo: 'Terrenos para futuro desarrollo',
+  descripcion: 'Terrenos para futuro desarrollo en Cape Coral, FL',
+  ver_maps: 'Ver en Google Maps'
+
+  },
   proyectos_usa: {
   titulo: 'Proyectos U.S.A',
   titulo_2:'Oportunidades de Inversión en ',
@@ -774,6 +791,8 @@ imagenes_add:{
     casa_usa_1_desc: 'Nueva casa unifamiliar en venta Cape Coral , FL',
     casa_usa_2_title: 'Casa unifamiliar en venta',
     casa_usa_2_desc: 'Casa unifamiliar en venta Cape Coral, FL',
+    terrenos_titulo: 'Terrenos para futuro desarrollo',
+    terrenos_desc: 'Terrenos para futuro desarrollo Cape Coral, FL',
     boton: 'Ver más',
     proximamente: 'Próximamente'
   },

@@ -1,0 +1,71 @@
+.wrapper {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  color: #333;
+}
+.card h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.card a{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.wrapper h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff6600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ff6600;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* por defecto, una columna */
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* desde 768px en adelante, dos columnas */
+  }
+}

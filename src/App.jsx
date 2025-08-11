@@ -19,6 +19,7 @@ import useAnnouncementModal from './hooks/useAnnouncementModal';
 import renderRincon from './assets/render_rincon.png';
 import anuncioImage from './assets/anuncios/Anuncio.webp';
 import InfoMarbella from "./pages/InfoMarbella";
+import TerrenosFuturos from "./pages/TerrenosFuturos";
 
 export default function App() {
   // Hook para manejar el modal de anuncio principal
@@ -48,6 +49,7 @@ export default function App() {
         <Route path="/casa-usa-segunda" element={<CasaUsaSegunda/>} />
         <Route path="/casas-lujo" element={<CasasLujo/>} />
         <Route path="/quintas-marbella" element={<InfoMarbella/>} />
+        <Route path="/terrenos-construccion" element={<TerrenosFuturos/>} />
       </Routes>
       
       {/* Modal de anuncio principal */}

@@ -78,6 +78,11 @@ if (proyecto.titulo === 'marbella_titulo') {
   setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
   return;
 }
+if (proyecto.titulo === 'terrenos_titulo') {
+  navigate('/terrenos-construccion');
+  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+  return;
+}
 
 
   // Enlaces externos - solo si es un enlace real (no '#')

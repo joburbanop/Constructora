@@ -11,6 +11,7 @@ import PuertasSol from '../assets/puertas_sol/puertas_sol.webp'
 import CanaBrava from '../assets/cana_brava/cana_brava_logo.webp';
 import CanaDulce from '../assets/cana_dulce/cana_dulce_logo.webp';
 import Palmeras from '../assets/palmeras_italia/palmeras_italia_logo.webp';
+import Terrenos from '../assets/coral_mall/cope_coral5.webp';
 const proyectos = [
   {
     imagen: Rincon,
@@ -121,7 +122,18 @@ const proyectos = [
     ubicacion: 'san_pedro',
     enlace: '/cana-brava',
     etiquetaColor: '#ffb347'
-  }
+  },
+   {
+    imagen: Terrenos,
+    titulo: 'terrenos_titulo',
+    descripcion: 'terrenos_desc',
+    tipo: '',
+    icono: 'locales',
+    iconoColor: '#222',
+    ubicacion: 'cope_coral',
+    enlace: '#',
+    etiquetaColor: '#ffb347'
+  },
   
 
 
