@@ -161,8 +161,8 @@
 }
 
 .experto-img {
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
   background: #f7f7f7;
@@ -290,8 +290,8 @@
   }
   
   .experto-img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border: 2px solid #f47c20;
   }
 }

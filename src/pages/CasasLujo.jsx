@@ -27,36 +27,16 @@ import casaLujo13 from '../assets/Casas_de_Lujo/IMG_20200130_182939.webp';
 const CasasLujo = () => {
   const { t } = useIdioma();
   const navigate = useNavigate();
-
+   // Expertos específicos para Casas de Lujo con información personalizada
+ const nombresDeseados = ['lina','ludivia','sofia'];
+ const asesores = agentes.filter(({ clave }) =>
+    nombresDeseados.includes(clave)
+    );
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
-  // Expertos específicos para Casas de Lujo con información personalizada
-  const asesores = [
-    {
-      id: 'sofia',
-      nombre: 'Sofía Saavedra',
-      cargo: 'Directora comercial Casas & Lotes SAS',
-      telefono: '+57 3234708860',
-      imagen: '/src/assets/expertos/SOFIA.webp'
-    },
-    {
-      id: 'ludivia',
-      nombre: 'Ludivia Guapacha',
-      cargo: 'Ejecutiva comercial Quintas de Marbella',
-      telefono: '+57 3332488488',
-      imagen: '/src/assets/expertos/LUDI.webp'
-    },
-    {
-      id: 'lina',
-      nombre: 'Lina Encizo',
-      cargo: 'Ejecutiva comercial San Miguel',
-      telefono: '+57 3244414141',
-      imagen: '/src/assets/expertos/LINA.webp'
-    }
-  ];
-
+ 
   // Definir los elementos de navegación para la página de Casas de Lujo
   const casasLujoNavItems = [
     { id: 'inicio', label: t.header?.inicio || 'Inicio', icon: <FaHome />, path: '/' },
