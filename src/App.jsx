@@ -52,7 +52,7 @@ export default function App() {
         <Route path="/terrenos-construccion" element={<TerrenosFuturos/>} />
       </Routes>
       
-      {/* Modal de anuncio principal */}
+      {/* Modal de anuncio principal 
       <AnnouncementModal
         isOpen={announcementModal.isOpen}
         onClose={announcementModal.closeModal}
@@ -67,6 +67,7 @@ export default function App() {
         animation="bounceIn"
         size="large"
       />
+      */}
       
       <ScrollToTop />
     </>
