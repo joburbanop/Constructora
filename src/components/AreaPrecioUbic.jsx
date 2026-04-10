@@ -13,11 +13,12 @@ const AreaPrecioUbic = ({ proyectoKey }) => {
         <h3>{traduccion.area}</h3>
         <p>{traduccion.area_desc}</p>
       </div>
-      <div className="bloque">
+     {/*<div className="bloque">
         <img src={iconAreaPrecioUbic.iconprecio} alt={`Icono precio - ${traduccion.precio}`} />
         <h3>{traduccion.precio}</h3>
         <p>{traduccion.precio_desc}</p>
-      </div>
+      </div>*/}
+      
       <div className="bloque">
         <img src={iconAreaPrecioUbic.iconubicacion} alt={`Icono ubicación - ${traduccion.ubicacion}`} />
         <h3>{traduccion.ubicacion}</h3>

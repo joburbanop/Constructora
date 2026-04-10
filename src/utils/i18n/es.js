@@ -612,13 +612,13 @@ imagenes_add:{
   },
   slider: {
     home: {
-      slide1_title: 'lotes con facilidad de pago',
+      slide1_title: 'Lotes con facilidad de pago',
       slide1_subtitle: 'Cuotas flexibles directamente con nuestra constructora',
-      slide2_title: 'lotes con facilidad de pago',
+      slide2_title: 'Lotes con facilidad de pago',
       slide2_subtitle: 'Cuotas flexibles directamente con nuestra constructora',
-      slide3_title: 'lotes con facilidad de pago',
+      slide3_title: 'Lotes con facilidad de pago',
       slide3_subtitle: 'Cuotas flexibles directamente con nuestra constructora',
-      slide4_title: 'lotes con facilidad de pago',
+      slide4_title: 'Lotes con facilidad de pago',
       slide4_subtitle: 'Cuotas flexibles directamente con nuestra constructora',
       boton: 'Contáctanos'
   },
