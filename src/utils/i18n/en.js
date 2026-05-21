@@ -516,10 +516,10 @@ const es = { // Should remain 'es' if you are keeping original variable names or
   // información videos de youtube
   videos: {
     rincon: {
-    video1: { id: 'BRmd52pMUW4', titulo: 'Work progress', visible: true },
-    render: { id: 'oSlfSdN70jQ', titulo: 'Work progress', visible: false },
+    video1: { id: 'bN8mihr4QHs', titulo: 'Work progress', visible: true },
+    render: { id: 'RUWM2PWuJ2s', titulo: 'Work progress', visible: false },
     Avance_en_Zona_comercial: { id: 'LS0EhS0oSbM', titulo: 'Work progress', visible: true },
-    rincon_lago_nuevo_sur: { id: 'BRmd52pMUW4', titulo: 'Discover Rincón del Lago', visible: true }
+    rincon_lago_nuevo_sur: { id: 'bN8mihr4QHs', titulo: 'Discover Rincón del Lago', visible: true }
 
     },
     puertas_sol: {
@@ -529,7 +529,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
       video_principal: { id: 'A7EXkNPyiF8', titulo: 'Discover Caña Dulce', visible: true }
     },
      marbella: {
-    video_principal: { id: 'JcVHrn_XfQoZQsin', titulo: 'Quintas de Marbella', visible: true }
+    video_principal: { id: 'pNOQshnDNvQ', titulo: 'Quintas de Marbella', visible: true }
   },
     cana_brava: {
       video_principal: { id: 'hbDuQFcnO6c', titulo: 'Discover Caña Brava', visible: true }

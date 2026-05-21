@@ -552,10 +552,10 @@ imagenes_add:{
 // información videos de youtube 
   videos: {
     rincon: {
-      video1: { id: 'BRmd52pMUW4', titulo: 'Avances de obra', visible: true },
-      render: { id: 'oSlfSdN70jQ', titulo: 'Avances de obra', visible: false },
+      video1: { id: 'bN8mihr4QHs', titulo: 'Avances de obra', visible: true },
+      render: { id: 'RUWM2PWuJ2s', titulo: 'Avances de obra', visible: false },
       Avance_en_Zona_comercial: { id: 'LS0EhS0oSbM', titulo: 'Avances de obra', visible: true },
-      rincon_lago_nuevo_sur:{id:'BRmd52pMUW4', titulo: 'Conozca Rincón del Lago', visible: true}
+      rincon_lago_nuevo_sur:{id:'bN8mihr4QHs', titulo: 'Conozca Rincón del Lago', visible: true}
     },
     puertas_sol: {
       video_principal: { id: 'dWO2LGUfFdY', titulo: 'Conozca Puertas del Sol', visible: true }
@@ -570,7 +570,7 @@ imagenes_add:{
       video_principal: { id: 'PUBhzK41_3A', titulo: 'Conozca Palmeras de la Italia', visible: true }
     },
     marbella: {
-    video_principal: { id: 'nLCuCT-fFnA', titulo: 'Quintas de Marbella', visible: true }
+    video_principal: { id: 'pNOQshnDNvQ', titulo: 'Quintas de Marbella', visible: true }
   },
 },
   entregados: {

@@ -8,7 +8,6 @@ import img6 from '../assets/rincon_lago/Rincon_lago_galeria6.webp';
 import img7 from '../assets/rincon_lago/Rincon_lago_galeria7.webp';
 import img8 from '../assets/rincon_lago/Rincon_lago_galeria8.webp';
 import img9 from '../assets/rincon_lago/Rincon_lago_galeria9.webp';
-import img10 from '../assets/rincon_lago/Rincon_lago_galeria10.webp';
 import Coral from '../assets/coral_mall/logo_coral_mall.webp';
 import pdf_coral from '../assets/pdfs/planos_coral.pdf';
 import CanaDulce from '../assets/cana_dulce/cana_dulce_logo.webp';
@@ -48,14 +47,14 @@ import casaUsaSegunda16 from '../assets/casaUsaSegunda/casa_usa_segunda_16.webp'
 import casaUsaSegunda17 from '../assets/casaUsaSegunda/casa_usa_segunda_17.webp';
 import casaUsaSegunda18 from '../assets/casaUsaSegunda/casa_usa_segunda_18.webp';
 import SanMiguelLogo from '../assets/SAN MIGUEL/San miguel/LOGO SAN MIGUEL PNG-01.webp';
-import sanMiguel1 from '../assets/SAN MIGUEL/sm f888.webp';
-import sanMiguel2 from '../assets/SAN MIGUEL/sm f88.webp';
-import sanMiguel3 from '../assets/SAN MIGUEL/locales F5.webp';
-import sanMiguel4 from '../assets/SAN MIGUEL/locales F3.webp';
-import sanMiguel5 from '../assets/SAN MIGUEL/SM F1.webp';
-import sanMiguel6 from '../assets/SAN MIGUEL/SM F7.webp';
-import sanMiguel7 from '../assets/SAN MIGUEL/SM F8.webp';
-import sanMiguel8 from '../assets/SAN MIGUEL/SM Ubi san miguel.webp';
+import sanMiguel1 from '../assets/SAN MIGUEL/san_miguel1.webp';
+import sanMiguel2 from '../assets/SAN MIGUEL/san_miguel2.webp';
+import sanMiguel3 from '../assets/SAN MIGUEL/san_miguel3.webp';
+import sanMiguel4 from '../assets/SAN MIGUEL/san_miguel4.webp';
+import sanMiguel5 from '../assets/SAN MIGUEL/san_miguel5.webp';
+import sanMiguel6 from '../assets/SAN MIGUEL/san_miguel6.webp';
+import sanMiguel7 from '../assets/SAN MIGUEL/san_miguel7.webp';
+import sanMiguel8 from '../assets/SAN MIGUEL/san_miguel8.webp';
 import CanaBravaLogo from '../assets/cana_brava/cana_brava_logo.webp';
 import canaBrava1 from '../assets/cana_brava/DJI_0117.webp';
 import canaBrava2 from '../assets/cana_brava/DJI_0137.webp';
@@ -97,7 +96,7 @@ export const infoProyectos = {
         img7,
         img8,
         img9,
-        img10
+      
     ]
   },
   coral:{
@@ -115,7 +114,7 @@ export const infoProyectos = {
         img7,
         img8,
         img9,
-        img10
+       
     ]
   },
   cana_dulce:{

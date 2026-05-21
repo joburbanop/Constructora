@@ -1,6 +1,6 @@
-import img1 from '../assets/slider_Rincon_Lago1.webp';
-import img2 from '../assets/slider_Rincon_Lago2.webp';
-import img3 from '../assets/slider_Rincon_Lago3.webp';
+import img1 from '../assets/rincon_lago/Rincon_lago_galeria7.webp';
+import img2 from '../assets/rincon_lago/Rincon_lago_galeria4.webp';
+import img3 from '../assets/rincon_lago/Rincon_lago_galeria3.webp';
 
 const slidesRinconLago = [
     {
