@@ -14,7 +14,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     casas: 'House',
     locales: 'Commercial Units',
     rincon_titulo: 'Exclusive country condominium',
-    rincon_desc: 'It\'s time to secure your lot in Rincón del Lago. 5-year financing. Schedule your house construction or hire our construction company and build your house with the best budget.',
+    rincon_desc: 'It\'s time to secure your lot in Rincón del Lago. Financing options up to 6 years.. Schedule your house construction or hire our construction company and build your house with the best budget.',
     sanmiguel_titulo: 'Open urbanization',
     sanmiguel_desc: 'Located in Rozo, on the road leading to Cerrito. An excellent alternative to build your house to your liking in a countryside environment.',
     marbella_titulo: 'Open urbanization',
@@ -173,7 +173,7 @@ const es = { // Should remain 'es' if you are keeping original variable names or
     subtitulo_2: 'COUNTRY CONDOMINIUM',
     descripcion: 'The Rincón del Lago condominium is located in Alfaguara, Jamundí, just 20 minutes from Cali, and stands out for its natural surroundings. All paved roads, optimal public services, telecommunications, and permanent monitoring to enjoy the security, exclusivity, and comfort of better living. Work in continuous development.',
     descripcion_1: '',
-    descripcion_2: 'Take advantage of pre-sale prices on lots. Delivery on April 30, 2026.',
+    descripcion_2: 'Get your lot today. Last lots available!',
     // claves componente EspaciosCompartidos.jsx del js infoEspacios.js
     espacios: [
       'bronceo',

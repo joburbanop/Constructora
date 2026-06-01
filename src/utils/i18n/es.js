@@ -14,7 +14,7 @@ const es = {
     locales: 'Locales',
     casas: 'Casa',
     rincon_titulo: 'Exclusivo condominio campestre',
-    rincon_desc: 'Es momento de separar su lote en Rincón del Lago. Financiación 5 años. Programe la construcción de su casa o contrate a nuestra constructora y edifique su casa con el mejor presupuesto.',
+    rincon_desc: 'Es momento de separar su lote en Rincón del Lago. Facilidades de pago hasta 6 años. Programe la construcción de su casa o contrate a nuestra constructora y edifique su casa con el mejor presupuesto.',
     sanmiguel_titulo: 'Urbanización abierta',
     sanmiguel_desc: 'Ubicada en Rozo, sobre la vía que conduce a Cerrito. Una excelente alternativa para construir casa a su gusto en medio de un entorno campestre.',
     marbella_titulo: 'Urbanización abierta',
@@ -176,7 +176,7 @@ const es = {
   subtitulo_2: 'CONDOMINIO CAMPESTRE',
   descripcion: 'El condominio Rincón del Lago se ubica en Alfaguara, Jamundí, a solo 20 minutos de Cali y se destaca su entorno natural. Todas las vías asfaltadas, óptimos servicios públicos, telecomunicaciones, monitoreo permanente para disfrutar la seguridad, exclusividad y comodidad de vivir mejor. Obra en desarrollo continuo.',
   descripcion_1:'',
-  descripcion_2: 'Aprovecha precios de preventa en lotes. Entrega el 30 de abril de 2026.',
+  descripcion_2: 'Adquiera su lote hoy mismo. ¡Últimos lotes disponibles!',
   // claves componente EspaciosCompartidos.jsx  del js infoEspacios.js
   espacios: [
     'bronceo',
