@@ -1,13 +1,16 @@
 import Rincon from '../assets/rincon_lago/Logo_rincon.webp';
 import img1 from '../assets/rincon_lago/Rincon_lago_galeria1.webp';
-import img2 from '../assets/rincon_lago/Rincon_lago_galeria2.webp';
-import img3 from '../assets/rincon_lago/Rincon_lago_galeria3.webp';
-import img4 from '../assets/rincon_lago/Rincon_lago_galeria4.webp';
-import img5 from '../assets/rincon_lago/Rincon_lago_galeria5.webp';
-import img6 from '../assets/rincon_lago/Rincon_lago_galeria6.webp';
-import img7 from '../assets/rincon_lago/Rincon_lago_galeria7.webp';
-import img8 from '../assets/rincon_lago/Rincon_lago_galeria8.webp';
-import img9 from '../assets/rincon_lago/Rincon_lago_galeria9.webp';
+import img2 from '../assets/rincon_lago/Rincon_lago_galeria1-1.webp';
+import img3 from '../assets/rincon_lago/Rincon_lago_galeria2.webp';
+import img4 from '../assets/rincon_lago/Rincon_lago_galeria2-2.webp';
+import img5 from '../assets/rincon_lago/Rincon_lago_galeria3.webp';
+import img6 from '../assets/rincon_lago/Rincon_lago_galeria3-3.webp';
+import img9 from '../assets/rincon_lago/Rincon_lago_galeria5-5.webp';
+import img12 from '../assets/rincon_lago/Rincon_lago_galeria7.webp';
+
+import img14 from '../assets/rincon_lago/Rincon_lago_galeria8.webp';
+import img15 from '../assets/rincon_lago/Rincon_lago_galeria8-8.webp';
+import img16 from '../assets/rincon_lago/Rincon_lago_galeria9.webp';
 import Coral from '../assets/coral_mall/logo_coral_mall.webp';
 import pdf_coral from '../assets/pdfs/planos_coral.pdf';
 import CanaDulce from '../assets/cana_dulce/cana_dulce_logo.webp';
@@ -93,9 +96,12 @@ export const infoProyectos = {
         img4,
         img5,
         img6,
-        img7,
-        img8,
         img9,
+        img12,
+      
+        img14,
+        img15,
+        img16
       
     ]
   },
@@ -111,8 +117,8 @@ export const infoProyectos = {
         img4,
         img5,
         img6,
-        img7,
-        img8,
+       
+       
         img9,
        
     ]
